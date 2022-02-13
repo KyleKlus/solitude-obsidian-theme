@@ -653,6 +653,16 @@ TODO:
         box-shadow: 0 0px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
         transform: translate3d(0px, -3px, 0px);
       }
+
+      .HyperMD-quote.cm-active.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line {
+        transform: translate3d(2px, -3px, 0px);
+        background-color: var(--bg-line-hover);
+        box-shadow: 0 0px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+      }
+
+      .HyperMD-quote.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line:hover{
+        background-color: var(--bg-line-hover);
+      }
       
       .cm-line.cm-line.cm-line.cm-line{
         border-left: 3px solid transparent;
