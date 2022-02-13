@@ -7,3 +7,8 @@ package-lock.json
 
 # Mac
 .DS_Store
+
+# theme dev vault
+theme-dev-vault-main
+
+.gitignore
