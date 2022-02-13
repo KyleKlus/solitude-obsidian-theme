@@ -675,10 +675,6 @@ TODO:
         padding-left: 5px;
       }
 
-      .cm-fold-indicator {
-        margin-left: 8px;
-      }
-
       /* #endregion |3.5.4.2. Lines  */
 
       /* #region *..........................3.5.4.3. Formating Elements */
@@ -835,6 +831,11 @@ TODO:
       .cm-content hr {
         border-top: 1px solid var(--horizontal-line-color);
         margin: 10px 0px;
+        line-height: 0.9;
+      }
+
+      .markdown-source-view.mod-cm6 .hr {
+        line-height: 0.8;
       }
 
       .cm-s-obsidian span.cm-highlight,
