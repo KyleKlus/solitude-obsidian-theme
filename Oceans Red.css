@@ -1530,18 +1530,17 @@ TODO:
 
     /* #region *..........................3.5.6. File Explorer Elements */
 
-    body:is(.show-file-explorer-decoration) .nav-folder-title, 
-    body:is(.show-file-explorer-decoration) .nav-file-title {
-      margin-left: 7px;
-      border-top: 1px solid transparent;
-      border-bottom: 1px solid transparent;
-      border-right: 1px solid transparent;
-      border-left: 2px solid var(--file-explorer-color);
+    .nav-header {
+      border-bottom: 1px solid var(--main-accent-dark);
+      border-top: 1px solid var(--main-accent-dark);
+      background-color: var(--bg-leaf-head);
+      padding: 2px 20px 2px 20px;
+      box-shadow: 0 0px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
     }
-
-    .nav-buttons-container .nav-action-button {
-      padding: 5px 5px 0px 5px;
-      border-bottom: 1px solid transparent;
+    
+    .nav-action-button {
+      margin-bottom: 8px;
+      margin-top: 8px;
     }
 
     .nav-buttons-container .nav-action-button:hover {
@@ -1550,48 +1549,52 @@ TODO:
       transition: all 600ms;
     }
 
+    .nav-action-button.is-active {
+      box-shadow: inset 3px 3px 3px rgb(0 0 0 / 50%);
+    }
+
+    .nav-folder:not(.mod-root) > .nav-folder-children {
+      border-left: 1px solid var(--main-accent);
+      margin: 5px 16px;
+      padding-left: 8px;
+    }
+
+    .nav-files-container {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+
     .nav-folder-title.is-being-dragged-over{
       background-color: var(--main-accent-dark);
     }
 
-    .nav-header {
-      border-bottom: 1px solid var(--main-accent-dark);
-      border-top: 1px solid var(--main-accent-dark);
-      background-color: var(--bg-leaf-head);
-      padding: 2px 20px 2px 20px;
-      box-shadow: 0 0px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-    }
-
     .nav-folder.mod-root > .nav-file-title, 
     .nav-folder.mod-root > .nav-folder-title {
-      border-top: 1px solid transparent;
-      border-bottom: 1px solid transparent;
-      border-right: 1px solid transparent;
-      border-left: 2px solid transparent;
-      font-size: 18px;
-      padding-top: 10px;
+      font-size: 20px;
+      padding-top: 15px;
+      padding-bottom: 10px;
     }
 
     .nav-buttons-container .nav-action-button{
         color: var(--main-accent);
-      }
+    }
 
     .nav-folder.mod-root > .nav-file-title:hover, 
     .nav-folder.mod-root > .nav-folder-title:hover {
-      border-left: 2px solid transparent;
+      border: 1px solid transparent;
       padding-left: 10px;
       box-shadow: none;
+      transform: none;
     }
 
-    body:not(.is-grabbing) .nav-file-title:hover,  
+    body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,  
     body:not(.is-grabbing) .nav-folder-title:hover {
       border: 1px solid transparent;
-      border-left: 2px solid var(--file-explorer-color);
+      border-left: 2px solid var(--main-accent-dark);
       background-color: var(--bg-leaf-head);
-      padding-left: 27px;
-      transition: padding-left 300ms;
-      box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-      
+      transform: translate(3px, -1px);
+      box-shadow: 0 8px 18px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+      transition: all 250ms;
     }
 
     /* Didn't find another way to overwrite hover, sry */
@@ -1601,11 +1604,12 @@ TODO:
     .nav-folder-title.is-being-dragged {
       background-color: var(--main-accent-dark);
       color: var(--text-on-accent);
+      box-shadow: 3px 6px 6px rgb(0 0 0 / 25%), inset 0px 0px 3px rgb(0 0 0 / 40%);
+      transition: all 300ms;
     }
 
-    .nav-file-title, 
-    .nav-folder-title{
-      padding: 0px 23px 0px 23px;
+    .nav-file-title{
+      padding: 0px 0px 0px 5px;
       font-size: 14px;
     }
 
