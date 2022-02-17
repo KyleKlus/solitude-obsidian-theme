@@ -823,7 +823,7 @@ TODO:
         border-left: 4px solid var(--main-accent-dark);
         border-radius: 0px;
         background-color: var(--bg-quote);
-        box-shadow: 0 10px 20px rgb(0 0 0 / 25%), 0 5px 10px rgb(0 0 0 / 22%);
+        box-shadow: 0 10px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
         transform: translate3d(0px, -3px, 0px);
       }
       
