@@ -1611,7 +1611,8 @@ TODO:
     .nav-folder-title.is-being-dragged {
       background-color: var(--main-accent-dark);
       color: var(--text-on-accent);
-      box-shadow: 3px 6px 6px rgb(0 0 0 / 25%), inset 0px 0px 3px rgb(0 0 0 / 40%);
+      box-shadow: 3px 6px 6px rgb(0 0 0 / 25%);
+      transform: translate(3px, -1px);
       transition: all 300ms;
     }
 
