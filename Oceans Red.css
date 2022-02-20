@@ -798,10 +798,11 @@ TODO:
         padding-bottom: 6px;
       }
 
-      .markdown-source-view.mod-cm6 .list-bullet:after {
+      .markdown-source-view.mod-cm6 .list-bullet:after,
+      .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
         left: 0;
         content: var(--list-bullet-sign);
-
+        color:var(--main-accent);
       }
       
       .markdown-embed, 
@@ -1132,7 +1133,8 @@ TODO:
 
         .cm-s-obsidian span.cm-formatting.cm-url, 
         .external-link, 
-        .markdown-source-view.mod-cm6 .cm-link {
+        .markdown-source-view.mod-cm6 .cm-link,
+        .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
           color: var(--url-color);
         }
 
