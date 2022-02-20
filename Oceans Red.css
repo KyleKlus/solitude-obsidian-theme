@@ -82,7 +82,7 @@ TODO:
   --text-highlight-bg: rgba(255, 255, 0, 0.4); /*Search Matches*/
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Active Search Match (Preview Mode)*/
   --text-selection: var(--main-accent-dark); /*Text Selections*/
-  --text-selection-color: rgb(202, 163, 163);
+  --text-selection-color: #caa3a3;
 
   --interactive-normal: var(--main-accent-dark); /*Button Color*/
   --interactive-hover: var(--main-accent); /*Button Hovered Color*/
@@ -98,35 +98,33 @@ TODO:
 
 /* #region *..........................2. Fonts */
 
-/* Font Variables */
-
 :root {
-  --header-1-size: 2em;
+  --header-1-size: 2rem;
   --header-1-weight: bold;
   --header-1-alignment: left;
 
-  --header-2-size: 1.6em;
+  --header-2-size: 1.6rem;
   --header-2-weight: bold;
   --header-2-alignment: left;
 
-  --header-3-size: 1.37em;
+  --header-3-size: 1.37rem;
   --header-3-weight: bold;
   --header-3-alignment: left;
 
-  --header-4-size: 1.25em;
+  --header-4-size: 1.25rem;
   --header-4-weight: bold;
   --header-4-alignment: left;
 
-  --header-5-size: 1.12em;
+  --header-5-size: 1.12rem;
   --header-5-weight: bold;
   --header-5-alignment: left;
 
-  --header-6-size: 1.0em;
+  --header-6-size: 1.0rem;
   --header-6-weight: bold;
   --header-6-alignment: left;
 
-  --note-font-size: 1.0em;
-  --active-line-font-size: 1.02em;
+  --note-font-size: 1.0rem;
+  --active-line-font-size: 1.02rem;
 
   --font-monospace: 'Fira Code'
 }
@@ -146,6 +144,7 @@ TODO:
 
 :root{
   --list-bullet-sign: "- ";
+  --note-width: 1200px;
 }
 
 * {
@@ -372,8 +371,8 @@ TODO:
       visibility: hidden;
     }
 
-    body:not(.show-ribbons) .workspace-split.mod-left-split.is-collapsed + .mod-root,
-    body:not(.show-ribbons) .workspace-split.mod-left-split {
+    body:not(.show-ribbons) .workspace-split:is(.mod-left-split.is-collapsed + .mod-root, 
+    .mod-left-split) {
       margin-left: -30px;
     }
 
@@ -382,28 +381,23 @@ TODO:
       width: 0.95em;
     }
 
+    .horizontal-main-container { /* Used for ribbon settings button */
+      z-index: 16;
+    }
+
     body:not(.show-ribbons) .side-dock-settings .side-dock-ribbon-action:last-child {
-      background-color: var(--bg-ribbon);
-      backdrop-filter: blur(2px);
-      box-shadow: var(--background-secondary-alt);
-
       position: absolute;
-      bottom: 1.8em;
-      left: 0.4em;
-
-      padding: 5px 7px 0px 7px;
-
-      border: 1px solid  var(--main-accent-dark);
-      border-radius: 7px;
-
+      bottom: 0.0rem;
+      left: 0.3rem;
+      z-index: 0;
+      padding: 0;
       visibility: visible;
     }
 
     body:not(.show-ribbons) .side-dock-settings .side-dock-ribbon-action:last-child:hover {
-      background-color: var(--bg-ribbon);
       backdrop-filter: blur(2px);
       color:var(--main-accent-light);
-      transition: background-color 300ms;
+      transition: background-color 300ms, blur 300ms;
     }
 
     .hide-settings-button:not(.show-ribbons) .side-dock-settings .side-dock-ribbon-action:last-child {
@@ -618,18 +612,17 @@ TODO:
 
       /* #region *..........................3.5.4.1. General */
 
-      .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer, 
-      .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content, 
-      .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row), 
-      .markdown-preview-view.is-readable-line-width .markdown-preview-sizer { /* <- Note width */
-        max-width: 1200px;
-        margin-right: auto;
+      .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+      .markdown-source-view.mod-cm6.is-readable-line-width :is(
+      :not(.is-rtl) .cm-contentContainer, 
+      .is-line-wrap :is(.cm-content, .cm-line:not(.HyperMD-table-row)) ) { /* <- Note width */
+        max-width: var(--note-width);
       }
 
       .markdown-preview-section, 
       .markdown-source-view,
       .markdown-reading-view, 
-      .cm-line{
+      .cm-line {
         font-size: var(--note-font-size);
         background-color: var(--bg-note);
       }
@@ -1706,16 +1699,22 @@ settings:
     default: false
   -
     id: note-font-size
-    title: Editor Font Size
+    title: Editor Font Size (rem)
     type: variable-number
     default: 1.0
-    format: 'em'
+    format: 'rem'
+  -
+    id: note-width
+    title: Note width (px)
+    type: variable-number
+    default: 1200
+    format: 'px'
   -
     id: active-line-font-size
     title: Active Line Font Size
     type: variable-number
     default: 1.02
-    format: 'em'
+    format: 'rem'
   - 
     id: General-colors-settings
     title: General Colors
@@ -1956,7 +1955,7 @@ settings:
     title: 'Header 2 Size:'
     type: variable-number
     default: 1.6
-    format: 'em'
+    format: 'rem'
   -
     id: header-2-weight
     title: 'Header 2 Weight:'
@@ -1993,7 +1992,7 @@ settings:
     title: 'Header 3 Size:'
     type: variable-number
     default: 1.37
-    format: 'em'
+    format: 'rem'
   -
     id: header-3-weight
     title: 'Header 3 Weight:'
@@ -2030,7 +2029,7 @@ settings:
     title: 'Header 4 Size:'
     type: variable-number
     default: 1.25
-    format: 'em'
+    format: 'rem'
   -
     id: header-4-weight
     title: 'Header 4 Weight:'
@@ -2067,7 +2066,7 @@ settings:
     title: 'Header 5 Size:'
     type: variable-number
     default: 1.12
-    format: 'em'
+    format: 'rem'
   -
     id: header-5-weight
     title: 'Header 5 Weight:'
@@ -2104,7 +2103,7 @@ settings:
     title: 'Header 6 Size:'
     type: variable-number
     default: 1.08
-    format: 'em'
+    format: 'rem'
   -
     id: header-6-weight
     title: 'Header 6 Weight:'
