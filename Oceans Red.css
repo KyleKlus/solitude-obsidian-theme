@@ -57,6 +57,7 @@ TODO:
   --url-hover-color: #6fe2ff;
   --note-link-color: var(--main-accent);
   --note-link-hover-color: var(--main-accent-light);
+  --note-link-hover-bg-color: #1d2833;
   --tag-color:#95b4c2;
   --tag-hover-color: #27cbd1;
   --bg-tag:#16375c;
@@ -81,6 +82,7 @@ TODO:
   --text-highlight-bg: rgba(255, 255, 0, 0.4); /*Search Matches*/
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Active Search Match (Preview Mode)*/
   --text-selection: var(--main-accent-dark); /*Text Selections*/
+  --text-selection-color: rgb(202, 163, 163);
 
   --interactive-normal: var(--main-accent-dark); /*Button Color*/
   --interactive-hover: var(--main-accent); /*Button Hovered Color*/
@@ -791,10 +793,22 @@ TODO:
 
         /* #endregion */
 
+      .markdown-source-view.mod-cm6 .cm-selection {
+        background-color: var(--text-selection);
+        color: var(--text-selection-color);
+        border-radius: 2px;
+      }
+      
       .markdown-preview-section li, 
       .cm-content .HyperMD-list-line{
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+
+      .markdown-source-view.mod-cm6 .list-bullet:after {
+        left: 0;
+        content: var(--list-bullet-sign);
+
       }
       
       .markdown-embed, 
@@ -1102,26 +1116,23 @@ TODO:
       /* #region *..........................3.5.4.5. Links */
 
       .cm-hmd-embed.cm-hmd-internal-link.cm-quote, 
-      .cm-s-obsidian .cm-line .cm-hmd-internal-link.cm-link-alias, 
-      .cm-s-obsidian .cm-line .is-unresolved,
+      .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link.cm-link-alias, .is-unresolved),
       .markdown-preview-section a.internal-link{
         color: var(--note-link-color);
-        padding: 3px;
       }
 
       .cm-hmd-embed.cm-hmd-internal-link.cm-quote:hover, 
-      .cm-s-obsidian .cm-line .cm-hmd-internal-link:hover, 
-      .cm-s-obsidian .cm-line .is-unresolved:hover,
+      .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link:hover, .is-unresolved:hover),
       .markdown-preview-section a.internal-link:hover{
         color: var(--note-link-hover-color);
-        background-color: var(--main-accent-dark);
+        background-color: var(--note-link-hover-bg-color);
         border-radius: 3px;
-        transition: all 400ms;
+        transition: background-color 400ms, 
+                    color 400ms;
       }
 
       .popover {
-        border: 1px solid var(--main-accent-dark);
-        box-shadow: 0 0px 20px rgb(0 0 0 / 30%), 0 10px 10px rgb(0 0 0 / 28%);
+        box-shadow: 0 0 2rem rgb(0 0 0 / 30%), 0 10px 10px rgb(0 0 0 / 28%);
       }
 
         /* #region *..........................3.5.4.5.1. URL */
