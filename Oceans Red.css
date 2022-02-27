@@ -1,7 +1,6 @@
 /*
 TODO:
 - Add a option to highlight custom tags
-- Add a option to switch to export mode (change everything to a normal doc)
 - Add an option to lighten the formatting symbols
 
 */
@@ -215,7 +214,7 @@ body:is(.is-export-mode) .markdown-preview-view {
   .status-bar{
     border-top: 1px solid var(--main-accent-dark);
     background-color: var(--bg-title-bar);
-    min-height: 26px;
+    min-height: 29px;
     max-height: 26px;
     padding: 2px 20px;
   }
