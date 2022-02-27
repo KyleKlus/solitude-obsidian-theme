@@ -72,6 +72,7 @@ TODO:
   --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
   
   --text-normal: #cfcdcd; /*Text body of note*/
+  --text-note: var(--text-normal);
   --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--main-accent); /*Links*/
   --text-accent-hover: var(--main-accent-light); /*Links hover*/
@@ -153,6 +154,32 @@ TODO:
 
   font-family: 'Fira Code';
   font-weight: 300;
+}
+
+body:is(.is-export-mode) {
+  --bg-note: #ffffff;
+  --bg-quote: #f3f3f3;
+  --main-accent-dark: #993333;
+  --text-note: #000000;
+  
+  --header-1-color: var(--text-note);
+  --header-2-color: var(--text-note);
+  --header-3-color: var(--text-note);
+  --header-4-color: var(--text-note);
+  --header-5-color: var(--text-note);
+  --header-6-color: var(--text-note);
+
+  --bold-color: var(--text-note);
+  --italic-color: var(--text-note);
+  --math-text-color: var(--text-note);
+}
+
+body:is(.is-export-mode) .markdown-preview-view {
+  color: var(--text-note);
+}
+
+.cm-embed-block {
+  color: var(--text-note);
 }
 
 /* #endregion */
@@ -636,13 +663,13 @@ TODO:
         border-right: 1px dotted var(--text-faint) !important;
       }
 
-      .cm-line:hover { /* Line Hover */
+      body:not(.is-export-mode) .cm-line:hover { /* Line Hover */
         background-color: var(--bg-line-hover);
         transition: all 200ms;
         border-radius: 5px;
       }
       
-      div.cm-active.cm-line /* Active Line */ {
+      body:not(.is-export-mode) div.cm-active.cm-line /* Active Line */ {
         background-color: var(--bg-line-active);
         box-shadow: 0 0px 20px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
         transform: translate3d(0px, -1px, 0px);
@@ -650,14 +677,14 @@ TODO:
         border-radius: 5px;
       }
 
-      .HyperMD-quote.cm-active.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line {
+      body:not(.is-export-mode) .HyperMD-quote.cm-active.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line {
         transform: translate3d(2px, -3px, 0px);
-        background-color: var(--bg-line-hover);
+        background-color: var(--bg-quote);
         box-shadow: 0 0px 20px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
         transition: all 200ms;
       }
 
-      .HyperMD-quote.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line:hover{
+      body:not(.is-export-mode) .HyperMD-quote.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line:hover{
         background-color: var(--bg-line-hover);
         transition: all 200ms;
       }
@@ -666,6 +693,8 @@ TODO:
         border-left: 3px solid transparent;
         border-right: 3px solid transparent;
         padding-left: 5px;
+        color: var(--text-note);
+        
       }
 
       /* #endregion |3.5.4.2. Lines  */
@@ -1689,10 +1718,10 @@ settings:
     level: 1
     collapsed: false
   -
-    id: show-file-explorer-decoration
-    title: Toggle File Explorer Decoration
+    id: is-export-mode
+    title: Toggle Export Mode
     type: class-toggle
-    default: true
+    default: false
   -
     id: show-ribbons
     title: Toggle Ribbons
@@ -1712,7 +1741,7 @@ settings:
     format: 'px'
   -
     id: active-line-font-size
-    title: Active Line Font Size
+    title: Active Line Font Size (rem)
     type: variable-number
     default: 1.01
     format: 'rem'
