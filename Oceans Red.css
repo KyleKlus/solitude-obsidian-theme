@@ -683,7 +683,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         transition: all 200ms;
       }
 
-      body:not(.is-export-mode) .HyperMD-quote.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line:hover{
+      body:not(.is-export-mode) body:is(.is-hover-effect-on) .HyperMD-quote.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line:hover{
         background-color: var(--bg-line-hover);
         transition: all 200ms;
       }
@@ -708,10 +708,10 @@ body:is(.is-export-mode) .markdown-preview-view {
           font-size: small;
         }
 
-        .cm-header-1.cm-header-1, 
+        .cm-header-1.cm-header-1,
         .markdown-preview-view h1 {
           color: var(--header-1-color);
-          font-size: var(--header-1-size);
+          
           font-weight: var(--header-1-weight);
           text-align: var(--header-1-alignment);
           /*border-bottom: 1px solid var(--horizontal-line-color);
@@ -721,66 +721,67 @@ body:is(.is-export-mode) .markdown-preview-view {
 
         .HyperMD-header-1 {
           text-align: var(--header-1-alignment);
+          font-size: var(--header-1-size);
         }
 
         .cm-header-2.cm-header-2, 
         .markdown-preview-view h2 {
           color: var(--header-2-color);
-          font-size: var(--header-2-size);
           font-weight: var(--header-2-weight);
           text-align: var(--header-2-alignment);
         }
 
         .HyperMD-header-2 {
           text-align: var(--header-2-alignment);
+          font-size: var(--header-2-size);
         }
 
         .cm-header-3.cm-header-3, 
         .markdown-preview-view h3 {
           color: var(--header-3-color);
-          font-size: var(--header-3-size);
           font-weight: var(--header-3-weight);
           text-align: var(--header-3-alignment);
         }
 
         .HyperMD-header-3 {
           text-align: var(--header-3-alignment);
+          font-size: var(--header-3-size);
         }
 
         .cm-header-4.cm-header-4, 
         .markdown-preview-view h4 {
           color: var(--header-4-color);
-          font-size: var(--header-4-size);
           font-weight: var(--header-4-weight);
           text-align: var(--header-4-alignment);
         }
 
         .HyperMD-header-4 {
           text-align: var(--header-4-alignment);
+          font-size: var(--header-4-size);
         }
 
         .cm-header-5.cm-header-5, 
         .markdown-preview-view h5 {
           color: var(--header-5-color);
-          font-size: var(--header-5-size);
           font-weight: var(--header-5-weight);
           text-align: var(--header-5-alignment);
         }
 
         .HyperMD-header-5 {
           text-align: var(--header-5-alignment);
+          font-size: var(--header-5-size);
         }
 
         .cm-header-6.cm-header-6, 
         .markdown-preview-view h6 {
           color: var(--header-6-color);
-          font-size: var(--header-6-size);
           font-weight: var(--header-6-weight);
           text-align: var(--header-6-alignment);
         }
 
         .HyperMD-header-6 {
           text-align: var(--header-6-alignment);
+          font-size: var(--header-6-size);
         }
 
         /* #endregion */
@@ -1721,6 +1722,16 @@ settings:
     title: Toggle Export Mode
     type: class-toggle
     default: false
+  -
+    id: is-hover-effect-on
+    title: Toggle Hover Effect in Editor
+    type: class-toggle
+    default: true
+  -
+    id: is-active-effect-on
+    title: Toggle Aktive Line Effect in Editor
+    type: class-toggle
+    default: true
   -
     id: show-ribbons
     title: Toggle Ribbons
