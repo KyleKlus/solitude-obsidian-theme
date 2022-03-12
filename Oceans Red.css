@@ -250,6 +250,10 @@ body:is(.is-export-mode) .markdown-preview-view {
       box-shadow: 0 0px 28px rgb(0 0 0 / 40%), 0 10px 10px rgb(0 0 0 / 32%);
     }
 
+    .community-plugin-readme.markdown-preview-view {
+      font-size: var(--note-font-size);
+    }
+
     /* #endregion */
 
     /* #region *..........................3.3.2. Settings modal */
