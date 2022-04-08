@@ -26,7 +26,7 @@ TODO:
 
   --bg-input: #0f0f0f;
 
-  --bg-note:var(--bg-leaf-content); /*1a1c1f*/
+  --bg-note: hsl(222, 25%, 9%); /*1a1c1f*/
   --bg-line-hover:#1e1f24;
   --bg-line-active:var(--bg-leaf-head);
 
@@ -36,7 +36,7 @@ TODO:
 
   --bg-task-hover:#202833;
 
-  --bg-quote:#0F121A;
+  --bg-quote:hsl(224, 27%, 6%);
 
   --header-1-color: #bbe66d;
   --header-2-color: #5ac760;
@@ -669,7 +669,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       .cm-line{
         border-left: 3px solid transparent;
         border-right: 3px solid transparent;
-        padding-left: 5px !important;
+        padding-left: 5px;
         background-color: transparent;
       }
 
@@ -876,9 +876,14 @@ body:is(.is-export-mode) .markdown-preview-view {
         padding: 5px;
       }
 
+      .callout-content {
+        background-color: var(--bg-quote);
+      }
+
       .callout-content p {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+        
       }
 
       .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
