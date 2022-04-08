@@ -864,7 +864,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         padding: 0px 10px 10px 10px;
       }
 
-      .markdown-source-view.mod-cm6 .cm-preview-code-block .cm-embed-block {
+      .markdown-source-view.mod-cm6 .cm-preview-code-block.cm-embed-block {
         padding: 18px 4px;
       }
 
