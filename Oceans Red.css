@@ -10,25 +10,25 @@ TODO:
 :root, .theme-dark {
   /* Theme Variables*/
   --main-accent: #c93939;
-  --main-accent-light: #fc4e4e;
-  --main-accent-dark: #641e1e;
+  --main-accent-light: #CF4F4F; /*#fc4e4e*/
+  --main-accent-dark: #601A1A;
 
-  --bg-title-bar:#17171a;
+  --bg-title-bar:#121215;
   --bg-title-bar-hover:#232327;
 
-  --bg-workspace:#101116;
+  --bg-workspace:#07090D;/*#101116*/
 
-  --bg-ribbon: #0e0e0ea6;
+  --bg-ribbon: var(--bg-workspace);
 
   --bg-leaf-head-active: var(--bg-leaf-content); 
-  --bg-leaf-head:#171a1d;
-  --bg-leaf-content:#1e2125; 
+  --bg-leaf-head:#0F121A; /*#171a1d*/
+  --bg-leaf-content:#171B23; /*1e2125*/ 
 
   --bg-input: #0f0f0f;
 
-  --bg-note:#1a1c1f; 
+  --bg-note:var(--bg-leaf-content); /*1a1c1f*/
   --bg-line-hover:#1e1f24;
-  --bg-line-active:#212529;
+  --bg-line-active:var(--bg-leaf-head);
 
   --bg-embed: var(--bg-note);
 
@@ -36,7 +36,7 @@ TODO:
 
   --bg-task-hover:#202833;
 
-  --bg-quote:#212429;
+  --bg-quote:#0F121A;
 
   --header-1-color: #bbe66d;
   --header-2-color: #5ac760;
@@ -70,7 +70,7 @@ TODO:
   --background-secondary: var(--bg-leaf-head); /*Sidebar background*/
   --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
   
-  --text-normal: #cfcdcd; /*Text body of note*/
+  --text-normal: #FFF8F0cd; /*Text body of note*/
   --text-note: var(--text-normal);
   --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--main-accent); /*Links*/
@@ -269,7 +269,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     }
     
     .modal.mod-settings {
-      width: 60vw;
+      width: 80vw;
       max-width: 80vw;
     }
     
@@ -712,8 +712,13 @@ body:is(.is-export-mode) .markdown-preview-view {
           font-size: small;
         }
 
+        .markdown-rendered .callout-title-inner :is(h1, h2, h3, h4, h5, h6) {
+          margin: 0 0;
+        }
+
         .cm-header-1.cm-header-1,
-        .markdown-preview-view h1 {
+        .markdown-preview-view h1,
+        .callout-title-inner h1 {
           color: var(--header-1-color);
           
           font-weight: var(--header-1-weight);
@@ -729,7 +734,8 @@ body:is(.is-export-mode) .markdown-preview-view {
         }
 
         .cm-header-2.cm-header-2, 
-        .markdown-preview-view h2 {
+        .markdown-preview-view h2,
+        .callout-title-inner h2 {
           color: var(--header-2-color);
           font-weight: var(--header-2-weight);
           text-align: var(--header-2-alignment);
@@ -741,7 +747,8 @@ body:is(.is-export-mode) .markdown-preview-view {
         }
 
         .cm-header-3.cm-header-3, 
-        .markdown-preview-view h3 {
+        .markdown-preview-view h3,
+        .callout-title-inner h3 {
           color: var(--header-3-color);
           font-weight: var(--header-3-weight);
           text-align: var(--header-3-alignment);
@@ -753,7 +760,8 @@ body:is(.is-export-mode) .markdown-preview-view {
         }
 
         .cm-header-4.cm-header-4, 
-        .markdown-preview-view h4 {
+        .markdown-preview-view h4,
+        .callout-title-inner h4 {
           color: var(--header-4-color);
           font-weight: var(--header-4-weight);
           text-align: var(--header-4-alignment);
@@ -765,7 +773,8 @@ body:is(.is-export-mode) .markdown-preview-view {
         }
 
         .cm-header-5.cm-header-5, 
-        .markdown-preview-view h5 {
+        .markdown-preview-view h5,
+        .callout-title-inner h5 {
           color: var(--header-5-color);
           font-weight: var(--header-5-weight);
           text-align: var(--header-5-alignment);
@@ -777,7 +786,8 @@ body:is(.is-export-mode) .markdown-preview-view {
         }
 
         .cm-header-6.cm-header-6, 
-        .markdown-preview-view h6 {
+        .markdown-preview-view h6,
+        .callout-title-inner h6 {
           color: var(--header-6-color);
           font-weight: var(--header-6-weight);
           text-align: var(--header-6-alignment);
@@ -848,6 +858,15 @@ body:is(.is-export-mode) .markdown-preview-view {
       
       .markdown-embed .markdown-preview-view {
         padding: 0px 10px 10px 10px;
+      }
+
+      .callout-title {
+        padding: 5px;
+      }
+
+      .callout-content p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
       }
 
       .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
