@@ -666,6 +666,13 @@ body:is(.is-export-mode) .markdown-preview-view {
         border-right: 1px dotted var(--text-faint) !important;
       }
 
+      .cm-line{
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        padding-left: 5px !important;
+        background-color: transparent;
+      }
+
       body:not(.is-export-mode) .cm-line:hover { /* Line Hover */
         background-color: var(--bg-line-hover);
         transition: all 200ms;
@@ -692,13 +699,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         transition: all 200ms;
       }
       
-      .cm-line.cm-line.cm-line.cm-line{
-        border-left: 3px solid transparent;
-        border-right: 3px solid transparent;
-        padding-left: 5px;
-        color: var(--text-note);
-        
-      }
+      
 
       /* #endregion |3.5.4.2. Lines  */
 
@@ -712,9 +713,12 @@ body:is(.is-export-mode) .markdown-preview-view {
           font-size: small;
         }
 
-        .markdown-rendered .callout-title-inner :is(h1, h2, h3, h4, h5, h6) {
+        .markdown-rendered .callout-title-inner :is(h1, h2, h3, h4, h5, h6),
+        .markdown-rendered .callout-content :is(h1, h2, h3, h4, h5, h6) {
           margin: 0 0;
         }
+
+        
 
         .cm-header-1.cm-header-1,
         .markdown-preview-view h1,
@@ -858,6 +862,10 @@ body:is(.is-export-mode) .markdown-preview-view {
       
       .markdown-embed .markdown-preview-view {
         padding: 0px 10px 10px 10px;
+      }
+
+      .cm-s-obsidian .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
+        background-color: var(--bg-quote);
       }
 
       .callout-title {
