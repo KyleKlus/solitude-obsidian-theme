@@ -26,7 +26,7 @@ TODO:
 
   --bg-input: #0f0f0f;
 
-  --bg-note: hsl(222, 25%, 9%); /*1a1c1f*/
+  --bg-note: #12151c; /*1a1c1f*/
   --bg-line-hover:#1e1f24;
   --bg-line-active:var(--bg-leaf-head);
 
@@ -36,7 +36,7 @@ TODO:
 
   --bg-task-hover:#202833;
 
-  --bg-quote:hsl(224, 27%, 6%);
+  --bg-quote:#0b0d13;
 
   --header-1-color: #bbe66d;
   --header-2-color: #5ac760;
@@ -718,11 +718,10 @@ body:is(.is-export-mode) .markdown-preview-view {
           margin: 0 0;
         }
 
-        
-
         .cm-header-1.cm-header-1,
         .markdown-preview-view h1,
-        .callout-title-inner h1 {
+        .callout-title-inner h1,
+        .callout-content h1 {
           color: var(--header-1-color);
           
           font-weight: var(--header-1-weight);
@@ -732,72 +731,89 @@ body:is(.is-export-mode) .markdown-preview-view {
           border-radius: 8px;*/
         }
 
-        .HyperMD-header-1 {
+        .HyperMD-header-1,
+        .callout-title-inner h1,
+        .callout-content h1 {
           text-align: var(--header-1-alignment);
           font-size: var(--header-1-size);
         }
 
         .cm-header-2.cm-header-2, 
         .markdown-preview-view h2,
-        .callout-title-inner h2 {
+        .callout-title-inner h2,
+        .callout-content h2 {
           color: var(--header-2-color);
           font-weight: var(--header-2-weight);
           text-align: var(--header-2-alignment);
         }
 
-        .HyperMD-header-2 {
+        .HyperMD-header-2,
+        .callout-title-inner h2,
+        .callout-content h2 {
           text-align: var(--header-2-alignment);
           font-size: var(--header-2-size);
         }
 
         .cm-header-3.cm-header-3, 
         .markdown-preview-view h3,
-        .callout-title-inner h3 {
+        .callout-title-inner h3,
+        .callout-content h3 {
           color: var(--header-3-color);
           font-weight: var(--header-3-weight);
           text-align: var(--header-3-alignment);
         }
 
-        .HyperMD-header-3 {
+        .HyperMD-header-3,
+        .callout-title-inner h3,
+        .callout-content h3 {
           text-align: var(--header-3-alignment);
           font-size: var(--header-3-size);
         }
 
         .cm-header-4.cm-header-4, 
         .markdown-preview-view h4,
-        .callout-title-inner h4 {
+        .callout-title-inner h4,
+        .callout-content h4 {
           color: var(--header-4-color);
           font-weight: var(--header-4-weight);
           text-align: var(--header-4-alignment);
         }
 
-        .HyperMD-header-4 {
+        .HyperMD-header-4,
+        .callout-title-inner h4,
+        .callout-content h4 {
           text-align: var(--header-4-alignment);
           font-size: var(--header-4-size);
         }
 
         .cm-header-5.cm-header-5, 
         .markdown-preview-view h5,
-        .callout-title-inner h5 {
+        .callout-title-inner h5,
+        .callout-content h5 {
           color: var(--header-5-color);
           font-weight: var(--header-5-weight);
           text-align: var(--header-5-alignment);
         }
 
-        .HyperMD-header-5 {
+        .HyperMD-header-5,
+        .callout-title-inner h5,
+        .callout-content h5 {
           text-align: var(--header-5-alignment);
           font-size: var(--header-5-size);
         }
 
         .cm-header-6.cm-header-6, 
         .markdown-preview-view h6,
-        .callout-title-inner h6 {
+        .callout-title-inner h6,
+        .callout-content h6 {
           color: var(--header-6-color);
           font-weight: var(--header-6-weight);
           text-align: var(--header-6-alignment);
         }
 
-        .HyperMD-header-6 {
+        .HyperMD-header-6,
+        .callout-title-inner h6,
+        .callout-content h6 {
           text-align: var(--header-6-alignment);
           font-size: var(--header-6-size);
         }
