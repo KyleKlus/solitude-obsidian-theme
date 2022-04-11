@@ -3,7 +3,7 @@
 
 :root, .theme-dark {
   --main-accent: #c93939;
-  --main-accent-light: #CF4F4F; /*#fc4e4e*/
+  --main-accent-light: #fc4e4e; /*#fc4e4e*/
   --main-accent-dark: #601A1A;
 
   --bg-title-bar:#0d0d10;
@@ -88,6 +88,24 @@
 /* #endregion */
 
 /* #region *..........................2. Fonts */
+
+:root :is(.is-mobile) {
+  --header-1-size: 1.43rem;
+
+  --header-2-size: 1.18rem;
+
+  --header-3-size: 1.00rem;
+
+  --header-4-size: 0.88rem;
+
+  --header-5-size: 0.75rem;
+
+  --header-6-size: 0.7rem;
+
+  --note-font-size: 0.7rem;
+
+  --active-line-font-size: 0.71rem;
+}
 
 :root {
   --header-1-size: 1.8rem;
@@ -236,6 +254,23 @@ body:is(.is-export-mode) .markdown-preview-view {
     transform: translate3d(2px, 1px, 0px);
     transition: all 200ms;
   }
+
+  /* #endregion */
+
+  /* #region *..........................3.2a Mobile Toolbar */
+
+    .mobile-toolbar,
+    .mobile-toolbar-options-container {
+      height: 40px;
+    }
+
+    .mobile-toolbar-option {
+      color: var(--main-accent);
+    }
+
+    .mobile-toolbar-option:hover {
+      color: var(--main-accent-light);
+    }
 
   /* #endregion */
 
@@ -415,16 +450,16 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     /* #region *..........................3.5.1. Ribbons */
 
-    body:not(.show-ribbons) .workspace-ribbon.mod-left {
+    body:not(.show-ribbons, .is-mobile) .workspace-ribbon.mod-left {
       visibility: hidden;
     }
 
-    body:not(.show-ribbons) .workspace-split:is(.mod-left-split.is-collapsed + .mod-root, 
+    body:not(.show-ribbons, .is-mobile) .workspace-split:is(.mod-left-split.is-collapsed + .mod-root, 
     .mod-left-split) {
       margin-left: -30px;
     }
 
-    body:not(.show-ribbons) .side-dock-settings .side-dock-ribbon-action:last-child svg {
+    body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child svg {
       height: 0.95em;
       width: 0.95em;
     }
@@ -433,7 +468,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       z-index: 16;
     }
 
-    body:not(.show-ribbons) .side-dock-settings .side-dock-ribbon-action:last-child {
+    body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child {
       position: absolute;
       bottom: 0.0rem;
       left: 0.3rem;
@@ -442,23 +477,27 @@ body:is(.is-export-mode) .markdown-preview-view {
       visibility: visible;
     }
 
-    body:not(.show-ribbons) .side-dock-settings .side-dock-ribbon-action:last-child:hover {
+    body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child:hover {
       backdrop-filter: blur(2px);
       color:var(--main-accent-light);
       transition: background-color 300ms, blur 300ms;
     }
 
-    .hide-settings-button:not(.show-ribbons) .side-dock-settings .side-dock-ribbon-action:last-child {
+    .hide-settings-button:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child {
       display: none;
     }
 
     /* hide ribbons, when the setting is chosen */
-    body:not(.show-ribbons) .workspace-ribbon.mod-right {
+    body:not(.show-ribbons, .is-mobile) .workspace-ribbon.mod-right {
       display: none;
     }
 
     .side-dock-ribbon-action svg {
       width: 1.05rem;
+    }
+
+    .side-dock-ribbon-action:hover {
+      color: var(--main-accent-light);
     }
 
     .workspace-ribbon {
@@ -513,6 +552,19 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     /* #endregion |4.1. Ribbons */
 
+    /* #region *..........................3.5.1.a Workspace Drawer */
+
+      .workspace-drawer {
+        max-width: none;
+        width: 100vw;
+      }
+
+      .workspace-drawer-tab-option-item-icon {
+        color: var(--main-accent);
+      }
+
+    /* #endregion */
+
     /* #region *..........................3.5.2. Workspace-Leaf */
 
       /* #region *..........................3.5.2.1. View Header */
@@ -560,7 +612,11 @@ body:is(.is-export-mode) .markdown-preview-view {
       color: var(--main-accent);
     }
 
-    .workspace-ribbon-collapse-btn:hover, .view-header-icon:hover, .view-action:hover {
+    .workspace-ribbon-collapse-btn:hover, 
+    .is-mobile .view-header-icon:hover, 
+    .is-mobile .view-action:hover,
+    .view-header-icon:hover, 
+    .view-action:hover {
       color: var(--main-accent-light);
     }
 
