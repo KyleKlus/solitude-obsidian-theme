@@ -9,7 +9,7 @@
   --bg-title-bar:#0d0d10;
   --bg-title-bar-button-hover:#232327;
 
-  --bg-workspace:#07090D;
+  --bg-workspace:#040507;
   
   --bg-ribbon: var(--bg-workspace);
 
@@ -199,19 +199,38 @@ body:is(.is-export-mode) .markdown-preview-view {
 /* #endregion */
 
 /* #region *..........................3. App */
-
+  
+  body,
   .app-container {
     background-color: var(--bg-workspace);
   }
 
   /* #region *..........................3.1. Titlebar*/
 
-  .titlebar {
-    background-color: var(--bg-title-bar);
+  body .titlebar {
+    background-color: transparent;
   }
 
   .titlebar-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0px auto 0px auto;
+    width: fit-content;
+    padding: 0 10px;
+    letter-spacing: unset;
+    opacity: 1;
+  }
+
+  .titlebar-text,
+  .titlebar-button-container {
     color: var(--main-accent);
+    background-color: var(--bg-leaf-head);
+    border-radius: var(--radius-medium);
+    border-radius: var(--radius-medium);
+    height: 22px;
   }
 
   .titlebar-button {
@@ -252,7 +271,8 @@ body:is(.is-export-mode) .markdown-preview-view {
   .status-bar-item.mod-clickable:hover{
     color: var(--main-accent-light);
     /* background-color: var(--bg-title-bar-button-hover); */
-    transform: translate3d(2px, 1px, 0px);
+    /* transform: translate3d(2px, 1px, 0px); */
+    transform: scale(1.05, 1.05);
     transition: all 200ms;
   }
 
@@ -661,8 +681,12 @@ body:is(.is-export-mode) .markdown-preview-view {
     .workspace-tab-header-container,
     .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
     .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+    .workspace-tab-container-before.is-before-active, 
+    .workspace-tab-container-after.is-after-active, 
+    .workspace-tab-header.is-before-active, 
+    .workspace-tab-header.is-after-active,
     .workspace-tabs {
-      background-color: var(--bg-workspace);
+      background-color: transparent;
     }
 
     .workspace-tab-container-before{
@@ -685,12 +709,9 @@ body:is(.is-export-mode) .markdown-preview-view {
       
     }
 
-    .workspace-tab-container-before.is-before-active, 
-    .workspace-tab-container-after.is-after-active, 
-    .workspace-tab-header.is-active, 
-    .workspace-tab-header.is-before-active, 
-    .workspace-tab-header.is-after-active {
-      background-color: var(--bg-leaf-head-active);
+    
+    .workspace-tab-header.is-active {
+      background-color: var(--bg-leaf-head);
       
     }
 
