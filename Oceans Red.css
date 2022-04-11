@@ -20,8 +20,8 @@
   --bg-input: #0f0f0f;
 
   --bg-note: #12151c;
-  --bg-line-hover:#1e1f24;
-  --bg-line-active:var(--bg-leaf-head);
+  --bg-line-hover: var(--bg-leaf-head); /* 1e1f24 */
+  --bg-line-active: #0b0d13;
 
   --bg-embed: var(--bg-note);
 
@@ -155,9 +155,9 @@
   --list-bullet-sign: "- ";
   --note-width: 1200px;
   --panel-spacing: 4px;
-  --radius-big: 15px;
-  --radius-medium: 5px;
-  --radius-small: 3px;
+  --radius-big: 20px;
+  --radius-medium: 10px;
+  --radius-small: 5px;
 }
 
 * {
@@ -199,6 +199,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 /* #endregion */
 
 /* #region *..........................3. App */
+
   .app-container {
     background-color: var(--bg-workspace);
   }
@@ -242,7 +243,7 @@ body:is(.is-export-mode) .markdown-preview-view {
   .status-bar-item{
     color: var(--main-accent);
     background-color: var(--bg-leaf-content);
-    border-radius: 5px;
+    border-radius: var(--radius-medium);
     max-height: 20px;
     margin: auto calc(var(--panel-spacing) / 2);
     padding: 0px 5px;
@@ -298,7 +299,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     
     .modal {
       border-width: 0px;
-      border-radius: 15px;
+      border-radius: var(--radius-big);
     }
 
     .modal-close-button {
@@ -383,7 +384,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       background: var(--bg-input);
       border: 1px solid var(--main-accent-dark);
       font-size: 0.8em;
-      border-radius: 2px;
+      border-radius: var(--radius-small);
     }
     
     input[type='text']:active, input[type='search']:active, input[type='email']:active, input[type='password']:active, input[type='number']:active, input[type='text']:focus, input[type='search']:focus, input[type='email']:focus, input[type='password']:focus, input[type='number']:focus {
@@ -408,7 +409,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .dropdown {
       border: 1px solid var(--main-accent-dark);
-      border-radius: 2px;
+      border-radius: var(--radius-small);
       font-size: 0.8em;
       background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.4' height='292.4'%3E%3Cpath fill='%23666' d='M287 69.4a17.6 17.6 0 0 0-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4A17.6 17.6 0 0 0 0 82.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 95c3.5-3.5 5.4-7.8 5.4-12.8 0-5-1.9-9.2-5.5-12.8z'/%3E%3C/svg%3E");
     }
@@ -428,11 +429,11 @@ body:is(.is-export-mode) .markdown-preview-view {
     
     /* #region *..........................3.4.4. Checkbox */
     .checkbox-container {
-      border-radius: 2px;
+      border-radius: var(--radius-medium);
     }
     
     .checkbox-container:after {
-      border-radius: 2px;
+      border-radius: var(--radius-small);
       transform: translate3d(2px, 0, 0);
     }
 
@@ -752,7 +753,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       body:not(.is-export-mode) .cm-line:hover { /* Line Hover */
         background-color: var(--bg-line-hover);
         transition: all 200ms;
-        border-radius: 5px;
+        border-radius: var(--radius-medium);
       }
       
       body:not(.is-export-mode) div.cm-active.cm-line /* Active Line */ {
@@ -760,7 +761,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         box-shadow: 0 0px 20px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
         transform: translate3d(0px, -1px, 0px);
         transition: all 200ms;
-        border-radius: 5px;
+        border-radius: var(--radius-medium);
       }
 
       body:not(.is-export-mode) .HyperMD-quote.cm-active.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line {
@@ -926,7 +927,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       .markdown-source-view.mod-cm6 .cm-selection {
         background-color: var(--text-selection);
         color: var(--text-selection-color);
-        border-radius: 2px;
+        border-radius: var(--radius-small);
       }
       
       .markdown-preview-section li, 
@@ -947,7 +948,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       .cm-formatting .markdown-embed, 
       .cm-s-obsidian .file-embed  {
         border: 1px solid transparent!important;
-        border-radius: 5px!important;
+        border-radius: var(--radius-medium)!important;
         margin: 0px 0!important;
         background-color: var(--bg-embed);
       }
@@ -1010,7 +1011,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         background-color: var(--bg-highlight-color);
         color: var(--highlight-text-color);
         font-weight: bold;
-        border-radius: 3px;
+        border-radius: var(--radius-small);
       }
 
       .cm-s-obsidian span.cm-formatting-highlight {
@@ -1070,7 +1071,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       .markdown-preview-section a.tag{
         background-color: var(--bg-tag);
         padding: 1px 6px;
-        border-radius: 10px;
+        border-radius: var(--radius-big);
       }
       
       .cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover, 
@@ -1175,7 +1176,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         transition: background-color 200ms ease-out 0s;
         cursor: pointer;
         filter: none;
-        border-radius: 9px;
+        border-radius: var(--radius-big);
         background-color: var(--background-primary);
       }
 
@@ -1279,7 +1280,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       .markdown-preview-section a.internal-link:hover{
         color: var(--note-link-hover-color);
         background-color: var(--note-link-hover-bg-color);
-        border-radius: 3px;
+        border-radius: var(--radius-small);
         transition: background-color 400ms, 
                     color 400ms;
       }
