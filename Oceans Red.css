@@ -74,8 +74,8 @@
   --text-accent-hover: var(--main-accent-light); /*Links hover*/
   --text-faint: #666; /*Link brackets color & Gutter Numbers*/
 
-  --text-highlight-bg: #ffff0066; /*Search Matches*/
-  --text-highlight-bg-active: #ff800066; /*Active Search Match (Preview Mode)*/
+  --text-highlight-bg: #c939395d; /*Search Matches*/
+  --text-highlight-bg-active: #cc141467; /*Active Search Match (Preview Mode)*/
   --text-selection: var(--main-accent-dark); /*Text Selections*/
   --text-selection-color: #caa3a3;
 
@@ -253,7 +253,9 @@ body:is(.is-export-mode) .markdown-preview-view {
   .titlebar-button.mod-forward:hover, 
   .titlebar-button.mod-back:hover {
     background-color: var(--bg-title-bar-button-hover);
-    transition: background-color 300ms;
+    border-radius: var(--radius-medium);
+    transform: scale(1.05, 1.05);
+    transition: all 300ms;
   }
 
   /* #endregion */
@@ -384,6 +386,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover{
       background-color: var(--main-accent-dark);
       border-left-color: var(--main-accent-dark);
+      transform: scale(1.05, 1.05);
     }
 
     /* #endregion */
@@ -400,7 +403,8 @@ body:is(.is-export-mode) .markdown-preview-view {
     
     .clickable-icon:hover {
       color: var(--main-accent-light);
-      transition: background-color 300ms;
+      transform: scale(1.05, 1.05);
+      transition: all 300ms;
     }
     
     /* #endregion | 3.4.1. Icons */
@@ -443,7 +447,8 @@ body:is(.is-export-mode) .markdown-preview-view {
     
     .dropdown:hover{
       background-color: var(--main-accent-dark);
-      transition: background-color 200ms;
+      transform: scale(1.05, 1.05);
+      transition: all 200ms;
     }
     
     .dropdown option {
@@ -508,7 +513,8 @@ body:is(.is-export-mode) .markdown-preview-view {
     body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child:hover {
       backdrop-filter: blur(2px);
       color:var(--main-accent-light);
-      transition: background-color 300ms, blur 300ms;
+      transform: scale(1.05, 1.05);
+      transition: all 300ms, blur 300ms;
     }
 
     .hide-settings-button:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child {
@@ -526,6 +532,8 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .side-dock-ribbon-action:hover {
       color: var(--main-accent-light);
+      transform: scale(1.05, 1.05);
+      transition: all 300ms;
     }
 
     .workspace-ribbon {
@@ -570,7 +578,8 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .side-dock-ribbon-action:hover svg,
     .workspace-ribbon-collapse-btn:hover svg {
-      color: var(--alt-accent);
+      transform: scale(1.05, 1.05);
+      color: var(--main-accent-light);
     }
 
     .side-dock-ribbon-action:active svg,
@@ -664,7 +673,9 @@ body:is(.is-export-mode) .markdown-preview-view {
       .is-mobile .view-action:hover,
       .view-header-icon:hover, 
       .view-action:hover {
+        transform: scale(1.05, 1.05);
         color: var(--main-accent-light);
+        transition: all 300ms;
       }
 
       .workspace-leaf-resize-handle:hover {
@@ -732,16 +743,15 @@ body:is(.is-export-mode) .markdown-preview-view {
       padding: 0;
     }
 
-    
-
     .workspace-tab-container-inner .workspace-tab-header-inner:hover {
       color:var(--main-accent-light);
-      border-bottom: 1px solid var(--main-accent);
+      transform: scale(1.05, 1.05);
       transition: all 400ms;
     }
 
     .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
       border-bottom: none;
+      transform: scale(1.05, 1.05);
     }
 
     .nav-buttons-container .nav-action-button, 
@@ -1752,7 +1762,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .nav-buttons-container .nav-action-button:hover {
       color: var(--main-accent-light);
-      border-bottom-color:  var(--main-accent-light);
+      transform: scale(1.05, 1.05);
       transition: all 600ms;
     }
 
