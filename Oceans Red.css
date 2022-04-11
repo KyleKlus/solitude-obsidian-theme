@@ -6,12 +6,16 @@
   --main-accent-light: #fc4e4e; /*#fc4e4e*/
   --main-accent-dark: #601A1A;
 
+  --bg: #171B23;
+  --bg-dark: #0F121A;
+  --bg-darker: #0b0d13;
+
+  --bg-app: #040507;
+  
   --bg-title-bar:#0d0d10;
   --bg-title-bar-button-hover:#232327;
-
-  --bg-workspace:#040507;
   
-  --bg-ribbon: var(--bg-workspace);
+  --bg-ribbon: var(--bg-app);
 
   --bg-leaf-head-active: var(--bg-leaf-content); 
   --bg-leaf-head:#0F121A;
@@ -57,7 +61,7 @@
   
   /* Overidden Obsidian Variables */
 
-  --background-modifier-cover: var(--bg-workspace); /*Obsidian Title Bar Bg*/
+  --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
   --background-primary: var(--bg-note); /*Note background*/
   --background-primary-alt: var(--bg-leaf-content); /*Note Title background active*/
   --background-secondary: var(--bg-leaf-head); /*Sidebar background*/
@@ -70,8 +74,8 @@
   --text-accent-hover: var(--main-accent-light); /*Links hover*/
   --text-faint: #666; /*Link brackets color & Gutter Numbers*/
 
-  --text-highlight-bg: rgba(255, 255, 0, 0.4); /*Search Matches*/
-  --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Active Search Match (Preview Mode)*/
+  --text-highlight-bg: #ffff0066; /*Search Matches*/
+  --text-highlight-bg-active: #ff800066; /*Active Search Match (Preview Mode)*/
   --text-selection: var(--main-accent-dark); /*Text Selections*/
   --text-selection-color: #caa3a3;
 
@@ -80,8 +84,8 @@
   --interactive-accent: var(--main-accent-dark); /*Workspace Note Title Underline*/
   --interactive-accent-hover: var(--main-accent); /*Menu Button Hover*/
   
-  --scrollbar-bg: rgba(255, 255, 255, 0.05); /*Scrollbar Gutter Background*/
-  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1); /*Scrollbar Color*/
+  --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
+  --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
   --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/
 }
 
@@ -200,9 +204,15 @@ body:is(.is-export-mode) .markdown-preview-view {
 
 /* #region *..........................3. App */
   
-  body,
-  .app-container {
-    background-color: var(--bg-workspace);
+  body {
+    background-color: var(--bg-app);
+  }
+
+  .titlebar,
+  .status-bar,
+  .workspace-leaf-resize-handle,
+  .workspace-split:is(.mod-root, .mod-vertical, .mod-horizontal) {
+    background-color: transparent;
   }
 
   /* #region *..........................3.1. Titlebar*/
@@ -227,7 +237,7 @@ body:is(.is-export-mode) .markdown-preview-view {
   .titlebar-text,
   .titlebar-button-container {
     color: var(--main-accent);
-    background-color: var(--bg-leaf-head);
+    background-color: var(--bg-dark);
     border-radius: var(--radius-medium);
     border-radius: var(--radius-medium);
     height: 22px;
@@ -251,7 +261,6 @@ body:is(.is-export-mode) .markdown-preview-view {
   /* #region *..........................3.2. Status bar*/
   .status-bar{
     border-top: 0px solid var(--main-accent-dark);
-    background-color: var(--bg-workspace);
     max-height: 20px;
     padding: 0px 25px;
     margin-bottom: var(--panel-spacing);
@@ -261,7 +270,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
   .status-bar-item{
     color: var(--main-accent);
-    background-color: var(--bg-leaf-content);
+    background-color: var(--bg);
     border-radius: var(--radius-medium);
     max-height: 20px;
     margin: auto calc(var(--panel-spacing) / 2);
@@ -270,8 +279,6 @@ body:is(.is-export-mode) .markdown-preview-view {
 
   .status-bar-item.mod-clickable:hover{
     color: var(--main-accent-light);
-    /* background-color: var(--bg-title-bar-button-hover); */
-    /* transform: translate3d(2px, 1px, 0px); */
     transform: scale(1.05, 1.05);
     transition: all 200ms;
   }
@@ -573,7 +580,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     /* #endregion |4.1. Ribbons */
 
-    /* #region *..........................3.5.1.a Workspace Drawer */
+    /* #region *..........................3.5.2. Workspace Drawer */
 
       .workspace-drawer {
         max-width: none;
@@ -586,11 +593,33 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     /* #endregion */
 
+    /* #region *..........................3.5.3. Workspace-Split */
+      
+    .workspace-split:is(.mod-left-split, .mod-root, .mod-right-split) {
+      padding: calc(2 * var(--panel-spacing)) var(--panel-spacing);
+      border-bottom-left-radius: var(--radius-big);
+      border-bottom-right-radius: var(--radius-big);
+    }
+
+    .workspace-split.mod-left-split {
+      padding-left: calc(2 * var(--panel-spacing));
+    }
+
+    .workspace-split.mod-right-split {
+      padding-right: calc(2 * var(--panel-spacing));
+    }
+
+    .workspace-split:is(.mod-root, .mod-vertical, .mod-horizontal) {
+      border-radius: var(--radius-big);
+    }
+
+
+    /* #endregion */
+
     /* #region *..........................3.5.2. Workspace-Leaf */
 
       /* #region *..........................3.5.2.1. View Header */
 
-      .workspace-leaf.mod-active .view-header,
       .workspace-leaf.mod-active .view-header,
       .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
         border-bottom: 2px solid var(--main-accent-dark);
@@ -599,10 +628,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         
       }
 
-      .workspace-split.mod-vertical.mod-root {
-        background-color: var(--bg-workspace);
-        padding-top: 5px;
-      }
+      
 
       .workspace-leaf.mod-active .view-header-title-container::after,
       .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header-title-container.view-header-title-container::after {
@@ -620,59 +646,52 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       /* #endregion |3.5.2.1. View Header  */
 
-    .workspace-split.mod-left-split {
-      padding-left: 5px;
-    }
+      .workspace-split.mod-root:is(.mod-vertical, .mod-horizontal):not(.mod-left-split, .mod-right-split) > :not(:last-child) {
+        padding-right: calc(2 * var(--panel-spacing));
+      }
 
-    .workspace-split.mod-right-split {
-      padding-right:5px;
-      padding-left: 5px;
-    }
+      .workspace-split.mod-horizontal:not(.mod-left-split, .mod-right-split) > :not(.workspace-leaf:last-child) {
+        padding-bottom: calc(2 * var(--panel-spacing));
+      }
 
-    .workspace-ribbon-collapse-btn, .view-header-icon, .view-action {
-      color: var(--main-accent);
-    }
 
-    .workspace-ribbon-collapse-btn:hover, 
-    .is-mobile .view-header-icon:hover, 
-    .is-mobile .view-action:hover,
-    .view-header-icon:hover, 
-    .view-action:hover {
-      color: var(--main-accent-light);
-    }
+      .workspace-ribbon-collapse-btn, 
+      .view-header-icon, 
+      .view-action {
+        color: var(--main-accent);
+      }
 
-    .workspace-leaf-resize-handle,
-    .workspace,
-    .workspace-split {
-      background-color: var(--bg-workspace);
-    }
+      .workspace-ribbon-collapse-btn:hover, 
+      .is-mobile .view-header-icon:hover, 
+      .is-mobile .view-action:hover,
+      .view-header-icon:hover, 
+      .view-action:hover {
+        color: var(--main-accent-light);
+      }
 
-    .workspace-leaf-resize-handle:hover {
-      background-color: var(--main-accent-dark);
-    }
+      .workspace-leaf-resize-handle:hover {
+        background-color: transparent;
+      }
 
-    .workspace-leaf .view-header, 
-    .nav-header, 
-    .workspace-split.mod-left-split .workspace-tabs .workspace-leaf, 
-    .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
+      .workspace-leaf .view-header, 
+      .nav-header, 
+      .workspace-split.mod-left-split .workspace-tabs .workspace-leaf, 
+      .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+        border-top-left-radius: var(--radius-big);
+        border-top-right-radius: var(--radius-big);
+      }
 
-    .workspace-leaf-content,
-    .workspace-split,
-    .workspace-leaf {
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 25%), 0 0px 10px 00px rgb(0 0 0 / 22%);
-    }
+      .workspace-leaf-content,
+      .workspace-leaf {
+        border-bottom-left-radius: var(--radius-big);
+        border-bottom-right-radius: var(--radius-big);
+      }
 
-    .workspace-split, 
-    .workspace-leaf-content[data-type="timeline"] {
-      padding-bottom: 5px;
-      padding-top: 5px;
-    }
-    
+      .workspace-leaf-content[data-type="timeline"] {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+      
 
     /* #endregion |4.2. Workspace-Leaf */
 
@@ -689,9 +708,6 @@ body:is(.is-export-mode) .markdown-preview-view {
       background-color: transparent;
     }
 
-    .workspace-tab-container-before{
-      min-width: 4px;
-    }
 
     .workspace-tab-container-inner {
       background-color: var(--bg-leaf-head);
@@ -709,9 +725,13 @@ body:is(.is-export-mode) .markdown-preview-view {
       
     }
 
+    .workspace-tabs {
+      padding: 0;
+    }
+
     
     .workspace-tab-header.is-active {
-      background-color: var(--bg-leaf-head);
+      background-color: var(--bg-leaf-head-active);
       
     }
 
