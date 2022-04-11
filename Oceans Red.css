@@ -1,32 +1,25 @@
-/*
-TODO:
-- Add a option to highlight custom tags
-- Add an option to lighten the formatting symbols
-
-*/
 
 /* #region *..........................1. Colors */
 
 :root, .theme-dark {
-  /* Theme Variables*/
   --main-accent: #c93939;
   --main-accent-light: #CF4F4F; /*#fc4e4e*/
   --main-accent-dark: #601A1A;
 
-  --bg-title-bar:#121215;
-  --bg-title-bar-hover:#232327;
+  --bg-title-bar:#0d0d10;
+  --bg-title-bar-button-hover:#232327;
 
-  --bg-workspace:#07090D;/*#101116*/
-
+  --bg-workspace:#07090D;
+  
   --bg-ribbon: var(--bg-workspace);
 
   --bg-leaf-head-active: var(--bg-leaf-content); 
-  --bg-leaf-head:#0F121A; /*#171a1d*/
-  --bg-leaf-content:#171B23; /*1e2125*/ 
+  --bg-leaf-head:#0F121A;
+  --bg-leaf-content:#171B23;
 
   --bg-input: #0f0f0f;
 
-  --bg-note: #12151c; /*1a1c1f*/
+  --bg-note: #12151c;
   --bg-line-hover:#1e1f24;
   --bg-line-active:var(--bg-leaf-head);
 
@@ -143,6 +136,10 @@ TODO:
 :root{
   --list-bullet-sign: "- ";
   --note-width: 1200px;
+  --panel-spacing: 4px;
+  --radius-big: 15px;
+  --radius-medium: 5px;
+  --radius-small: 3px;
 }
 
 * {
@@ -184,6 +181,9 @@ body:is(.is-export-mode) .markdown-preview-view {
 /* #endregion */
 
 /* #region *..........................3. App */
+  .app-container {
+    background-color: var(--bg-workspace);
+  }
 
   /* #region *..........................3.1. Titlebar*/
 
@@ -192,11 +192,11 @@ body:is(.is-export-mode) .markdown-preview-view {
   }
 
   .titlebar-text {
-    color: var(--main-accent-light);
+    color: var(--main-accent);
   }
 
   .titlebar-button {
-    color: var(--main-accent-light);
+    color: var(--main-accent);
     opacity: 1.0;
   }
 
@@ -204,7 +204,7 @@ body:is(.is-export-mode) .markdown-preview-view {
   .titlebar-button.mod-minimize:hover, 
   .titlebar-button.mod-forward:hover, 
   .titlebar-button.mod-back:hover {
-    background-color: var(--bg-title-bar-hover);
+    background-color: var(--bg-title-bar-button-hover);
     transition: background-color 300ms;
   }
 
@@ -212,21 +212,28 @@ body:is(.is-export-mode) .markdown-preview-view {
 
   /* #region *..........................3.2. Status bar*/
   .status-bar{
-    border-top: 1px solid var(--main-accent-dark);
-    background-color: var(--bg-title-bar);
-    min-height: 29px;
-    max-height: 26px;
-    padding: 2px 20px;
+    border-top: 0px solid var(--main-accent-dark);
+    background-color: var(--bg-workspace);
+    min-height: 22px;
+    padding: 0px 25px;
+    margin-bottom: var(--panel-spacing);
+    align-items: flex-start;
+    justify-content: center;
   }
 
   .status-bar-item{
     color: var(--main-accent);
+    background-color: var(--bg-leaf-content);
+    border-radius: 5px;
+    margin: auto calc(var(--panel-spacing) / 2);
+    padding: 0px 5px;
   }
 
   .status-bar-item.mod-clickable:hover{
     color: var(--main-accent-light);
-    background-color: var(--bg-title-bar-hover);
-    transition: background-color 200ms;
+    /* background-color: var(--bg-title-bar-button-hover); */
+    transform: translate3d(2px, 1px, 0px);
+    transition: all 200ms;
   }
 
   /* #endregion */
@@ -246,7 +253,6 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .modal,
     .prompt {
-      
       box-shadow: 0 0px 28px rgb(0 0 0 / 40%), 0 10px 10px rgb(0 0 0 / 32%);
     }
 
@@ -257,6 +263,10 @@ body:is(.is-export-mode) .markdown-preview-view {
     /* #endregion */
 
     /* #region *..........................3.3.2. Settings modal */
+
+    .modal {
+      border-radius: 15px;
+    }
 
     .modal.mod-settings div.vertical-tab-content h2{
       font-size: 1.4em;
@@ -1728,7 +1738,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
   .status-bar-item-segment.day-planner-progress-bar {
     background-color: var(--bg-title-bar);
-    background-image: linear-gradient(to right,transparent 50%,var(--bg-title-bar-hover) 0);
+    background-image: linear-gradient(to right,transparent 50%,var(--bg-title-bar-button-hover) 0);
     border: 1px solid var(--background-modifier-border);
     height: 18px;
   }
