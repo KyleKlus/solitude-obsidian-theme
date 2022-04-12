@@ -98,20 +98,14 @@
 
 :root :is(.is-mobile) {
   --header-1-size: 1.43rem;
-
   --header-2-size: 1.18rem;
-
   --header-3-size: 1.00rem;
-
   --header-4-size: 0.88rem;
-
   --header-5-size: 0.75rem;
-
   --header-6-size: 0.7rem;
-
   --note-font-size: 0.7rem;
-
   --active-line-font-size: 0.71rem;
+  --panel-spacing: 0px;
 }
 
 :root {
