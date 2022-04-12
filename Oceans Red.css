@@ -51,7 +51,7 @@
   --url-hover-color: #6fe2ff;
   --note-link-color: var(--main-accent);
   --note-link-hover-color: var(--main-accent-light);
-  --note-link-hover-bg-color: #1d2833;
+  --note-link-hover-bg-color: var(--bg-darkest);
   --tag-color:#95b4c2;
   --tag-hover-color: #27cbd1;
   --bg-tag:#16375c;
@@ -87,6 +87,9 @@
   --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
   --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
   --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/
+
+  --indentation-guide: var(--main-accent);
+  --indentation-guide-active: var(--main-accent-light);
 }
 
 /* #endregion */
@@ -404,6 +407,9 @@ body:is(.is-export-mode) .markdown-preview-view {
       color: var(--main-accent);
     }
     
+    .edit-block-button:hover,
+    .checkbox-container:hover,
+    .modal-close-button:hover,
     .clickable-icon:hover {
       color: var(--main-accent-light);
       transform: scale(1.05, 1.05);
@@ -476,7 +482,9 @@ body:is(.is-export-mode) .markdown-preview-view {
     
     /* #region *..........................3.4.5. Tooltips */
     
-    /* TODO */
+    .tooltip {
+      background-color: rgba(0, 0, 0, 0.709);
+    }
 
     /* #endregion | 3.4.5 Tooltips */
 
@@ -1084,17 +1092,6 @@ body:is(.is-export-mode) .markdown-preview-view {
         position: relative; 
       }
       
-      .cm-hmd-list-indent .cm-tab::before, 
-      ul ul::before, 
-      ol ol::before, 
-      ol ul::before, 
-      ul ol::before {
-        content: '';
-        border-left: 1px solid var(--text-accent);
-        opacity: 0.50;
-        position: absolute;
-      }
-      
       /* Edit Mode */
       .cm-hmd-list-indent .cm-tab::before { 
         left: 0.1em;
@@ -1327,11 +1324,17 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       .cm-hmd-embed.cm-hmd-internal-link.cm-quote, 
       .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link, .is-unresolved),
+      .cm-s-obsidian .internal-link,
       .markdown-preview-section a.internal-link{
         color: var(--note-link-color);
+        text-decoration: none;
         border-bottom: 1px solid var(--main-accent);
       }
 
+      .cm-s-obsidian span.cm-formatting.cm-url, 
+      .external-link, 
+      .markdown-source-view.mod-cm6 .cm-link,
+      .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote,
       .cm-s-obsidian .cm-line .cm-underline {
         text-decoration: none;
       }
@@ -1358,6 +1361,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         .markdown-source-view.mod-cm6 .cm-link,
         .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
           color: var(--url-color);
+          text-decoration: none;
           border-bottom: 1px solid var(--url-color);
         }
 
@@ -1368,6 +1372,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         .cm-s-obsidian span.cm-url:hover, 
         .external-link:hover,
         .markdown-source-view.mod-cm6 .cm-link:hover {
+          text-decoration: none;
           color: var(--url-hover-color);
         }
 
