@@ -1326,15 +1326,21 @@ body:is(.is-export-mode) .markdown-preview-view {
       /* #region *..........................3.5.4.5. Links */
 
       .cm-hmd-embed.cm-hmd-internal-link.cm-quote, 
-      .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link.cm-link-alias, .is-unresolved),
+      .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link, .is-unresolved),
       .markdown-preview-section a.internal-link{
         color: var(--note-link-color);
+        border-bottom: 1px solid var(--main-accent);
+      }
+
+      .cm-s-obsidian .cm-line .cm-underline {
+        text-decoration: none;
       }
 
       .cm-hmd-embed.cm-hmd-internal-link.cm-quote:hover, 
       .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link:hover, .is-unresolved:hover),
       .markdown-preview-section a.internal-link:hover{
         color: var(--note-link-hover-color);
+        text-decoration: none;
         background-color: var(--note-link-hover-bg-color);
         border-radius: var(--radius-small);
         transition: background-color 400ms, 
@@ -1352,6 +1358,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         .markdown-source-view.mod-cm6 .cm-link,
         .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
           color: var(--url-color);
+          border-bottom: 1px solid var(--url-color);
         }
 
         .cm-s-obsidian span.cm-url:not(.cm-link) {
