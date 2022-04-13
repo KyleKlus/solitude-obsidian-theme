@@ -5,12 +5,12 @@
   --main-accent: #AE1E1E;
   --main-accent-light: #DC2E2E; /*#fc4e4e*/
 
-  --bg: #121926;
-  --bg-dark: #0E1320;
-  --bg-darker: #0C101D;
-  --bg-darkest: #090C16;
+  --bg: #121826;
+  --bg-dark: #0D111D;
+  --bg-darker: #0B0F1A;
+  --bg-darkest: #060911;
 
-  --bg-app: #030407;
+  --bg-app: #030406;
   
   --bg-title-bar:#0d0d10;
   --bg-title-bar-button-hover:#232327;
