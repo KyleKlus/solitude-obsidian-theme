@@ -67,12 +67,12 @@
   --background-secondary: var(--bg-darkest); /*Sidebar background*/
   --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
   
-  --text-normal: #FFF8F0cd; /*Text body of note*/
+  --text-normal: #E6EDEF; /*Text body of note*/
   --text-note: var(--text-normal);
   --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--main-accent); /*Links*/
   --text-accent-hover: var(--main-accent-light); /*Links hover*/
-  --text-faint: #666; /*Link brackets color & Gutter Numbers*/
+  --text-faint: #5C5C5C; /*Link brackets color & Gutter Numbers*/
 
   --text-highlight-bg: #c939395d; /*Search Matches*/
   --text-highlight-bg-active: #cc141467; /*Active Search Match (Preview Mode)*/
