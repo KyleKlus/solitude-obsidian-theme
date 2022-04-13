@@ -2,15 +2,15 @@
 
 :root, .theme-dark {
   --main-accent-dark: #580F0F;
-  --main-accent: #9D1B1B;
-  --main-accent-light: #D12323; /*#fc4e4e*/
+  --main-accent: #AE1E1E;
+  --main-accent-light: #DC2E2E; /*#fc4e4e*/
 
-  --bg: #171B23;
-  --bg-dark: #12151c;
-  --bg-darker: #0F121A;
-  --bg-darkest: #0b0d13;
+  --bg: #121926;
+  --bg-dark: #0E1320;
+  --bg-darker: #0C101D;
+  --bg-darkest: #090C16;
 
-  --bg-app: #040507;
+  --bg-app: #030407;
   
   --bg-title-bar:#0d0d10;
   --bg-title-bar-button-hover:#232327;
