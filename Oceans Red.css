@@ -861,6 +861,42 @@ body:is(.is-export-mode) .markdown-preview-view {
           margin: 0 0;
         }
 
+        .callout[data-callout="h"] {
+          --callout-color:transparent;
+          --callout-icon: none;
+          border-left-width: 0px;
+          background-color: transparent;
+        }
+
+        .callout[data-callout="h"] .callout-title {
+          background-color: transparent;
+          border-bottom: 1px solid var(--horizontal-line-color);
+        }
+
+        .callout[data-callout="h"] .callout-content {
+          background-color: transparent;
+        }
+
+        .callout[data-callout="ctrl"] {
+          --callout-icon: none;
+        }
+
+        .callout[data-callout="ctrl"] .callout-title {
+
+        }
+
+        .callout[data-callout="ctrl"] .callout-content {
+          
+        }
+
+        .markdown-source-view.mod-cm6 .cm-callout {
+          border: none;
+        }
+
+        .markdown-source-view.mod-cm6 .cm-callout:hover {
+          border: none;
+        }
+
         .cm-header-1.cm-header-1,
         .markdown-preview-view h1,
         .callout-title-inner h1,
