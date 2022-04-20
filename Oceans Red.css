@@ -6,7 +6,7 @@
   --main-accent-light: #DC2E2E; /*#fc4e4e*/
 
   --bg: #14141aec;
-  --bg-dark: #111216d4;
+  --bg-dark: #111216ca;
   --bg-darker: #0e0f13f6;
   --bg-darkest: #08080bf5;
 
@@ -246,7 +246,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     border-radius: var(--radius-medium);
     border-radius: var(--radius-medium);
     height: 22px;
-    box-shadow: 0 0px 28px rgba(0, 0, 0, 0.426), 0 10px 10px rgba(0, 0, 0, 0.177);
+    box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
   }
 
   .titlebar-button {
@@ -282,7 +282,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     max-height: 20px;
     margin: auto calc(var(--panel-spacing) / 2);
     padding: 0px 5px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.533), 0 10px 10px rgba(0, 0, 0, 0.319);
+    box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
     transition: all 200ms ease-out;
   }
 
@@ -326,7 +326,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .modal,
     .prompt {
-      box-shadow: 0 0px 28px rgb(0 0 0 / 40%), 0 10px 10px rgb(0 0 0 / 32%);
+      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
     }
 
     .community-plugin-readme.markdown-preview-view {
@@ -657,7 +657,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
         border-bottom: 2px solid var(--main-accent-dark);
         background-color: var(--bg-leaf-head-active);
-        box-shadow: 0 0px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+        box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
         
       }
 
@@ -668,7 +668,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       .view-header {
         background-color: var(--bg-leaf-head);
-        box-shadow: 0 0px 10px rgb(0 0 0 / 25%), 0 5px 10px rgb(0 0 0 / 22%);
+        box-shadow: 0 10px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
       }
 
       .view-header-title-container:after {
@@ -754,7 +754,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     }
 
     .workspace-tab-container-inner {
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.533), 0 10px 10px rgba(0, 0, 0, 0.319);
+      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
     }
 
     .workspace-tab-header-container{
@@ -847,7 +847,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       
       body:not(.is-export-mode) div.cm-active.cm-line /* Active Line */ {
         background-color: var(--bg-line-active);
-        box-shadow: 0 0px 20px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+        box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
         transform: translate3d(0px, -1px, 0px);
         transition: all 200ms;
         border-radius: var(--radius-medium);
@@ -856,7 +856,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       body:not(.is-export-mode) .HyperMD-quote.cm-active.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line {
         transform: translate3d(2px, -3px, 0px);
         background-color: var(--bg-quote);
-        box-shadow: 0 0px 20px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+        box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
         transition: all 200ms;
       }
 
@@ -960,9 +960,10 @@ body:is(.is-export-mode) .markdown-preview-view {
         /* #endregion -> Custom Callouts */
 
         .markdown-source-view.mod-cm6 .callout {
-          margin: 0;
           margin-left: 50px;
           margin-right: 50px;
+          box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+          transform: translate3d(0px, -3px, 0px);
         }
 
         .markdown-source-view.mod-cm6 .cm-callout {
@@ -1169,7 +1170,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         border-left: 4px solid var(--main-accent-dark);
         border-radius: 0px;
         background-color: var(--bg-quote);
-        box-shadow: 0 10px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+        box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
         transform: translate3d(0px, -3px, 0px);
       }
       
@@ -1889,7 +1890,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       border-top: 1px solid var(--main-accent-dark);
       background-color: var(--bg-leaf-head);
       padding: 2px 10px 2px 20px;
-      box-shadow: 0 0px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
       border-radius: var(--radius-big);
     }
     
@@ -1906,7 +1907,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     }
 
     .nav-action-button.is-active {
-      box-shadow: inset 3px 3px 3px rgb(0 0 0 / 50%);
+      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
     }
 
     .nav-folder:not(.mod-root) > .nav-folder-children {
@@ -1951,7 +1952,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       border-left: 2px solid var(--main-accent-dark);
       background-color: var(--bg-leaf-head);
       transform: translate(3px, -1px);
-      box-shadow: 0 8px 18px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
       transition: all 200ms ease-in;
     }
 
