@@ -1157,11 +1157,12 @@ body:is(.is-export-mode) .markdown-preview-view {
       }
 
       .markdown-source-view.mod-cm6 .list-bullet:after,
-      .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
-        left: 0;
+      .cm-formatting.cm-formatting-list.cm-formatting-list-ol,
+      .markdown-embed .markdown-source-view.mod-cm6 .list-bullet:after,
+      .markdown-embed .cm-formatting.cm-formatting-list.cm-formatting-list-ol  {
+        left: 0px;
         content: var(--list-bullet-sign);
         color:var(--main-accent);
-        text-indent: 10px;
       }
       
       .markdown-embed, 
@@ -1357,6 +1358,12 @@ body:is(.is-export-mode) .markdown-preview-view {
         color: var(--main-accent);
         list-style-type: var(--list-bullet-sign);
         content: var(--list-bullet-sign);
+      }
+
+      .markdown-embed ::marker {
+        content: none;
+        list-style-type: none;
+        color: transparent;
       }
       
       .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-atom, 
