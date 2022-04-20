@@ -947,7 +947,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
           .callout[data-callout="ctrl"] .callout-title {
             /* border-bottom: 1px solid var(--main-accent-dark); */
-            background-color: #1a1c21;
+            background-color: #081324;
             border-top: 0px solid transparent;
             border-top-left-radius: var(--radius-medium);
             border-top-right-radius: var(--radius-medium);
@@ -968,8 +968,8 @@ body:is(.is-export-mode) .markdown-preview-view {
         /* #endregion -> Custom Callouts */
 
         .markdown-source-view.mod-cm6 .callout {
-          margin-left: 50px;
-          margin-right: 50px;
+          margin-left: 80px;
+          margin-right: 80px;
           box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
           transform: translate3d(0px, -3px, 0px);
         }
