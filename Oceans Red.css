@@ -892,6 +892,14 @@ body:is(.is-export-mode) .markdown-preview-view {
 
         /* #region -> Custom Callouts */
 
+        .markdown-source-view.mod-cm6 .callout[data-callout="moc"] {
+          --callout-color: 255, 166, 77;
+          --callout-icon: lucide-list;
+          margin-left: 0px;
+          margin-right: 550px;
+          
+        }
+
           .markdown-source-view.mod-cm6 .callout[data-callout="h"] {
             --callout-color:transparent;
             --callout-icon: none;
@@ -952,6 +960,7 @@ body:is(.is-export-mode) .markdown-preview-view {
             border-top-left-radius: var(--radius-medium);
             border-top-right-radius: var(--radius-medium);
           }
+
 
           .callout[data-callout="ctrl"] .callout-content {
             background-color: var(--bg-darkest);
@@ -1152,6 +1161,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         left: 0;
         content: var(--list-bullet-sign);
         color:var(--main-accent);
+        text-indent: 10px;
       }
       
       .markdown-embed, 
