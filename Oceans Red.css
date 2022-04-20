@@ -837,15 +837,20 @@ body:is(.is-export-mode) .markdown-preview-view {
         border-right: 3px solid transparent;
         padding-left: 5px;
         background-color: transparent;
+        text-indent: 10px;
       }
 
-      body:not(.is-export-mode) .cm-line:hover { /* Line Hover */
+      .markdown-source-view.mod-cm6 .hr{
+        text-indent: 0px;
+      }
+
+      body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover { /* Line Hover */
         background-color: var(--bg-line-hover);
         transition: all 200ms;
         border-radius: var(--radius-medium);
       }
       
-      body:not(.is-export-mode) div.cm-active.cm-line /* Active Line */ {
+      body:not(.is-export-mode):is(.is-active-effect-on) div.cm-active.cm-line /* Active Line */ {
         background-color: var(--bg-line-active);
         box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
         transform: translate3d(0px, -1px, 0px);
@@ -856,6 +861,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       body:not(.is-export-mode) .HyperMD-quote.cm-active.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line {
         transform: translate3d(2px, -3px, 0px);
         background-color: var(--bg-quote);
+        text-indent: 10px;
         box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
         transition: all 200ms;
       }
@@ -886,13 +892,15 @@ body:is(.is-export-mode) .markdown-preview-view {
 
         /* #region -> Custom Callouts */
 
-          .callout[data-callout="h"] {
+          .markdown-source-view.mod-cm6 .callout[data-callout="h"] {
             --callout-color:transparent;
             --callout-icon: none;
             border-left-width: 0px;
             background-color: transparent;
             margin-left: 0px;
             margin-right: 0px;
+            box-shadow: none;
+
           }
 
           .markdown-source-view.mod-cm6 .callout[data-callout="h"] .callout-title {
@@ -974,11 +982,33 @@ body:is(.is-export-mode) .markdown-preview-view {
           border: none;
         }
 
+        .cm-header-1.cm-header-1, 
+        .markdown-preview-view h1,
+        .HyperMD-header-1,
+        .cm-header-2.cm-header-2, 
+        .markdown-preview-view h2,
+        .HyperMD-header-2,
+        .cm-header-3.cm-header-3, 
+        .markdown-preview-view h3,
+        .HyperMD-header-3,
+        .cm-header-4.cm-header-4, 
+        .markdown-preview-view h4,
+        .HyperMD-header-4,
+        .cm-header-5.cm-header-5, 
+        .markdown-preview-view h5,
+        .HyperMD-header-5,
+        .cm-header-6.cm-header-6, 
+        .markdown-preview-view h6,
+        .HyperMD-header-6 {
+          text-indent: 10px;
+        }
+
         .cm-header-1.cm-header-1,
         .markdown-preview-view h1,
         .callout-title-inner h1,
         .callout-content h1 {
           color: var(--header-1-color);
+          
           
           font-weight: var(--header-1-weight);
           text-align: var(--header-1-alignment);
@@ -1002,6 +1032,8 @@ body:is(.is-export-mode) .markdown-preview-view {
           font-weight: var(--header-2-weight);
           text-align: var(--header-2-alignment);
         }
+
+        
 
         .HyperMD-header-2,
         .callout-title-inner h2,
@@ -2049,12 +2081,12 @@ settings:
     default: false
   -
     id: is-hover-effect-on
-    title: Toggle Hover Effect in Editor
+    title: Toggle hover effect in editor
     type: class-toggle
     default: true
   -
     id: is-active-effect-on
-    title: Toggle Aktive Line Effect in Editor
+    title: Toggle active line effect in editor
     type: class-toggle
     default: true
   -
