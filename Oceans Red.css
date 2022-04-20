@@ -27,7 +27,7 @@
   --bg-line-hover: var(--bg-darker); /* 1e1f24 */
   --bg-line-active: var(--bg-darkest);
 
-  --bg-embed: var(--bg-note);
+  --bg-embed: transparent;
 
   --horizontal-line-color:#4d5255;
 
@@ -155,10 +155,10 @@
 :root{
   --list-bullet-sign: "- ";
   --note-width: 1200px;
-  --panel-spacing: 6px;
+  --panel-spacing: 7px;
   --radius-big: 20px;
   --radius-medium: 10px;
-  --radius-small: 4px;
+  --radius-small: 3px;
 }
 
 * {
@@ -246,6 +246,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     border-radius: var(--radius-medium);
     border-radius: var(--radius-medium);
     height: 22px;
+    box-shadow: 0 0px 28px rgba(0, 0, 0, 0.426), 0 10px 10px rgba(0, 0, 0, 0.177);
   }
 
   .titlebar-button {
@@ -259,8 +260,7 @@ body:is(.is-export-mode) .markdown-preview-view {
   .titlebar-button.mod-back:hover {
     background-color: var(--bg-title-bar-button-hover);
     border-radius: var(--radius-medium);
-    transform: scale(1.05, 1.05);
-    transition: all 300ms;
+    transition: background-color 200ms ease-in;
   }
 
   /* #endregion */
@@ -282,12 +282,14 @@ body:is(.is-export-mode) .markdown-preview-view {
     max-height: 20px;
     margin: auto calc(var(--panel-spacing) / 2);
     padding: 0px 5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.533), 0 10px 10px rgba(0, 0, 0, 0.319);
+    transition: all 200ms ease-out;
   }
 
   .status-bar-item.mod-clickable:hover{
     color: var(--main-accent-light);
     transform: scale(1.05, 1.05);
-    transition: all 200ms;
+    transition: all 200ms ease-in;
   }
 
   /* #endregion */
@@ -404,15 +406,19 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .clickable-icon {
       color: var(--main-accent);
+      transition: all 200ms ease-out;
     }
     
     .edit-block-button:hover,
     .checkbox-container:hover,
     .modal-close-button:hover,
     .clickable-icon:hover {
-      color: var(--main-accent-light);
-      transform: scale(1.05, 1.05);
-      transition: transform 300ms;
+      color: var(--text-normal);
+      border-radius: var(--radius-big);
+      background-color: var(--main-accent);
+      padding: 0px 3px 0px 3px ;
+      transform: scale(1.1, 1.1);
+      transition: all 200ms ease-in;
     }
 
     .markdown-source-view.mod-cm6 .edit-block-button {
@@ -457,19 +463,20 @@ body:is(.is-export-mode) .markdown-preview-view {
       border: 1px solid var(--main-accent-dark);
       border-radius: var(--radius-small);
       font-size: 0.8em;
+      transition: transform 100ms ease-out;
       background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.4' height='292.4'%3E%3Cpath fill='%23666' d='M287 69.4a17.6 17.6 0 0 0-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4A17.6 17.6 0 0 0 0 82.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 95c3.5-3.5 5.4-7.8 5.4-12.8 0-5-1.9-9.2-5.5-12.8z'/%3E%3C/svg%3E");
     }
     
     .dropdown:hover{
-      background-color: var(--main-accent-dark);
+      background-color: var(--main-accent);
       transform: scale(1.05, 1.05);
-      transition: all 200ms;
+      transition: transform 100ms ease-in;
     }
     
     .dropdown option {
       font-weight: normal;
       background-color: var(--background-primary);
-      border: 1px solid var(--main-accent-dark);
+      border: 1px solid var(--main-accent-light);
     }
 
     /* #endregion | 3.4.3. dropdown */
@@ -746,6 +753,10 @@ body:is(.is-export-mode) .markdown-preview-view {
       
     }
 
+    .workspace-tab-container-inner {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.533), 0 10px 10px rgba(0, 0, 0, 0.319);
+    }
+
     .workspace-tab-header-container{
       margin-bottom: calc(var(--panel-spacing));
     }
@@ -794,7 +805,11 @@ body:is(.is-export-mode) .markdown-preview-view {
         max-width: var(--note-width);
       }
 
-      .markdown-preview-section, 
+      .markdown-preview-section {
+        background-color: var(--bg-embed);
+        font-size: var(--note-font-size);
+      }
+
       .markdown-source-view,
       .markdown-reading-view, 
       .cm-line {
@@ -876,9 +891,11 @@ body:is(.is-export-mode) .markdown-preview-view {
             --callout-icon: none;
             border-left-width: 0px;
             background-color: transparent;
+            margin-left: 0px;
+            margin-right: 0px;
           }
 
-          .callout[data-callout="h"] .callout-title {
+          .markdown-source-view.mod-cm6 .callout[data-callout="h"] .callout-title {
             background-color: transparent;
             border-bottom: 1px solid var(--horizontal-line-color);
           }
@@ -887,30 +904,32 @@ body:is(.is-export-mode) .markdown-preview-view {
             background-color: transparent;
           }
 
-          .callout[data-callout="ctrl"] {
+          .markdown-source-view.mod-cm6 .callout[data-callout="ctrl"] {
             --callout-icon: none;
             border: 0px solid transparent;
             border-radius: var(--radius-medium);
+            margin-left: 0px;
+            margin-right: 0px;
           }
 
           .callout[data-callout="ctrl"] .callout-title .callout-title-inner a.internal-link,
           .callout[data-callout="ctrl"] .callout-content a.internal-link  {
-            color: var(--text-normal);
-            border: 0px solid transparent;
+            
             border-radius: var(--radius-small);
-            background-color: var(--main-accent-dark);
-            font-size: 0.9rem;
+            font-size: 0.83rem;
             display: inline-block;
-            padding: 3px;
+            margin-bottom: 2px;
             margin-left: 5px;
             margin-right: 5px;
           }
 
           .callout[data-callout="ctrl"] .callout-title .callout-title-inner a.internal-link:hover ,
           .callout[data-callout="ctrl"] .callout-content a.internal-link:hover  {
-            background-color: var(--main-accent);
+            background-color: var(--main-accent-dark);
+            color: var(--text-normal);
+            padding: 0 2px;
             transform: scale(1.08, 1.08);
-            transition: all 200ms;
+            transition: all 200ms ease-in;
           }
 
           .callout[data-callout="ctrl"] .callout-title .callout-title-inner,
@@ -919,15 +938,15 @@ body:is(.is-export-mode) .markdown-preview-view {
           }
 
           .callout[data-callout="ctrl"] .callout-title {
-            border-bottom: 1px solid var(--main-accent-dark);
-            background-color: var(--bg-darkest);
+            /* border-bottom: 1px solid var(--main-accent-dark); */
+            background-color: #1a1c21;
             border-top: 0px solid transparent;
             border-top-left-radius: var(--radius-medium);
             border-top-right-radius: var(--radius-medium);
           }
 
           .callout[data-callout="ctrl"] .callout-content {
-            background-color: var(--bg-darker);
+            background-color: var(--bg-darkest);
             border-bottom: 0px solid transparent;
             border-bottom-left-radius: var(--radius-medium);
             border-bottom-right-radius: var(--radius-medium);
@@ -942,11 +961,12 @@ body:is(.is-export-mode) .markdown-preview-view {
 
         .markdown-source-view.mod-cm6 .callout {
           margin: 0;
+          margin-left: 50px;
+          margin-right: 50px;
         }
 
         .markdown-source-view.mod-cm6 .cm-callout {
           border: none;
-          
         }
 
         .markdown-source-view.mod-cm6 .cm-callout:hover {
@@ -1219,13 +1239,14 @@ body:is(.is-export-mode) .markdown-preview-view {
         background-color: var(--bg-tag);
         padding: 1px 6px;
         border-radius: var(--radius-big);
+        transition: all 200ms ease-out;
       }
       
       .cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover, 
       a.tag:hover{
         color: var(--tag-hover-color);
         background-color: var(--bg-tag-hover);
-        transition: all 300ms;
+        transition: all 200ms ease-in;
       }
       
       .theme-dark .token.property, 
@@ -1330,11 +1351,12 @@ body:is(.is-export-mode) .markdown-preview-view {
       .markdown-preview-view .task-list-item-checkbox:checked, .cm-line .task-list-item-checkbox:checked  {
         border: none;
         background-color: var(--interactive-accent);
+        transition: background-color 200ms ease-in;
       }
 
       .markdown-preview-view .task-list-item-checkbox:hover, .cm-line .task-list-item-checkbox:hover {
         background-color: var(--bg-task-hover);
-        transition: background-color 300ms;
+        transition: background-color 200ms ease-in;
       }
 
       .markdown-preview-view .task-list-item-checkbox:checked::before, .cm-line .task-list-item-checkbox:checked::before {
@@ -1426,6 +1448,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         color: var(--note-link-color);
         text-decoration: none;
         border-bottom: 1px solid var(--main-accent);
+        transition: all 200ms ease-out;
       }
 
       .cm-s-obsidian span.cm-formatting.cm-url, 
@@ -1443,8 +1466,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         text-decoration: none;
         background-color: var(--note-link-hover-bg-color);
         border-radius: var(--radius-small);
-        transition: background-color 400ms, 
-                    color 400ms;
+        transition: all 200ms ease-in;
       }
 
       .popover {
@@ -1874,12 +1896,13 @@ body:is(.is-export-mode) .markdown-preview-view {
     .nav-action-button {
       margin-bottom: 8px;
       margin-top: 8px;
+      transition: all 200ms ease-out;
     }
 
     .nav-buttons-container .nav-action-button:hover {
       color: var(--main-accent-light);
-      transform: scale(1.05, 1.05);
-      transition: all 600ms;
+      transform: scale(1.1, 1.1);
+      transition: all 200ms ease-in;
     }
 
     .nav-action-button.is-active {
@@ -1906,6 +1929,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       font-size: 20px;
       padding-top: 15px;
       padding-bottom: 10px;
+      transition: all 200ms ease-out;
     }
 
     .nav-buttons-container .nav-action-button{
@@ -1918,6 +1942,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       padding-left: 10px;
       box-shadow: none;
       transform: none;
+      transition: all 200ms ease-in;
     }
 
     body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,  
@@ -1927,7 +1952,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       background-color: var(--bg-leaf-head);
       transform: translate(3px, -1px);
       box-shadow: 0 8px 18px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-      transition: all 250ms;
+      transition: all 200ms ease-in;
     }
 
     /* Didn't find another way to overwrite hover, sry */
@@ -1939,7 +1964,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       color: var(--text-on-accent);
       box-shadow: 3px 6px 6px rgb(0 0 0 / 25%);
       transform: translate(3px, -1px);
-      transition: all 300ms;
+      transition: all 200ms ease-in;
     }
 
     .nav-file-title{
@@ -1961,7 +1986,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
   .event_item.event_item.event_item.event_item:hover {
     background-color: var(--main-accent-dark);
-    transition: background-color 200ms;
+    transition: background-color 200ms ease-in;
   }
 
   .progress-pie{
