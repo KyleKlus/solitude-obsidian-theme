@@ -818,8 +818,24 @@ body:is(.is-export-mode) .markdown-preview-view {
       }
 
       .markdown-source-view.mod-cm6 .cm-scroller {
-        padding: 10;
+        padding: 10px;
       }
+
+      body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-scroller {
+        padding: 0px;
+      }
+
+      .markdown-source-view.mod-cm6 .cm-gutters {
+        padding-right: 1px;
+      }
+
+      body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
+        padding-right: 0px;
+        width: 0px;
+        color: transparent;
+      }
+
+
 
       /* #endregion |3.5.4.1. General  */
 
@@ -876,29 +892,20 @@ body:is(.is-export-mode) .markdown-preview-view {
       /* #endregion |3.5.4.2. Lines  */
 
       /* #region *..........................3.5.4.3. Formating Elements */
-
-        /* #region *..........................3.5.4.3.1. Headings */
-
-        body:is(.downsize-h-formatter) .cm-formatting-header.cm-formatting-header {
-          color: var(--text-faint);
-          font-weight: 200;
-          font-size: small;
-        }
-
-        .markdown-rendered .callout-title-inner :is(h1, h2, h3, h4, h5, h6),
-        .markdown-rendered .callout-content :is(h1, h2, h3, h4, h5, h6) {
-          margin: 0 0;
-        }
-
+        
         /* #region -> Custom Callouts */
 
-        .markdown-source-view.mod-cm6 .callout[data-callout="moc"] {
-          --callout-color: 255, 166, 77;
-          --callout-icon: lucide-list;
-          margin-left: 0px;
-          margin-right: 550px;
-          
-        }
+          body:is(.is-mobile) .markdown-source-view.mod-cm6 .callout {
+            margin-left: 0px;
+            margin-right: 0px;
+          }
+
+          .markdown-source-view.mod-cm6 .callout[data-callout="moc"] {
+            --callout-color: 255, 166, 77;
+            --callout-icon: lucide-list;
+            margin-left: 0px;
+            margin-right: 550px;  
+          }
 
           .markdown-source-view.mod-cm6 .callout[data-callout="h"] {
             --callout-color:transparent;
@@ -973,23 +980,37 @@ body:is(.is-export-mode) .markdown-preview-view {
             margin-top: 0.2rem;
             margin-bottom: 0.2rem;
           }
+          
+          .markdown-source-view.mod-cm6 .callout {
+            margin-left: 80px;
+            margin-right: 80px;
+            box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+            transform: translate3d(0px, -3px, 0px);
+          }
 
+          .markdown-source-view.mod-cm6 .cm-callout {
+            border: none;
+          }
+
+          .markdown-source-view.mod-cm6 .cm-callout:hover {
+            border: none;
+          }
         /* #endregion -> Custom Callouts */
 
-        .markdown-source-view.mod-cm6 .callout {
-          margin-left: 80px;
-          margin-right: 80px;
-          box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-          transform: translate3d(0px, -3px, 0px);
+        /* #region *..........................3.5.4.3.1. Headings */
+
+        body:is(.downsize-h-formatter) .cm-formatting-header.cm-formatting-header {
+          color: var(--text-faint);
+          font-weight: 200;
+          font-size: small;
         }
 
-        .markdown-source-view.mod-cm6 .cm-callout {
-          border: none;
+        .markdown-rendered .callout-title-inner :is(h1, h2, h3, h4, h5, h6),
+        .markdown-rendered .callout-content :is(h1, h2, h3, h4, h5, h6) {
+          margin: 0 0;
         }
 
-        .markdown-source-view.mod-cm6 .cm-callout:hover {
-          border: none;
-        }
+
 
         .cm-header-1.cm-header-1, 
         .markdown-preview-view h1,
