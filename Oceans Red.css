@@ -2120,6 +2120,14 @@ body:is(.is-export-mode) .markdown-preview-view {
     }
 
   /* #endregion */
+  
+  /* #region -> Full Calendar Plugin */
+
+    .workspace-leaf-content[data-type="full-calendar-view"] {
+      background-color: var(--bg-darker-translucent);
+    }
+
+  /* #endregion -> Full Calendar Plugin */
 
 /* #endregion */
 
