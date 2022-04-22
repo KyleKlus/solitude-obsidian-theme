@@ -2129,6 +2129,16 @@ body:is(.is-export-mode) .markdown-preview-view {
 
   /* #endregion -> Full Calendar Plugin */
 
+  /* #region -> Privacy Glasses */
+
+  body.privacy-glasses.blur-preview 
+  :is(.callout-content :is(p, li), .callout-title-inner ):not(:hover) {
+      text-shadow: 0 0 var(--blurLevel) currentColor;
+      -webkit-text-fill-color: transparent;
+  }
+
+/* #endregion -> Privacy Glasses */
+
 /* #endregion */
 
 /* #region *..........................5. Style Settings Plugin */
