@@ -1,14 +1,14 @@
 /* #region *..........................1. Colors */
 
 :root, .theme-dark {
-  --main-accent-dark: #580F0F;
-  --main-accent: #AE1E1E;
-  --main-accent-light: #DC2E2E; /*#fc4e4e*/
+  --main-accent-dark: hsl(0, 60%, 20%);
+  --main-accent: hsl(0, 60%, 40%);
+  --main-accent-light: hsl(0, 60%, 52%); /*#fc4e4e*/
 
-  --bg-translucent: hsla(240, 13%, 10%, 0.925);
-  --bg-dark-translucent: hsla(228, 13%, 9%, 0.949);
-  --bg-darker-translucent: hsla(228, 15%, 7%, 0.965);
-  --bg-darkest-translucent: hsla(240, 16%, 6%, 0.961);
+  --bg-translucent: hsla(240, 0%, 10%, 0.925);
+  --bg-dark-translucent: hsla(228, 0%, 9%, 0.925);
+  --bg-darker-translucent: hsla(228, 2%, 7%, 0.925);
+  --bg-darkest-translucent: hsla(240, 3%, 6%, 0.925);
 
   --bg: #14141a;
   --bg-dark: #111216;
@@ -23,7 +23,7 @@
   --bg-ribbon: var(--bg-app);
 
   --bg-leaf-head-active: var(--bg-translucent); 
-  --bg-leaf-head:var(--bg-darker-translucent);
+  --bg-leaf-head: var(--bg-darker-translucent);
   --bg-leaf-content: var(--bg-translucent);
 
   --bg-input: #0f0f0f;
@@ -72,7 +72,7 @@
   --background-secondary: var(--bg-darkest); /*Sidebar background*/
   --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
   
-  --text-normal: hsl(193, 22%, 88%); /*Text body of note*/
+  --text-normal: hsl(234, 17%, 75%); /*Text body of note*/
   --text-note: var(--text-normal);
   --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--main-accent); /*Links*/
@@ -2130,7 +2130,7 @@ body:is(.is-export-mode) .markdown-preview-view {
   /* #region -> Full Calendar Plugin */
 
     .workspace-leaf-content[data-type="full-calendar-view"] {
-      background-color: var(--bg-darker-translucent);
+      background-color: transparent;
     }
 
   /* #endregion -> Full Calendar Plugin */
