@@ -72,7 +72,7 @@
   --background-secondary: var(--bg-darkest); /*Sidebar background*/
   --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
   
-  --text-normal: hsl(234, 17%, 75%); /*Text body of note*/
+  --text-normal: hsl(231, 18%, 84%); /*Text body of note*/
   --text-note: var(--text-normal);
   --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--main-accent); /*Links*/
@@ -220,7 +220,6 @@ body:is(.is-export-mode) .markdown-preview-view {
 
 
   .titlebar,
-  .status-bar,
   .workspace-leaf-resize-handle,
   .workspace-leaf,
   .workspace-leaf-content,
@@ -278,9 +277,9 @@ body:is(.is-export-mode) .markdown-preview-view {
   /* #region *..........................3.2. Status bar*/
   .status-bar{
     border-top: 0px solid var(--main-accent-dark);
+    background-color: var(--bg-darker-translucent);
     max-height: 20px;
     padding: 0px 25px;
-    margin-bottom: var(--panel-spacing);
     align-items: flex-start;
     justify-content: center;
   }
@@ -643,17 +642,22 @@ body:is(.is-export-mode) .markdown-preview-view {
       border-bottom-left-radius: var(--radius-big);
       border-bottom-right-radius: var(--radius-big);
     }
-
+    
     .workspace-split.mod-root .view-content {
       background-color: transparent;
     }
 
+    .workspace-split.mod-root .workspace-leaf-content[data-type="full-calendar-view"] > .view-content {
+      background-color: var(--bg-darker-translucent);
+    }
+
+
     .workspace-split.mod-left-split {
-      padding-left: calc(2 * var(--panel-spacing));
+      padding-left: 0;
     }
 
     .workspace-split.mod-right-split {
-      padding-right: calc(2 * var(--panel-spacing));
+      padding-right: 0;
     }
 
     .workspace-split:is(.mod-root, .mod-vertical, .mod-horizontal) {
