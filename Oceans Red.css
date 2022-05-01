@@ -2224,6 +2224,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     button:hover {
       transform: scale(1.1, 1.1);
       transition: all 200ms ease-in;
+      border-radius: var(--radius-small);
     }
 
   /* #endregion -> Full Calendar Plugin */
