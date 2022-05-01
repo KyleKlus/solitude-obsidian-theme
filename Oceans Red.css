@@ -219,6 +219,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
   body {
     background-color: var(--bg-app);
+    padding-top: 24px !important;
   }
 
   body {
@@ -240,6 +241,7 @@ body:is(.is-export-mode) .markdown-preview-view {
   body .titlebar {
     background-color: var(--bg-title-bar);
     height: 24px !important;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
   }
 
   .titlebar-text {
@@ -258,24 +260,42 @@ body:is(.is-export-mode) .markdown-preview-view {
   .titlebar-text,
   .titlebar-button-container {
     color: var(--main-accent);
-    background-color: var(--bg-dark-translucent);
     border-radius: var(--radius-medium);
     border-radius: var(--radius-medium);
+    background-color: var(--bg-translucent);
+
     height: 22px;
     box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
   }
 
   .titlebar-button {
     color: var(--main-accent);
+    
     opacity: 1.0;
     border: 1px solid transparent;
     border-radius: var(--radius-medium);
+    max-height: 20px;
   }
+
+  .titlebar-button.page-header-button {
+    border:none;
+    color: var(--main-accent);
+    opacity: 1.0;
+    background-color: var(--bg-translucent);
+    border-radius: var(--radius-medium);
+    max-height: 20px;
+    margin: 0px calc(var(--panel-spacing) / 2.5) 2px calc(var(--panel-spacing) / 2.5);
+    padding: 0px 10px;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+    transition: all 200ms ease-out;
+  }
+
 
   .titlebar-button.mod-maximize:hover, 
   .titlebar-button.mod-minimize:hover, 
   .titlebar-button.mod-forward:hover, 
-  .titlebar-button.mod-back:hover {
+  .titlebar-button.mod-back:hover,
+  .titlebar-button.page-header-button:hover {
     color: var(--main-accent-light);
     background-color: var(--bg-title-bar-button-hover);
     transform: scale(1.1, 1.1);
@@ -649,6 +669,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .workspace-split.mod-root {
       padding: var(--panel-spacing) var(--panel-spacing);
       border-radius: var(--radius-big);
+      
     }
 
     .workspace-split:is(.mod-left-split, .mod-right-split) {
@@ -1052,7 +1073,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         body:is(.downsize-h-formatter) .cm-formatting-header.cm-formatting-header {
           color: var(--text-faint);
           font-weight: 200;
-          font-size: small;
+          font-size: small !important;
         }
 
         .markdown-rendered .callout-title-inner :is(h1, h2, h3, h4, h5, h6),
