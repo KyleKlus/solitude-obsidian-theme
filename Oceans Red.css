@@ -365,6 +365,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .modal,
     .prompt {
       box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+      background-color: var(--bg-darker);
     }
 
     .community-plugin-readme.markdown-preview-view {
