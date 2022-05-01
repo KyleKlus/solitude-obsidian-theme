@@ -10,10 +10,10 @@
   --bg-darker-translucent: hsla(0, 0%, 7%, 0.95);
   --bg-darkest-translucent: hsla(0, 0%, 5%, 0.95);
 
-  --bg: #252526;
-  --bg-dark: #202020;
-  --bg-darker: #1D1D1D;
-  --bg-darkest: #161616;
+  --bg: hsl(0, 0%, 11%);
+  --bg-dark: hsl(0, 0%, 9%);
+  --bg-darker: hsl(0, 0%, 7%);
+  --bg-darkest: hsl(0, 0%, 5%);
 
   --bg-app: #060608;
   
@@ -365,7 +365,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .modal,
     .prompt {
       box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-      background-color: var(--bg-darker);
+      background-color: var(--bg-darkest);
     }
 
     .community-plugin-readme.markdown-preview-view {
@@ -731,7 +731,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       /* #endregion |3.5.2.1. View Header  */
 
       .workspace-split.mod-root:is(.mod-vertical, .mod-horizontal):not(.mod-left-split, .mod-right-split) > :not(:last-child) {
-        padding-right: calc(2 * var(--panel-spacing));
+        padding-right: calc(var(--panel-spacing));
       }
 
       .workspace-split.mod-horizontal:not(.mod-left-split, .mod-right-split) > :not(.workspace-leaf:last-child) {
