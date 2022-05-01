@@ -40,12 +40,19 @@
 
   --bg-quote:var(--bg-darkest-translucent);
 
-  --header-1-color: #bbe66d;
+  --header-1-color: hsl(230, 30%, 90%);
+  --header-2-color: hsl(230, 30%, 80%);
+  --header-3-color: hsl(230, 30%, 70%);
+  --header-4-color: hsl(230, 30%, 60%);
+  --header-5-color: hsl(230, 30%, 50%);
+  --header-6-color: hsl(230, 30%, 40%);
+
+  /* --header-1-color: #bbe66d;
   --header-2-color: #5ac760;
   --header-3-color: #3cbd81;
   --header-4-color: #4baacf;
   --header-5-color: #5187d8;
-  --header-6-color: #2e31e6;
+  --header-6-color: #2e31e6; */
   
   --bg-highlight-color:#afe400;
   --highlight-text-color:#000000;
@@ -72,7 +79,7 @@
   --background-secondary: var(--bg-darkest); /*Sidebar background*/
   --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
   
-  --text-normal: hsl(235, 30%, 92%); /*Text body of note*/
+  --text-normal: hsl(230, 30%, 90%); /*Text body of note*/
   --text-note: var(--text-normal);
   --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--main-accent); /*Links*/
