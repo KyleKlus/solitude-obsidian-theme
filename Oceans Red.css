@@ -5,31 +5,31 @@
   --main-accent: hsl(0, 60%, 40%);
   --main-accent-light: hsl(0, 60%, 52%); /*#fc4e4e*/
 
-  --bg-translucent: hsla(240, 0%, 10%, 0.925);
-  --bg-dark-translucent: hsla(228, 0%, 9%, 0.925);
-  --bg-darker-translucent: hsla(228, 2%, 7%, 0.925);
-  --bg-darkest-translucent: hsla(240, 3%, 6%, 0.925);
+  --bg-translucent: hsla(240, 1%, 12%, 0.95);
+  --bg-dark-translucent: hsla(0, 0%, 9%, 0.95);
+  --bg-darker-translucent: hsla(0, 0%, 7%, 0.95);
+  --bg-darkest-translucent: hsla(0, 0%, 5%, 0.95);
 
-  --bg: #14141a;
-  --bg-dark: #111216;
-  --bg-darker: #0e0f13;
-  --bg-darkest: #08080b;
+  --bg: #252526;
+  --bg-dark: #202020;
+  --bg-darker: #1D1D1D;
+  --bg-darkest: #161616;
 
   --bg-app: #060608;
   
-  --bg-title-bar:#0d0d10;
+  --bg-title-bar:var(--bg-darkest-translucent);
   --bg-title-bar-button-hover:#232327;
   
   --bg-ribbon: var(--bg-app);
 
-  --bg-leaf-head-active: var(--bg-translucent); 
+  --bg-leaf-head-active: var(--bg-darkest-translucent); 
   --bg-leaf-head: var(--bg-darker-translucent);
-  --bg-leaf-content: var(--bg-translucent);
+  --bg-leaf-content: var(--bg-dark-translucent);
 
   --bg-input: #0f0f0f;
 
-  --bg-note: var(--bg-dark-translucent);
-  --bg-line-hover: var(--bg-darker-translucent); /* 1e1f24 */
+  --bg-note: var(--bg-darker-translucent);
+  --bg-line-hover: var(--bg-darkest-translucent); /* 1e1f24 */
   --bg-line-active: var(--bg-darkest-translucent);
 
   --bg-embed: transparent;
@@ -72,7 +72,7 @@
   --background-secondary: var(--bg-darkest); /*Sidebar background*/
   --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
   
-  --text-normal: hsl(231, 18%, 84%); /*Text body of note*/
+  --text-normal: hsl(235, 30%, 92%); /*Text body of note*/
   --text-note: var(--text-normal);
   --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--main-accent); /*Links*/
@@ -86,7 +86,7 @@
 
   --interactive-normal: var(--main-accent-dark); /*Button Color*/
   --interactive-hover: var(--main-accent); /*Button Hovered Color*/
-  --interactive-accent: var(--main-accent-dark); /*Workspace Note Title Underline*/
+  --interactive-accent: var(--main-accent); /*Workspace Note Title Underline*/
   --interactive-accent-hover: var(--main-accent); /*Menu Button Hover*/
   
   --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
@@ -164,7 +164,7 @@
 :root{
   --list-bullet-sign: "- ";
   --note-width: 1200px;
-  --panel-spacing: 7px;
+  --panel-spacing: 16px;
   --radius-big: 20px;
   --radius-medium: 10px;
   --radius-small: 3px;
@@ -219,7 +219,6 @@ body:is(.is-export-mode) .markdown-preview-view {
   }
 
 
-  .titlebar,
   .workspace-leaf-resize-handle,
   .workspace-leaf,
   .workspace-leaf-content,
@@ -232,7 +231,8 @@ body:is(.is-export-mode) .markdown-preview-view {
   /* #region *..........................3.1. Titlebar*/
 
   body .titlebar {
-    background-color: transparent;
+    background-color: var(--bg-title-bar);
+    height: 24px !important;
   }
 
   .titlebar-text {
@@ -261,35 +261,37 @@ body:is(.is-export-mode) .markdown-preview-view {
   .titlebar-button {
     color: var(--main-accent);
     opacity: 1.0;
+    border: 1px solid transparent;
+    border-radius: var(--radius-medium);
   }
 
   .titlebar-button.mod-maximize:hover, 
   .titlebar-button.mod-minimize:hover, 
   .titlebar-button.mod-forward:hover, 
   .titlebar-button.mod-back:hover {
+    color: var(--main-accent-light);
     background-color: var(--bg-title-bar-button-hover);
-    border-radius: var(--radius-medium);
-    transition: background-color 200ms ease-in;
+    transform: scale(1.1, 1.1);
+    transition: all 200ms ease-in;
   }
 
   /* #endregion */
 
   /* #region *..........................3.2. Status bar*/
   .status-bar{
-    border-top: 0px solid var(--main-accent-dark);
-    background-color: var(--bg-darker-translucent);
-    max-height: 20px;
-    padding: 0px 25px;
-    align-items: flex-start;
+    background-color: var(--main-accent-dark);
+    max-height: 28px;
+    padding: 8px 25px;
+    align-items: center;
     justify-content: center;
   }
 
   .status-bar-item{
     color: var(--main-accent);
-    background-color: var(--bg-translucent);
+    background-color: var(--bg-darker-translucent);
     border-radius: var(--radius-medium);
     max-height: 20px;
-    margin: auto calc(var(--panel-spacing) / 2);
+    margin: 4px calc(var(--panel-spacing) / 2);
     padding: 0px 5px;
     box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
     transition: all 200ms ease-out;
@@ -637,14 +639,22 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     /* #region *..........................3.5.3. Workspace-Split */
       
-    .workspace-split:is(.mod-left-split, .mod-root, .mod-right-split) {
-      padding: calc(2 * var(--panel-spacing)) var(--panel-spacing);
-      border-bottom-left-radius: var(--radius-big);
-      border-bottom-right-radius: var(--radius-big);
+    .workspace-split.mod-root {
+      padding: var(--panel-spacing) var(--panel-spacing);
+      border-radius: var(--radius-big);
+    }
+
+    .workspace-split:is(.mod-left-split, .mod-right-split) {
+      border-radius: 0;
+      background-color: var(--bg-dark-translucent);
     }
     
     .workspace-split.mod-root .view-content {
       background-color: transparent;
+    }
+
+    .view-content .empty-state {
+      background-color: var(--bg-dark-translucent);
     }
 
     .workspace-split.mod-root .workspace-leaf-content[data-type="full-calendar-view"] > .view-content {
@@ -658,10 +668,6 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .workspace-split.mod-right-split {
       padding-right: 0;
-    }
-
-    .workspace-split:is(.mod-root, .mod-vertical, .mod-horizontal) {
-      border-radius: var(--radius-big);
     }
 
 
@@ -720,11 +726,10 @@ body:is(.is-export-mode) .markdown-preview-view {
       }
 
       .workspace-leaf-resize-handle:hover {
-        background-color: transparent;
+        background-color: var(--main-accent-dark);
       }
 
       .workspace-leaf .view-header, 
-      .nav-header, 
       .workspace-split.mod-left-split .workspace-tabs .workspace-leaf, 
       .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
         border-top-left-radius: var(--radius-big);
@@ -733,8 +738,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       .workspace-leaf-content,
       .workspace-leaf {
-        border-bottom-left-radius: var(--radius-big);
-        border-bottom-right-radius: var(--radius-big);
+        border-radius: var(--radius-big);
       }
 
       .workspace-leaf-content[data-type="timeline"] {
@@ -765,6 +769,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .workspace-tab-header.is-after-active,
     .workspace-tabs {
       background-color: transparent;
+      
     }
 
     .workspace-tab-container-inner,
@@ -790,22 +795,31 @@ body:is(.is-export-mode) .markdown-preview-view {
     }
 
     .workspace-tabs .workspace-leaf {
-      background-color: var(--bg-leaf-content);
+      background-color: transparent;
     }
 
     .workspace-tabs {
       padding: 0;
     }
 
+    .workspace-tab-container-inner .workspace-tab-header-inner,
+    .workspace-tab-header.is-active .workspace-tab-header-inner {
+      border: 1px solid transparent;
+      border-radius: var(--radius-medium);
+    }
+
     .workspace-tab-container-inner .workspace-tab-header-inner:hover {
-      color:var(--main-accent-light);
-      transform: scale(1.05, 1.05);
-      transition: all 400ms;
+      color: var(--main-accent-light);
+      border-color: var(--main-accent-light);
+      transform: scale(1.1, 1.1);
+      transition: all 200ms ease-in;
     }
 
     .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
-      border-bottom: none;
-      transform: scale(1.05, 1.05);
+      color: var(--main-accent-light);
+      border-color: var(--main-accent-light);
+      transform: scale(1.1, 1.1);
+      transition: all 200ms ease-in;
     }
 
     .nav-buttons-container .nav-action-button, 
@@ -1213,6 +1227,12 @@ body:is(.is-export-mode) .markdown-preview-view {
         left: 0px;
         content: var(--list-bullet-sign);
         color:var(--main-accent);
+      }
+
+      .markdown-embed-title, .file-embed-title {
+        line-height: 0;
+        font-size: 0;
+        color: transparent;
       }
       
       .markdown-embed, 
@@ -1985,22 +2005,23 @@ body:is(.is-export-mode) .markdown-preview-view {
     /* #region *..........................3.5.6. File Explorer Elements */
 
     .nav-header {
-      border-bottom: 1px solid var(--main-accent-dark);
-      border-top: 1px solid var(--main-accent-dark);
-      background-color: var(--bg-leaf-head);
-      padding: 2px 10px 2px 20px;
-      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-      border-radius: var(--radius-big);
+      width: fit-content;
+      align-self: center;
+      padding-top: 0;
     }
     
-    .nav-action-button {
-      margin-bottom: 8px;
-      margin-top: 8px;
+    .nav-header .nav-buttons-container .nav-action-button {
+      background-color: var(--bg-leaf-head);
+      border: 1px solid transparent;
+      padding: 11px 11px 4px 11px;
+      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+      border-radius: var(--radius-big);
       transition: all 200ms ease-out;
     }
 
     .nav-buttons-container .nav-action-button:hover {
       color: var(--main-accent-light);
+      border-color: var(--main-accent-light);
       transform: scale(1.1, 1.1);
       transition: all 200ms ease-in;
     }
@@ -2043,10 +2064,27 @@ body:is(.is-export-mode) .markdown-preview-view {
     .nav-folder.mod-root > .nav-file-title:hover, 
     .nav-folder.mod-root > .nav-folder-title:hover {
       border: 1px solid transparent;
+      border-bottom-color: var(--main-accent-dark);
+      border-bottom-width: 2px;
       padding-left: 10px;
       box-shadow: none;
       transform: none;
       transition: all 200ms ease-in;
+    }
+
+    .nav-folder.mod-root > .nav-file-title, 
+    .nav-folder.mod-root > .nav-folder-title {
+      border: 1px solid transparent;
+      border-bottom-color: var(--main-accent-dark);
+      border-bottom-width: 2px;
+      padding-left: 10px;
+      box-shadow: none;
+      transform: none;
+      transition: all 200ms ease-in;
+    }
+
+    .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+      font-weight: 900;
     }
 
     body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,  
@@ -2133,8 +2171,31 @@ body:is(.is-export-mode) .markdown-preview-view {
   
   /* #region -> Full Calendar Plugin */
 
+    .fc {
+      --fc-button-active-bg-color: var(--main-accent-light);
+    }
+
     .workspace-leaf-content[data-type="full-calendar-view"] {
       background-color: transparent;
+    }
+
+    .workspace-leaf-content[data-type="full-calendar-view"] .view-content{
+      padding-top: 5px;
+    }
+
+    .fc-button-group {
+      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+      transition: all 200ms ease-out;
+    }
+
+    :not(.fc-button-group) > button {
+      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+      transition: all 200ms ease-out;
+    }
+
+    button:hover {
+      transform: scale(1.1, 1.1);
+      transition: all 200ms ease-in;
     }
 
   /* #endregion -> Full Calendar Plugin */
