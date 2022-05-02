@@ -397,17 +397,20 @@ body:is(.is-export-mode) .markdown-preview-view {
       border-left: 3px solid var(--bg-leaf-head-active);
       font-size: 0.8em;
       padding: 3px 6px 3px 24px;
+      transition: all 200ms ease-out;
     }
     
     .modal.mod-settings .vertical-tab-nav-item.is-active{
       border-left-color: var(--main-accent-dark);
       background-color: var(--bg-leaf-head);
+      transition: all 200ms ease-out;
     }
 
     .modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover{
       background-color: var(--main-accent-dark);
       border-left-color: var(--main-accent-dark);
       transform: scale(1.05, 1.05);
+      transition: all 200ms ease-in;
     }
 
     /* #endregion */
@@ -416,10 +419,28 @@ body:is(.is-export-mode) .markdown-preview-view {
 
   /* #region *..........................3.4. Interaction items */
 
+  .modal button:not(.mod-cta):not(.mod-warning),
+  .modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
+    background-color: var(--interactive-normal);
+  }
+
+  .modal button:not(.mod-cta):not(.mod-warning):hover,
+  .modal.mod-settings button:not(.mod-cta):not(.mod-warning):hover {
+    background-color: var(--interactive-hover);
+  }
+
     /* #region *..........................3.4.1. Icons */
 
     .clickable-icon {
       color: var(--main-accent);
+      transition: transform 200ms ease-out,
+                  background-color 200ms ease-out;
+    }
+
+    .edit-block-button,
+    .checkbox-container,
+    .modal-close-button,
+    .clickable-icon {
       transition: all 200ms ease-out;
     }
     
@@ -432,7 +453,8 @@ body:is(.is-export-mode) .markdown-preview-view {
       background-color: var(--main-accent);
       padding: 0px 3px 0px 3px ;
       transform: scale(1.1, 1.1);
-      transition: all 200ms ease-in;
+      transition: transform 200ms ease-in,
+                  background-color 200ms ease-in;
     }
 
     .markdown-source-view.mod-cm6 .edit-block-button {
@@ -440,6 +462,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       bottom: 2px;
       right: 2px;
       padding: 1px;
+      transition: all 200ms ease-out;
     }
     
     /* #endregion | 3.4.1. Icons */
