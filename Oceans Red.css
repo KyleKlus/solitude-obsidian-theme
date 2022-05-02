@@ -11,7 +11,7 @@
       --conf-bg-start: 2%;
       --conf-bg-transparency: 0.95;
       --conf-bg-hue: 228;
-      --conf-bg-sat: 16%;
+      --conf-bg-sat: 12%;
 
       --bg-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
       --bg-dark-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
@@ -647,11 +647,6 @@ body:is(.is-export-mode) .markdown-preview-view {
       border-radius: var(--radius-big);
       
     }
-
-    .workspace-split:is(.mod-left-split, .mod-right-split) {
-      border-radius: 0;
-      background-color: var(--bg-dark-translucent);
-    }
     
     .workspace-split.mod-root .view-content {
       background-color: transparent;
@@ -668,10 +663,14 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .workspace-split.mod-left-split {
       padding-left: 0;
+      background-color: var(--bg-dark);
+      border-right: 3px solid var(--horizontal-line-color);
+      box-shadow: var(--shadow);
     }
 
     .workspace-split.mod-right-split {
       padding-right: 0;
+      background-color: var(--bg-dark-translucent);
     }
 
 
@@ -787,10 +786,15 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .workspace-tab-container-inner {
       box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+      height: 24px;
     }
 
     .workspace-tab-header-container{
-      margin-bottom: calc(var(--panel-spacing));
+      background-color: var(--bg-darker);
+      border-bottom: 2px solid var(--main-accent-dark);
+      height: fit-content;
+      justify-content: center;
+      padding: 10px;
     }
 
     .workspace-tab-header.is-active {
@@ -879,6 +883,14 @@ body:is(.is-export-mode) .markdown-preview-view {
         width: 0px;
         color: transparent;
         display: none;
+      }
+
+      .cm-contentContainer {
+        margin-left: auto;
+      }
+
+      .cm-gutters {
+        margin-left: unset;
       }
 
       /* #endregion |3.5.4.1. General  */
@@ -2016,7 +2028,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .nav-header {
       width: fit-content;
       align-self: center;
-      padding-top: 0;
+      padding-top: 14px;
     }
     
     .nav-header .nav-buttons-container .nav-action-button {
@@ -2175,6 +2187,41 @@ body:is(.is-export-mode) .markdown-preview-view {
       border-right: 1px solid var(--main-accent-dark);
     }
 
+    
+
+  /* #endregion */
+  
+  /* #region -> Full Calendar Plugin */
+
+    .fc {
+      --fc-button-active-bg-color: var(--main-accent-light);
+    }
+
+    .workspace-leaf-content[data-type="full-calendar-view"] {
+      background-color: transparent;
+    }
+
+    .workspace-leaf-content[data-type="full-calendar-view"] .view-content{
+      padding-top: 5px;
+    }
+
+    .fc-button-group {
+      box-shadow: var(--shadow);
+      transition: all 200ms ease-out;
+    }
+
+    :not(.fc-button-group) > button {
+      box-shadow: var(--shadow);
+      transition: all 200ms ease-out;
+    }
+
+    button:hover {
+      transform: scale(1.1, 1.1);
+      transition: all 200ms ease-in;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-small);
+    }
+
     .fc-timegrid-slot[data-time="12:00:00"],
     .fc-timegrid-slot[data-time="12:00:00"] + td,
     .fc-timegrid-slot[data-time="12:30:00"],
@@ -2211,37 +2258,14 @@ body:is(.is-export-mode) .markdown-preview-view {
       background-color: rgba(255, 0, 0, 0.034);
     }
 
-  /* #endregion */
-  
-  /* #region -> Full Calendar Plugin */
-
-    .fc {
-      --fc-button-active-bg-color: var(--main-accent-light);
-    }
-
-    .workspace-leaf-content[data-type="full-calendar-view"] {
-      background-color: transparent;
-    }
-
-    .workspace-leaf-content[data-type="full-calendar-view"] .view-content{
-      padding-top: 5px;
-    }
-
-    .fc-button-group {
-      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+    .fc-event[href], .fc-event.fc-event-draggable {
       transition: all 200ms ease-out;
     }
 
-    :not(.fc-button-group) > button {
-      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-      transition: all 200ms ease-out;
-    }
-
-    button:hover {
-      transform: scale(1.1, 1.1);
-      transition: all 200ms ease-in;
+    .fc-event[href]:hover, .fc-event.fc-event-draggable:hover {
       box-shadow: var(--shadow);
-      border-radius: var(--radius-small);
+      transform: scale(1.05, 1.05);
+      transition: all 200ms ease-in;
     }
 
   /* #endregion -> Full Calendar Plugin */
