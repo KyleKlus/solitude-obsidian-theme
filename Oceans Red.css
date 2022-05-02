@@ -1,113 +1,112 @@
-/* #region *..........................1. Colors */
+/* #region -> Colors */
 
-:root, .theme-dark {
-  --main-accent-dark: hsl(0, 60%, 20%);
-  --main-accent: hsl(0, 60%, 40%);
-  --main-accent-light: hsl(0, 60%, 52%); /*#fc4e4e*/
+  :root, .theme-dark {
+    /* #region -> General Colors */
+      
+      --main-accent-dark: hsl(0, 60%, 20%);
+      --main-accent: hsl(0, 60%, 40%);
+      --main-accent-light: hsl(0, 60%, 52%); /*#fc4e4e*/
 
-  --bg-spacing: 4%;
-  --bg-start: 3%;
+      --conf-bg-spacing: 3%;
+      --conf-bg-start: 2%;
+      --conf-bg-transparency: 0.95;
+      --conf-bg-hue: 228;
+      --conf-bg-sat: 16%;
 
-  --bg-translucent: hsla(0, 2%, calc(var(--bg-start) + 3 * var(--bg-spacing)), 0.95);
-  --bg-dark-translucent: hsla(0, 2%, calc(var(--bg-start) + 2 * var(--bg-spacing)), 0.95);
-  --bg-darker-translucent: hsla(0, 2%, calc(var(--bg-start) + 1 * var(--bg-spacing)), 0.95);
-  --bg-darkest-translucent: hsla(0, 2%, calc(var(--bg-start) + 0 * var(--bg-spacing)), 0.95);
+      --bg-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
+      --bg-dark-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
+      --bg-darker-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
+      --bg-darkest-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 0 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
 
-  --bg: hsl(0, 2%, calc(var(--bg-start) + 3 * var(--bg-spacing)));
-  --bg-dark: hsl(0, 2%, calc(var(--bg-start) + 2 * var(--bg-spacing)));
-  --bg-darker: hsl(0, 2%, calc(var(--bg-start) + 1 * var(--bg-spacing)));
-  --bg-darkest: hsl(0, 2%, calc(var(--bg-start) + 0 * var(--bg-spacing)));
+      --bg: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)));
+      --bg-dark: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)));
+      --bg-darker: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)));
+      --bg-darkest: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 0 * var(--conf-bg-spacing)));
+    /* #endregion -> General Colors */
 
-  --bg-app: var(--bg-darkest);
-  
-  --bg-title-bar:var(--bg-darkest-translucent);
-  --bg-title-bar-button-hover:#232327;
-  
-  --bg-ribbon: var(--bg-app);
+    --bg-app: var(--bg-darkest);
+    
+    --bg-title-bar: var(--bg-darkest-translucent);
+    --bg-title-bar-button-hover:#232327;
 
-  --bg-leaf-head-active: var(--bg-darkest-translucent); 
-  --bg-leaf-head: var(--bg-darker-translucent);
-  --bg-leaf-content: var(--bg-dark-translucent);
+    --bg-ribbon: var(--bg-app);
 
-  --bg-input: #0f0f0f;
+    --bg-leaf-head-active: var(--bg-darkest-translucent); 
+    --bg-leaf-head: var(--bg-darker-translucent);
+    --bg-leaf-content: var(--bg-dark-translucent);
 
-  --bg-note: var(--bg-darker-translucent);
-  --bg-line-hover: var(--bg-darkest-translucent); /* 1e1f24 */
-  --bg-line-active: var(--bg-darkest-translucent);
+    --bg-input: #0f0f0f;
 
-  --bg-embed: transparent;
+    --bg-note: var(--bg-darker-translucent);
+    --bg-line-hover: var(--bg-darkest-translucent); /* 1e1f24 */
+    --bg-line-active: var(--bg-darkest-translucent);
 
-  --horizontal-line-color:#4d5255;
+    --bg-embed: transparent;
 
-  --bg-task-hover:#202833;
+    --horizontal-line-color:#4d5255;
 
-  --bg-quote:var(--bg-darkest-translucent);
+    --bg-task-hover:#202833;
 
-  --header-1-color: hsl(230, 30%, 90%);
-  --header-2-color: hsl(230, 30%, 80%);
-  --header-3-color: hsl(230, 30%, 70%);
-  --header-4-color: hsl(230, 30%, 60%);
-  --header-5-color: hsl(230, 30%, 50%);
-  --header-6-color: hsl(230, 30%, 40%);
+    --bg-quote: var(--bg-darkest);
 
-  /* --header-1-color: #bbe66d;
-  --header-2-color: #5ac760;
-  --header-3-color: #3cbd81;
-  --header-4-color: #4baacf;
-  --header-5-color: #5187d8;
-  --header-6-color: #2e31e6; */
-  
-  --bg-highlight-color:#afe400;
-  --highlight-text-color:#000000;
-  --bold-color: #2487e4;
-  --italic-color: #59dbb4;
-  --math-text-color:#5e90c9;
-  --url-color: #40bcdb;
-  --url-hover-color: #6fe2ff;
-  --note-link-color: var(--main-accent);
-  --note-link-hover-color: var(--main-accent-light);
-  --note-link-hover-bg-color: var(--bg-darkest-translucent);
-  --tag-color:#95b4c2;
-  --tag-hover-color: #27cbd1;
-  --bg-tag:#16375c;
-  --bg-tag-hover: #10253f;
+    --header-1-color: hsl(230, 20%, 92%);
+    --header-2-color: hsl(230, 20%, 82%);
+    --header-3-color: hsl(230, 20%, 72%);
+    --header-4-color: hsl(230, 20%, 62%);
+    --header-5-color: hsl(230, 20%, 52%);
+    --header-6-color: hsl(230, 20%, 42%);
+    
+    --bg-highlight-color:#afe400;
+    --highlight-text-color:#000000;
+    --bold-color: #2487e4;
+    --italic-color: #59dbb4;
+    --math-text-color:#5e90c9;
+    --url-color: #40bcdb;
+    --url-hover-color: #6fe2ff;
+    --note-link-color: var(--main-accent);
+    --note-link-hover-color: var(--main-accent-light);
+    --note-link-hover-bg-color: var(--bg-darkest-translucent);
+    --tag-color:#95b4c2;
+    --tag-hover-color: #27cbd1;
+    --bg-tag:#16375c;
+    --bg-tag-hover: #10253f;
 
-  --graph-line-color:#7a7a7a;
-  
-  /* Overridden Obsidian Variables */
+    --graph-line-color:#7a7a7a;
+    
+    /* Overridden Obsidian Variables */
 
-  --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
-  --background-primary: var(--bg-dark); /*Note background*/
-  --background-primary-alt: var(--bg-darker); /*Note Title background active*/
-  --background-secondary: var(--bg-darkest); /*Sidebar background*/
-  --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
-  
-  --text-normal: hsl(230, 30%, 90%); /*Text body of note*/
-  --text-note: var(--text-normal);
-  --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
-  --text-accent: var(--main-accent); /*Links*/
-  --text-accent-hover: var(--main-accent-light); /*Links hover*/
-  --text-faint: #5C5C5C; /*Link brackets color & Gutter Numbers*/
+    --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
+    --background-primary: var(--bg-dark); /*Note background*/
+    --background-primary-alt: var(--bg-darker); /*Note Title background active*/
+    --background-secondary: var(--bg-darkest); /*Sidebar background*/
+    --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
+    
+    --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
+    --text-note: var(--text-normal);
+    --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
+    --text-accent: var(--main-accent); /*Links*/
+    --text-accent-hover: var(--main-accent-light); /*Links hover*/
+    --text-faint: #5C5C5C; /*Link brackets color & Gutter Numbers*/
 
-  --text-highlight-bg: #c939395d; /*Search Matches*/
-  --text-highlight-bg-active: #cc141467; /*Active Search Match (Preview Mode)*/
-  --text-selection: var(--main-accent-dark); /*Text Selections*/
-  --text-selection-color: #caa3a3;
+    --text-highlight-bg: #c939395d; /*Search Matches*/
+    --text-highlight-bg-active: #cc141467; /*Active Search Match (Preview Mode)*/
+    --text-selection: var(--main-accent-dark); /*Text Selections*/
+    --text-selection-color: #caa3a3;
 
-  --interactive-normal: var(--main-accent-dark); /*Button Color*/
-  --interactive-hover: var(--main-accent); /*Button Hovered Color*/
-  --interactive-accent: var(--main-accent); /*Workspace Note Title Underline*/
-  --interactive-accent-hover: var(--main-accent); /*Menu Button Hover*/
-  
-  --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
-  --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
-  --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/
+    --interactive-normal: var(--main-accent-dark); /*Button Color*/
+    --interactive-hover: var(--main-accent); /*Button Hovered Color*/
+    --interactive-accent: var(--main-accent); /*Workspace Note Title Underline*/
+    --interactive-accent-hover: var(--main-accent-light); /*Menu Button Hover*/
+    
+    --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
+    --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
+    --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/
 
-  --indentation-guide: var(--main-accent);
-  --indentation-guide-active: var(--main-accent-light);
-}
+    --indentation-guide: var(--main-accent);
+    --indentation-guide-active: var(--main-accent-light);
+  }
 
-/* #endregion */
+/* #endregion -> Colors */
 
 /* #region *..........................2. Fonts */
 
@@ -178,6 +177,7 @@
   --radius-big: 20px;
   --radius-medium: 10px;
   --radius-small: 3px;
+  --shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
 }
 
 * {
@@ -240,72 +240,44 @@ body:is(.is-export-mode) .markdown-preview-view {
   
 
   /* #region *..........................3.1. Titlebar*/
+  
+    .titlebar {
+      background-color: var(--bg-title-bar);
+      height: 24px !important;
+      box-shadow: var(--shadow);
+    }
+  
+    .titlebar-button,
+    .titlebar-text {
+      color: var(--interactive-accent);
+      background-color: transparent;
+      opacity: 1.0;
+    }
 
-  body .titlebar {
-    background-color: var(--bg-title-bar);
-    height: 24px !important;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-  }
+    .titlebar-text {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      margin: 0px auto 0px auto;
+      width: fit-content;
+      padding: 0 10px;
+      letter-spacing: unset;
+    }
 
-  .titlebar-text {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    margin: 0px auto 0px auto;
-    width: fit-content;
-    padding: 0 10px;
-    letter-spacing: unset;
-    opacity: 1;
-  }
+    .titlebar-button {
+      max-height: 24px;
+      transition: all 200ms ease-out;
+    }
 
-  .titlebar-text,
-  .titlebar-button-container {
-    color: var(--main-accent);
-    border-radius: var(--radius-medium);
-    border-radius: var(--radius-medium);
-    background-color: var(--bg-translucent);
+    .titlebar-button:hover {
+      color: var(--interactive-accent-hover);
+      transform: scale(1.6, 1.6);
+      transition: all 200ms ease-in;
+    }
 
-    height: 22px;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-  }
-
-  .titlebar-button {
-    color: var(--main-accent);
-    
-    opacity: 1.0;
-    border: 1px solid transparent;
-    border-radius: var(--radius-medium);
-    max-height: 20px;
-  }
-
-  .titlebar-button.page-header-button {
-    border:none;
-    color: var(--main-accent);
-    opacity: 1.0;
-    background-color: var(--bg-translucent);
-    border-radius: var(--radius-medium);
-    max-height: 20px;
-    margin: 0px calc(var(--panel-spacing) / 2.5) 2px calc(var(--panel-spacing) / 2.5);
-    padding: 0px 10px;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-    transition: all 200ms ease-out;
-  }
-
-
-  .titlebar-button.mod-maximize:hover, 
-  .titlebar-button.mod-minimize:hover, 
-  .titlebar-button.mod-forward:hover, 
-  .titlebar-button.mod-back:hover,
-  .titlebar-button.page-header-button:hover {
-    color: var(--main-accent-light);
-    background-color: var(--bg-title-bar-button-hover);
-    transform: scale(1.1, 1.1);
-    transition: all 200ms ease-in;
-  }
-
-  /* #endregion */
+  /* #endregion -> Titlebar */
 
   /* #region *..........................3.2. Status bar*/
   .status-bar{
@@ -808,9 +780,9 @@ body:is(.is-export-mode) .markdown-preview-view {
     .workspace-tab-header.is-before-active .workspace-tab-header-inner, 
     .workspace-tab-header.is-after-active .workspace-tab-header-inner,
     .workspace-tab-header {
-      background-color: var(--bg-leaf-head);
+      background-color: var(--interactive-normal);
       border-radius: var(--radius-medium);
-      
+      color: var(--text-normal);
     }
 
     .workspace-tab-container-inner {
@@ -822,7 +794,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     }
 
     .workspace-tab-header.is-active {
-      background-color: var(--bg-leaf-head-active);
+      background-color: var(--interactive-hover);
       border-radius: var(--radius-medium);
     }
 
@@ -836,21 +808,16 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .workspace-tab-container-inner .workspace-tab-header-inner,
     .workspace-tab-header.is-active .workspace-tab-header-inner {
-      border: 1px solid transparent;
+      color: var(--text-normal);
       border-radius: var(--radius-medium);
+      transition: all 200ms ease-out;
     }
 
-    .workspace-tab-container-inner .workspace-tab-header-inner:hover {
-      color: var(--main-accent-light);
-      border-color: var(--main-accent-light);
-      transform: scale(1.1, 1.1);
-      transition: all 200ms ease-in;
-    }
-
+    .workspace-tab-container-inner .workspace-tab-header-inner:hover,
     .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
-      color: var(--main-accent-light);
-      border-color: var(--main-accent-light);
-      transform: scale(1.1, 1.1);
+      background-color: var(--interactive-hover);
+      transform: scale(1.2, 1.2);
+      box-shadow: var(--shadow);
       transition: all 200ms ease-in;
     }
 
@@ -2053,23 +2020,22 @@ body:is(.is-export-mode) .markdown-preview-view {
     }
     
     .nav-header .nav-buttons-container .nav-action-button {
-      background-color: var(--bg-leaf-head);
+      background-color: var(--interactive-normal);
       border: 1px solid transparent;
-      padding: 11px 11px 4px 11px;
-      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-      border-radius: var(--radius-big);
+      padding: 7px 22px 0px 22px;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-small);
       transition: all 200ms ease-out;
     }
 
     .nav-buttons-container .nav-action-button:hover {
-      color: var(--main-accent-light);
-      border-color: var(--main-accent-light);
+      background-color: var(--interactive-hover);
       transform: scale(1.1, 1.1);
       transition: all 200ms ease-in;
     }
 
     .nav-action-button.is-active {
-      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+      box-shadow: var(--shadow);
     }
 
     .nav-folder-collapse-indicator {
@@ -2080,6 +2046,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       border-left: 1px solid var(--main-accent);
       margin: 5px 16px;
       padding-left: 8px;
+      transition: all 200ms ease-out;
     }
 
     .nav-files-container {
@@ -2096,34 +2063,28 @@ body:is(.is-export-mode) .markdown-preview-view {
       font-size: 20px;
       padding-top: 15px;
       padding-bottom: 10px;
-      transition: all 200ms ease-out;
     }
 
-    .nav-buttons-container .nav-action-button{
-        color: var(--main-accent);
+    .nav-buttons-container .nav-action-button {
+        color: var(--text-normal);
     }
-
-    .nav-folder.mod-root > .nav-file-title:hover, 
-    .nav-folder.mod-root > .nav-folder-title:hover {
-      border: 1px solid transparent;
-      border-bottom-color: var(--main-accent-dark);
-      border-bottom-width: 2px;
-      padding-left: 10px;
-      box-shadow: none;
-      transform: none;
-      transition: all 200ms ease-in;
-    }
-
-    .nav-folder.mod-root > .nav-file-title, 
-    .nav-folder.mod-root > .nav-folder-title {
-      border: 1px solid transparent;
-      border-bottom-color: var(--main-accent-dark);
-      border-bottom-width: 2px;
-      padding-left: 10px;
-      box-shadow: none;
-      transform: none;
-      transition: all 200ms ease-in;
-    }
+      
+      .nav-folder.mod-root > .nav-file-title, 
+      .nav-folder.mod-root > .nav-folder-title {
+        border: 1px solid transparent;
+        padding-left: 10px;
+        box-shadow: none;
+        transform: none;
+        transition: all 200ms ease-in;
+      }
+      
+      .nav-folder.mod-root > .nav-file-title:hover, 
+      .nav-folder.mod-root > .nav-folder-title:hover {
+        border: 1px solid transparent;
+        padding-left: 10px;
+        box-shadow: none;
+        transform: none;
+      }
 
     .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
       font-weight: 900;
@@ -2133,9 +2094,9 @@ body:is(.is-export-mode) .markdown-preview-view {
     body:not(.is-grabbing) .nav-folder-title:hover {
       border: 1px solid transparent;
       border-left: 2px solid var(--main-accent-dark);
-      background-color: var(--bg-leaf-head);
+      background-color: var(--bg-darkest);
       transform: translate(3px, -1px);
-      box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+      box-shadow: var(--shadow);
       transition: all 200ms ease-in;
     }
 
@@ -2151,9 +2112,14 @@ body:is(.is-export-mode) .markdown-preview-view {
       transition: all 200ms ease-in;
     }
 
-    .nav-file-title{
+    .nav-folder-title {
+      transition: all 200ms ease-out;
+    }
+
+    .nav-file-title {
       padding: 0px 0px 0px 5px;
       font-size: 14px;
+      transition: all 200ms ease-out;
     }
 
     /* #endregion | 3.5.6. File Explorer Elements */
@@ -2274,6 +2240,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     button:hover {
       transform: scale(1.1, 1.1);
       transition: all 200ms ease-in;
+      box-shadow: var(--shadow);
       border-radius: var(--radius-small);
     }
 
