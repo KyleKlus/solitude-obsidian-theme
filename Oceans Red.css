@@ -220,7 +220,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
 /* #region *..........................3. App */
 
-  body {
+  body:not(.is-mobile) {
     background-color: var(--bg-app);
     padding-top: 24px !important;
   }
@@ -670,7 +670,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     /* #region *..........................3.5.3. Workspace-Split */
       
-    .workspace-split.mod-root {
+    body:not(.is-mobile) .workspace-split.mod-root {
       padding: var(--panel-spacing) var(--panel-spacing);
       border-radius: var(--radius-big);
       
