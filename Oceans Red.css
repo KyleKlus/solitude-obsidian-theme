@@ -340,7 +340,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .modal,
     .prompt {
       box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
-      background-color: var(--bg-darkest);
+      background-color: var(--bg-darker);
     }
 
     .community-plugin-readme.markdown-preview-view {
@@ -1566,6 +1566,17 @@ body:is(.is-export-mode) .markdown-preview-view {
         mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='6.5' width='13' height='1'/%3E%3C/svg%3E");
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='6.5' width='13' height='1'/%3E%3C/svg%3E");
       }
+
+      /* SVG line for cancelled/non-task ('- [/]') */
+      .markdown-preview-view li[data-task="/"]>.task-list-item-checkbox:checked::before, .cm-line [data-task="-"].task-list-item-checkbox:checked::before {
+        content: '';
+        top:2px;
+        bottom:2px;
+        background-color: white;
+        mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='6.5' width='13' height='1'/%3E%3C/svg%3E");
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='6.5' width='13' height='1'/%3E%3C/svg%3E");
+      }
+
       /* greyed-out background colour for cancelled/non-task ('- [-]') */
       .markdown-preview-view li[data-task="-"]>.task-list-item-checkbox:checked, .cm-line [data-task="-"].task-list-item-checkbox:checked {
         background-color: var(--text-faint);
