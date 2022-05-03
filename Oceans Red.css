@@ -7,8 +7,8 @@
       --main-accent: hsl(0, 60%, 40%);
       --main-accent-light: hsl(0, 60%, 52%); /*#fc4e4e*/
 
-      --conf-bg-spacing: 3%;
-      --conf-bg-start: 2%;
+      --conf-bg-spacing: 5%;
+      --conf-bg-start: 4%;
       --conf-bg-transparency: 0.95;
       --conf-bg-hue: 228;
       --conf-bg-sat: 12%;
