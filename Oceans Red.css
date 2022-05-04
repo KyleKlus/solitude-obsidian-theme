@@ -178,6 +178,7 @@
   --radius-medium: 10px;
   --radius-small: 3px;
   --shadow: 2px 6px 7px 1px rgb(0 0 0 / 45%), 2px 6px 7px 1px rgba(0, 0, 0, 0.32);
+  --text-shadow: 2px 6px 4px rgb(0 0 0 / 60%);
 }
 
 * {
@@ -1562,17 +1563,30 @@ body:is(.is-export-mode) .markdown-preview-view {
         filter: none;
         border-radius: var(--radius-big);
         background-color: var(--bg-note);
+        /* box-shadow: var(--shadow); */
         transition: all 150ms ease-out 0s;
+        transform: rotate(-180deg);
       }
+
+      /* .HyperMD-task-line span {
+        text-shadow: var(--text-shadow);
+      } */
 
       .markdown-preview-view .task-list-item-checkbox:checked, .cm-line .task-list-item-checkbox:checked  {
         border: none;
+        transform: unset;
         background-color: var(--interactive-accent);
         transition: all 200ms ease-in;
       }
 
-      .markdown-preview-view .task-list-item-checkbox:hover, .cm-line .task-list-item-checkbox:hover {
-        background-color: var(--bg-task-hover);
+      .markdown-preview-view .task-list-item-checkbox:not(:checked):hover, .cm-line .task-list-item-checkbox:not(:checked):hover {
+        border-color: var(--interactive-accent);
+        transform: scale(1.2, 1.2), rotate(-180deg);
+        transition: all 200ms ease-in;
+      }
+
+      .markdown-preview-view .task-list-item-checkbox:checked:hover, .cm-line .task-list-item-checkbox:checked:hover {
+        transform: scale(1.2, 1.2);
         transition: all 200ms ease-in;
       }
 
@@ -1585,6 +1599,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         width:14px;
         left:2px;
         right:2px;
+        transition: all 200ms ease-in;
       }
 
       .markdown-preview-view ul>li.task-list-item, .cm-line ul>li.task-list-item {
