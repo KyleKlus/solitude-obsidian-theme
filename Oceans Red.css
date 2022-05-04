@@ -31,8 +31,8 @@
 
     --bg-ribbon: var(--bg-app);
 
-    --bg-leaf-head-active: var(--bg-darkest-translucent); 
-    --bg-leaf-head: var(--bg-darker-translucent);
+    --bg-leaf-head-active: var(--bg-darkest); 
+    --bg-leaf-head: var(--bg-darker);
     --bg-leaf-content: var(--bg-dark-translucent);
 
     --bg-input: #0f0f0f;
@@ -675,7 +675,6 @@ body:is(.is-export-mode) .markdown-preview-view {
     body:not(.is-mobile) .workspace-split.mod-root {
       padding: var(--panel-spacing) var(--panel-spacing);
       border-radius: var(--radius-big);
-      
     }
     
     .workspace-split.mod-root .view-content {
@@ -734,12 +733,19 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       /* #endregion |3.5.2.1. View Header  */
 
-      .workspace-split.mod-root:is(.mod-vertical, .mod-horizontal):not(.mod-left-split, .mod-right-split) > :not(:last-child) {
-        padding-right: calc(var(--panel-spacing));
+      .workspace-split.mod-vertical > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-horizontal),
+      .workspace-split .mod-horizontal > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-vertical) {
+        box-shadow: var(--shadow);
       }
 
-      .workspace-split.mod-horizontal:not(.mod-left-split, .mod-right-split) > :not(.workspace-leaf:last-child) {
-        padding-bottom: calc( var(--panel-spacing));
+      .workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
+        margin-right: calc(var(--panel-spacing));
+        padding-right: 0px;
+      }
+
+      .workspace-split .mod-horizontal > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
+        margin-bottom: calc( var(--panel-spacing));
+        padding-bottom: 0px;
       }
 
       .workspace-ribbon-collapse-btn, 
