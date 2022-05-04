@@ -897,8 +897,9 @@ body:is(.is-export-mode) .markdown-preview-view {
         padding: 0px;
       }
 
-      .markdown-source-view.mod-cm6 .cm-gutters {
+      .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-scroller > *:first-child {
         padding-right: 1px;
+        margin-left: unset;
       }
 
       body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
@@ -910,10 +911,6 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       .cm-contentContainer {
         margin-left: auto;
-      }
-
-      .cm-gutters {
-        margin-left: unset;
       }
 
       /* #endregion |3.5.4.1. General  */
