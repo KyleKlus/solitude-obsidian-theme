@@ -172,7 +172,7 @@
 
 :root{
   --list-bullet-sign: "- ";
-  --note-width: 1200px;
+  --note-width: 900px;
   --panel-spacing: 16px;
   --radius-big: 15px;
   --radius-medium: 10px;
@@ -1326,7 +1326,7 @@ body:is(.is-export-mode) .markdown-preview-view {
         border: 0px solid transparent;
         border-radius: 0px;
         background-color: transparent;
-        width: 100%;
+        width: var(--note-width);
         margin-left: unset!important;
         margin-right: unset!important;
       }
