@@ -21,7 +21,7 @@
       --bg: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)));
       --bg-dark: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)));
       --bg-darker: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)));
-      --bg-darkest: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 0 * var(--conf-bg-spacing)));
+      --bg-darkest: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2% + 0 * var(--conf-bg-spacing)));
     /* #endregion -> General Colors */
 
     --bg-app: var(--bg);
@@ -50,11 +50,11 @@
     --bg-quote: var(--bg-darkest);
 
     --header-1-color: hsl(230, 20%, 92%);
-    --header-2-color: hsl(230, 20%, 82%);
-    --header-3-color: hsl(230, 20%, 72%);
-    --header-4-color: hsl(230, 20%, 62%);
-    --header-5-color: hsl(230, 20%, 52%);
-    --header-6-color: hsl(230, 20%, 42%);
+    --header-2-color: hsl(230, 20%, 92%);
+    --header-3-color: hsl(230, 20%, 92%);
+    --header-4-color: hsl(230, 20%, 88%);
+    --header-5-color: hsl(230, 20%, 88%);
+    --header-6-color: hsl(230, 20%, 88%);
     
     --bg-highlight-color:#afe400;
     --highlight-text-color:#000000;
@@ -127,15 +127,15 @@
   --header-1-weight: bold;
   --header-1-alignment: left;
 
-  --header-2-size: 1.55rem;
+  --header-2-size: 1.65rem;
   --header-2-weight: bold;
   --header-2-alignment: left;
 
-  --header-3-size: 1.37rem;
+  --header-3-size: 1.30rem;
   --header-3-weight: bold;
   --header-3-alignment: left;
 
-  --header-4-size: 1.25rem;
+  --header-4-size: 1.20rem;
   --header-4-weight: bold;
   --header-4-alignment: left;
 
@@ -143,8 +143,8 @@
   --header-5-weight: bold;
   --header-5-alignment: left;
 
-  --header-6-size: 1.0rem;
-  --header-6-weight: bold;
+  --header-6-size: 1.1rem;
+  --header-6-weight: normal;
   --header-6-alignment: left;
 
   --note-font-size: 1.0rem;
@@ -942,16 +942,15 @@ body:is(.is-export-mode) .markdown-preview-view {
         border-right: 1px dotted var(--text-faint) !important;
       }
 
-      .cm-line{
+      .ͼ1 .cm-line{
         border-left: 3px solid transparent;
         border-right: 3px solid transparent;
-        padding-left: 5px;
+        padding-left: 10px;
         background-color: transparent;
-        text-indent: 10px;
       }
 
       .markdown-source-view.mod-cm6 .hr{
-        text-indent: 0px;
+        padding-left: 0px;
       }
 
       body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover { /* Line Hover */
@@ -971,7 +970,6 @@ body:is(.is-export-mode) .markdown-preview-view {
       body:not(.is-export-mode) .HyperMD-quote.cm-active.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line {
         transform: translate3d(2px, -3px, 0px);
         background-color: var(--bg-quote);
-        text-indent: 10px;
         box-shadow: var(--shadow);
         transition: all 200ms;
       }
@@ -1108,29 +1106,6 @@ body:is(.is-export-mode) .markdown-preview-view {
         .markdown-rendered .callout-title-inner :is(h1, h2, h3, h4, h5, h6),
         .markdown-rendered .callout-content :is(h1, h2, h3, h4, h5, h6) {
           margin: 0 0;
-        }
-
-
-
-        .cm-header-1.cm-header-1, 
-        .markdown-preview-view h1,
-        .HyperMD-header-1,
-        .cm-header-2.cm-header-2, 
-        .markdown-preview-view h2,
-        .HyperMD-header-2,
-        .cm-header-3.cm-header-3, 
-        .markdown-preview-view h3,
-        .HyperMD-header-3,
-        .cm-header-4.cm-header-4, 
-        .markdown-preview-view h4,
-        .HyperMD-header-4,
-        .cm-header-5.cm-header-5, 
-        .markdown-preview-view h5,
-        .HyperMD-header-5,
-        .cm-header-6.cm-header-6, 
-        .markdown-preview-view h6,
-        .HyperMD-header-6 {
-          text-indent: 10px;
         }
 
         .cm-header-1.cm-header-1,
@@ -1328,24 +1303,42 @@ body:is(.is-export-mode) .markdown-preview-view {
         
       }
 
-      .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
+      body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote,  .markdown-preview-view blockquote {
         border: 0px solid var(--background-primary);
         border-right: 1px solid var(--background-secondary);
         border-left: 5px solid var(--main-accent-dark);
         border-radius: 0px;
         background-color: var(--background-secondary);
-        width: 80%;
+        width: 90%;
         margin-left: auto!important;
         margin-right: auto!important;
       }
       
-      .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
+      body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover, .markdown-preview-view blockquote {
         border-left: 4px solid var(--main-accent-dark);
         border-radius: 0px;
         background-color: var(--bg-quote);
         box-shadow: var(--shadow);
         transform: translate3d(0px, -3px, 0px);
       }
+
+      body:is(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+        border: 0px solid transparent;
+        border-radius: 0px;
+        background-color: transparent;
+        width: 100%;
+        margin-left: unset!important;
+        margin-right: unset!important;
+      }
+      
+      body:is(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover {
+        border: 0px solid transparent;
+        border-radius: var(--radius-medium);
+        background-color: var(--bg-line-hover);
+        box-shadow: none;
+        transform: none;
+      }
+      
       
       .markdown-preview-view hr,
       .cm-content hr {
@@ -2337,8 +2330,8 @@ body:is(.is-export-mode) .markdown-preview-view {
 /* #region *..........................5. Style Settings Plugin */
 
 /* @settings
-name: Neon Dark Theme
-id: neon-dark-theme
+name: Red Solitude Dark
+id: red-solitude-dark
 settings:
   - 
     id: general-settings
@@ -2359,6 +2352,11 @@ settings:
   -
     id: is-active-effect-on
     title: Toggle active line effect in editor
+    type: class-toggle
+    default: true
+  -
+    id: is-deactivate-normal-quotes
+    title: Toggle normal quotes in live preview
     type: class-toggle
     default: true
   -
