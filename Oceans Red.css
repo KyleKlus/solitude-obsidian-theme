@@ -287,6 +287,8 @@ body:is(.is-export-mode) .markdown-preview-view {
     padding: 8px 25px;
     align-items: center;
     justify-content: center;
+    border: none;
+    box-shadow: var(--shadow);
   }
 
   .status-bar-item{
@@ -1332,6 +1334,9 @@ body:is(.is-export-mode) .markdown-preview-view {
         border-left: 5px solid var(--main-accent-dark);
         border-radius: 0px;
         background-color: var(--background-secondary);
+        width: 80%;
+        margin-left: auto!important;
+        margin-right: auto!important;
       }
       
       .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
