@@ -4,7 +4,7 @@
     /* #region -> General Colors */
       
       --main-accent-dark: hsl(0, 60%, 20%);
-      --main-accent: hsl(0, 60%, 40%);
+      --main-accent: #a32929;
       --main-accent-light: hsl(0, 60%, 52%); /*#fc4e4e*/
 
       --conf-bg-spacing: 5%;
@@ -762,6 +762,16 @@ body:is(.is-export-mode) .markdown-preview-view {
         background-color: var(--bg-leaf-head-active);
         box-shadow: var(--shadow);
         
+      }
+
+      .view-header-icon svg path {
+        display: none;
+      }
+
+      .view-header-icon svg {
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="%23a32929" d="M108 60a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm56 16a16 16 0 1 0-16-16a16 16 0 0 0 16 16Zm-72 36a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm-72 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Z"%2F%3E%3C%2Fsvg%3E');
       }
 
       .workspace-leaf.mod-active .view-header-title-container::after,
