@@ -2414,7 +2414,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .fc-timegrid-slot[data-time="21:30:00"],
     .fc-timegrid-slot[data-time="21:30:00"] + td {
       background-color:  #00ff480b;
-    }    
+    }
 
     .fc-timegrid-slot[data-time="22:00:00"],
     .fc-timegrid-slot[data-time="22:00:00"] + td,
@@ -2435,6 +2435,31 @@ body:is(.is-export-mode) .markdown-preview-view {
       box-shadow: var(--shadow);
       transform: scale(1.05, 1.05);
       transition: all 200ms ease-in;
+    }
+
+    .fc .fc-timegrid-event .fc-event-time {
+      flex-grow: 1;
+      flex-shrink: 1;
+      min-height: 0;
+      max-height: unset;
+      font-size: x-small;
+      order: 1;
+    }
+
+    .fc .fc-v-event .fc-event-title-container{
+      flex-grow: 0;
+      flex-shrink: 1;
+      min-height: unset;
+      overflow-wrap: hidden;
+      max-height: 100%;
+    }
+    
+    .fc .fc-event-title {
+      font-size: small;
+    }
+
+    .fc .fc-timegrid-slot {
+      padding: 5px 0px;
     }
 
   /* #endregion -> Full Calendar Plugin */
