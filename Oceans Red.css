@@ -2366,12 +2366,17 @@ body:is(.is-export-mode) .markdown-preview-view {
       --fc-button-active-bg-color: var(--main-accent-light);
     }
 
+    .fc .fc-day-past .fc-timegrid-event {
+      opacity: 0.5;
+    }
+
     .workspace-leaf-content[data-type="full-calendar-view"] {
       background-color: transparent;
     }
 
     .workspace-leaf-content[data-type="full-calendar-view"] .view-content{
-      padding-top: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .fc-button-group {
@@ -2428,11 +2433,11 @@ body:is(.is-export-mode) .markdown-preview-view {
     }
 
     .fc-event[href], .fc-event.fc-event-draggable {
+      box-shadow: var(--shadow) !important;
       transition: all 200ms ease-out;
     }
 
     .fc-event[href]:hover, .fc-event.fc-event-draggable:hover {
-      box-shadow: var(--shadow);
       transform: scale(1.05, 1.05);
       transition: all 200ms ease-in;
     }
@@ -2453,13 +2458,17 @@ body:is(.is-export-mode) .markdown-preview-view {
       overflow-wrap: hidden;
       max-height: 100%;
     }
+
+    .fc-timegrid-event-harness:hover {
+      z-index: 10 !important;
+    }
     
     .fc .fc-event-title {
       font-size: small;
     }
 
     .fc .fc-timegrid-slot {
-      padding: 5px 0px;
+      padding: 4px 0px;
     }
 
   /* #endregion -> Full Calendar Plugin */
