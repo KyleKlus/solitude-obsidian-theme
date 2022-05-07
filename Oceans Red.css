@@ -2366,7 +2366,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       --fc-button-active-bg-color: var(--main-accent-light);
     }
 
-    .fc .fc-day-past .fc-timegrid-event {
+    .fc .fc-timegrid-event.fc-event-past {
       opacity: 0.5;
     }
 
