@@ -375,7 +375,14 @@ body:is(.is-export-mode) .markdown-preview-view {
   /* #region *..........................3.3. Modals */
 
     /* #region *..........................3.3.1. General Modals */
-    
+
+    .is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
+      height: calc(100% - 20px) !important;
+      max-height: calc(100% - 20px);
+      width: calc(100% - 20px) !important;
+      max-width: calc(100% - 20px);
+    }
+
     .modal-bg {
       background-color: rgba(41, 41, 41, 0.373);
       backdrop-filter: blur(6px);
