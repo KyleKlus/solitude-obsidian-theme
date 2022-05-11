@@ -2439,12 +2439,13 @@ body:is(.is-export-mode) .markdown-preview-view {
       background-color: rgba(255, 0, 0, 0.034);
     }
 
-    .fc-event[href], .fc-event.fc-event-draggable {
+    .fc-event[href], .fc-event.fc-event-draggable:not(.fc-daygrid-dot-event) {
       box-shadow: var(--shadow) !important;
       transition: all 200ms ease-out;
     }
 
     .fc-event[href]:hover, .fc-event.fc-event-draggable:hover {
+      box-shadow: var(--shadow) !important;
       transform: scale(1.05, 1.05);
       transition: all 200ms ease-in;
     }
