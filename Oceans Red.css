@@ -409,6 +409,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .modal-close-button {
       right: 8px;
+      padding: 0px 3px;
       color: var(--main-accent);
     }
 
@@ -496,7 +497,7 @@ body:is(.is-export-mode) .markdown-preview-view {
     .checkbox-container,
     .modal-close-button,
     .clickable-icon {
-      transition: all 200ms ease-out;
+      transition: transform 200ms ease-out;
     }
     
     .edit-block-button:hover,
@@ -507,7 +508,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       border-radius: var(--radius-big);
       background-color: var(--main-accent);
       padding: 0px 3px 0px 3px ;
-      transform: scale(1.1, 1.1);
+      transform: scale(1.2, 1.2);
       transition: transform 200ms ease-in,
                   background-color 200ms ease-in;
     }
