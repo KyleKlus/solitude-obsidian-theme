@@ -9,7 +9,7 @@
 
       --conf-bg-spacing: 5%;
       --conf-bg-start: 3%;
-      --conf-bg-transparency: 0.88;
+      --conf-bg-transparency: 0.85;
       --conf-bg-hue: 228;
       --conf-bg-sat: 12%;
 
@@ -173,7 +173,7 @@
 :root{
   --list-bullet-sign: "- ";
   --note-width: 900px;
-  --panel-spacing: 16px;
+  --panel-spacing: 15px;
   --radius-big: 15px;
   --radius-medium: 10px;
   --radius-small: 3px;
@@ -967,6 +967,12 @@ body:is(.is-export-mode) .markdown-preview-view {
       .cm-line {
         font-size: var(--note-font-size);
         background-color: var(--bg-note);
+      }
+
+      .workspace-tabs .markdown-source-view,
+      .workspace-tabs .markdown-reading-view, 
+      .workspace-tabs .cm-line  {
+        background-color: transparent;
       }
 
       .markdown-source-view.mod-cm6 .cm-scroller {
