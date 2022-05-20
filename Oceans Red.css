@@ -1071,8 +1071,8 @@ body:is(.is-export-mode) .markdown-preview-view {
             --callout-icon: none;
             border-left-width: 0px;
             background-color: transparent;
-            margin-left: 0px;
-            margin-right: 0px;
+            margin-left: calc((100% - var(--note-width)) / 2);
+            margin-right: calc((100% - var(--note-width)) / 2);
             box-shadow: none;
 
           }
