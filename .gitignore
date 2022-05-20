@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vscode
 .vscode
 
@@ -13,3 +14,20 @@ theme-dev-vault-main
 
 oceans-red-workspace.code-workspace
 update_vaults.zsh
+=======
+# vscode
+.vscode
+
+# npm
+node_modules
+package-lock.json
+
+# Mac
+.DS_Store
+
+# theme dev vault
+theme-dev-vault-main
+
+oceans-red-workspace.code-workspace
+update_vaults.zsh
+>>>>>>> 78cddc094dcc9f7b3083517ce9d650a8eae99805
