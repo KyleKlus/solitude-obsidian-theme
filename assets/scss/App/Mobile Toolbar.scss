@@ -1,0 +1,16 @@
+/* #region *.......................... Mobile Toolbar */
+
+.mobile-toolbar,
+.mobile-toolbar-options-container {
+    height: 40px;
+}
+
+.mobile-toolbar-option {
+    color: var(--main-accent);
+}
+
+.mobile-toolbar-option:hover {
+    color: var(--main-accent-light);
+}
+
+/* #endregion */

@@ -1,0 +1,42 @@
+/* #region *.......................... Graph */
+
+.view-content iframe {
+    background: var(--bg-note);
+}
+
+.graph-view.color-fill {
+    color: var(--main-accent);
+}
+
+.theme-dark .graph-view.color-fill-unresolved {
+    color: var(--main-accent-dark);
+    opacity: 0.5;
+}
+
+* .theme-dark .graph-view.color-fill-tag {
+    color: var(--tags);
+}
+
+.theme-dark .graph-view.color-fill-attachment {
+    color: var(--url-color);
+}
+
+.graph-view.color-line {
+    color: var(--graph-line-color);
+}
+
+.graph-view.color-line-highlight,
+.graph-view.color-fill-highlight {
+    color: var(--main-accent-light);
+}
+
+.graph-controls {
+    resize: horizontal;
+    max-width: none;
+}
+
+.graph-view.color-fill-focused {
+    color: var(--accent-5);
+}
+
+/* #endregion | Graph */

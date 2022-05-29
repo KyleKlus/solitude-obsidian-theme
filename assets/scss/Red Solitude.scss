@@ -1,0 +1,23 @@
+@import 'Config/Variables.scss';
+
+* {
+  -webkit-font-feature-settings: 'liga' on, 'calt' on;
+  font-feature-settings: 'liga' on, 'calt' on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  font-family: 'Fira Code';
+  font-weight: 300;
+}
+
+@import 'Export Mode';
+
+.cm-embed-block {
+  color: var(--text-note);
+}
+
+@import 'App/App.scss';
+
+@import 'Plugins';
+
+@import 'Config/Style\ Options.scss';

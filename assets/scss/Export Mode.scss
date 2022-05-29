@@ -1,0 +1,25 @@
+/* #region *..........................Export Mode */
+
+body:is(.is-export-mode) {
+    --bg-note: #ffffff;
+    --bg-quote: #f3f3f3;
+    --main-accent-dark: #993333;
+    --text-note: #000000;
+    
+    --header-1-color: var(--text-note);
+    --header-2-color: var(--text-note);
+    --header-3-color: var(--text-note);
+    --header-4-color: var(--text-note);
+    --header-5-color: var(--text-note);
+    --header-6-color: var(--text-note);
+    
+    --bold-color: var(--text-note);
+    --italic-color: var(--text-note);
+    --math-text-color: var(--text-note);
+}
+
+body:is(.is-export-mode) .markdown-preview-view {
+    color: var(--text-note);
+}
+
+/* #endregion */

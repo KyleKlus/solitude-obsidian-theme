@@ -1,0 +1,17 @@
+/* #region *..........................Variables */
+
+@import 'Colors';
+@import 'Fonts';
+
+:root{
+    --list-bullet-sign: "- ";
+    --note-width: 750px;
+    --panel-spacing: 15px;
+    --radius-big: 15px;
+    --radius-medium: 10px;
+    --radius-small: 3px;
+    --shadow: 2px 6px 7px 1px rgb(0 0 0 / 45%), 2px 6px 7px 1px rgba(0, 0, 0, 0.32);
+    --text-shadow: 2px 6px 4px rgb(0 0 0 / 60%);
+}
+
+/* #endregion */

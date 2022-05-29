@@ -1,0 +1,464 @@
+/* #region *.......................... Style Settings Plugin */
+
+/* @settings
+name: Red Solitude Dark
+id: red-solitude-dark
+settings:
+  - 
+    id: general-settings
+    title: General Settings
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: is-export-mode
+    title: Toggle Export Mode
+    type: class-toggle
+    default: false
+  -
+    id: is-hover-effect-on
+    title: Toggle hover effect in editor
+    type: class-toggle
+    default: true
+  -
+    id: is-active-effect-on
+    title: Toggle active line effect in editor
+    type: class-toggle
+    default: true
+  -
+    id: is-deactivate-normal-quotes
+    title: Toggle normal quotes in live preview
+    type: class-toggle
+    default: true
+  -
+    id: show-ribbons
+    title: Toggle Ribbons
+    type: class-toggle
+    default: false
+  -
+    id: note-font-size
+    title: Editor Font Size (rem)
+    type: variable-number
+    default: 1.0
+    format: 'rem'
+  -
+    id: note-width
+    title: Note width (px)
+    type: variable-number
+    default: 1200
+    format: 'px'
+  -
+    id: active-line-font-size
+    title: Active Line Font Size (rem)
+    type: variable-number
+    default: 1.01
+    format: 'rem'
+  - 
+    id: General-colors-settings
+    title: General Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: bg-workspace
+    title: Workspace Background Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#101116'
+    default-dark: '#101116'
+  -
+    id: main-accent
+    title: Accent Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#c93939'
+    default-dark: '#c93939'
+  -
+    id: main-accent-light
+    title: Accent Color light
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#fc4e4e'
+    default-dark: '#fc4e4e'
+  -
+    id: main-accent-dark
+    title: Accent Color Dark
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#641e1e'
+    default-dark: '#641e1e'
+  -
+    id: bold-color
+    title: Bold Text Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#2487e4'
+    default-dark: '#2487e4'
+  -
+    id: italic-color
+    title: Italic Text Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#59dbb4'
+    default-dark: '#59dbb4'
+  -
+    id: note-link-color
+    title: Note Link Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#c93939'
+    default-dark: '#c93939'
+  -
+    id: note-link-hover-color
+    title: Note Link Hover Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#fc4e4e'
+    default-dark: '#fc4e4e'
+  -
+    id: math-text-color
+    title: Latex Text Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#5e90c9'
+    default-dark: '#5e90c9'
+  -
+    id: url-color
+    title: URL Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#40bcdb'
+    default-dark: '#40bcdb'
+  -
+    id: url-hover-color
+    title: URL Hover Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#4ddbff'
+    default-dark: '#4ddbff'
+  -
+    id: tag-color
+    title: Tag Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#63638d'
+    default-dark: '#63638d'
+  -
+    id: tag-hover-color
+    title: Tag Hover Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#5252ca'
+    default-dark: '#5252ca'
+  - 
+    id: background-color-settings
+    title: Background Colors
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+    id: bg-workspace
+    title: Workspace Background
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#f2f3f5'
+    default-dark: '#000000'
+  -
+    id: bg-ribbon
+    title: Ribbon Color
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#f2f3f5'
+    default-dark: '#0e0e0ea6'
+  -
+    id: bg-leaf-head
+    title: Background color of leaf header
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#f2f3f5'
+    default-dark: '#171a1d'
+  -
+    id: bg-leaf-head-active
+    title: Background color of active leaf header
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#f2f3f5'
+    default-dark: '#1e2125'
+  -
+    id: bg-leaf-content
+    title: Background of leaf content
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#f2f3f5'
+    default-dark: '#1e2125'
+  -
+    id: bg-note
+    title: Background of the note
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#f2f3f5'
+    default-dark: '#1a1c1f'
+  -
+    id: bg-embed
+    title: Background of embeds
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#f2f3f5'
+    default-dark: '#1a1c1f'
+  -
+    id: header-settings
+    title: Headers
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: downsize-h-formatter
+    title: 'Downsize Header Formatter'
+    description: 'This downsizes the "#" formatter for headers.'
+    type: class-toggle
+    default: true
+  - 
+    id: header-1-settings
+    title: Heading Level 1
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: header-1-color
+    title: 'Header 1 Color:'
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#dde0f3'
+    default-dark: '#bbe66d'
+  -
+    id: header-1-size
+    title: 'Header 1 Size:'
+    type: variable-number
+    default: 1.9
+    format: 'em'
+  -
+    id: header-1-weight
+    title: 'Header 1 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-1-alignment
+    title: 'Header 1 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  - 
+    id: header-2-settings
+    title: Heading Level 2
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: header-2-color
+    title: 'Header 2 Color:'
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#dde0f3'
+    default-dark: '#5ac760'
+  -
+    id: header-2-size
+    title: 'Header 2 Size:'
+    type: variable-number
+    default: 1.55
+    format: 'rem'
+  -
+    id: header-2-weight
+    title: 'Header 2 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-2-alignment
+    title: 'Header 2 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  - 
+    id: header-3-settings
+    title: Heading Level 3
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: header-3-color
+    title: 'Header3 Color:'
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#dde0f3'
+    default-dark: '#3cbd81'
+  -
+    id: header-3-size
+    title: 'Header 3 Size:'
+    type: variable-number
+    default: 1.37
+    format: 'rem'
+  -
+    id: header-3-weight
+    title: 'Header 3 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-3-alignment
+    title: 'Header 3 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  - 
+    id: header-4-settings
+    title: Heading Level 4
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: header-4-color
+    title: 'Header 4 Color:'
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#dde0f3'
+    default-dark: '#4baacf'
+  -
+    id: header-4-size
+    title: 'Header 4 Size:'
+    type: variable-number
+    default: 1.25
+    format: 'rem'
+  -
+    id: header-4-weight
+    title: 'Header 4 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-4-alignment
+    title: 'Header 4 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  - 
+    id: header-5-settings
+    title: Heading Level 5
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: header-5-color
+    title: 'Header 5 Color:'
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#dde0f3'
+    default-dark: '#5187d8'
+  -
+    id: header-5-size
+    title: 'Header 5 Size:'
+    type: variable-number
+    default: 1.12
+    format: 'rem'
+  -
+    id: header-5-weight
+    title: 'Header 5 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-5-alignment
+    title: 'Header 5 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  - 
+    id: header-6-settings
+    title: Heading Level 6
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: header-6-color
+    title: 'Header 6 Color:'
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#dde0f3'
+    default-dark: '#2e31e6'
+  -
+    id: header-6-size
+    title: 'Header 6 Size:'
+    type: variable-number
+    default: 1.08
+    format: 'rem'
+  -
+    id: header-6-weight
+    title: 'Header 6 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-6-alignment
+    title: 'Header 6 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+*/
+
+/* #endregion */
