@@ -1,1 +1,105 @@
-.modal button:not(.mod-cta):not(.mod-warning),.modal.mod-settings button:not(.mod-cta):not(.mod-warning){background-color:var(--interactive-normal)}.modal button:not(.mod-cta):not(.mod-warning):hover,.modal.mod-settings button:not(.mod-cta):not(.mod-warning) :hover{background-color:var(--interactive-hover)}.is-mobile .modal,.is-mobile .prompt,.is-mobile .suggestion-container{height:calc(100% - 20px) !important;max-height:calc(100% - 20px);width:calc(100% - 20px) !important;max-width:calc(100% - 20px)}.modal-bg{background-color:rgba(41,41,41,.373);backdrop-filter:blur(6px)}.suggestion-item.is-selected{background-color:var(--bg-line-active)}.modal,.prompt{box-shadow:var(--shadow);background-color:var(--bg-darker)}.community-plugin-readme.markdown-preview-view{font-size:var(--note-font-size)}.modal{border-width:0px;border-radius:var(--radius-big)}.modal-close-button{right:8px;padding:0px 3px;color:var(--main-accent)}.modal.mod-settings div.vertical-tab-content h2{font-size:1.4em}.modal.mod-settings .vertical-tab-header,.modal.mod-settings .vertical-tab-content-container,.modal.mod-settings{height:90vh}.modal.mod-settings{width:80vw;max-width:80vw}.modal.mod-settings.vertical-tab-header-group{padding:5px 0}.setting-item-name{font-size:.9em}.modal.mod-settings .vertical-tab-content-container,.modal.mod-settings .horizontal-tab-content,.modal.mod-settings .vertical-tab-content{background-color:var(--bg-leaf-head);padding:5px 30px}.modal.mod-settings .vertical-tab-nav-item{border-top:2px solid rgba(0,0,0,0);border-bottom:2px solid rgba(0,0,0,0);border-left:3px solid var(--bg-leaf-head-active);font-size:.8em;padding:3px 6px 3px 24px;transition:all 200ms ease-out}.modal.mod-settings .vertical-tab-nav-item.is-active{border-left-color:var(--main-accent-dark);background-color:var(--bg-leaf-head);transition:all 200ms ease-out}.modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover{background-color:var(--main-accent-dark);border-left-color:var(--main-accent-dark);transform:scale(1.05, 1.05);transition:all 200ms ease-in}
+/* #region *..........................3.3. Modals */
+/* #region *..........................3.3.1. General Modals */
+.modal button:not(.mod-cta):not(.mod-warning),
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
+  background-color: var(--interactive-normal);
+}
+
+.modal button:not(.mod-cta):not(.mod-warning):hover,
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning) :hover {
+  background-color: var(--interactive-hover);
+}
+
+.is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
+  height: calc(100% - 20px) !important;
+  max-height: calc(100% - 20px);
+  width: calc(100% - 20px) !important;
+  max-width: calc(100% - 20px);
+}
+
+.modal-bg {
+  background-color: rgba(41, 41, 41, 0.373);
+  backdrop-filter: blur(6px);
+}
+
+.suggestion-item.is-selected {
+  background-color: var(--bg-line-active);
+}
+
+.modal,
+.prompt {
+  box-shadow: var(--shadow);
+  background-color: var(--bg-darker);
+}
+
+.community-plugin-readme.markdown-preview-view {
+  font-size: var(--note-font-size);
+}
+
+.modal {
+  border-width: 0px;
+  border-radius: var(--radius-big);
+}
+
+.modal-close-button {
+  right: 8px;
+  padding: 0px 3px;
+  color: var(--main-accent);
+}
+
+/* #endregion */
+/* #region *..........................3.3.2. Settings modal */
+.modal.mod-settings div.vertical-tab-content h2 {
+  font-size: 1.4em;
+}
+
+.modal.mod-settings .vertical-tab-header,
+.modal.mod-settings .vertical-tab-content-container,
+.modal.mod-settings {
+  height: 90vh;
+}
+
+.modal.mod-settings {
+  width: 80vw;
+  max-width: 80vw;
+}
+
+.modal.mod-settings.vertical-tab-header-group {
+  padding: 5px 0;
+}
+
+.setting-item-name {
+  font-size: 0.9em;
+}
+
+.modal.mod-settings .vertical-tab-content-container,
+.modal.mod-settings .horizontal-tab-content,
+.modal.mod-settings .vertical-tab-content {
+  background-color: var(--bg-leaf-head);
+  padding: 5px 30px;
+}
+
+.modal.mod-settings .vertical-tab-nav-item {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 3px solid var(--bg-leaf-head-active);
+  font-size: 0.8em;
+  padding: 3px 6px 3px 24px;
+  transition: all 200ms ease-out;
+}
+
+.modal.mod-settings .vertical-tab-nav-item.is-active {
+  border-left-color: var(--main-accent-dark);
+  background-color: var(--bg-leaf-head);
+  transition: all 200ms ease-out;
+}
+
+.modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover {
+  background-color: var(--main-accent-dark);
+  border-left-color: var(--main-accent-dark);
+  transform: scale(1.05, 1.05);
+  transition: all 200ms ease-in;
+}
+
+/* #endregion */
+/* #endregion */
