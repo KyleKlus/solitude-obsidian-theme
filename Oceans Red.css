@@ -953,7 +953,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
       .markdown-source-view.mod-cm6.is-readable-line-width :is( 
-      .is-line-wrap .cm-line:not(.HyperMD-table-row) ) { /* <- Note width */
+      .is-line-wrap .cm-line:not(.HyperMD-table-row), .cm-embed-block ) { /* <- Note width */
         max-width: var(--note-width);
         margin-left: auto !important;
         margin-right: auto !important;
