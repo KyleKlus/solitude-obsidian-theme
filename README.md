@@ -1,5 +1,7 @@
 # Red Solitude
 
+![Screenshot](promo_screenshot.png)
+
 ## Description
 
 This theme tries to be a stylish dark theme with a strong accent color. It has many extra functions and is highly configureable via the "Style Settings" plugin.
