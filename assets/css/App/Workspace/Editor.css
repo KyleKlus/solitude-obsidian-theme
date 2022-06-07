@@ -11,15 +11,13 @@
 }
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-.markdown-source-view.mod-cm6.is-readable-line-width :is(.is-line-wrap .cm-line:not(.HyperMD-table-row), .cm-embed-block) {
+.markdown-source-view.mod-cm6.is-readable-line-width :is(:not(.is-rtl) .cm-contentContainer, .is-line-wrap .cm-content),
+.is-line-wrap .cm-line:not(.HyperMD-table-row),
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   /* <- Note width */
   max-width: var(--note-width);
   margin-left: auto !important;
   margin-right: auto !important;
-}
-
-.markdown-source-view.mod-cm6.is-readable-line-width :is(:not(.is-rtl) .cm-contentContainer, .is-line-wrap .cm-content) {
-  max-width: 100%;
 }
 
 .markdown-preview-section {
@@ -78,7 +76,6 @@ body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 .ͼ1 .cm-line {
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  padding-left: 10px;
   background-color: transparent;
 }
 
@@ -107,122 +104,7 @@ body:not(.is-export-mode) body:is(.is-hover-effect-on) .HyperMD-quote.cm-line.cm
 }
 
 /* #endregion | Lines  */
-/* #region -> Formating Elements */
-/* #region -> Custom Callouts */
-body:is(.is-mobile) .markdown-source-view.mod-cm6 .callout {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout=moc] {
-  --callout-color: 255, 166, 77;
-  --callout-icon: lucide-list;
-  margin-left: calc((100% - var(--note-width)) / 2);
-  margin-right: calc(var(--note-width) * 0.6);
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout=h] {
-  --callout-color: transparent;
-  --callout-icon: none;
-  border-left-width: 0px;
-  background-color: transparent;
-  margin-left: calc((100% - var(--note-width)) / 2);
-  margin-right: calc((100% - var(--note-width)) / 2);
-  box-shadow: none;
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout=h] .callout-title {
-  background-color: transparent;
-  border-bottom: 1px solid var(--horizontal-line-color);
-}
-
-.callout[data-callout=h] .callout-content {
-  background-color: transparent;
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout=ctrl] {
-  --callout-icon: none;
-  background-color: transparent;
-  border: none;
-  transform: none;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 50px;
-}
-
-.callout[data-callout=ctrl] .callout-title .callout-title-inner:is(a.internal-link, a.external-link),
-.callout[data-callout=ctrl] .callout-content:is(a.internal-link, a.external-link) {
-  border-radius: var(--radius-small);
-  font-size: 0.83rem;
-  display: inline-block;
-  margin-bottom: 2px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.callout[data-callout=ctrl] .callout-content :is(a.internal-link, a.external-link) {
-  font-size: 0.7rem;
-}
-
-.callout[data-callout=ctrl] .callout-title .callout-title-inner a.internal-link:hover,
-.callout[data-callout=ctrl] .callout-content a.internal-link:hover {
-  color: var(--main-accent-light);
-  padding: 0 2px;
-  transform: scale(1.08, 1.08);
-  transition: all 200ms ease-in;
-}
-
-.callout[data-callout=ctrl] .callout-title .callout-title-inner {
-  text-align: end;
-}
-
-.callout[data-callout=ctrl] .callout-content {
-  text-align: center;
-}
-
-.callout[data-callout=ctrl] .callout-title {
-  background-color: var(--bg-darker-translucent);
-  /* border-bottom: 1px solid var(--horizontal-line-color); */
-  border-top: 0px solid transparent;
-  border-top-left-radius: var(--radius-small);
-  border-top-right-radius: var(--radius-small);
-}
-
-.callout[data-callout=ctrl] .callout-content {
-  border-bottom: 0px solid transparent;
-  background-color: var(--bg-darkest-translucent);
-  border-bottom-left-radius: var(--radius-small);
-  border-bottom-right-radius: var(--radius-small);
-}
-
-.callout[data-callout=ctrl] .callout-content p {
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-
-.markdown-source-view.mod-cm6 .callout {
-  margin-left: 12%;
-  margin-right: 12%;
-  box-shadow: var(--shadow);
-  transform: translate3d(0px, -3px, 0px);
-}
-
-.markdown-source-view.mod-cm6 .cm-callout li {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.markdown-source-view.mod-cm6 .cm-callout {
-  border: none;
-  max-width: 100%;
-  min-width: 100%;
-}
-
-.markdown-source-view.mod-cm6 .cm-callout:hover {
-  border: none;
-}
-
-/* #endregion | Custom Callouts */
+/* #region -> Formatting Elements */
 /* #region -> Headings */
 body:is(.downsize-h-formatter) .cm-formatting-header.cm-formatting-header {
   color: var(--text-faint);
@@ -363,6 +245,26 @@ span.math {
 }
 
 /* #endregion */
+.markdown-source-view.mod-cm6 .callout,
+.markdown-preview-view .callout {
+  margin: 1.4rem;
+  box-shadow: var(--shadow);
+  transform: translate3d(0px, -3px, 0px);
+}
+
+.markdown-source-view.mod-cm6 .cm-callout li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.markdown-source-view.mod-cm6 .cm-callout {
+  border: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-callout:hover {
+  border: none;
+}
+
 .markdown-source-view.mod-cm6 .cm-selection {
   background-color: var(--text-selection);
   color: var(--text-selection-color);
@@ -412,19 +314,6 @@ span.math {
   background-color: var(--bg-quote);
 }
 
-.callout-title {
-  padding: 5px;
-}
-
-.callout-content {
-  background-color: var(--bg-quote);
-}
-
-.callout-content p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
   border: 0px solid var(--background-primary);
   border-right: 1px solid var(--background-secondary);
@@ -436,7 +325,7 @@ body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-pre
   margin-right: auto !important;
 }
 
-body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover, .markdown-preview-view blockquote {
+body:not(.is-deactivate-normal-quotes, .is-export-mode):is(.is-hover-effect-on) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover, .markdown-preview-view blockquote {
   border-left: 4px solid var(--main-accent-dark);
   border-radius: 0px;
   background-color: var(--bg-quote);

@@ -10,73 +10,28 @@
 
 /* #region *.......................... Ribbons */
 
-body:not(.show-ribbons, .is-mobile) .workspace-ribbon.mod-left {
-    visibility: hidden;
-}
-
-body:not(.show-ribbons, .is-mobile) .workspace-split:is(.mod-left-split.is-collapsed + .mod-root, 
-.mod-left-split) {
-    margin-left: -30px;
-}
-
-body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child svg {
-    height: 0.95em;
-    width: 0.95em;
-}
-
-.horizontal-main-container { /* Used for ribbon settings button */
-    z-index: 16;
-}
-
-body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child {
-    position: absolute;
-    bottom: 1px;
-    left: 0.3rem;
-    z-index: 0;
-    padding: 2px 3px 0 3px;
-    margin-bottom: 2px;
-    max-height: 22px;
-    visibility: visible;
-    color: var(--main-accent);
-    background-color: var(--bg-darker-translucent);
-    border-radius: var(--radius-medium);
-    box-shadow: var(--shadow);
-    transition: all 200ms ease-out;
-}
-
-body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child:hover {
-    color: var(--main-accent-light);
-    transform: scale(1.1, 1.1);
-    transition: all 200ms ease-in;
-}
-
-.hide-settings-button:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child {
-    display: none;
-}
-
-/* hide ribbons, when the setting is chosen */
-body:not(.show-ribbons, .is-mobile) .workspace-ribbon.mod-right {
-    display: none;
-}
-
 .side-dock-ribbon-action svg {
     width: 1.05rem;
+    transition: all 300ms ease-out;
 }
+
+.side-dock-ribbon-action:hover {
+    transition: all 300ms ease-out;
+}
+
 
 .side-dock-ribbon-action:hover {
     color: var(--main-accent-light);
     transform: scale(1.05, 1.05);
-    transition: all 300ms;
+    transition: all 300ms ease-in;
 }
 
 .workspace-ribbon {
-    background-color: var(--resize-handle-color);
-    --ribbon-border: 2px solid var(--bg3);
+    background-color: var(--bg-darkest);
 }
 
 body .app-container .workspace-ribbon.is-collapsed {
-    background-color: var(--bg2);
-    border-color: var(--basic-border-color);
+    background-color: var(--bg-darkest);
 }
 
 .workspace-ribbon.mod-left {
@@ -92,17 +47,13 @@ body .app-container .workspace-ribbon.is-collapsed {
 /* ribbon buttons */
 .side-dock-ribbon-action svg,
 .workspace-ribbon-collapse-btn svg {
-    color: var(--extra-contrast);
+    color: var(--main-accent);
 }
 
 .workspace-ribbon-collapse-btn {
     padding-top: 20px;
     margin-top: 0;
     border-bottom: var(--ribbon-border);
-}
-
-body:not(.show-titlebar) .workspace-ribbon-collapse-btn {
-    border-top: var(--basic-border);
 }
 
 .workspace-ribbon-collapse-btn svg {
@@ -113,11 +64,6 @@ body:not(.show-titlebar) .workspace-ribbon-collapse-btn {
 .workspace-ribbon-collapse-btn:hover svg {
     transform: scale(1.05, 1.05);
     color: var(--main-accent-light);
-}
-
-.side-dock-ribbon-action:active svg,
-.workspace-ribbon-collapse-btn:active svg {
-    color: var(--text-accent);
 }
 
 /* #endregion |4.1. Ribbons */
@@ -179,7 +125,7 @@ box-shadow: var(--shadow);
     border-bottom: 2px solid var(--main-accent-dark);
     background-color: var(--bg-leaf-head-active);
     box-shadow: var(--shadow);
-    
+
 }
 
 .view-header-icon svg path {
@@ -223,17 +169,17 @@ box-shadow: var(--shadow);
     padding-bottom: 0px;
 }
 
-.workspace-ribbon-collapse-btn, 
-.view-header-icon, 
+.workspace-ribbon-collapse-btn,
+.view-header-icon,
 .view-action {
     color: var(--main-accent);
     transition: all 200ms ease-out;
 }
 
-.workspace-ribbon-collapse-btn:hover, 
-.is-mobile .view-header-icon:hover, 
+.workspace-ribbon-collapse-btn:hover,
+.is-mobile .view-header-icon:hover,
 .is-mobile .view-action:hover,
-.view-header-icon:hover, 
+.view-header-icon:hover,
 .view-action:hover {
     transform: scale(1.25, 1.25);
     color: var(--main-accent-light);
@@ -244,8 +190,8 @@ box-shadow: var(--shadow);
     background-color: var(--main-accent-dark);
 }
 
-.workspace-leaf .view-header, 
-.workspace-split.mod-left-split .workspace-tabs .workspace-leaf, 
+.workspace-leaf .view-header,
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
     border-top-left-radius: var(--radius-big);
     border-top-right-radius: var(--radius-big);
@@ -265,7 +211,7 @@ box-shadow: var(--shadow);
     padding-top: 5px;
 }
 
-.workspace-leaf.mod-active .view-header-title-container::after, 
+.workspace-leaf.mod-active .view-header-title-container::after,
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header-title-container.view-header-title-container::after {
     background: transparent;
 }
@@ -278,9 +224,9 @@ box-shadow: var(--shadow);
 .workspace-tab-header-container,
 .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
 .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
-.workspace-tab-container-before.is-before-active, 
-.workspace-tab-container-after.is-after-active, 
-.workspace-tab-header.is-before-active, 
+.workspace-tab-container-before.is-before-active,
+.workspace-tab-container-after.is-after-active,
+.workspace-tab-header.is-before-active,
 .workspace-tab-header.is-after-active,
 .workspace-tabs {
 background-color: transparent;
@@ -288,7 +234,7 @@ background-color: transparent;
 }
 
 .workspace-tab-container-inner,
-.workspace-tab-header.is-before-active .workspace-tab-header-inner, 
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-after-active .workspace-tab-header-inner,
 .workspace-tab-header {
 background-color: var(--interactive-normal);
@@ -338,9 +284,9 @@ box-shadow: var(--shadow);
 transition: all 200ms ease-in;
 }
 
-.nav-buttons-container .nav-action-button, 
-.workspace-tab-header, 
-.workspace-tab-header.is-active, 
+.nav-buttons-container .nav-action-button,
+.workspace-tab-header,
+.workspace-tab-header.is-active,
 .side-dock-ribbon-action{
 color: var(--main-accent);
 }

@@ -11,14 +11,14 @@
   --conf-bg-transparency: 0.85;
   --conf-bg-hue: 228;
   --conf-bg-sat: 12%;
-  --bg-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
-  --bg-dark-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
-  --bg-darker-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
-  --bg-darkest-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 0 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
-  --bg: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)));
-  --bg-dark: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)));
-  --bg-darker: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)));
-  --bg-darkest: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2% + 0 * var(--conf-bg-spacing)));
+  --bg-translucent: hsla(208, 16%, 16%, var(--conf-bg-transparency));
+  --bg-dark-translucent: hsla(210, 15%, 13%, var(--conf-bg-transparency));
+  --bg-darker-translucent: hsla(204, 12%, 8%, var(--conf-bg-transparency));
+  --bg-darkest-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
+  --bg: hsl(210, 16%, 16%);
+  --bg-dark: hsl(210, 15%, 13%);
+  --bg-darker: hsl(204, 14%, 8%);
+  --bg-darkest: hsl(192, 20%, 5%);
   /* #endregion -> General Colors */
   --bg-app: var(--bg);
   --bg-title-bar: var(--bg-darkest);
@@ -171,28 +171,6 @@
   font-weight: 300;
 }
 
-/* #region *..........................Export Mode */
-body:is(.is-export-mode) {
-  --bg-note: #ffffff;
-  --bg-quote: #f3f3f3;
-  --main-accent-dark: #993333;
-  --text-note: #000000;
-  --header-1-color: var(--text-note);
-  --header-2-color: var(--text-note);
-  --header-3-color: var(--text-note);
-  --header-4-color: var(--text-note);
-  --header-5-color: var(--text-note);
-  --header-6-color: var(--text-note);
-  --bold-color: var(--text-note);
-  --italic-color: var(--text-note);
-  --math-text-color: var(--text-note);
-}
-
-body:is(.is-export-mode) .markdown-preview-view {
-  color: var(--text-note);
-}
-
-/* #endregion */
 .cm-embed-block {
   color: var(--text-note);
 }
@@ -518,74 +496,27 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 }
 
 /* #region *.......................... Ribbons */
-body:not(.show-ribbons, .is-mobile) .workspace-ribbon.mod-left {
-  visibility: hidden;
-}
-
-body:not(.show-ribbons, .is-mobile) .workspace-split:is(.mod-left-split.is-collapsed + .mod-root,
-.mod-left-split) {
-  margin-left: -30px;
-}
-
-body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child svg {
-  height: 0.95em;
-  width: 0.95em;
-}
-
-.horizontal-main-container {
-  /* Used for ribbon settings button */
-  z-index: 16;
-}
-
-body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child {
-  position: absolute;
-  bottom: 1px;
-  left: 0.3rem;
-  z-index: 0;
-  padding: 2px 3px 0 3px;
-  margin-bottom: 2px;
-  max-height: 22px;
-  visibility: visible;
-  color: var(--main-accent);
-  background-color: var(--bg-darker-translucent);
-  border-radius: var(--radius-medium);
-  box-shadow: var(--shadow);
-  transition: all 200ms ease-out;
-}
-
-body:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child:hover {
-  color: var(--main-accent-light);
-  transform: scale(1.1, 1.1);
-  transition: all 200ms ease-in;
-}
-
-.hide-settings-button:not(.show-ribbons, .is-mobile) .side-dock-settings .side-dock-ribbon-action:last-child {
-  display: none;
-}
-
-/* hide ribbons, when the setting is chosen */
-body:not(.show-ribbons, .is-mobile) .workspace-ribbon.mod-right {
-  display: none;
-}
-
 .side-dock-ribbon-action svg {
   width: 1.05rem;
+  transition: all 300ms ease-out;
+}
+
+.side-dock-ribbon-action:hover {
+  transition: all 300ms ease-out;
 }
 
 .side-dock-ribbon-action:hover {
   color: var(--main-accent-light);
   transform: scale(1.05, 1.05);
-  transition: all 300ms;
+  transition: all 300ms ease-in;
 }
 
 .workspace-ribbon {
-  background-color: var(--resize-handle-color);
-  --ribbon-border: 2px solid var(--bg3);
+  background-color: var(--bg-darkest);
 }
 
 body .app-container .workspace-ribbon.is-collapsed {
-  background-color: var(--bg2);
-  border-color: var(--basic-border-color);
+  background-color: var(--bg-darkest);
 }
 
 .workspace-ribbon.mod-left {
@@ -601,17 +532,13 @@ body .app-container .workspace-ribbon.is-collapsed {
 /* ribbon buttons */
 .side-dock-ribbon-action svg,
 .workspace-ribbon-collapse-btn svg {
-  color: var(--extra-contrast);
+  color: var(--main-accent);
 }
 
 .workspace-ribbon-collapse-btn {
   padding-top: 20px;
   margin-top: 0;
   border-bottom: var(--ribbon-border);
-}
-
-body:not(.show-titlebar) .workspace-ribbon-collapse-btn {
-  border-top: var(--basic-border);
 }
 
 .workspace-ribbon-collapse-btn svg {
@@ -622,11 +549,6 @@ body:not(.show-titlebar) .workspace-ribbon-collapse-btn {
 .workspace-ribbon-collapse-btn:hover svg {
   transform: scale(1.05, 1.05);
   color: var(--main-accent-light);
-}
-
-.side-dock-ribbon-action:active svg,
-.workspace-ribbon-collapse-btn:active svg {
-  color: var(--text-accent);
 }
 
 /* #endregion |4.1. Ribbons */
@@ -852,15 +774,13 @@ body:not(.is-mobile) .workspace-split.mod-root {
 }
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-.markdown-source-view.mod-cm6.is-readable-line-width :is(.is-line-wrap .cm-line:not(.HyperMD-table-row), .cm-embed-block) {
+.markdown-source-view.mod-cm6.is-readable-line-width :is(:not(.is-rtl) .cm-contentContainer, .is-line-wrap .cm-content),
+.is-line-wrap .cm-line:not(.HyperMD-table-row),
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   /* <- Note width */
   max-width: var(--note-width);
   margin-left: auto !important;
   margin-right: auto !important;
-}
-
-.markdown-source-view.mod-cm6.is-readable-line-width :is(:not(.is-rtl) .cm-contentContainer, .is-line-wrap .cm-content) {
-  max-width: 100%;
 }
 
 .markdown-preview-section {
@@ -919,7 +839,6 @@ body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 .ͼ1 .cm-line {
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  padding-left: 10px;
   background-color: transparent;
 }
 
@@ -948,122 +867,7 @@ body:not(.is-export-mode) body:is(.is-hover-effect-on) .HyperMD-quote.cm-line.cm
 }
 
 /* #endregion | Lines  */
-/* #region -> Formating Elements */
-/* #region -> Custom Callouts */
-body:is(.is-mobile) .markdown-source-view.mod-cm6 .callout {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout=moc] {
-  --callout-color: 255, 166, 77;
-  --callout-icon: lucide-list;
-  margin-left: calc((100% - var(--note-width)) / 2);
-  margin-right: calc(var(--note-width) * 0.6);
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout=h] {
-  --callout-color: transparent;
-  --callout-icon: none;
-  border-left-width: 0px;
-  background-color: transparent;
-  margin-left: calc((100% - var(--note-width)) / 2);
-  margin-right: calc((100% - var(--note-width)) / 2);
-  box-shadow: none;
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout=h] .callout-title {
-  background-color: transparent;
-  border-bottom: 1px solid var(--horizontal-line-color);
-}
-
-.callout[data-callout=h] .callout-content {
-  background-color: transparent;
-}
-
-.markdown-source-view.mod-cm6 .callout[data-callout=ctrl] {
-  --callout-icon: none;
-  background-color: transparent;
-  border: none;
-  transform: none;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 50px;
-}
-
-.callout[data-callout=ctrl] .callout-title .callout-title-inner:is(a.internal-link, a.external-link),
-.callout[data-callout=ctrl] .callout-content:is(a.internal-link, a.external-link) {
-  border-radius: var(--radius-small);
-  font-size: 0.83rem;
-  display: inline-block;
-  margin-bottom: 2px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.callout[data-callout=ctrl] .callout-content :is(a.internal-link, a.external-link) {
-  font-size: 0.7rem;
-}
-
-.callout[data-callout=ctrl] .callout-title .callout-title-inner a.internal-link:hover,
-.callout[data-callout=ctrl] .callout-content a.internal-link:hover {
-  color: var(--main-accent-light);
-  padding: 0 2px;
-  transform: scale(1.08, 1.08);
-  transition: all 200ms ease-in;
-}
-
-.callout[data-callout=ctrl] .callout-title .callout-title-inner {
-  text-align: end;
-}
-
-.callout[data-callout=ctrl] .callout-content {
-  text-align: center;
-}
-
-.callout[data-callout=ctrl] .callout-title {
-  background-color: var(--bg-darker-translucent);
-  /* border-bottom: 1px solid var(--horizontal-line-color); */
-  border-top: 0px solid transparent;
-  border-top-left-radius: var(--radius-small);
-  border-top-right-radius: var(--radius-small);
-}
-
-.callout[data-callout=ctrl] .callout-content {
-  border-bottom: 0px solid transparent;
-  background-color: var(--bg-darkest-translucent);
-  border-bottom-left-radius: var(--radius-small);
-  border-bottom-right-radius: var(--radius-small);
-}
-
-.callout[data-callout=ctrl] .callout-content p {
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-
-.markdown-source-view.mod-cm6 .callout {
-  margin-left: 12%;
-  margin-right: 12%;
-  box-shadow: var(--shadow);
-  transform: translate3d(0px, -3px, 0px);
-}
-
-.markdown-source-view.mod-cm6 .cm-callout li {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.markdown-source-view.mod-cm6 .cm-callout {
-  border: none;
-  max-width: 100%;
-  min-width: 100%;
-}
-
-.markdown-source-view.mod-cm6 .cm-callout:hover {
-  border: none;
-}
-
-/* #endregion | Custom Callouts */
+/* #region -> Formatting Elements */
 /* #region -> Headings */
 body:is(.downsize-h-formatter) .cm-formatting-header.cm-formatting-header {
   color: var(--text-faint);
@@ -1204,6 +1008,26 @@ span.math {
 }
 
 /* #endregion */
+.markdown-source-view.mod-cm6 .callout,
+.markdown-preview-view .callout {
+  margin: 1.4rem;
+  box-shadow: var(--shadow);
+  transform: translate3d(0px, -3px, 0px);
+}
+
+.markdown-source-view.mod-cm6 .cm-callout li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.markdown-source-view.mod-cm6 .cm-callout {
+  border: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-callout:hover {
+  border: none;
+}
+
 .markdown-source-view.mod-cm6 .cm-selection {
   background-color: var(--text-selection);
   color: var(--text-selection-color);
@@ -1253,19 +1077,6 @@ span.math {
   background-color: var(--bg-quote);
 }
 
-.callout-title {
-  padding: 5px;
-}
-
-.callout-content {
-  background-color: var(--bg-quote);
-}
-
-.callout-content p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
   border: 0px solid var(--background-primary);
   border-right: 1px solid var(--background-secondary);
@@ -1277,7 +1088,7 @@ body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-pre
   margin-right: auto !important;
 }
 
-body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover, .markdown-preview-view blockquote {
+body:not(.is-deactivate-normal-quotes, .is-export-mode):is(.is-hover-effect-on) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover, .markdown-preview-view blockquote {
   border-left: 4px solid var(--main-accent-dark);
   border-radius: 0px;
   background-color: var(--bg-quote);
@@ -2306,42 +2117,6 @@ button:hover {
   border-radius: var(--radius-small);
 }
 
-.fc-timegrid-slot[data-time="12:00:00"],
-.fc-timegrid-slot[data-time="12:00:00"] + td,
-.fc-timegrid-slot[data-time="12:30:00"],
-.fc-timegrid-slot[data-time="12:30:00"] + td,
-.fc-timegrid-slot[data-time="13:00:00"],
-.fc-timegrid-slot[data-time="13:00:00"] + td,
-.fc-timegrid-slot[data-time="18:00:00"],
-.fc-timegrid-slot[data-time="18:00:00"] + td,
-.fc-timegrid-slot[data-time="18:30:00"],
-.fc-timegrid-slot[data-time="18:30:00"] + td,
-.fc-timegrid-slot[data-time="19:00:00"],
-.fc-timegrid-slot[data-time="19:00:00"] + td,
-.fc-timegrid-slot[data-time="19:30:00"],
-.fc-timegrid-slot[data-time="19:30:00"] + td,
-.fc-timegrid-slot[data-time="20:00:00"],
-.fc-timegrid-slot[data-time="20:00:00"] + td,
-.fc-timegrid-slot[data-time="20:30:00"],
-.fc-timegrid-slot[data-time="20:30:00"] + td,
-.fc-timegrid-slot[data-time="21:00:00"],
-.fc-timegrid-slot[data-time="21:00:00"] + td,
-.fc-timegrid-slot[data-time="21:30:00"],
-.fc-timegrid-slot[data-time="21:30:00"] + td {
-  background-color: rgba(0, 255, 72, 0.0431372549);
-}
-
-.fc-timegrid-slot[data-time="22:00:00"],
-.fc-timegrid-slot[data-time="22:00:00"] + td,
-.fc-timegrid-slot[data-time="22:30:00"],
-.fc-timegrid-slot[data-time="22:30:00"] + td,
-.fc-timegrid-slot[data-time="23:00:00"],
-.fc-timegrid-slot[data-time="23:00:00"] + td,
-.fc-timegrid-slot[data-time="23:30:00"],
-.fc-timegrid-slot[data-time="23:30:00"] + td {
-  background-color: rgba(255, 0, 0, 0.034);
-}
-
 .fc-event[href], .fc-event.fc-event-draggable:not(.fc-daygrid-dot-event) {
   box-shadow: var(--shadow) !important;
   transition: all 200ms ease-out;
@@ -2396,35 +2171,20 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
 name: Red Solitude Dark
 id: red-solitude-dark
 settings:
-  - 
+  -
     id: general-settings
     title: General Settings
     type: heading
     level: 1
     collapsed: false
   -
-    id: is-export-mode
-    title: Toggle Export Mode
-    type: class-toggle
-    default: false
-  -
     id: is-hover-effect-on
     title: Toggle hover effect in editor
     type: class-toggle
-    default: true
+    default: false
   -
     id: is-active-effect-on
     title: Toggle active line effect in editor
-    type: class-toggle
-    default: true
-  -
-    id: is-deactivate-normal-quotes
-    title: Toggle normal quotes in live preview
-    type: class-toggle
-    default: true
-  -
-    id: show-ribbons
-    title: Toggle Ribbons
     type: class-toggle
     default: false
   -
@@ -2437,7 +2197,7 @@ settings:
     id: note-width
     title: Note width (px)
     type: variable-number
-    default: 1200
+    default: 900
     format: 'px'
   -
     id: active-line-font-size
@@ -2445,7 +2205,7 @@ settings:
     type: variable-number
     default: 1.01
     format: 'rem'
-  - 
+  -
     id: General-colors-settings
     title: General Colors
     type: heading
@@ -2555,13 +2315,13 @@ settings:
     opacity: true
     default-light: '#5252ca'
     default-dark: '#5252ca'
-  - 
+  -
     id: background-color-settings
     title: Background Colors
     type: heading
     level: 1
     collapsed: true
-  - 
+  -
     id: bg-workspace
     title: Workspace Background
     type: variable-themed-color
@@ -2629,13 +2389,13 @@ settings:
     description: 'This downsizes the "#" formatter for headers.'
     type: class-toggle
     default: true
-  - 
+  -
     id: header-1-settings
     title: Heading Level 1
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-1-color
     title: 'Header 1 Color:'
     type: variable-themed-color
@@ -2666,13 +2426,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-2-settings
     title: Heading Level 2
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-2-color
     title: 'Header 2 Color:'
     type: variable-themed-color
@@ -2703,13 +2463,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-3-settings
     title: Heading Level 3
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-3-color
     title: 'Header3 Color:'
     type: variable-themed-color
@@ -2740,13 +2500,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-4-settings
     title: Heading Level 4
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-4-color
     title: 'Header 4 Color:'
     type: variable-themed-color
@@ -2777,13 +2537,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-5-settings
     title: Heading Level 5
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-5-color
     title: 'Header 5 Color:'
     type: variable-themed-color
@@ -2814,13 +2574,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-6-settings
     title: Heading Level 6
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-6-color
     title: 'Header 6 Color:'
     type: variable-themed-color

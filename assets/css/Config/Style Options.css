@@ -3,35 +3,20 @@
 name: Red Solitude Dark
 id: red-solitude-dark
 settings:
-  - 
+  -
     id: general-settings
     title: General Settings
     type: heading
     level: 1
     collapsed: false
   -
-    id: is-export-mode
-    title: Toggle Export Mode
-    type: class-toggle
-    default: false
-  -
     id: is-hover-effect-on
     title: Toggle hover effect in editor
     type: class-toggle
-    default: true
+    default: false
   -
     id: is-active-effect-on
     title: Toggle active line effect in editor
-    type: class-toggle
-    default: true
-  -
-    id: is-deactivate-normal-quotes
-    title: Toggle normal quotes in live preview
-    type: class-toggle
-    default: true
-  -
-    id: show-ribbons
-    title: Toggle Ribbons
     type: class-toggle
     default: false
   -
@@ -44,7 +29,7 @@ settings:
     id: note-width
     title: Note width (px)
     type: variable-number
-    default: 1200
+    default: 900
     format: 'px'
   -
     id: active-line-font-size
@@ -52,7 +37,7 @@ settings:
     type: variable-number
     default: 1.01
     format: 'rem'
-  - 
+  -
     id: General-colors-settings
     title: General Colors
     type: heading
@@ -162,13 +147,13 @@ settings:
     opacity: true
     default-light: '#5252ca'
     default-dark: '#5252ca'
-  - 
+  -
     id: background-color-settings
     title: Background Colors
     type: heading
     level: 1
     collapsed: true
-  - 
+  -
     id: bg-workspace
     title: Workspace Background
     type: variable-themed-color
@@ -236,13 +221,13 @@ settings:
     description: 'This downsizes the "#" formatter for headers.'
     type: class-toggle
     default: true
-  - 
+  -
     id: header-1-settings
     title: Heading Level 1
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-1-color
     title: 'Header 1 Color:'
     type: variable-themed-color
@@ -273,13 +258,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-2-settings
     title: Heading Level 2
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-2-color
     title: 'Header 2 Color:'
     type: variable-themed-color
@@ -310,13 +295,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-3-settings
     title: Heading Level 3
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-3-color
     title: 'Header3 Color:'
     type: variable-themed-color
@@ -347,13 +332,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-4-settings
     title: Heading Level 4
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-4-color
     title: 'Header 4 Color:'
     type: variable-themed-color
@@ -384,13 +369,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-5-settings
     title: Heading Level 5
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-5-color
     title: 'Header 5 Color:'
     type: variable-themed-color
@@ -421,13 +406,13 @@ settings:
       - left
       - center
       - right
-  - 
+  -
     id: header-6-settings
     title: Heading Level 6
     type: heading
     level: 2
     collapsed: true
-  - 
+  -
     id: header-6-color
     title: 'Header 6 Color:'
     type: variable-themed-color

@@ -12,15 +12,15 @@
     --conf-bg-hue: 228;
     --conf-bg-sat: 12%;
 
-    --bg-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
-    --bg-dark-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
-    --bg-darker-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
-    --bg-darkest-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 0 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
+    --bg-translucent: hsla(208, 16%, 16%, var(--conf-bg-transparency));
+    --bg-dark-translucent: hsla(210, 15%, 13%, var(--conf-bg-transparency));
+    --bg-darker-translucent: hsla(204, 12%, 8%, var(--conf-bg-transparency));
+    --bg-darkest-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
 
-    --bg: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)));
-    --bg-dark: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)));
-    --bg-darker: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)));
-    --bg-darkest: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2% + 0 * var(--conf-bg-spacing)));
+    --bg: hsl(210, 16%, 16%);
+    --bg-dark: hsl(210, 15%, 13%);
+    --bg-darker: hsl(204, 14%, 8%);
+    --bg-darkest: hsl(192, 20%, 5%);
 
     /* #endregion -> General Colors */
 
@@ -31,7 +31,7 @@
 
     --bg-ribbon: var(--bg-app);
 
-    --bg-leaf-head-active: var(--bg-darkest); 
+    --bg-leaf-head-active: var(--bg-darkest);
     --bg-leaf-head: var(--bg-darker);
     --bg-leaf-content: var(--bg-dark-translucent);
 
