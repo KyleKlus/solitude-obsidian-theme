@@ -21,6 +21,16 @@ settings:
     type: class-toggle
     default: false
   -
+    id: no-translucency
+    title: Toggle translucency
+    type: class-toggle
+    default: true
+  -
+    id: no-background
+    title: Toggle background
+    type: class-toggle
+    default: true
+  -
     id: note-font-size
     title: Editor Font Size (rem)
     type: variable-number

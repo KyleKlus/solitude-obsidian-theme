@@ -2,9 +2,9 @@
 
 :root, .theme-dark {
 /* #region -> General Colors */
-    --main-accent-dark: hsl(0, 60%, 20%);
+    --main-accent-dark: #521414;
     --main-accent: #a32929;
-    --main-accent-light: hsl(0, 60%, 52%);
+    --main-accent-light: #ce3b3b;
 
     --conf-bg-spacing: 5%;
     --conf-bg-start: 3%;
@@ -17,8 +17,8 @@
     --bg-darker-translucent: hsla(204, 12%, 8%, var(--conf-bg-transparency));
     --bg-darkest-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
 
-    --bg: hsl(210, 16%, 16%);
-    --bg-dark: hsl(210, 15%, 13%);
+    --bg: #22292f;
+    --bg-dark: #1c2126;
     --bg-darker: hsl(204, 14%, 8%);
     --bg-darkest: hsl(192, 20%, 5%);
 
@@ -104,5 +104,12 @@
 
     --indentation-guide: var(--main-accent);
     --indentation-guide-active: var(--main-accent-light);
+}
+
+:root body:is(.no-translucency) {
+    --bg-translucent: var(--bg);
+    --bg-dark-translucent: var(--bg-dark);
+    --bg-darker-translucent: var(--bg-darker);
+    --bg-darkest-translucent: var(--bg-darkest);
 }
 /* #endregion -> Colors */

@@ -1,0 +1,41 @@
+.fc .fc-toolbar.fc-header-toolbar.fc-toolbar-ltr {
+	flex-wrap: wrap;
+    margin-top: -0.375em;
+    margin-bottom: calc(1.5em - 0.375em); /* original - 0.375em */
+}
+
+.fc .fc-toolbar-chunk {
+	margin-top: 0.375em;
+    margin-bottom: 0.375em;
+    max-width: fit-content;
+}
+
+.workspace-split:is(.mod-left-split, .mod-right-split) .fc .fc-button {
+    font-size: 0.9em;
+    padding: 0.3em 0.55em;
+}
+
+.workspace-split:is(.mod-left-split, .mod-right-split) .fc .fc-toolbar-title {
+    font-size: large;
+}
+
+.workspace-split:is(.mod-left-split, .mod-right-split)  .fc .fc-list-table td, .fc .fc-list-day-cushion {
+    padding: 8px 5px;
+}
+
+.fc .fc-toolbar-chunk:not(:last-child) {
+    flex-grow: 1;
+}
+
+/* .fc .fc-toolbar-chunk:not(:first-child) {
+    flex-grow: 1;
+    order: 1;
+}
+
+.fc .fc-toolbar-chunk:first-child {
+    order: 2;
+}
+
+.fc .fc-toolbar-chunk:last-child {
+    order: 0;
+} */

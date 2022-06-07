@@ -1,0 +1,35 @@
+.fc-timegrid-slot[data-time="12:00:00"],
+.fc-timegrid-slot[data-time="12:00:00"] + td,
+.fc-timegrid-slot[data-time="12:30:00"],
+.fc-timegrid-slot[data-time="12:30:00"] + td,
+.fc-timegrid-slot[data-time="13:00:00"],
+.fc-timegrid-slot[data-time="13:00:00"] + td,
+.fc-timegrid-slot[data-time="18:00:00"],
+.fc-timegrid-slot[data-time="18:00:00"] + td,
+.fc-timegrid-slot[data-time="18:30:00"],
+.fc-timegrid-slot[data-time="18:30:00"] + td,
+.fc-timegrid-slot[data-time="19:00:00"],
+.fc-timegrid-slot[data-time="19:00:00"] + td,
+.fc-timegrid-slot[data-time="19:30:00"],
+.fc-timegrid-slot[data-time="19:30:00"] + td,
+.fc-timegrid-slot[data-time="20:00:00"],
+.fc-timegrid-slot[data-time="20:00:00"] + td,
+.fc-timegrid-slot[data-time="20:30:00"],
+.fc-timegrid-slot[data-time="20:30:00"] + td,
+.fc-timegrid-slot[data-time="21:00:00"],
+.fc-timegrid-slot[data-time="21:00:00"] + td,
+.fc-timegrid-slot[data-time="21:30:00"],
+.fc-timegrid-slot[data-time="21:30:00"] + td {
+    background-color:  #00ff480b;
+}
+
+.fc-timegrid-slot[data-time="22:00:00"],
+.fc-timegrid-slot[data-time="22:00:00"] + td,
+.fc-timegrid-slot[data-time="22:30:00"],
+.fc-timegrid-slot[data-time="22:30:00"] + td,
+.fc-timegrid-slot[data-time="23:00:00"],
+.fc-timegrid-slot[data-time="23:00:00"] + td,
+.fc-timegrid-slot[data-time="23:30:00"],
+.fc-timegrid-slot[data-time="23:30:00"] + td {
+    background-color: rgba(255, 0, 0, 0.034);
+}
