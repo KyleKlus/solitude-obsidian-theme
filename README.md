@@ -38,9 +38,8 @@ Use [these](https://github.com/MajorEnkidu/red-solitude-obsidian-theme/tree/main
 
 - v1.0.0 Initial Theme creation
 - v2.0.0 First Release
-- v2.0.1 Bugfixes (Buttons and workspace background)
+- v2.2.0 Bugfixes (Buttons and workspace background)
 
-## Planed Changes
+## Planned Changes
 
-- Bugfixes for Buttons
 - More plugin support
