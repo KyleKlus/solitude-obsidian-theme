@@ -104,7 +104,7 @@
   --indentation-guide-active: var(--main-accent-light);
 }
 
-:root body:is(.no-translucency) {
+:root body:not(.is-translucency-effect-on) {
   --bg-translucent: var(--bg);
   --bg-dark-translucent: var(--bg-dark);
   --bg-darker-translucent: var(--bg-darker);
@@ -184,7 +184,7 @@ body:not(.is-mobile) {
   padding-top: 24px !important;
 }
 
-body:not(.no-background) {
+body:is(.has-custom-background) {
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(2px);
@@ -2190,24 +2190,24 @@ settings:
     collapsed: false
   -
     id: is-hover-effect-on
-    title: Toggle hover effect in editor
+    title: Enable hover effect in editor
     type: class-toggle
     default: false
   -
     id: is-active-effect-on
-    title: Toggle active line effect in editor
+    title: Enable active line effect in editor
     type: class-toggle
     default: false
   -
-    id: no-translucency
-    title: Toggle translucency
+    id: is-translucency-effect-on
+    title: Enable translucency effect
     type: class-toggle
-    default: true
+    default: false
   -
-    id: no-background
-    title: Toggle background
+    id: has-custom-background
+    title: Enable custom feature background
     type: class-toggle
-    default: true
+    default: false
   -
     id: note-font-size
     title: Editor Font Size (rem)

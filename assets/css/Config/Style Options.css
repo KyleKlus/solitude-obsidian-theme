@@ -11,24 +11,24 @@ settings:
     collapsed: false
   -
     id: is-hover-effect-on
-    title: Toggle hover effect in editor
+    title: Enable hover effect in editor
     type: class-toggle
     default: false
   -
     id: is-active-effect-on
-    title: Toggle active line effect in editor
+    title: Enable active line effect in editor
     type: class-toggle
     default: false
   -
-    id: no-translucency
-    title: Toggle translucency
+    id: is-translucency-effect-on
+    title: Enable translucency effect
     type: class-toggle
-    default: true
+    default: false
   -
-    id: no-background
-    title: Toggle background
+    id: has-custom-background
+    title: Enable custom feature background
     type: class-toggle
-    default: true
+    default: false
   -
     id: note-font-size
     title: Editor Font Size (rem)
@@ -455,3 +455,5 @@ settings:
       - right
 */
 /* #endregion */
+
+/*# sourceMappingURL=Style%20Options.css.map */

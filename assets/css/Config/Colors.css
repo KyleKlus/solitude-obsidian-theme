@@ -102,7 +102,7 @@
   --indentation-guide-active: var(--main-accent-light);
 }
 
-:root body:is(.no-translucency) {
+:root body:not(.is-translucency-effect-on) {
   --bg-translucent: var(--bg);
   --bg-dark-translucent: var(--bg-dark);
   --bg-darker-translucent: var(--bg-darker);
@@ -110,3 +110,5 @@
 }
 
 /* #endregion -> Colors */
+
+/*# sourceMappingURL=Colors.css.map */
