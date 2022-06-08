@@ -39,6 +39,7 @@ Use [these](https://github.com/MajorEnkidu/red-solitude-obsidian-theme/tree/main
 - v1.0.0 Initial Theme creation
 - v2.0.0 First Release
 - v2.2.0 Bugfixes (Buttons and workspace background)
+- v2.2.1 Bugfix: old folder icon wasn't removed
 
 ## Planned Changes
 
