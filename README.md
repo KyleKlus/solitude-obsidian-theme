@@ -4,18 +4,43 @@
 
 ## Description
 
-This theme tries to be a stylish dark theme with a strong accent color. It has many extra functions and is highly configureable via the "Style Settings" plugin.
+This is a dark theme with a strong accent color and a 3D look. It has many extra functions (if you use the below mentioned snippets) and is highly configurable via the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
-## Extra Features (Use [these](https://github.com/MajorEnkidu/red-solitude-obsidian-theme/tree/main/snippets) Snippets)
+## Extra Features
 
-- Ctrl callout (callout tag: "ctrl") for use as a ctrl-buttons header
-- Heading callout (callout tag: "h") such that whole sections can be folded via callout fold arrows
-- MOC callout (callout tag: "moc") such that a wiki like, left aligned moc can be created
-- Exportmode
-- Ribbon hiding
+Use the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to enable the below mentioned features .
 
-## Extra Supported Plugins
+- Custom workspace background
+- Translucent panels
+- Active line effect
+- Hover over line effect
 
-- Fullcalendar
-- Style Settings
-- Privacy Glasses
+Use [these](https://github.com/MajorEnkidu/red-solitude-obsidian-theme/tree/main/snippets) Snippets, if you want to have the below mentioned features.
+
+- Heading callout (callout tag: "h") such that whole sections under the heading can be folded via callout fold arrows
+
+- MOC callout (callout tag: "moc") such that a wiki like, left aligned, moc can be created
+
+- Controls callout (callout tag: "ctrl") for use as a ctrl-buttons header (Work in progress)
+
+- Exportmode (Work in progress)
+
+## Recommended Plugins
+
+- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
+
+## Supported Plugins
+
+- [Fullcalendar](https://github.com/davish/obsidian-full-calendar)
+- [Privacy Glasses](https://github.com/jillalberts/privacy-glasses)
+
+## Changelog
+
+- v1.0.0 Initial Theme creation
+- v2.0.0 First Release
+- v2.0.1 Bugfixes (Buttons and workspace background)
+
+## Planed Changes
+
+- Bugfixes for Buttons
+- More plugin support
