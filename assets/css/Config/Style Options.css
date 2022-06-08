@@ -54,171 +54,110 @@ settings:
     level: 1
     collapsed: true
   -
-    id: bg-workspace
+    id: bg
     title: Workspace Background Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#101116'
-    default-dark: '#101116'
+    default-dark: '#22292f'
   -
     id: main-accent
     title: Accent Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#c93939'
-    default-dark: '#c93939'
+    default: '#a32929'
   -
     id: main-accent-light
     title: Accent Color light
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#fc4e4e'
-    default-dark: '#fc4e4e'
+    default: '#ce3b3b'
   -
     id: main-accent-dark
     title: Accent Color Dark
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#641e1e'
-    default-dark: '#641e1e'
+    default: '#521414'
   -
     id: bold-color
     title: Bold Text Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#2487e4'
-    default-dark: '#2487e4'
+    default: '#2487e4'
   -
     id: italic-color
     title: Italic Text Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#59dbb4'
-    default-dark: '#59dbb4'
+    default: '#59dbb4'
   -
     id: note-link-color
     title: Note Link Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#c93939'
-    default-dark: '#c93939'
+    default: '#a32929'
   -
     id: note-link-hover-color
     title: Note Link Hover Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#fc4e4e'
-    default-dark: '#fc4e4e'
+    default: '#ce3b3b'
   -
     id: math-text-color
     title: Latex Text Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#5e90c9'
-    default-dark: '#5e90c9'
+    default: '#5e90c9'
   -
     id: url-color
     title: URL Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#40bcdb'
-    default-dark: '#40bcdb'
+    default: '#40bcdb'
   -
     id: url-hover-color
     title: URL Hover Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#4ddbff'
-    default-dark: '#4ddbff'
+    default: '#6fe2ff'
   -
     id: tag-color
     title: Tag Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#63638d'
-    default-dark: '#63638d'
+    default: '#95b4c2'
   -
     id: tag-hover-color
     title: Tag Hover Color
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#5252ca'
-    default-dark: '#5252ca'
+    default: '#27cbd1'
   -
-    id: background-color-settings
-    title: Background Colors
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: bg-workspace
-    title: Workspace Background
-    type: variable-themed-color
+    id: bg-tag
+    title: Tag background color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#f2f3f5'
-    default-dark: '#000000'
+    default: '#16375c'
   -
-    id: bg-ribbon
-    title: Ribbon Color
-    type: variable-themed-color
+    id: bg-tag-hover
+    title: Tag background hover color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#f2f3f5'
-    default-dark: '#0e0e0ea6'
-  -
-    id: bg-leaf-head
-    title: Background color of leaf header
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#f2f3f5'
-    default-dark: '#171a1d'
-  -
-    id: bg-leaf-head-active
-    title: Background color of active leaf header
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#f2f3f5'
-    default-dark: '#1e2125'
-  -
-    id: bg-leaf-content
-    title: Background of leaf content
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#f2f3f5'
-    default-dark: '#1e2125'
-  -
-    id: bg-note
-    title: Background of the note
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#f2f3f5'
-    default-dark: '#1a1c1f'
-  -
-    id: bg-embed
-    title: Background of embeds
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#f2f3f5'
-    default-dark: '#1a1c1f'
+    default: '#10253f'
   -
     id: header-settings
     title: Headers
@@ -240,11 +179,10 @@ settings:
   -
     id: header-1-color
     title: 'Header 1 Color:'
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#dde0f3'
-    default-dark: '#bbe66d'
+    default: '#e8e9f0'
   -
     id: header-1-size
     title: 'Header 1 Size:'
@@ -277,11 +215,10 @@ settings:
   -
     id: header-2-color
     title: 'Header 2 Color:'
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#dde0f3'
-    default-dark: '#5ac760'
+    default: '#e8e9f0'
   -
     id: header-2-size
     title: 'Header 2 Size:'
@@ -314,11 +251,10 @@ settings:
   -
     id: header-3-color
     title: 'Header3 Color:'
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#dde0f3'
-    default-dark: '#3cbd81'
+    default: '#e8e9f0'
   -
     id: header-3-size
     title: 'Header 3 Size:'
@@ -351,11 +287,10 @@ settings:
   -
     id: header-4-color
     title: 'Header 4 Color:'
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#dde0f3'
-    default-dark: '#4baacf'
+    default: '#dadce7'
   -
     id: header-4-size
     title: 'Header 4 Size:'
@@ -388,11 +323,10 @@ settings:
   -
     id: header-5-color
     title: 'Header 5 Color:'
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#dde0f3'
-    default-dark: '#5187d8'
+    default: '#dadce7'
   -
     id: header-5-size
     title: 'Header 5 Size:'
@@ -425,11 +359,10 @@ settings:
   -
     id: header-6-color
     title: 'Header 6 Color:'
-    type: variable-themed-color
+    type: variable-color
     format: hex
     opacity: true
-    default-light: '#dde0f3'
-    default-dark: '#2e31e6'
+    default: '#dadce7'
   -
     id: header-6-size
     title: 'Header 6 Size:'
