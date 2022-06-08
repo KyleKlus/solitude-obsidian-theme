@@ -92,7 +92,8 @@
 svg.up-and-down-arrows path,
 svg.magnifying-glass path,
 svg.expand-vertically path,
-svg.bullet-list path {
+svg.bullet-list path,
+svg.folder path {
   display: none;
 }
 
@@ -202,3 +203,5 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 
 /* #endregion | File Explorer Elements */
+
+/*# sourceMappingURL=File%20Explorer.css.map */
