@@ -1,11 +1,11 @@
-/* #region *..........................3. App */
+/* #region *.......................... App */
 
 body:not(.is-mobile) {
     background-color: var(--bg-app);
     padding-top: 24px !important;
 }
 
-body:not(.no-background) {
+body:is(.has-custom-background) {
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(2px);
@@ -20,32 +20,57 @@ body:not(.no-background) {
 
 /* #region *.......................... Interaction items */
 
-/* #region *.......................... Icons */
+/* #region *.......................... Icons & buttons */
+
+button:hover {
+    transform: scale(1.07);
+    transition: all 200ms ease-in;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-small);
+}
+
+.setting-add-hotkey-button{
+    padding: 3px 1px;
+    transition: transform 200ms ease-out;
+}
+
+.setting-add-hotkey-button:hover {
+    background-color: var(--main-accent);
+    transform: scale(1.08);
+    transition: all 200ms ease-in;
+}
 
 .clickable-icon {
-    color: var(--main-accent);
-    transition: transform 200ms ease-out,
-    background-color 200ms ease-out;
+    transition: all 200ms ease-out;
 }
 
 .edit-block-button,
-.checkbox-container,
-.modal-close-button,
-.clickable-icon {
+.modal-close-button{
+    padding: 0px 3px 0px 3px;
+    border-radius: var(--radius-big);
     transition: transform 200ms ease-out;
 }
 
 .edit-block-button:hover,
-.checkbox-container:hover,
-.modal-close-button:hover,
-.clickable-icon:hover {
+.modal-close-button:hover{
     color: var(--text-normal);
-    border-radius: var(--radius-big);
     background-color: var(--main-accent);
-    padding: 0px 3px 0px 3px ;
     transform: scale(1.2, 1.2);
     transition: transform 200ms ease-in,
                 background-color 200ms ease-in;
+}
+
+.setting-editor-extra-setting-button {
+    border-radius: var(--radius-big);
+    padding: 3px;
+    transition: all 200ms;
+}
+
+.setting-editor-extra-setting-button:hover {
+    color: var(--text-normal);
+    background-color: var(--main-accent);
+    transform: scale(1.2, 1.2);
+    transition: all 200ms;
 }
 
 .markdown-source-view.mod-cm6 .edit-block-button {
@@ -65,10 +90,37 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
     border: 1px solid var(--main-accent-dark);
     font-size: 0.8em;
     border-radius: var(--radius-small);
+    transition: all 200ms ease-out;
 }
 
-input[type='text']:active, input[type='search']:active, input[type='email']:active, input[type='password']:active, input[type='number']:active, input[type='text']:focus, input[type='search']:focus, input[type='email']:focus, input[type='password']:focus, input[type='number']:focus {
+input[type='text']:hover,
+input[type='search']:hover,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='number']:hover,
+input[type='text']:hover,
+input[type='search']:hover,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='number']:hover {
     border-color: var(--main-accent);
+    background-color: var(--bg-input);
+    transition: all 200ms ease-in;
+}
+
+input[type='text']:active,
+input[type='search']:active,
+input[type='email']:active,
+input[type='password']:active,
+input[type='number']:active,
+input[type='text']:focus,
+input[type='search']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='number']:focus {
+    border-color: var(--main-accent);
+    background-color: var(--bg-darkest);
+    transition: all 200ms ease-in;
 }
 
 .search-input-container input {
@@ -85,33 +137,44 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 
 /* #endregion | 3.4.2. Inputbox */
 
-/* #region *..........................3.4.3. Dropdown */
+/* #region *.......................... Dropdown */
 
 .dropdown {
     border: 1px solid var(--main-accent-dark);
     border-radius: var(--radius-small);
     font-size: 0.8em;
-    transition: transform 100ms ease-out;
+    transition: all 200ms ease-out;
     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.4' height='292.4'%3E%3Cpath fill='%23666' d='M287 69.4a17.6 17.6 0 0 0-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4A17.6 17.6 0 0 0 0 82.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 95c3.5-3.5 5.4-7.8 5.4-12.8 0-5-1.9-9.2-5.5-12.8z'/%3E%3C/svg%3E");
 }
 
 .dropdown:hover{
-    background-color: var(--main-accent);
-    transform: scale(1.05, 1.05);
-    transition: transform 100ms ease-in;
+    border: 1px solid var(--main-accent);
+    transition: all 200ms ease-in;
 }
 
 .dropdown option {
     font-weight: normal;
-    background-color: var(--background-primary);
-    border: 1px solid var(--main-accent-light);
+    background-color: var(--bg-dark);
+    border: 1px solid var(--main-accent) !important;
+    transition: all 200ms ease-out;
+}
+
+.dropdown option:hover {
+    background-color: var(--main-accent) !important;
+    transition: all 200ms ease-in;
 }
 
 /* #endregion | 3.4.3. dropdown */
 
-/* #region *..........................3.4.4. Checkbox */
+/* #region *.......................... Checkbox */
+
+
 .checkbox-container {
-    border-radius: var(--radius-medium);
+    color: var(--text-normal);
+    border-radius: var(--radius-big);
+    padding: 0px 3px 0px 3px ;
+    transition: transform 200ms ease-in,
+    background-color 200ms ease-in;
 }
 
 .checkbox-container:after {
@@ -119,9 +182,23 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
     transform: translate3d(2px, 0, 0);
 }
 
+.checkbox-container:hover {
+    background-color: var(--main-accent-dark);
+    transform: scale(1.1);
+    transition: transform 200ms ease-in,
+    background-color 200ms ease-in;
+}
+
+.checkbox-container.is-enabled:hover {
+    background-color: var(--main-accent);
+    transform: scale(1.1);
+    transition: transform 200ms ease-in,
+    background-color 200ms ease-in;
+}
+
 /* #endregion | Checkbox */
 
-/* #region *..........................Tooltips */
+/* #region *.......................... Tooltips */
 
 .tooltip {
     background-color: rgba(0, 0, 0, 0.709);

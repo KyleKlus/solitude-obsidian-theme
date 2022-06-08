@@ -1,8 +1,8 @@
 /* #region *..........................Export Mode */
-
+/* This snippet implements an export mode, such that every color will as if it is a word document */
 :root body {
     --bg-note: #ffffff;
-    --bg-quote: #f3f3f3;
+    --bg-quote: hsl(195, 16%, 84%);
     --main-accent-dark: #993333;
     --text-note: #000000;
 

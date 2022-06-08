@@ -1,5 +1,5 @@
-/* #region *..........................3.3. Modals */
-/* #region *..........................3.3.1. General Modals */
+/* #region *.......................... Modals */
+/* #region *.......................... General Modals */
 .modal button:not(.mod-cta):not(.mod-warning),
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
   background-color: var(--interactive-normal);
@@ -32,6 +32,21 @@
   background-color: var(--bg-darker);
 }
 
+.popover .markdown-embed .markdown-embed-link {
+  background-color: var(--bg-darkest);
+  color: var(--text-normal);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 4px 5px 0px 5px;
+  transition: all 200ms ease-out;
+  box-shadow: var(--button-shadow);
+}
+
+.popover .markdown-embed .markdown-embed-link:hover {
+  border-color: var(--main-accent);
+  transition: all 200ms ease-in;
+}
+
 .community-plugin-readme.markdown-preview-view {
   font-size: var(--note-font-size);
 }
@@ -48,7 +63,7 @@
 }
 
 /* #endregion */
-/* #region *..........................3.3.2. Settings modal */
+/* #region *.......................... Settings modal */
 .modal.mod-settings div.vertical-tab-content h2 {
   font-size: 1.4em;
 }
@@ -97,9 +112,10 @@
 .modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover {
   background-color: var(--main-accent-dark);
   border-left-color: var(--main-accent-dark);
-  transform: scale(1.05, 1.05);
   transition: all 200ms ease-in;
 }
 
 /* #endregion */
 /* #endregion */
+
+/*# sourceMappingURL=Modals.css.map */

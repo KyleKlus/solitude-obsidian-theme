@@ -1,4 +1,5 @@
 /* #region -> Custom Callouts */
+/* This is a snippet which adds custom callouts to obsidian */
 
 body:is(.is-mobile) .markdown-source-view.mod-cm6 .callout {
     margin-left : 0px;

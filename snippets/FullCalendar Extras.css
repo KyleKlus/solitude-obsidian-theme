@@ -1,3 +1,5 @@
+/* This snippet defines leisure and work time sections within the week view of the calendar */
+
 .fc-timegrid-slot[data-time="12:00:00"],
 .fc-timegrid-slot[data-time="12:00:00"] + td,
 .fc-timegrid-slot[data-time="12:30:00"],

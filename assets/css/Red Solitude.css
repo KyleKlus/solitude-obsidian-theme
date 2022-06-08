@@ -104,7 +104,7 @@
   --indentation-guide-active: var(--main-accent-light);
 }
 
-:root body:is(.no-translucency) {
+:root body:not(.is-translucency-effect-on) {
   --bg-translucent: var(--bg);
   --bg-dark-translucent: var(--bg-dark);
   --bg-darker-translucent: var(--bg-darker);
@@ -178,13 +178,13 @@
   font-weight: 300;
 }
 
-/* #region *..........................3. App */
+/* #region *.......................... App */
 body:not(.is-mobile) {
   background-color: var(--bg-app);
   padding-top: 24px !important;
 }
 
-body:not(.no-background) {
+body:is(.has-custom-background) {
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(2px);
@@ -287,8 +287,8 @@ body:not(.no-background) {
 }
 
 /* #endregion */
-/* #region *..........................3.3. Modals */
-/* #region *..........................3.3.1. General Modals */
+/* #region *.......................... Modals */
+/* #region *.......................... General Modals */
 .modal button:not(.mod-cta):not(.mod-warning),
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
   background-color: var(--interactive-normal);
@@ -321,6 +321,21 @@ body:not(.no-background) {
   background-color: var(--bg-darker);
 }
 
+.popover .markdown-embed .markdown-embed-link {
+  background-color: var(--bg-darkest);
+  color: var(--text-normal);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 4px 5px 0px 5px;
+  transition: all 200ms ease-out;
+  box-shadow: var(--button-shadow);
+}
+
+.popover .markdown-embed .markdown-embed-link:hover {
+  border-color: var(--main-accent);
+  transition: all 200ms ease-in;
+}
+
 .community-plugin-readme.markdown-preview-view {
   font-size: var(--note-font-size);
 }
@@ -337,7 +352,7 @@ body:not(.no-background) {
 }
 
 /* #endregion */
-/* #region *..........................3.3.2. Settings modal */
+/* #region *.......................... Settings modal */
 .modal.mod-settings div.vertical-tab-content h2 {
   font-size: 1.4em;
 }
@@ -386,36 +401,61 @@ body:not(.no-background) {
 .modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover {
   background-color: var(--main-accent-dark);
   border-left-color: var(--main-accent-dark);
-  transform: scale(1.05, 1.05);
   transition: all 200ms ease-in;
 }
 
 /* #endregion */
 /* #endregion */
 /* #region *.......................... Interaction items */
-/* #region *.......................... Icons */
+/* #region *.......................... Icons & buttons */
+button:hover {
+  transform: scale(1.07);
+  transition: all 200ms ease-in;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-small);
+}
+
+.setting-add-hotkey-button {
+  padding: 3px 1px;
+  transition: transform 200ms ease-out;
+}
+
+.setting-add-hotkey-button:hover {
+  background-color: var(--main-accent);
+  transform: scale(1.08);
+  transition: all 200ms ease-in;
+}
+
 .clickable-icon {
-  color: var(--main-accent);
-  transition: transform 200ms ease-out, background-color 200ms ease-out;
+  transition: all 200ms ease-out;
 }
 
 .edit-block-button,
-.checkbox-container,
-.modal-close-button,
-.clickable-icon {
+.modal-close-button {
+  padding: 0px 3px 0px 3px;
+  border-radius: var(--radius-big);
   transition: transform 200ms ease-out;
 }
 
 .edit-block-button:hover,
-.checkbox-container:hover,
-.modal-close-button:hover,
-.clickable-icon:hover {
+.modal-close-button:hover {
   color: var(--text-normal);
-  border-radius: var(--radius-big);
   background-color: var(--main-accent);
-  padding: 0px 3px 0px 3px;
   transform: scale(1.2, 1.2);
   transition: transform 200ms ease-in, background-color 200ms ease-in;
+}
+
+.setting-editor-extra-setting-button {
+  border-radius: var(--radius-big);
+  padding: 3px;
+  transition: all 200ms;
+}
+
+.setting-editor-extra-setting-button:hover {
+  color: var(--text-normal);
+  background-color: var(--main-accent);
+  transform: scale(1.2, 1.2);
+  transition: all 200ms;
 }
 
 .markdown-source-view.mod-cm6 .edit-block-button {
@@ -433,10 +473,37 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
   border: 1px solid var(--main-accent-dark);
   font-size: 0.8em;
   border-radius: var(--radius-small);
+  transition: all 200ms ease-out;
 }
 
-input[type=text]:active, input[type=search]:active, input[type=email]:active, input[type=password]:active, input[type=number]:active, input[type=text]:focus, input[type=search]:focus, input[type=email]:focus, input[type=password]:focus, input[type=number]:focus {
+input[type=text]:hover,
+input[type=search]:hover,
+input[type=email]:hover,
+input[type=password]:hover,
+input[type=number]:hover,
+input[type=text]:hover,
+input[type=search]:hover,
+input[type=email]:hover,
+input[type=password]:hover,
+input[type=number]:hover {
   border-color: var(--main-accent);
+  background-color: var(--bg-input);
+  transition: all 200ms ease-in;
+}
+
+input[type=text]:active,
+input[type=search]:active,
+input[type=email]:active,
+input[type=password]:active,
+input[type=number]:active,
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=number]:focus {
+  border-color: var(--main-accent);
+  background-color: var(--bg-darkest);
+  transition: all 200ms ease-in;
 }
 
 .search-input-container input {
@@ -452,31 +519,39 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 }
 
 /* #endregion | 3.4.2. Inputbox */
-/* #region *..........................3.4.3. Dropdown */
+/* #region *.......................... Dropdown */
 .dropdown {
   border: 1px solid var(--main-accent-dark);
   border-radius: var(--radius-small);
   font-size: 0.8em;
-  transition: transform 100ms ease-out;
+  transition: all 200ms ease-out;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.4' height='292.4'%3E%3Cpath fill='%23666' d='M287 69.4a17.6 17.6 0 0 0-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4A17.6 17.6 0 0 0 0 82.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 95c3.5-3.5 5.4-7.8 5.4-12.8 0-5-1.9-9.2-5.5-12.8z'/%3E%3C/svg%3E");
 }
 
 .dropdown:hover {
-  background-color: var(--main-accent);
-  transform: scale(1.05, 1.05);
-  transition: transform 100ms ease-in;
+  border: 1px solid var(--main-accent);
+  transition: all 200ms ease-in;
 }
 
 .dropdown option {
   font-weight: normal;
-  background-color: var(--background-primary);
-  border: 1px solid var(--main-accent-light);
+  background-color: var(--bg-dark);
+  border: 1px solid var(--main-accent) !important;
+  transition: all 200ms ease-out;
+}
+
+.dropdown option:hover {
+  background-color: var(--main-accent) !important;
+  transition: all 200ms ease-in;
 }
 
 /* #endregion | 3.4.3. dropdown */
-/* #region *..........................3.4.4. Checkbox */
+/* #region *.......................... Checkbox */
 .checkbox-container {
-  border-radius: var(--radius-medium);
+  color: var(--text-normal);
+  border-radius: var(--radius-big);
+  padding: 0px 3px 0px 3px;
+  transition: transform 200ms ease-in, background-color 200ms ease-in;
 }
 
 .checkbox-container:after {
@@ -484,8 +559,20 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
   transform: translate3d(2px, 0, 0);
 }
 
+.checkbox-container:hover {
+  background-color: var(--main-accent-dark);
+  transform: scale(1.1);
+  transition: transform 200ms ease-in, background-color 200ms ease-in;
+}
+
+.checkbox-container.is-enabled:hover {
+  background-color: var(--main-accent);
+  transform: scale(1.1);
+  transition: transform 200ms ease-in, background-color 200ms ease-in;
+}
+
 /* #endregion | Checkbox */
-/* #region *..........................Tooltips */
+/* #region *.......................... Tooltips */
 .tooltip {
   background-color: rgba(0, 0, 0, 0.709);
 }
@@ -581,10 +668,6 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 .view-content .empty-state {
   background-color: var(--bg-dark-translucent);
-}
-
-.workspace-split.mod-root .workspace-leaf-content[data-type=full-calendar-view] > .view-content {
-  background-color: var(--bg-darker-translucent);
 }
 
 .workspace-split.mod-left-split {
@@ -721,6 +804,16 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-tab-container-inner {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
   height: 24px;
+}
+
+svg.folder {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="M216 72h-85.3l-27.8-20.8a15.6 15.6 0 0 0-9.6-3.2H40a16 16 0 0 0-16 16v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V88a16 16 0 0 0-16-16ZM93.3 96H40V64h53.3l21.4 16l-21.4 16M216 200H40v-88h53.3a15.6 15.6 0 0 0 9.6-3.2L130.7 88H216Z"%2F%3E%3C%2Fsvg%3E');
+  background-size: 18px;
+  background-repeat: no-repeat;
+}
+
+.workspace-tab-header-inner-icon .folder path {
+  display: none;
 }
 
 .workspace-tab-header-container {
@@ -1861,10 +1954,10 @@ a.external-link[href*="reactjs.org"]::before {
   padding-top: 14px;
 }
 
-.nav-header .nav-buttons-container .nav-action-button {
+.nav-action-button {
   background-color: var(--interactive-normal);
   border: 1px solid transparent;
-  padding: 7px 22px 0px 22px;
+  padding: 7px 20px 0px 20px;
   box-shadow: var(--shadow);
   border-radius: var(--radius-small);
   transition: all 200ms ease-out;
@@ -1872,12 +1965,13 @@ a.external-link[href*="reactjs.org"]::before {
 
 .nav-buttons-container .nav-action-button:hover {
   background-color: var(--interactive-hover);
-  transform: scale(1.1, 1.1);
+  transform: scale(1.07);
   transition: all 200ms ease-in;
 }
 
 .nav-action-button.is-active {
-  box-shadow: var(--shadow);
+  background-color: var(--interactive-hover);
+  transition: all 200ms ease-in;
 }
 
 .nav-folder-collapse-indicator {
@@ -1902,6 +1996,7 @@ a.external-link[href*="reactjs.org"]::before {
 
 .nav-folder.is-collapsed > .nav-folder-title .nav-folder-collapse-indicator svg {
   transform: none;
+  background-repeat: no-repeat;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="M216 72h-85.3l-27.8-20.8a15.6 15.6 0 0 0-9.6-3.2H40a16 16 0 0 0-16 16v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V88a16 16 0 0 0-16-16ZM93.3 96H40V64h53.3l21.4 16l-21.4 16M216 200H40v-88h53.3a15.6 15.6 0 0 0 9.6-3.2L130.7 88H216Z"%2F%3E%3C%2Fsvg%3E');
 }
 
@@ -1942,27 +2037,48 @@ a.external-link[href*="reactjs.org"]::before {
   color: var(--text-normal);
 }
 
-.workspace-leaf-content[data-type=file-explorer] .nav-action-button svg path {
+.workspace-leaf-content[data-type=file-explorer] .nav-action-button svg path,
+svg.up-and-down-arrows path,
+svg.magnifying-glass path,
+svg.expand-vertically path,
+svg.bullet-list path {
   display: none;
 }
 
-.workspace-leaf-content[data-type=file-explorer] .nav-action-button svg {
+.workspace-leaf-content[data-type=file-explorer] .nav-action-button svg,
+.nav-action-button[aria-label="Change sort order"] svg,
+.nav-action-button[aria-label="Show search filter"] svg,
+.nav-action-button[aria-label="Show more context"] svg,
+.nav-action-button[aria-label="Collapse results"] svg {
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
   background-size: 25px;
 }
 
-.workspace-leaf-content[data-type=file-explorer] .nav-action-button[aria-label="New note"] svg {
+.nav-action-button[aria-label="New note"] svg {
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="m213.7 82.3l-56-56A8.1 8.1 0 0 0 152 24H56a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V88a8.1 8.1 0 0 0-2.3-5.7Zm-53.7-31L188.7 80H160ZM200 216H56V40h88v48a8 8 0 0 0 8 8h48v120Zm-40-64a8 8 0 0 1-8 8h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1 0-16h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 8 8Z"%2F%3E%3C%2Fsvg%3E');
 }
 
-.workspace-leaf-content[data-type=file-explorer] .nav-action-button[aria-label="New folder"] svg {
+.nav-action-button[aria-label="New folder"] svg {
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="M216 72h-85.3l-27.8-20.8a15.6 15.6 0 0 0-9.6-3.2H40a16 16 0 0 0-16 16v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V88a16 16 0 0 0-16-16ZM93.3 96H40V64h53.3l21.4 16l-21.4 16M216 200H40v-88h53.3a15.6 15.6 0 0 0 9.6-3.2L130.7 88H216Zm-80-76v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1 0-16h16v-16a8 8 0 0 1 16 0Z"%2F%3E%3C%2Fsvg%3E');
 }
 
-.workspace-leaf-content[data-type=file-explorer] .nav-action-button[aria-label="Change sort order"] svg {
+svg.up-and-down-arrows {
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="M117.7 170.3a8.1 8.1 0 0 1 0 11.4l-32 32a8.2 8.2 0 0 1-11.4 0l-32-32a8.1 8.1 0 0 1 11.4-11.4L72 188.7V48a8 8 0 0 1 16 0v140.7l18.3-18.4a8.1 8.1 0 0 1 11.4 0Zm96-96l-32-32a8.1 8.1 0 0 0-11.4 0l-32 32a8.1 8.1 0 0 0 11.4 11.4L168 67.3V208a8 8 0 0 0 16 0V67.3l18.3 18.4a8.2 8.2 0 0 0 11.4 0a8.1 8.1 0 0 0 0-11.4Z"%2F%3E%3C%2Fsvg%3E');
+}
+
+svg.magnifying-glass {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"%3E%3Cpath fill="white" d="m29 27.586l-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9a9.01 9.01 0 0 1-9-9Z"%2F%3E%3C%2Fsvg%3E');
+}
+
+svg.expand-vertically {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M18.51 1.51H2.49m16.02 18H2.49m4.006-5.992l4 4l4.015-4m-8.015-6l4-4l4.015 4M10.51 17.51v-14"%2F%3E%3C%2Fsvg%3E');
+}
+
+svg.bullet-list {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cpath stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M7.5 6.5h8m-8 3.998h5m-5 4.002h8"%2F%3E%3Cpath fill="white" d="M4.499 7.5c.5 0 1-.5 1-1s-.5-1-1-1s-.999.5-.999 1s.499 1 .999 1zm0 4c.5 0 1-.5 1-1s-.5-1-1-1s-.999.5-.999 1s.499 1 .999 1zm0 4c.5 0 1-.5 1-1s-.5-1-1-1s-.999.5-.999 1s.499 1 .999 1z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  background-size: 18px;
 }
 
 .nav-folder.mod-root > .nav-file-title,
@@ -2016,6 +2132,22 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   padding: 0px 0px 0px 5px;
   font-size: 14px;
   transition: all 200ms ease-out;
+}
+
+.tree-item-self,
+.search-result-file-match,
+.tree-item-flair {
+  transition: all 200ms ease-out;
+}
+
+.tree-item-self.is-clickable:hover,
+.search-result-file-match:hover,
+.tree-item-flair:hover {
+  transition: all 200ms ease-in;
+}
+
+.tree-item-flair {
+  padding: 6px 4px;
 }
 
 /* #endregion | File Explorer Elements */
@@ -2121,13 +2253,6 @@ div#calendar-container td.svelte-egt0yd {
   transition: all 200ms ease-out;
 }
 
-button:hover {
-  transform: scale(1.1, 1.1);
-  transition: all 200ms ease-in;
-  box-shadow: var(--shadow);
-  border-radius: var(--radius-small);
-}
-
 .fc-event[href], .fc-event.fc-event-draggable:not(.fc-daygrid-dot-event) {
   box-shadow: var(--shadow) !important;
   transition: all 200ms ease-out;
@@ -2168,6 +2293,10 @@ button:hover {
   padding: 4px 0px;
 }
 
+.workspace-split.mod-root .workspace-leaf-content[data-type=full-calendar-view] > .view-content {
+  background-color: var(--bg-darker-translucent);
+}
+
 /* #endregion -> Full Calendar Plugin */
 /* #region -> Privacy Glasses */
 body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-title-inner):not(:hover) {
@@ -2190,24 +2319,24 @@ settings:
     collapsed: false
   -
     id: is-hover-effect-on
-    title: Toggle hover effect in editor
+    title: Enable hover effect in editor
     type: class-toggle
     default: false
   -
     id: is-active-effect-on
-    title: Toggle active line effect in editor
+    title: Enable active line effect in editor
     type: class-toggle
     default: false
   -
-    id: no-translucency
-    title: Toggle translucency
+    id: is-translucency-effect-on
+    title: Enable translucency effect
     type: class-toggle
-    default: true
+    default: false
   -
-    id: no-background
-    title: Toggle background
+    id: has-custom-background
+    title: Enable custom feature background
     type: class-toggle
-    default: true
+    default: false
   -
     id: note-font-size
     title: Editor Font Size (rem)
@@ -2634,3 +2763,5 @@ settings:
       - right
 */
 /* #endregion */
+
+/*# sourceMappingURL=Red%20Solitude.css.map */

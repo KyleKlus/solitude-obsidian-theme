@@ -76,13 +76,6 @@ div#calendar-container td.svelte-egt0yd {
     transition: all 200ms ease-out;
 }
 
-button:hover {
-    transform: scale(1.1, 1.1);
-    transition: all 200ms ease-in;
-    box-shadow: var(--shadow);
-    border-radius: var(--radius-small);
-}
-
 .fc-event[href], .fc-event.fc-event-draggable:not(.fc-daygrid-dot-event) {
     box-shadow: var(--shadow) !important;
     transition: all 200ms ease-out;
@@ -121,6 +114,10 @@ button:hover {
 
 .fc .fc-timegrid-slot {
     padding: 4px 0px;
+}
+
+.workspace-split.mod-root .workspace-leaf-content[data-type="full-calendar-view"] > .view-content {
+    background-color: var(--bg-darker-translucent);
 }
 
 /* #endregion -> Full Calendar Plugin */
