@@ -5,7 +5,7 @@ body:not(.is-mobile) {
     padding-top: 24px !important;
 }
 
-body:not(.no-background) {
+body:is(.has-custom-background) {
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(2px);
