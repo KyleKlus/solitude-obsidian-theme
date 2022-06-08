@@ -1954,7 +1954,7 @@ a.external-link[href*="reactjs.org"]::before {
   padding-top: 14px;
 }
 
-.nav-action-button {
+.nav-buttons-container .nav-action-button {
   background-color: var(--interactive-normal);
   border: 1px solid transparent;
   padding: 7px 20px 0px 20px;
@@ -1969,7 +1969,7 @@ a.external-link[href*="reactjs.org"]::before {
   transition: all 200ms ease-in;
 }
 
-.nav-action-button.is-active {
+.nav-buttons-container .nav-action-button.is-active {
   background-color: var(--interactive-hover);
   transition: all 200ms ease-in;
 }
