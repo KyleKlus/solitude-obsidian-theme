@@ -11,7 +11,7 @@ This is a dark theme with a strong accent color and a 3D look. It has many extra
 Use the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to enable the below mentioned features .
 
 - Custom workspace background
-- Translucent panels
+- Translucent panels (Only useful if a custom background is used)
 - Active line effect
 - Hover over line effect
 
@@ -24,6 +24,9 @@ Use [these](https://github.com/MajorEnkidu/red-solitude-obsidian-theme/tree/main
 - Controls callout (callout tag: "ctrl") for use as a ctrl-buttons header (Work in progress)
 
 - Exportmode (Work in progress)
+
+![Screenshot](assets/img/custom_background_screenshot.png)
+Theme with translucency enabled and a custom background defined via a snippet. Here you can also see the before mentioned custom callouts.
 
 ## Recommended Plugins
 
