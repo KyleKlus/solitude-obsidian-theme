@@ -43,11 +43,21 @@ settings:
     default: 900
     format: 'px'
   -
+    id: gutter-is-moved
+    title: Enable moving the gutter all the way to the left
+    type: class-toggle
+    default: false
+  -
     id: active-line-font-size
     title: Active Line Font Size (rem)
     type: variable-number
     default: 1.01
     format: 'rem'
+  -
+    id: custom-bullet-point-enabled
+    title: Enable custom bullet point character "-"
+    type: class-toggle
+    default: false
   -
     id: General-colors-settings
     title: General Colors

@@ -111,6 +111,7 @@ li[data-task="/"] > .task-list-item-checkbox:checked::before {
   margin-left: -2px;
   width: 20px;
   height: 10px;
+  border-bottom: 1px solid transparent;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 0;
@@ -120,7 +121,7 @@ li[data-task="/"] > .task-list-item-checkbox:checked::before {
 li[data-task="/"] > .task-list-item-checkbox,
 .task-list-item-checkbox[data-task="/"] {
   transform: rotate(90deg);
-  background-color: var(--bg-note);
+  background-color: var(--bg-dark);
   width: 20px;
   height: 10px;
   margin-left: 5px;
@@ -131,9 +132,10 @@ li[data-task="/"] > .task-list-item-checkbox,
 .markdown-reading-view li[data-task="/"] > .task-list-item-checkbox,
 .markdown-reading-view .task-list-item-checkbox[data-task="/"] {
   transform: rotate(90deg);
-  background-color: var(--bg-note);
+  background-color: var(--bg-dark);
   width: 20px;
   height: 10px;
+  border: 1px solid var(--text-faint);
   margin-left: -16px !important;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;

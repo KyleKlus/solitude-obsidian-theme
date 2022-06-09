@@ -298,7 +298,6 @@ svg.folder {
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   /* <- Note width */
   max-width: var(--note-width);
-  margin-left: auto !important;
   margin-right: auto !important;
 }
 
@@ -329,7 +328,7 @@ body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-scroller {
   padding: 0px;
 }
 
-.markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-scroller > *:first-child {
+body:is(.gutter-is-moved) .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-scroller > *:first-child {
   padding-right: 1px;
   margin-left: unset;
 }
@@ -341,7 +340,7 @@ body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   display: none;
 }
 
-.cm-contentContainer {
+body:is(.gutter-is-moved) .cm-contentContainer {
   margin-left: auto;
 }
 
@@ -568,6 +567,14 @@ span.math {
 .markdown-embed .markdown-source-view.mod-cm6 .list-bullet:after,
 .markdown-embed .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
   left: 0px;
+  color: var(--main-accent);
+}
+
+body:is(.custom-bullet-point-enabled) .markdown-source-view.mod-cm6 .list-bullet:after,
+body:is(.custom-bullet-point-enabled) .cm-formatting.cm-formatting-list.cm-formatting-list-ol,
+body:is(.custom-bullet-point-enabled) .markdown-embed .markdown-source-view.mod-cm6 .list-bullet:after,
+body:is(.custom-bullet-point-enabled) .markdown-embed .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+  left: 0px;
   content: var(--list-bullet-sign);
   color: var(--main-accent);
 }
@@ -766,6 +773,12 @@ em,
 .cm-formatting-list,
 .list-bullet::after {
   color: var(--main-accent);
+}
+
+body:is(.custom-bullet-point-enabled) ::marker,
+body:is(.custom-bullet-point-enabled) .cm-formatting-list,
+body:is(.custom-bullet-point-enabled) .list-bullet::after {
+  color: var(--main-accent);
   list-style-type: var(--list-bullet-sign);
   content: var(--list-bullet-sign);
 }
@@ -902,6 +915,7 @@ li[data-task="/"] > .task-list-item-checkbox:checked::before {
   margin-left: -2px;
   width: 20px;
   height: 10px;
+  border-bottom: 1px solid transparent;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 0;
@@ -911,7 +925,7 @@ li[data-task="/"] > .task-list-item-checkbox:checked::before {
 li[data-task="/"] > .task-list-item-checkbox,
 .task-list-item-checkbox[data-task="/"] {
   transform: rotate(90deg);
-  background-color: var(--bg-note);
+  background-color: var(--bg-dark);
   width: 20px;
   height: 10px;
   margin-left: 5px;
@@ -922,9 +936,10 @@ li[data-task="/"] > .task-list-item-checkbox,
 .markdown-reading-view li[data-task="/"] > .task-list-item-checkbox,
 .markdown-reading-view .task-list-item-checkbox[data-task="/"] {
   transform: rotate(90deg);
-  background-color: var(--bg-note);
+  background-color: var(--bg-dark);
   width: 20px;
   height: 10px;
+  border: 1px solid var(--text-faint);
   margin-left: -16px !important;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;

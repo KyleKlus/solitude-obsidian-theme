@@ -2,8 +2,8 @@
 
 .status-bar{
     background-color: var(--main-accent-dark);
-    max-height: 28px;
-    padding: 8px 25px;
+    max-height: 30px;
+    padding: 10px 25px;
     align-items: center;
     justify-content: center;
     border: none;
@@ -11,13 +11,13 @@
 }
 
 .status-bar-item{
-    color: var(--main-accent);
+    color: var(--text-normal);
     background-color: var(--bg-darker-translucent);
     border-radius: var(--radius-medium);
-    max-height: 20px;
+    max-height: 22px;
     margin: 4px calc(var(--panel-spacing) / 2);
     padding: 0px 5px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--text-shadow);
     transition: all 200ms ease-out;
 }
 

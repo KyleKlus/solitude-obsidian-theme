@@ -6,9 +6,14 @@
     box-shadow: var(--shadow);
 }
 
-.titlebar-button,
+.titlebar-button {
+    color: var(--main-accent);
+    background-color: transparent;
+    opacity: 1.0;
+}
+
 .titlebar-text {
-    color: var(--interactive-accent);
+    color: var(--text-normal);
     background-color: transparent;
     opacity: 1.0;
 }
