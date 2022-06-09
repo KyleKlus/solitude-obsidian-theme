@@ -22,11 +22,13 @@ settings:
   -
     id: is-translucency-effect-on
     title: Enable translucency effect
+    description: It only really makes sense to use this option if you have a custom background set
     type: class-toggle
     default: false
   -
     id: has-custom-background
     title: Enable custom background
+    description: Use the provided repo snippet, if you want to have your own picture as a background
     type: class-toggle
     default: false
   -
