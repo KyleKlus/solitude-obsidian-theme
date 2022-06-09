@@ -64,7 +64,7 @@ settings:
     level: 1
     collapsed: true
   -
-    id: bg
+    id: bg-app
     title: Workspace Background Color
     type: variable-color
     format: hex

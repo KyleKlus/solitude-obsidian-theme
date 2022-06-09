@@ -24,12 +24,9 @@
 
     /* #endregion -> General Colors */
 
-    --bg-app: var(--bg);
+    --bg-app: #323c45;
 
     --bg-title-bar: var(--bg-darkest);
-    --bg-title-bar-button-hover:#232327;
-
-    --bg-ribbon: var(--bg-app);
 
     --bg-leaf-head-active: var(--bg-darkest);
     --bg-leaf-head: var(--bg-darker);
@@ -49,10 +46,10 @@
 
     --bg-quote: var(--bg-darkest);
 
-    --header-1-color: #e8e9f0;
+    --header-1-color: hsl(233, 21%, 93%);
     --header-2-color: hsl(230, 20%, 92%);
     --header-3-color: hsl(230, 20%, 92%);
-    --header-4-color: #dadce7;
+    --header-4-color: hsl(231, 21%, 88%);
     --header-5-color: hsl(230, 20%, 88%);
     --header-6-color: hsl(230, 20%, 88%);
 

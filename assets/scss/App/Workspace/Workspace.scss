@@ -45,10 +45,6 @@ body .app-container .workspace-ribbon.is-collapsed {
 }
 
 /* ribbon buttons */
-.side-dock-ribbon-action svg,
-.workspace-ribbon-collapse-btn svg {
-    color: var(--main-accent);
-}
 
 .workspace-ribbon-collapse-btn {
     padding-top: 20px;
@@ -60,8 +56,13 @@ body .app-container .workspace-ribbon.is-collapsed {
     stroke-width: 4px;
 }
 
-.side-dock-ribbon-action:hover svg,
-.workspace-ribbon-collapse-btn:hover svg {
+.side-dock-ribbon-action {
+    color: var(--main-accent);
+}
+
+.side-dock-ribbon-action:hover,
+.workspace-ribbon-collapse-btn:hover{
+    background-color: var(--bg-darker);
     transform: scale(1.05, 1.05);
     color: var(--main-accent-light);
 }
@@ -95,9 +96,6 @@ background-color: transparent;
 .view-content .empty-state {
 background-color: var(--bg-dark-translucent);
 }
-
-
-
 
 .workspace-split.mod-left-split {
     padding-left: 0;
@@ -293,8 +291,7 @@ svg.folder {
 
 .nav-buttons-container .nav-action-button,
 .workspace-tab-header,
-.workspace-tab-header.is-active,
-.side-dock-ribbon-action{
+.workspace-tab-header.is-active {
     color: var(--main-accent);
 }
 
