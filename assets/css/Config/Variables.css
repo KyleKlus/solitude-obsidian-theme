@@ -155,7 +155,7 @@
 }
 /* #endregion */
 :root {
-  --list-bullet-sign: "-";
+  --list-bullet-sign: "- ";
   --note-width: 750px;
   --panel-spacing: 15px;
   --radius-big: 15px;
