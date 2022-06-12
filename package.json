@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass-dev": "sass --style=expanded assets/scss:assets/css && ./update_theme_dev_vault.zsh",
-    "sass-prod": "sass --no-source-map --style=expanded assets/scss:assets/css && ./update_vaults.zsh"
+    "sass-prod": "sass --no-source-map --style=expanded assets/scss:assets/css && ./update_vaults.zsh",
+    "sass-dev-snippet": "sass --no-source-map --style=expanded assets/scss:assets/css && ./update_snippets.zsh"
   },
   "repository": {
     "type": "git",

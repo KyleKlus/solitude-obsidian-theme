@@ -9,8 +9,8 @@ body:is(.is-mobile) .markdown-source-view.mod-cm6 .callout {
 .markdown-source-view.mod-cm6 .callout[data-callout="moc"] {
     --callout-color: 255, 166, 77;
     --callout-icon : lucide-list;
-    margin-left    : calc((100% - var(--note-width)) / 2);
-    margin-right   : calc(var(--note-width) * 0.60);
+    margin-left    : 10%;
+    margin-right   : 60%;
 }
 
 .markdown-source-view.mod-cm6 .callout[data-callout="h"] {
@@ -18,8 +18,8 @@ body:is(.is-mobile) .markdown-source-view.mod-cm6 .callout {
     --callout-icon   : none;
     border-left-width: 0px;
     background-color : transparent;
-    margin-left      : calc((100% - var(--note-width)) / 2);
-    margin-right     : calc((100% - var(--note-width)) / 2);
+    margin-left      : 10%;
+    margin-right     : 10%;
     box-shadow       : none;
 
 }

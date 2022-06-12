@@ -396,8 +396,8 @@ body:is(.downsize-h-formatter) .cm-formatting-header.cm-formatting-header {
   font-size: small !important;
 }
 
-.markdown-rendered .callout-title-inner:is(h1, h2, h3, h4, h5, h6),
-.markdown-rendered .callout-content:is(h1, h2, h3, h4, h5, h6) {
+.markdown-rendered .callout-title-inner :is(h1, h2, h3, h4, h5, h6),
+.markdown-rendered .callout-content :is(h1, h2, h3, h4, h5, h6) {
   margin: 0 0;
 }
 
@@ -531,7 +531,6 @@ span.math {
 /* #endregion */
 .markdown-source-view.mod-cm6 .callout,
 .markdown-preview-view .callout {
-  margin: 1.4rem;
   box-shadow: var(--shadow);
   transform: translate3d(0px, -3px, 0px);
 }
