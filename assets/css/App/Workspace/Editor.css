@@ -255,8 +255,8 @@ body:is(.is-mobile) .callout {
 }
 
 .callout {
-  margin-left: 12%;
-  margin-right: 12%;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
   box-shadow: var(--shadow);
   transform: translate3d(0px, -3px, 0px);
 }

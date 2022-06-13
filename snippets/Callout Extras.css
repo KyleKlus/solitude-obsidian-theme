@@ -4,7 +4,7 @@
 .callout[data-callout="moc"] {
     --callout-color: 255, 166, 77;
     --callout-icon : lucide-list;
-    margin-left    : 10% !important;
+    margin-left    : 4% !important;
     margin-right   : 60% !important;
 }
 
@@ -14,7 +14,8 @@
     border-left-width: 0px;
     background-color : transparent;
     box-shadow       : none !important;
-
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .callout[data-callout="h"] .callout-icon,
@@ -36,9 +37,11 @@
     background-color: transparent;
     border          : none;
     transform       : none;
-    margin-left     : 0px;
-    margin-right    : 0px;
+    margin-left     : 0px !important;
+    margin-right    : 0px !important;
     margin-bottom   : 50px;
+    display: flex;
+    flex-direction: row;
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner:is(a.internal-link, a.external-link),
@@ -69,6 +72,7 @@
 
 .callout[data-callout="ctrl"] .callout-content {
     text-align: center;
+    flex-grow: 2;
 }
 
 .callout[data-callout="ctrl"] .callout-title {
@@ -77,6 +81,7 @@
     border-top             : 0px solid transparent;
     border-top-left-radius : var(--radius-small);
     border-top-right-radius: var(--radius-small);
+    flex-grow: 1;
 }
 
 
