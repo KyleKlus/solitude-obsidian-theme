@@ -157,7 +157,7 @@
 /* #endregion */
 :root {
   --list-bullet-sign: "- ";
-  --note-width: 750px;
+  --note-width: 700px;
   --panel-spacing: 15px;
   --radius-big: 15px;
   --radius-medium: 10px;
@@ -1112,6 +1112,28 @@ span.math {
 }
 
 /* #endregion */
+/* #region -> Callouts */
+body:is(.is-mobile) .callout {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.callout {
+  margin-left: 12%;
+  margin-right: 12%;
+  box-shadow: var(--shadow);
+  transform: translate3d(0px, -3px, 0px);
+}
+
+.cm-callout li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.cm-callout:hover {
+  border: none;
+}
+
 .markdown-source-view.mod-cm6 .callout,
 .markdown-preview-view .callout {
   box-shadow: var(--shadow);
@@ -1131,6 +1153,7 @@ span.math {
   border: none;
 }
 
+/* #endregion | Callout */
 .markdown-source-view.mod-cm6 .cm-selection {
   background-color: var(--text-selection);
   color: var(--text-selection-color);
@@ -2407,7 +2430,7 @@ settings:
     id: note-width
     title: Note width (px)
     type: variable-number
-    default: 900
+    default: 700
     format: 'px'
   -
     id: active-line-font-size
