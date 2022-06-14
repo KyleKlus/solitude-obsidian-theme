@@ -2450,7 +2450,7 @@ settings:
     type: variable-color
     format: hex
     opacity: true
-    default-dark: '#22292f'
+    default: '#323c45'
   -
     id: main-accent
     title: Accent Color
