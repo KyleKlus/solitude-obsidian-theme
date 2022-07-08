@@ -39,7 +39,7 @@
     transform       : none;
     margin-left     : 0px !important;
     margin-right    : 0px !important;
-    margin-bottom   : 50px;
+    margin-bottom   : 100px !important;
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner:is(a.internal-link, a.external-link),
@@ -65,7 +65,47 @@
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner {
-    text-align: end;
+    display: grid;
+    grid-template-rows: [first] auto [col-end];
+    grid-template-columns: [row-start] auto [spacer] auto [row1-last] auto [row-end];
+}
+
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:not(:first-child) {
+    grid-row-start: first;
+    grid-row-end: span col-end;
+    grid-column-start: row-last;
+    grid-column-end: span row-end;
+    justify-self: right;
+    font-size: small;
+    align-self: center;
+    border-bottom-width: 2px;
+    text-shadow: var(--text-shadow);
+}
+
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child {
+    grid-row-start: first;
+    grid-row-end: span col-end;
+    grid-column-start: row-start;
+    grid-column-end: span spacer;
+    justify-self: left;
+    align-self: center;
+    padding-right: 1px;
+    border: 1px solid var(--main-accent);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow);
+}
+
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child:hover {
+    background-color: var(--bg-dark);
+    border-color: var(--main-accent-light);
+}
+
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child::before {
+    content: "<-";
+}
+
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child::before:hover {
+    color: var(--main-accent-light);
 }
 
 .callout[data-callout="ctrl"] .callout-content {
@@ -78,6 +118,7 @@
     border-top             : 0px solid transparent;
     border-top-left-radius : var(--radius-small);
     border-top-right-radius: var(--radius-small);
+    box-shadow: var(--shadow);
 }
 
 
@@ -91,6 +132,20 @@
 .callout[data-callout="ctrl"] .callout-content p {
     margin-top   : 0.2rem;
     margin-bottom: 0.2rem;
+}
+
+.callout[data-callout="ctrl"] .callout-content > *:not(p),
+.callout[data-callout="ctrl"] .callout-content > p > a {
+    border: 1px solid var(--main-accent);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow);
+    padding: 2px 21px 2px 6px;
+}
+
+.callout[data-callout="ctrl"] .callout-content > *:not(p),
+.callout[data-callout="ctrl"] .callout-content > p > a:hover {
+    background-color: var(--bg-darker);
+    border-color: var(--main-accent-light);
 }
 
 /* #endregion | Custom Callouts */
