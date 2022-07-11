@@ -88,7 +88,7 @@
     grid-column-end: span 1;
     justify-self: left;
     align-self: center;
-    padding-right: 1px;
+    padding: 1px 6px 1px 3px;
     border: 1px solid var(--main-accent);
     border-radius: var(--radius-medium);
     box-shadow: var(--shadow);
