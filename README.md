@@ -43,6 +43,7 @@ Theme with translucency enabled and a custom background defined via a snippet. H
 - v2.0.0 First Release
 - v2.2.0 Bugfixes (Buttons and workspace background)
 - v2.2.1 Bugfix: old folder icon wasn't removed
+- v2.3.0 Major bugfixes after update & some additional settings were added
 
 ## Planned Changes
 
