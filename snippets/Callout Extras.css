@@ -70,7 +70,7 @@
     grid-template-columns: 1fr;
 }
 
-.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:not(:first-child) {
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:not(:first-child, :last-child) {
     grid-row-start: 1;
     grid-row-end: 1;
     font-size: small;
@@ -78,10 +78,10 @@
     justify-self: center;
     border-bottom-width: 2px;
     text-shadow: var(--text-shadow);
-    margin: 0px 5px;
+    margin: 0px 8px;
 }
 
-.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child {
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child{
     grid-row-start: 1;
     grid-row-end: span 1;
     grid-column-start: 1;
@@ -94,16 +94,38 @@
     box-shadow: var(--shadow);
 }
 
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child) {
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    justify-self: right;
+    align-self: center;
+    padding: 1px 3px 1px 6px;
+    border: 1px solid var(--main-accent);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow);
+}
+
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child:hover {
+    background-color: var(--bg-dark);
+    border-color: var(--main-accent-light);
+    padding: 1px 6px 1px 3px;
+}
+
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child):hover  {
     background-color: var(--bg-dark);
     border-color: var(--main-accent-light);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child::before {
-    content: "<-";
+    content: "<- ";
 }
 
-.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child::before:hover {
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child)::after {
+    content: " ->";
+}
+
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child::before:hover,
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child)::after:hover {
     color: var(--main-accent-light);
 }
 

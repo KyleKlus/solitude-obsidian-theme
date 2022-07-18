@@ -3,6 +3,7 @@
   background-color: var(--bg-title-bar);
   height: 24px !important;
   box-shadow: var(--shadow);
+  border: none;
 }
 
 .titlebar-button {

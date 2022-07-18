@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/* #region *..........................Variables */
-/* #region -> Colors */
+/* #region *..........................Variables */ /* #region -> Colors */
 :root, .theme-dark {
   /* #region -> General Colors */
   --main-accent-dark: #521414;
@@ -27,8 +26,7 @@
   --bg-leaf-content: var(--bg-dark-translucent);
   --bg-input: #0f0f0f;
   --bg-note: var(--bg-darker-translucent);
-  --bg-line-hover: var(--bg-darkest-translucent);
-  /* 1e1f24 */
+  --bg-line-hover: var(--bg-darkest-translucent); /* 1e1f24 */
   --bg-line-active: var(--bg-darkest-translucent);
   --bg-embed: transparent;
   --horizontal-line-color:#4d5255;
@@ -56,48 +54,28 @@
   --bg-tag-hover: #10253f;
   --graph-line-color:#7a7a7a;
   /* Overridden Obsidian Variables */
-  --background-modifier-cover: var(--bg-app);
-  /*Obsidian Title Bar Bg*/
-  --background-primary: var(--bg-dark);
-  /*Note background*/
-  --background-primary-alt: var(--bg-darker);
-  /*Note Title background active*/
-  --background-secondary: var(--bg-darkest);
-  /*Sidebar background*/
-  --background-secondary-alt: var(--bg-leaf-head-active);
-  /*Sidebar Title background*/
-  --text-normal: hsl(230, 20%, 92%);
-  /*Text body of note*/
+  --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
+  --background-primary: var(--bg-dark); /*Note background*/
+  --background-primary-alt: var(--bg-darker); /*Note Title background active*/
+  --background-secondary: var(--bg-darkest); /*Sidebar background*/
+  --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
+  --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
   --text-note: var(--text-normal);
-  --text-muted: ;
-  /*Text darker for sidebar, toggles, inactive, tags, etc*/
-  --text-accent: var(--main-accent);
-  /*Links*/
-  --text-accent-hover: var(--main-accent-light);
-  /*Links hover*/
-  --text-faint: #5C5C5C;
-  /*Link brackets color & Gutter Numbers*/
-  --text-highlight-bg: #c939395d;
-  /*Search Matches*/
-  --text-highlight-bg-active: #cc141467;
-  /*Active Search Match (Preview Mode)*/
-  --text-selection: var(--main-accent-dark);
-  /*Text Selections*/
+  --text-muted: ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
+  --text-accent: var(--main-accent); /*Links*/
+  --text-accent-hover: var(--main-accent-light); /*Links hover*/
+  --text-faint: #5C5C5C; /*Link brackets color & Gutter Numbers*/
+  --text-highlight-bg: #c939395d; /*Search Matches*/
+  --text-highlight-bg-active: #cc141467; /*Active Search Match (Preview Mode)*/
+  --text-selection: var(--main-accent-dark); /*Text Selections*/
   --text-selection-color: #caa3a3;
-  --interactive-normal: var(--main-accent-dark);
-  /*Button Color*/
-  --interactive-hover: var(--main-accent);
-  /*Button Hovered Color*/
-  --interactive-accent: var(--main-accent);
-  /*Workspace Note Title Underline*/
-  --interactive-accent-hover: var(--main-accent-light);
-  /*Menu Button Hover*/
-  --scrollbar-bg: #ffffff0d;
-  /*Scrollbar Gutter Background*/
-  --scrollbar-thumb-bg: #ffffff1a;
-  /*Scrollbar Color*/
-  --scrollbar-active-thumb-bg: var(--main-accent-dark);
-  /*Scrollbar Dragged Color*/
+  --interactive-normal: var(--main-accent-dark); /*Button Color*/
+  --interactive-hover: var(--main-accent); /*Button Hovered Color*/
+  --interactive-accent: var(--main-accent); /*Workspace Note Title Underline*/
+  --interactive-accent-hover: var(--main-accent-light); /*Menu Button Hover*/
+  --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
+  --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
+  --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/
   --indentation-guide: var(--main-accent);
   --indentation-guide-active: var(--main-accent-light);
 }
@@ -194,6 +172,7 @@ body:is(.has-custom-background) {
   background-color: var(--bg-title-bar);
   height: 24px !important;
   box-shadow: var(--shadow);
+  border: none;
 }
 
 .titlebar-button {
@@ -754,6 +733,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 .workspace-leaf-resize-handle:hover {
   background-color: var(--main-accent-dark);
+  border-color: var(--main-accent-dark);
 }
 
 .workspace-leaf .view-header,
@@ -835,6 +815,7 @@ svg.folder {
 
 .workspace-tabs .workspace-leaf {
   background-color: transparent;
+  border-color: transparent;
 }
 
 .workspace-tabs {
@@ -877,8 +858,7 @@ svg.folder {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
 .markdown-source-view.mod-cm6.is-readable-line-width :is(:not(.is-rtl) .cm-contentContainer, .is-line-wrap .cm-content),
 .is-line-wrap .cm-line:not(.HyperMD-table-row),
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
-  /* <- Note width */
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) { /* <- Note width */
   max-width: var(--note-width);
   margin-right: auto !important;
 }
@@ -932,8 +912,7 @@ body:is(.gutter-is-moved) .cm-contentContainer {
 
 /* #endregion | General  */
 /* #region -> Lines */
-.markdown-source-view .cm-scroller div.cm-gutters {
-  /* <- Line numbers & dotted divider */
+.markdown-source-view .cm-scroller div.cm-gutters { /* <- Line numbers & dotted divider */
   flex: 0 0 auto;
   background-color: transparent;
   color: var(--text-faint) !important;
@@ -950,8 +929,7 @@ body:is(.gutter-is-moved) .cm-contentContainer {
   padding-left: 0px;
 }
 
-body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover {
-  /* Line Hover */
+body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover { /* Line Hover */
   background-color: var(--bg-line-hover);
   transition: all 200ms;
   border-radius: var(--radius-medium);

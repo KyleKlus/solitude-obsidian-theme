@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/MajorEnkidu/red-solitude-obsidian-theme#readme",
   "devDependencies": {
-    "sass": "^1.52.1"
+    "sass": "^1.53.0"
   }
 }

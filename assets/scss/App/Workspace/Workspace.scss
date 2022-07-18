@@ -184,6 +184,7 @@ background-color: var(--bg-dark-translucent);
 
 .workspace-leaf-resize-handle:hover {
     background-color: var(--main-accent-dark);
+    border-color: var(--main-accent-dark);
 }
 
 .workspace-leaf .view-header,
@@ -268,6 +269,7 @@ svg.folder {
 
 .workspace-tabs .workspace-leaf {
     background-color: transparent;
+    border-color: transparent;
 }
 
 .workspace-tabs {
