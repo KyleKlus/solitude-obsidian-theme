@@ -63,6 +63,24 @@
 }
 
 /* #endregion */
+/* #region *.......................... Theme modal */
+.community-theme {
+  box-shadow: var(--shadow);
+}
+
+.community-theme .community-theme-info {
+  flex-grow: 1;
+}
+
+.community-theme div:nth-child(3) {
+  flex-grow: 1;
+}
+
+.community-theme.is-selected .modal-button-container button:hover {
+  background-color: var(--main-accent-light);
+}
+
+/* #endregion */
 /* #region *.......................... Settings modal */
 .modal.mod-settings div.vertical-tab-content h2 {
   font-size: 1.4em;
