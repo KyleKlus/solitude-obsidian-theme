@@ -19,7 +19,6 @@
     transition: all 300ms ease-out;
 }
 
-
 .side-dock-ribbon-action:hover {
     color: var(--main-accent-light);
     transform: scale(1.05, 1.05);
@@ -267,6 +266,7 @@ svg.folder {
     border-radius: var(--radius-medium);
 }
 
+.workspace-tabs .workspace-leaf.mod-active,
 .workspace-tabs .workspace-leaf {
     background-color: transparent;
     border-color: transparent;

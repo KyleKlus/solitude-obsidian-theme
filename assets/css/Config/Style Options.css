@@ -66,6 +66,11 @@ settings:
     level: 1
     collapsed: true
   -
+    id: dark-statusbar-enabled
+    title: Enable that the statusbar is colored dark
+    type: class-toggle
+    default: false
+  -
     id: bg-app
     title: Workspace Background Color
     type: variable-color

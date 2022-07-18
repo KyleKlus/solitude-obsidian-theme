@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/App/Statusbar.scss"],"names":[],"mappings":"AAAA;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ","file":"Statusbar.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/App/Statusbar.scss"],"names":[],"mappings":"AAAA;AAEA;EACI;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ","file":"Statusbar.css"}

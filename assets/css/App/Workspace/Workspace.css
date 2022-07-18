@@ -251,6 +251,7 @@ svg.folder {
   border-radius: var(--radius-medium);
 }
 
+.workspace-tabs .workspace-leaf.mod-active,
 .workspace-tabs .workspace-leaf {
   background-color: transparent;
   border-color: transparent;

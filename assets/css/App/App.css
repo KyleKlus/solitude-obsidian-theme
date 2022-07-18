@@ -676,6 +676,7 @@ svg.folder {
   border-radius: var(--radius-medium);
 }
 
+.workspace-tabs .workspace-leaf.mod-active,
 .workspace-tabs .workspace-leaf {
   background-color: transparent;
   border-color: transparent;
@@ -2065,6 +2066,14 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /* #endregion | File Explorer Elements */
 /* #endregion */
 /* #region *.......................... Status bar*/
+body:is(.red-statusbar-enabled) .status-bar {
+  background-color: var(--bg-darkest-translucent);
+}
+
+body:is(.red-statusbar-enabled) .status-bar-item {
+  background-color: var(--main-accent-dark);
+}
+
 .status-bar {
   background-color: var(--main-accent-dark);
   max-height: 30px;
