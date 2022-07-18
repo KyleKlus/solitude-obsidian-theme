@@ -1,10 +1,10 @@
 /* #region *.......................... Status bar*/
 
-body:is(.red-statusbar-enabled) .status-bar {
+body:is(.dark-statusbar-enabled) .status-bar {
     background-color: var(--bg-darkest-translucent);
 }
 
-body:is(.red-statusbar-enabled) .status-bar-item {
+body:is(.dark-statusbar-enabled) .status-bar-item {
     background-color: var(--main-accent-dark);
 }
 
