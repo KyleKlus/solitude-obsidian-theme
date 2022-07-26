@@ -11,13 +11,13 @@
   --conf-bg-sat: 12%;
   --bg-translucent: hsla(208, 16%, 16%, var(--conf-bg-transparency));
   --bg-dark-translucent: hsla(210, 15%, 13%, var(--conf-bg-transparency));
-  --bg-darker-translucent: hsla(204, 12%, 8%, var(--conf-bg-transparency));
-  --bg-darkest-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
+  --bg-darker-translucent: hsla(204, 12%, 10%, var(--conf-bg-transparency));
+  --bg-darkest-translucent: hsla(192, 20%, 7%, var(--conf-bg-transparency));
   --bg-black-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
-  --bg: #22292f;
-  --bg-dark: #1c2126;
-  --bg-darker: hsl(204, 14%, 8%);
-  --bg-darkest: hsl(192, 20%, 5%);
+  --bg: hsl(208, 16%, 16%);
+  --bg-dark: hsl(210, 15%, 13%);
+  --bg-darker: hsl(204, 14%, 10%);
+  --bg-darkest: hsl(192, 20%, 7%);
   --bg-black:hsl(192, 20%, 5%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;

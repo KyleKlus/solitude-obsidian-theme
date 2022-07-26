@@ -23,7 +23,7 @@ body:is(.has-custom-background) {
 /* #region *.......................... Icons & buttons */
 
 button:hover {
-    transform: scale(1.07);
+    transform: scale(1.03);
     transition: all 200ms ease-in;
     box-shadow: var(--shadow);
     border-radius: var(--radius-small);
@@ -63,14 +63,14 @@ button:hover {
 .setting-editor-extra-setting-button {
     border-radius: var(--radius-big);
     padding: 3px;
-    transition: all 200ms;
+    transition: all 200ms ease-out;
 }
 
 .setting-editor-extra-setting-button:hover {
     color: var(--text-normal);
     background-color: var(--main-accent);
     transform: scale(1.1, 1.1);
-    transition: all 200ms;
+    transition: all 200ms ease-in;
 }
 
 .markdown-source-view.mod-cm6 .edit-block-button {
@@ -86,7 +86,7 @@ button:hover {
 /* #region *.......................... Inputbox */
 
 input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
-    background: var(--bg-input);
+    background: var(--bg-darkest);
     border: 1px solid var(--main-accent-dark);
     font-size: 0.8em;
     border-radius: var(--radius-small);
@@ -104,7 +104,7 @@ input[type='email']:hover,
 input[type='password']:hover,
 input[type='number']:hover {
     border-color: var(--main-accent);
-    background-color: var(--bg-input);
+    background-color: var(--bg-darkest);
     transition: all 200ms ease-in;
 }
 
@@ -171,29 +171,40 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 
 .checkbox-container {
     color: var(--text-normal);
+    background-color: var(--bg-black);
     border-radius: var(--radius-big);
+    border: 1px solid transparent;
     padding: 0px 3px 0px 3px ;
-    transition: transform 200ms ease-in,
-    background-color 200ms ease-in;
+    transition: all 200ms ease-out;
 }
 
 .checkbox-container:after {
     border-radius: var(--radius-small);
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, -1px, 0);
+    transition: all 200ms ease-out;
+}
+
+.checkbox-container.is-enabled:after {
+    border-radius: var(--radius-small);
+    transform: translate3d(18px, -1px, 0);
+    transition: all 200ms ease-in;
 }
 
 .checkbox-container:hover {
-    background-color: var(--main-accent-dark);
-    transform: scale(1.1);
-    transition: transform 200ms ease-in,
-    background-color 200ms ease-in;
+    border-color: var(--main-accent);
+    transform: scale(1.05);
+    transition: all 200ms ease-in;
+}
+
+.checkbox-container.is-enabled {
+    background-color: var(--main-accent);
+    transition: all 200ms ease-in;
 }
 
 .checkbox-container.is-enabled:hover {
-    background-color: var(--main-accent);
-    transform: scale(1.1);
-    transition: transform 200ms ease-in,
-    background-color 200ms ease-in;
+    border-color: var(--main-accent-dark);
+    transform: scale(1.03);
+    transition: all 200ms ease-in;
 }
 
 /* #endregion | Checkbox */
