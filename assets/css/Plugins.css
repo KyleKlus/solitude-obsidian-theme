@@ -122,5 +122,42 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
 
 /* #endregion -> Privacy Glasses */
 /* #region Kanban */
+.theme-dark .kanban-plugin {
+  background-color: var(--bg-note);
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__lane {
+  background-color: var(--bg-darkest);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark .kanban-plugin__item button.kanban-plugin__item-prefix-button,
+.theme-dark .kanban-plugin__item button.kanban-plugin__item-postfix-button,
+.theme-dark .kanban-plugin__lane button.kanban-plugin__lane-settings-button,
+.theme-dark .kanban-plugin__lane button.kanban-plugin__new-item-button {
+  background-color: var(--bg-darker);
+  transition: all 200ms ease-out;
+}
+
+.theme-dark .kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
+.theme-dark .kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
+.theme-dark .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover,
+.theme-dark .kanban-plugin__lane button.kanban-plugin__new-item-button:hover {
+  background-color: var(--main-accent);
+  transform: scale(1.05);
+  transition: all 200ms ease-in;
+}
+
+.kanban-plugin__lane-grip {
+  transition: all 200ms ease-out;
+}
+
+.kanban-plugin__lane-grip:hover {
+  color: var(--main-accent);
+  transform: scale(1.05);
+  transition: all 200ms ease-in;
+}
+
 /* #endregion Kanban */
 /* #endregion */
