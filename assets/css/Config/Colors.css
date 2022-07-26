@@ -2,8 +2,9 @@
 :root, .theme-dark {
   /* #region -> General Colors */
   --main-accent-dark: #521414;
-  --main-accent: #a32929;
+  --main-accent: rgb(163, 41, 41);
   --main-accent-light: #ce3b3b;
+  --main-accent-rgb: 163, 41, 41;
   --conf-bg-spacing: 5%;
   --conf-bg-start: 3%;
   --conf-bg-transparency: 0.85;
@@ -69,6 +70,7 @@
   --interactive-hover: var(--main-accent); /*Button Hovered Color*/
   --interactive-accent: var(--main-accent); /*Workspace Note Title Underline*/
   --interactive-accent-hover: var(--main-accent-light); /*Menu Button Hover*/
+  --interactive-accent-rgb: var(--main-accent-rgb);
   --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
   --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
   --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/

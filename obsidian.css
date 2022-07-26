@@ -3,8 +3,9 @@
 :root, .theme-dark {
   /* #region -> General Colors */
   --main-accent-dark: #521414;
-  --main-accent: #a32929;
+  --main-accent: rgb(163, 41, 41);
   --main-accent-light: #ce3b3b;
+  --main-accent-rgb: 163, 41, 41;
   --conf-bg-spacing: 5%;
   --conf-bg-start: 3%;
   --conf-bg-transparency: 0.85;
@@ -70,6 +71,7 @@
   --interactive-hover: var(--main-accent); /*Button Hovered Color*/
   --interactive-accent: var(--main-accent); /*Workspace Note Title Underline*/
   --interactive-accent-hover: var(--main-accent-light); /*Menu Button Hover*/
+  --interactive-accent-rgb: var(--main-accent-rgb);
   --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
   --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
   --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/
@@ -777,12 +779,13 @@ body:not(.is-mobile) .workspace-split.mod-root {
   border-top-right-radius: var(--radius-big);
 }
 
-.workspace-leaf-content,
-.workspace-leaf {
+.workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf-content,
+.workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf {
   border-radius: var(--radius-big);
 }
 
 .workspace-leaf-content[data-type=timeline] {
+  border-radius: 0px;
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -2036,10 +2039,14 @@ a.external-link[href*="reactjs.org"]::before {
   padding-top: 14px;
 }
 
+.nav-files-container {
+  border-top: 1px dotted var(--text-faint);
+}
+
 .nav-buttons-container .nav-action-button {
   background-color: var(--interactive-normal);
   border: 1px solid transparent;
-  padding: 7px 20px 0px 20px;
+  padding: 4px 15px 0px 15px;
   box-shadow: var(--shadow);
   border-radius: var(--radius-small);
   transition: all 200ms ease-out;
@@ -2054,6 +2061,12 @@ a.external-link[href*="reactjs.org"]::before {
 .nav-buttons-container .nav-action-button.is-active {
   background-color: var(--interactive-hover);
   transition: all 200ms ease-in;
+}
+
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+.workspace-leaf.mod-active .nav-file.has-focus {
+  background-color: transparent;
+  border: none;
 }
 
 .nav-folder-collapse-indicator {
@@ -2188,9 +2201,8 @@ svg.bullet-list {
 body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
   border: 1px solid transparent;
-  border-left: 2px solid var(--main-accent-dark);
   background-color: var(--bg-black);
-  transform: translate(3px, -1px);
+  transform: translate(1px, -1px);
   box-shadow: var(--shadow);
   transition: all 200ms ease-in;
 }
@@ -2200,10 +2212,11 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .nav-folder-title.is-active.is-active.is-active,
 .nav-file-title.is-being-dragged,
 .nav-folder-title.is-being-dragged {
-  background-color: var(--main-accent-dark);
+  background-color: var(--bg-black);
+  border-left: 2px solid var(--main-accent-dark);
   color: var(--text-on-accent);
   box-shadow: var(--shadow);
-  transform: translate(3px, -1px);
+  transform: translate(1px, -1px);
   transition: all 200ms ease-in;
 }
 
@@ -2396,6 +2409,8 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
 }
 
 /* #endregion -> Privacy Glasses */
+/* #region Kanban */
+/* #endregion Kanban */
 /* #endregion */
 /* #region *.......................... Style Settings Plugin */
 /* @settings

@@ -196,12 +196,13 @@ background-color: var(--bg-dark-translucent);
     border-top-right-radius: var(--radius-big);
 }
 
-.workspace-leaf-content,
-.workspace-leaf {
+.workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf-content,
+.workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf {
     border-radius: var(--radius-big);
 }
 
 .workspace-leaf-content[data-type="timeline"] {
+    border-radius: 0px;
     padding-bottom: 5px;
     padding-top: 5px;
 }
