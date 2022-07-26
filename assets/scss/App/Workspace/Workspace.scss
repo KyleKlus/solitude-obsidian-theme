@@ -256,11 +256,10 @@ svg.folder {
 }
 
 .workspace-tab-header-container{
-    background-color: var(--bg-darker);
-    border-bottom: 2px solid var(--main-accent-dark);
+    background-color: var(--bg-darkest);
     height: fit-content;
     justify-content: center;
-    padding: 10px;
+    padding: 8px;
     box-shadow: var(--shadow);
 }
 
@@ -289,7 +288,7 @@ svg.folder {
 .workspace-tab-container-inner .workspace-tab-header-inner:hover,
 .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
     background-color: var(--interactive-hover);
-    transform: scale(1.2, 1.2);
+    transform: scale(1.05);
     box-shadow: var(--shadow);
     transition: all 200ms ease-in;
 }
