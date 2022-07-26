@@ -30,8 +30,8 @@ body:is(.dark-statusbar-enabled) .status-bar-item {
 }
 
 .status-bar-item.mod-clickable:hover{
-    color: var(--main-accent-light);
-    transform: scale(1.05, 1.05);
+    color: var(--interactive-accent-hover);
+    transform: scale(1.04, 1.04);
     transition: all 200ms ease-in;
 }
 

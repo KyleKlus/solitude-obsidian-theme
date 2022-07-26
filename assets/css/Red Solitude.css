@@ -22,7 +22,6 @@
   --bg-black:hsl(192, 20%, 5%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;
-  --bg-title-bar: var(--bg-black);
   --bg-leaf-head-active: var(--bg-black);
   --bg-leaf-head: var(--bg-darker);
   --bg-leaf-content: var(--bg-dark-translucent);
@@ -2255,8 +2254,8 @@ body:is(.dark-statusbar-enabled) .status-bar-item {
 }
 
 .status-bar-item.mod-clickable:hover {
-  color: var(--main-accent-light);
-  transform: scale(1.05, 1.05);
+  color: var(--interactive-accent-hover);
+  transform: scale(1.04, 1.04);
   transition: all 200ms ease-in;
 }
 
