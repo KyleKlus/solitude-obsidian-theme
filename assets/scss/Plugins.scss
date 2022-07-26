@@ -32,7 +32,7 @@ div#calendar-container .hollow{
 
 div#calendar-container .year, body:not(.active)#calendar-container .today, div#calendar-container thead, div#calendar-container td.svelte-egt0yd {
     color: var(--main-accent);
-    background-color: var(--bg-leaf-head);
+    background-color: var(--bg-darker);
 }
 
 div#calendar-container thead {

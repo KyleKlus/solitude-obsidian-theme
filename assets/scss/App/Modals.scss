@@ -20,8 +20,8 @@
 }
 
 .modal-bg {
-    background-color: rgba(41, 41, 41, 0.373);
-    backdrop-filter: blur(6px);
+    background-color: rgba(41, 41, 41, 0.01);
+    backdrop-filter: blur(8px);
 }
 
 .suggestion-item.is-selected {
@@ -114,28 +114,28 @@
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .horizontal-tab-content,
 .modal.mod-settings .vertical-tab-content {
-    background-color: var(--bg-leaf-head);
+    background-color: var(--bg-darker);
     padding: 5px 30px;
 }
 
 .modal.mod-settings .vertical-tab-nav-item {
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
-    border-left: 3px solid var(--bg-leaf-head-active);
+    border-left: 3px solid var(--bg-darkest);
     font-size: 0.8em;
     padding: 3px 6px 3px 24px;
     transition: all 200ms ease-out;
 }
 
 .modal.mod-settings .vertical-tab-nav-item.is-active{
-	border-left-color: var(--main-accent-dark);
-    background-color: var(--bg-leaf-head);
+	border-left-color: var(--main-accent);
+    background-color: var(--bg-darker);
     transition: all 200ms ease-out;
 }
 
 .modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover{
-	background-color: var(--main-accent-dark);
-	border-left-color: var(--main-accent-dark);
+	background-color: var(--main-accent);
+	border-left-color: var(--main-accent);
 	transition: all 200ms ease-in;
 }
 

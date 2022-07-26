@@ -31,9 +31,9 @@
 
     --bg-ribbon: var(--bg-app);
 
-    --bg-leaf-head-active: var(--bg-black);
-    --bg-leaf-head: var(--bg-darker);
-    --bg-leaf-content: var(--bg-dark-translucent);
+    --bg-darkest: var(--bg-black);
+    --bg-darker: var(--bg-darker);
+    --bg-dark: var(--bg-dark-translucent);
 
     --bg-input: #0f0f0f;
 
@@ -79,7 +79,7 @@
     --background-primary: var(--bg-dark); /*Note background*/
     --background-primary-alt: var(--bg-darker); /*Note Title background active*/
     --background-secondary: var(--bg-black); /*Sidebar background*/
-    --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
+    --background-secondary-alt: var(--bg-darkest); /*Sidebar Title background*/
 
     --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
     --text-note: var(--text-normal);
@@ -443,14 +443,14 @@ body:is(.is-export-mode) .markdown-preview-view {
     .modal.mod-settings .vertical-tab-content-container,
     .modal.mod-settings .horizontal-tab-content,
     .modal.mod-settings .vertical-tab-content {
-      background-color: var(--bg-leaf-head);
+      background-color: var(--bg-darker);
       padding: 5px 30px;
     }
 
     .modal.mod-settings .vertical-tab-nav-item {
       border-top: 2px solid transparent;
       border-bottom: 2px solid transparent;
-      border-left: 3px solid var(--bg-leaf-head-active);
+      border-left: 3px solid var(--bg-darkest);
       font-size: 0.8em;
       padding: 3px 6px 3px 24px;
       transition: all 200ms ease-out;
@@ -458,7 +458,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     .modal.mod-settings .vertical-tab-nav-item.is-active{
       border-left-color: var(--main-accent-dark);
-      background-color: var(--bg-leaf-head);
+      background-color: var(--bg-darker);
       transition: all 200ms ease-out;
     }
 
@@ -764,7 +764,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       .workspace-leaf.mod-active .view-header,
       .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
         border-bottom: 2px solid var(--main-accent-dark);
-        background-color: var(--bg-leaf-head-active);
+        background-color: var(--bg-darkest);
         box-shadow: var(--shadow);
 
       }
@@ -781,16 +781,16 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       .workspace-leaf.mod-active .view-header-title-container::after,
       .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header-title-container.view-header-title-container::after {
-        background: linear-gradient(to right, transparent, var(--bg-leaf-head-active));
+        background: linear-gradient(to right, transparent, var(--bg-darkest));
       }
 
       .view-header {
-        background-color: var(--bg-leaf-head-active);
+        background-color: var(--bg-darkest);
         box-shadow: var(--shadow);
       }
 
       .view-header-title-container:after {
-        background: linear-gradient(to right, transparent, var(--bg-leaf-head-active));
+        background: linear-gradient(to right, transparent, var(--bg-darkest));
       }
 
       /* #endregion |3.5.2.1. View Header  */
@@ -2366,7 +2366,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
     div#calendar-container .year, body:not(.active)#calendar-container .today, div#calendar-container thead, div#calendar-container td.svelte-egt0yd {
       color: var(--main-accent);
-      background-color: var(--bg-leaf-head);
+      background-color: var(--bg-darker);
     }
 
     div#calendar-container thead {

@@ -118,7 +118,7 @@ background-color: var(--bg-dark-translucent);
 .workspace-leaf.mod-active .view-header,
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
     border-bottom: 2px solid var(--main-accent-dark);
-    background-color: var(--bg-leaf-head-active);
+    background-color: var(--bg-darkest);
     box-shadow: var(--shadow);
 
 }
@@ -135,16 +135,16 @@ background-color: var(--bg-dark-translucent);
 
 .workspace-leaf.mod-active .view-header-title-container::after,
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header-title-container.view-header-title-container::after {
-    background: linear-gradient(to right, transparent, var(--bg-leaf-head-active));
+    background: linear-gradient(to right, transparent, var(--bg-darkest));
 }
 
 .view-header {
-    background-color: var(--bg-leaf-head-active);
+    background-color: var(--bg-darkest);
     box-shadow: var(--shadow);
 }
 
 .view-header-title-container:after {
-    background: linear-gradient(to right, transparent, var(--bg-leaf-head-active));
+    background: linear-gradient(to right, transparent, var(--bg-darkest));
 }
 
 /* #endregion | View Header  */

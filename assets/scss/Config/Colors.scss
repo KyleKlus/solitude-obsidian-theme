@@ -28,17 +28,11 @@
 
     --bg-app: #323c45;
 
-    --bg-leaf-head-active: var(--bg-black);
-    --bg-leaf-head: var(--bg-darker);
-    --bg-leaf-content: var(--bg-dark-translucent);
-
-    --bg-input: #0f0f0f;
-
     --bg-note: var(--bg-darker-translucent);
-    --bg-line-hover: var(--bg-black-translucent); /* 1e1f24 */
-    --bg-line-active: var(--bg-black-translucent);
+    --bg-line-hover: var(--bg-black);
+    --bg-line-active: var(--bg-black);
 
-    --bg-embed: transparent;
+    --bg-embed: var(--bg-darkest);
 
     --horizontal-line-color:#4d5255;
 
@@ -76,7 +70,7 @@
     --background-primary: var(--bg-dark); /*Note background*/
     --background-primary-alt: var(--bg-darker); /*Note Title background active*/
     --background-secondary: var(--bg-black); /*Sidebar background*/
-    --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
+    --background-secondary-alt: var(--bg-darkest); /*Sidebar Title background*/
 
     --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
     --text-note: var(--text-normal);
