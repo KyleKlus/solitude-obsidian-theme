@@ -145,7 +145,7 @@
 
 .callout[data-callout="ctrl"] .callout-content {
     border-bottom             : 0px solid transparent;
-    background-color          : var(--bg-darkest-translucent);
+    background-color          : var(--bg-black-translucent);
     border-bottom-left-radius : var(--radius-small);
     border-bottom-right-radius: var(--radius-small);
 }

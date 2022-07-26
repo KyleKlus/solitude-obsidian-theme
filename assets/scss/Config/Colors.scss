@@ -16,27 +16,29 @@
     --bg-dark-translucent: hsla(210, 15%, 13%, var(--conf-bg-transparency));
     --bg-darker-translucent: hsla(204, 12%, 8%, var(--conf-bg-transparency));
     --bg-darkest-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
+    --bg-black-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
 
     --bg: #22292f;
     --bg-dark: #1c2126;
     --bg-darker: hsl(204, 14%, 8%);
     --bg-darkest: hsl(192, 20%, 5%);
+    --bg-black:hsl(192, 20%, 5%);
 
     /* #endregion -> General Colors */
 
     --bg-app: #323c45;
 
-    --bg-title-bar: var(--bg-darkest);
+    --bg-title-bar: var(--bg-black);
 
-    --bg-leaf-head-active: var(--bg-darkest);
+    --bg-leaf-head-active: var(--bg-black);
     --bg-leaf-head: var(--bg-darker);
     --bg-leaf-content: var(--bg-dark-translucent);
 
     --bg-input: #0f0f0f;
 
     --bg-note: var(--bg-darker-translucent);
-    --bg-line-hover: var(--bg-darkest-translucent); /* 1e1f24 */
-    --bg-line-active: var(--bg-darkest-translucent);
+    --bg-line-hover: var(--bg-black-translucent); /* 1e1f24 */
+    --bg-line-active: var(--bg-black-translucent);
 
     --bg-embed: transparent;
 
@@ -44,7 +46,7 @@
 
     --bg-task-hover:#202833;
 
-    --bg-quote: var(--bg-darkest);
+    --bg-quote: var(--bg-black);
 
     --header-1-color: hsl(233, 21%, 93%);
     --header-2-color: hsl(230, 20%, 92%);
@@ -62,7 +64,7 @@
     --url-hover-color: #6fe2ff;
     --note-link-color: var(--main-accent);
     --note-link-hover-color: var(--main-accent-light);
-    --note-link-hover-bg-color: var(--bg-darkest-translucent);
+    --note-link-hover-bg-color: var(--bg-black-translucent);
     --tag-color:#95b4c2;
     --tag-hover-color: #27cbd1;
     --bg-tag:#16375c;
@@ -75,7 +77,7 @@
     --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
     --background-primary: var(--bg-dark); /*Note background*/
     --background-primary-alt: var(--bg-darker); /*Note Title background active*/
-    --background-secondary: var(--bg-darkest); /*Sidebar background*/
+    --background-secondary: var(--bg-black); /*Sidebar background*/
     --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
 
     --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
@@ -107,6 +109,6 @@
     --bg-translucent: var(--bg);
     --bg-dark-translucent: var(--bg-dark);
     --bg-darker-translucent: var(--bg-darker);
-    --bg-darkest-translucent: var(--bg-darkest);
+    --bg-black-translucent: var(--bg-black);
 }
 /* #endregion -> Colors */

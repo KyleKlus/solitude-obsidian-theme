@@ -1,25 +1,16 @@
 /* #region *.......................... Titlebar*/
 
 .titlebar {
-    background-color: var(--bg-title-bar);
+    background-color: var(--bg-black);
     height: 24px !important;
     box-shadow: var(--shadow);
     border: none;
 }
 
-.titlebar-button {
-    color: var(--main-accent);
+.titlebar-text {
+    color: var(--text-faint);
     background-color: transparent;
     opacity: 1.0;
-}
-
-.titlebar-text {
-    color: var(--text-normal);
-    background-color: transparent;
-    opacity: 1.0;
-}
-
-.titlebar-text {
     position: relative;
     display: flex;
     justify-content: center;
@@ -31,14 +22,25 @@
     letter-spacing: unset;
 }
 
+.titlebar-text:hover {
+    color: var(--interactive-accent-hover);
+}
+
+.titlebar-button-container {
+    top: 0px;
+}
+
 .titlebar-button {
     max-height: 24px;
     transition: all 200ms ease-out;
+    color: var(--text-faint);
+    background-color: transparent;
+    opacity: 1.0;
 }
 
 .titlebar-button:hover {
     color: var(--interactive-accent-hover);
-    transform: scale(1.5, 1.5);
+    transform: scale(1.2, 1.2);
     transition: all 200ms ease-in;
 }
 

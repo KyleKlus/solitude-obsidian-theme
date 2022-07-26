@@ -1,7 +1,7 @@
 /* #region *.......................... Status bar*/
 
 body:is(.dark-statusbar-enabled) .status-bar {
-    background-color: var(--bg-darkest-translucent);
+    background-color: var(--bg-black-translucent);
 }
 
 body:is(.dark-statusbar-enabled) .status-bar-item {

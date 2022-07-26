@@ -14,24 +14,26 @@
   --bg-dark-translucent: hsla(210, 15%, 13%, var(--conf-bg-transparency));
   --bg-darker-translucent: hsla(204, 12%, 8%, var(--conf-bg-transparency));
   --bg-darkest-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
+  --bg-black-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
   --bg: #22292f;
   --bg-dark: #1c2126;
   --bg-darker: hsl(204, 14%, 8%);
   --bg-darkest: hsl(192, 20%, 5%);
+  --bg-black:hsl(192, 20%, 5%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;
-  --bg-title-bar: var(--bg-darkest);
-  --bg-leaf-head-active: var(--bg-darkest);
+  --bg-title-bar: var(--bg-black);
+  --bg-leaf-head-active: var(--bg-black);
   --bg-leaf-head: var(--bg-darker);
   --bg-leaf-content: var(--bg-dark-translucent);
   --bg-input: #0f0f0f;
   --bg-note: var(--bg-darker-translucent);
-  --bg-line-hover: var(--bg-darkest-translucent); /* 1e1f24 */
-  --bg-line-active: var(--bg-darkest-translucent);
+  --bg-line-hover: var(--bg-black-translucent); /* 1e1f24 */
+  --bg-line-active: var(--bg-black-translucent);
   --bg-embed: transparent;
   --horizontal-line-color:#4d5255;
   --bg-task-hover:#202833;
-  --bg-quote: var(--bg-darkest);
+  --bg-quote: var(--bg-black);
   --header-1-color: hsl(233, 21%, 93%);
   --header-2-color: hsl(230, 20%, 92%);
   --header-3-color: hsl(230, 20%, 92%);
@@ -47,7 +49,7 @@
   --url-hover-color: #6fe2ff;
   --note-link-color: var(--main-accent);
   --note-link-hover-color: var(--main-accent-light);
-  --note-link-hover-bg-color: var(--bg-darkest-translucent);
+  --note-link-hover-bg-color: var(--bg-black-translucent);
   --tag-color:#95b4c2;
   --tag-hover-color: #27cbd1;
   --bg-tag:#16375c;
@@ -57,7 +59,7 @@
   --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
   --background-primary: var(--bg-dark); /*Note background*/
   --background-primary-alt: var(--bg-darker); /*Note Title background active*/
-  --background-secondary: var(--bg-darkest); /*Sidebar background*/
+  --background-secondary: var(--bg-black); /*Sidebar background*/
   --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
   --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
   --text-note: var(--text-normal);
@@ -84,7 +86,7 @@
   --bg-translucent: var(--bg);
   --bg-dark-translucent: var(--bg-dark);
   --bg-darker-translucent: var(--bg-darker);
-  --bg-darkest-translucent: var(--bg-darkest);
+  --bg-black-translucent: var(--bg-black);
 }
 
 /* #endregion -> Colors */
@@ -169,25 +171,16 @@ body:is(.has-custom-background) {
 
 /* #region *.......................... Titlebar*/
 .titlebar {
-  background-color: var(--bg-title-bar);
+  background-color: var(--bg-black);
   height: 24px !important;
   box-shadow: var(--shadow);
   border: none;
 }
 
-.titlebar-button {
-  color: var(--main-accent);
+.titlebar-text {
+  color: var(--text-faint);
   background-color: transparent;
   opacity: 1;
-}
-
-.titlebar-text {
-  color: var(--text-normal);
-  background-color: transparent;
-  opacity: 1;
-}
-
-.titlebar-text {
   position: relative;
   display: flex;
   justify-content: center;
@@ -199,14 +192,25 @@ body:is(.has-custom-background) {
   letter-spacing: unset;
 }
 
+.titlebar-text:hover {
+  color: var(--interactive-accent-hover);
+}
+
+.titlebar-button-container {
+  top: 0px;
+}
+
 .titlebar-button {
   max-height: 24px;
   transition: all 200ms ease-out;
+  color: var(--text-faint);
+  background-color: transparent;
+  opacity: 1;
 }
 
 .titlebar-button:hover {
   color: var(--interactive-accent-hover);
-  transform: scale(1.5, 1.5);
+  transform: scale(1.2, 1.2);
   transition: all 200ms ease-in;
 }
 
@@ -304,7 +308,7 @@ body:is(.has-custom-background) {
 }
 
 .popover .markdown-embed .markdown-embed-link {
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
   color: var(--text-normal);
   border: 1px solid transparent;
   border-radius: 50%;
@@ -502,7 +506,7 @@ input[type=email]:focus,
 input[type=password]:focus,
 input[type=number]:focus {
   border-color: var(--main-accent);
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
   transition: all 200ms ease-in;
 }
 
@@ -605,11 +609,11 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 }
 
 .workspace-ribbon {
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
 }
 
 body .app-container .workspace-ribbon.is-collapsed {
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
 }
 
 .workspace-ribbon.mod-left {
@@ -871,7 +875,7 @@ svg.folder {
 
 .document-search-container {
   padding: 3px 2px 4px 2px;
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
 }
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
@@ -2174,7 +2178,7 @@ body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
   border: 1px solid transparent;
   border-left: 2px solid var(--main-accent-dark);
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
   transform: translate(3px, -1px);
   box-shadow: var(--shadow);
   transition: all 200ms ease-in;
@@ -2222,7 +2226,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /* #endregion */
 /* #region *.......................... Status bar*/
 body:is(.dark-statusbar-enabled) .status-bar {
-  background-color: var(--bg-darkest-translucent);
+  background-color: var(--bg-black-translucent);
 }
 
 body:is(.dark-statusbar-enabled) .status-bar-item {

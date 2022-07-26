@@ -14,25 +14,16 @@ body:is(.has-custom-background) {
 
 /* #region *.......................... Titlebar*/
 .titlebar {
-  background-color: var(--bg-title-bar);
+  background-color: var(--bg-black);
   height: 24px !important;
   box-shadow: var(--shadow);
   border: none;
 }
 
-.titlebar-button {
-  color: var(--main-accent);
+.titlebar-text {
+  color: var(--text-faint);
   background-color: transparent;
   opacity: 1;
-}
-
-.titlebar-text {
-  color: var(--text-normal);
-  background-color: transparent;
-  opacity: 1;
-}
-
-.titlebar-text {
   position: relative;
   display: flex;
   justify-content: center;
@@ -44,14 +35,25 @@ body:is(.has-custom-background) {
   letter-spacing: unset;
 }
 
+.titlebar-text:hover {
+  color: var(--interactive-accent-hover);
+}
+
+.titlebar-button-container {
+  top: 0px;
+}
+
 .titlebar-button {
   max-height: 24px;
   transition: all 200ms ease-out;
+  color: var(--text-faint);
+  background-color: transparent;
+  opacity: 1;
 }
 
 .titlebar-button:hover {
   color: var(--interactive-accent-hover);
-  transform: scale(1.5, 1.5);
+  transform: scale(1.2, 1.2);
   transition: all 200ms ease-in;
 }
 
@@ -149,7 +151,7 @@ body:is(.has-custom-background) {
 }
 
 .popover .markdown-embed .markdown-embed-link {
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
   color: var(--text-normal);
   border: 1px solid transparent;
   border-radius: 50%;
@@ -347,7 +349,7 @@ input[type=email]:focus,
 input[type=password]:focus,
 input[type=number]:focus {
   border-color: var(--main-accent);
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
   transition: all 200ms ease-in;
 }
 
@@ -450,11 +452,11 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 }
 
 .workspace-ribbon {
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
 }
 
 body .app-container .workspace-ribbon.is-collapsed {
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
 }
 
 .workspace-ribbon.mod-left {
@@ -716,7 +718,7 @@ svg.folder {
 
 .document-search-container {
   padding: 3px 2px 4px 2px;
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
 }
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
@@ -2019,7 +2021,7 @@ body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
   border: 1px solid transparent;
   border-left: 2px solid var(--main-accent-dark);
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-black);
   transform: translate(3px, -1px);
   box-shadow: var(--shadow);
   transition: all 200ms ease-in;
@@ -2067,7 +2069,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /* #endregion */
 /* #region *.......................... Status bar*/
 body:is(.dark-statusbar-enabled) .status-bar {
-  background-color: var(--bg-darkest-translucent);
+  background-color: var(--bg-black-translucent);
 }
 
 body:is(.dark-statusbar-enabled) .status-bar-item {

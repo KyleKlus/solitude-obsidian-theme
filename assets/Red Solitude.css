@@ -16,30 +16,30 @@
       --bg-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
       --bg-dark-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
       --bg-darker-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
-      --bg-darkest-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 0 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
+      --bg-black-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 0 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
 
       --bg: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)));
       --bg-dark: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)));
       --bg-darker: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)));
-      --bg-darkest: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2% + 0 * var(--conf-bg-spacing)));
+      --bg-black: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2% + 0 * var(--conf-bg-spacing)));
     /* #endregion -> General Colors */
 
     --bg-app: var(--bg);
 
-    --bg-title-bar: var(--bg-darkest);
+    --bg-title-bar: var(--bg-black);
     --bg-title-bar-button-hover:#232327;
 
     --bg-ribbon: var(--bg-app);
 
-    --bg-leaf-head-active: var(--bg-darkest);
+    --bg-leaf-head-active: var(--bg-black);
     --bg-leaf-head: var(--bg-darker);
     --bg-leaf-content: var(--bg-dark-translucent);
 
     --bg-input: #0f0f0f;
 
     --bg-note: var(--bg-darker-translucent);
-    --bg-line-hover: var(--bg-darkest-translucent); /* 1e1f24 */
-    --bg-line-active: var(--bg-darkest-translucent);
+    --bg-line-hover: var(--bg-black-translucent); /* 1e1f24 */
+    --bg-line-active: var(--bg-black-translucent);
 
     --bg-embed: transparent;
 
@@ -47,7 +47,7 @@
 
     --bg-task-hover:#202833;
 
-    --bg-quote: var(--bg-darkest);
+    --bg-quote: var(--bg-black);
 
     --header-1-color: hsl(230, 20%, 92%);
     --header-2-color: hsl(230, 20%, 92%);
@@ -65,7 +65,7 @@
     --url-hover-color: #6fe2ff;
     --note-link-color: var(--main-accent);
     --note-link-hover-color: var(--main-accent-light);
-    --note-link-hover-bg-color: var(--bg-darkest-translucent);
+    --note-link-hover-bg-color: var(--bg-black-translucent);
     --tag-color:#95b4c2;
     --tag-hover-color: #27cbd1;
     --bg-tag:#16375c;
@@ -78,7 +78,7 @@
     --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
     --background-primary: var(--bg-dark); /*Note background*/
     --background-primary-alt: var(--bg-darker); /*Note Title background active*/
-    --background-secondary: var(--bg-darkest); /*Sidebar background*/
+    --background-secondary: var(--bg-black); /*Sidebar background*/
     --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
 
     --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
@@ -944,7 +944,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
       .document-search-container {
         padding: 3px 2px 4px 2px;
-        background-color: var(--bg-darkest);
+        background-color: var(--bg-black);
       }
 
       .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
@@ -1134,7 +1134,7 @@ body:is(.is-export-mode) .markdown-preview-view {
 
           .callout[data-callout="ctrl"] .callout-content {
             border-bottom: 0px solid transparent;
-            background-color: var(--bg-darkest-translucent);
+            background-color: var(--bg-black-translucent);
             border-bottom-left-radius: var(--radius-small);
             border-bottom-right-radius: var(--radius-small);
           }
@@ -2296,7 +2296,7 @@ body:is(.is-export-mode) .markdown-preview-view {
       border: 1px solid transparent;
 
       border-left: 2px solid var(--main-accent-dark);
-      background-color: var(--bg-darkest);
+      background-color: var(--bg-black);
       transform: translate(3px, -1px);
       box-shadow: var(--shadow);
       transition: all 200ms ease-in;

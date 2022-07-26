@@ -119,7 +119,7 @@ input[type='email']:focus,
 input[type='password']:focus,
 input[type='number']:focus {
     border-color: var(--main-accent);
-    background-color: var(--bg-darkest);
+    background-color: var(--bg-black);
     transition: all 200ms ease-in;
 }
 
