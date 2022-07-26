@@ -602,21 +602,6 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 }
 
 /* #region *.......................... Ribbons */
-.side-dock-ribbon-action svg {
-  width: 1.05rem;
-  transition: all 300ms ease-out;
-}
-
-.side-dock-ribbon-action:hover {
-  transition: all 300ms ease-out;
-}
-
-.side-dock-ribbon-action:hover {
-  color: var(--main-accent-light);
-  transform: scale(1.05, 1.05);
-  transition: all 300ms ease-in;
-}
-
 .workspace-ribbon {
   background-color: var(--bg-black);
 }
@@ -626,35 +611,46 @@ body .app-container .workspace-ribbon.is-collapsed {
 }
 
 .workspace-ribbon.mod-left {
-  border-right: var(--ribbon-border);
   border-left: none;
 }
 
 .workspace-ribbon.mod-right {
   border-right: none;
-  border-left: var(--ribbon-border);
 }
 
 /* ribbon buttons */
+.side-dock-ribbon-action svg {
+  width: 1.05rem;
+  transition: all 200ms ease-out;
+}
+
+.side-dock-ribbon-action {
+  color: var(--text-faint);
+  transition: all 200ms ease-out;
+}
+
+.side-dock-ribbon-action:hover {
+  color: var(--main-accent-light);
+  transform: scale(1.05, 1.05);
+  transition: all 200ms ease-in;
+}
+
 .workspace-ribbon-collapse-btn {
   padding-top: 20px;
   margin-top: 0;
-  border-bottom: var(--ribbon-border);
+  transition: all 200ms ease-out;
 }
 
 .workspace-ribbon-collapse-btn svg {
   stroke-width: 4px;
-}
-
-.side-dock-ribbon-action {
-  color: var(--main-accent);
+  transition: all 200ms ease-out;
 }
 
 .side-dock-ribbon-action:hover,
 .workspace-ribbon-collapse-btn:hover {
-  background-color: var(--bg-darker);
   transform: scale(1.05, 1.05);
   color: var(--main-accent-light);
+  transition: all 200ms ease-in;
 }
 
 /* #endregion |4.1. Ribbons */
@@ -748,7 +744,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-ribbon-collapse-btn,
 .view-header-icon,
 .view-action {
-  color: var(--main-accent);
+  color: var(--text-faint);
   transition: all 200ms ease-out;
 }
 
@@ -757,14 +753,21 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .is-mobile .view-action:hover,
 .view-header-icon:hover,
 .view-action:hover {
-  transform: scale(1.25, 1.25);
+  transform: scale(1.05, 1.05);
   color: var(--main-accent-light);
   transition: all 200ms ease-in;
+}
+
+.workspace-leaf-resize-handle {
+  background-color: transparent;
+  border-color: transparent;
+  transition: all 200ms ease-out;
 }
 
 .workspace-leaf-resize-handle:hover {
   background-color: var(--main-accent-dark);
   border-color: var(--main-accent-dark);
+  transition: all 200ms ease-in;
 }
 
 .workspace-leaf .view-header,
