@@ -40,6 +40,7 @@
     margin-left     : 0px !important;
     margin-right    : 0px !important;
     margin-bottom   : 100px !important;
+    border-radius: var(--radius-medium);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner:is(a.internal-link, a.external-link),
@@ -129,25 +130,32 @@
     color: var(--main-accent-light);
 }
 
-.callout[data-callout="ctrl"] .callout-content {
-    text-align: center;
+.callout[data-callout="ctrl"] .callout-title {
+    background-color: var(--bg-darkest-translucent);
+    border: 1px solid var(--border-highlight-color);
+    border-bottom: none;
+    /* border-bottom: 1px solid var(--horizontal-line-color); */
+    border-top-left-radius : var(--radius-medium);
+    border-top-right-radius: var(--radius-medium);
+    box-shadow: var(--shadow);
 }
 
-.callout[data-callout="ctrl"] .callout-title {
-    background-color: var(--bg-darker-translucent);
+.callout[data-callout="ctrl"] .callout-title:only-child {
+    background-color: var(--bg-darkest-translucent);
     /* border-bottom: 1px solid var(--horizontal-line-color); */
-    border-top             : 0px solid transparent;
-    border-top-left-radius : var(--radius-small);
-    border-top-right-radius: var(--radius-small);
+    border: 1px solid var(--border-highlight-color);
+    border-radius : var(--radius-medium);
     box-shadow: var(--shadow);
 }
 
 
 .callout[data-callout="ctrl"] .callout-content {
-    border-bottom             : 0px solid transparent;
+    border: 1px solid var(--border-highlight-color);
+    border-top            : none;
     background-color          : var(--bg-black-translucent);
-    border-bottom-left-radius : var(--radius-small);
-    border-bottom-right-radius: var(--radius-small);
+    border-bottom-left-radius : var(--radius-medium);
+    border-bottom-right-radius: var(--radius-medium);
+    text-align: center;
 }
 
 .callout[data-callout="ctrl"] .callout-content p {

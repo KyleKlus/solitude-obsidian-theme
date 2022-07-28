@@ -21,6 +21,7 @@
   --bg-darker: hsl(204, 14%, 10%);
   --bg-darkest: hsl(192, 20%, 7%);
   --bg-black:hsl(192, 20%, 5%);
+  --border-highlight-color:hsl(210, 15%, 13%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;
   --bg-note: var(--bg-darker-translucent);
@@ -290,8 +291,8 @@ body:is(.has-custom-background) {
 }
 
 .modal-bg {
-  background-color: rgba(41, 41, 41, 0.01);
-  backdrop-filter: blur(8px);
+  background-color: rgba(41, 41, 41, 0.5);
+  backdrop-filter: blur(5px);
 }
 
 .suggestion-item.is-selected {
@@ -2045,10 +2046,6 @@ a.external-link[href*="reactjs.org"]::before {
   width: fit-content;
   align-self: center;
   padding-top: 14px;
-}
-
-.nav-files-container {
-  border-top: 1px dotted var(--text-faint);
 }
 
 .nav-buttons-container .nav-action-button {
