@@ -2218,7 +2218,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .nav-file-title.is-being-dragged,
 .nav-folder-title.is-being-dragged {
   background-color: var(--bg-black);
-  border-left: 2px solid var(--main-accent-dark);
+  border-left: 2px solid var(--main-accent);
   color: var(--text-on-accent);
   box-shadow: var(--shadow);
   transform: translate(1px, -1px);
