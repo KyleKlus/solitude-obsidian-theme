@@ -21,7 +21,7 @@
   --bg-darker: hsl(204, 14%, 10%);
   --bg-darkest: hsl(192, 20%, 7%);
   --bg-black:hsl(192, 20%, 5%);
-  --border-highlight-color:hsl(210, 15%, 13%);
+  --border-highlight-color:hsl(210, 15%, 17%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;
   --bg-note: var(--bg-darker-translucent);
@@ -300,16 +300,16 @@ body:is(.has-custom-background) {
 }
 
 .modal,
-.prompt {
+.prompt,
+.popover {
   box-shadow: var(--shadow);
   background-color: var(--bg-darker);
+  border: 1px solid var(--border-highlight-color);
+  border-radius: var(--radius-big);
 }
 
 .popover .markdown-embed .markdown-embed-link {
-  background-color: var(--bg-black);
   color: var(--text-normal);
-  border: 1px solid transparent;
-  border-radius: 50%;
   padding: 4px 5px 0px 5px;
   transition: all 200ms ease-out;
   box-shadow: var(--button-shadow);
@@ -322,11 +322,6 @@ body:is(.has-custom-background) {
 
 .community-plugin-readme.markdown-preview-view {
   font-size: var(--note-font-size);
-}
-
-.modal {
-  border-width: 0px;
-  border-radius: var(--radius-big);
 }
 
 .modal-close-button {
@@ -470,7 +465,8 @@ button:hover {
 
 /* #endregion | Icons */
 /* #region *.......................... Inputbox */
-input[type=text], input[type=search], input[type=email], input[type=password], input[type=number] {
+input[type=text], input[type=search], input[type=email], input[type=password], input[type=number],
+.theme-dark .kanban-plugin__grow-wrap > textarea, .theme-dark .kanban-plugin__grow-wrap:after {
   background: var(--bg-darkest);
   border: 1px solid var(--main-accent-dark);
   font-size: 0.8em;
@@ -487,7 +483,9 @@ input[type=text]:hover,
 input[type=search]:hover,
 input[type=email]:hover,
 input[type=password]:hover,
-input[type=number]:hover {
+input[type=number]:hover,
+.theme-dark .kanban-plugin__grow-wrap > textarea:hover,
+.theme-dark .kanban-plugin__grow-wrap:hover:after {
   border-color: var(--main-accent);
   background-color: var(--bg-darkest);
   transition: all 200ms ease-in;
@@ -502,7 +500,9 @@ input[type=text]:focus,
 input[type=search]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
-input[type=number]:focus {
+input[type=number]:focus,
+.theme-dark .kanban-plugin__grow-wrap > textarea:focus,
+.theme-dark .kanban-plugin__grow-wrap:focus:after {
   border-color: var(--main-accent);
   background-color: var(--bg-black);
   transition: all 200ms ease-in;
@@ -670,7 +670,7 @@ body .app-container .workspace-ribbon.is-collapsed {
 /* #endregion */
 /* #region *.......................... Workspace-Split */
 body:not(.is-mobile) .workspace-split.mod-root {
-  padding: var(--panel-spacing) var(--panel-spacing);
+  padding: var(--panel-spacing);
   border-radius: var(--radius-big);
 }
 
@@ -2415,21 +2415,53 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
 
 /* #endregion -> Privacy Glasses */
 /* #region Kanban */
+/* Some deklaration are where input boxes are */
 .theme-dark .kanban-plugin {
   background-color: var(--bg-note);
 }
 
+.kanban-plugin__lane-wrapper {
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-medium);
+}
+
 .kanban-plugin__lane-wrapper .kanban-plugin__lane {
-  background-color: var(--bg-darkest);
+  background-color: var(--bg-darker);
   border-radius: var(--radius-small);
   border: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark .kanban-plugin__lane-header-wrapper {
+  padding: 5px 9px 5px 5px;
+}
+
+.theme-dark .kanban-plugin__lane-items {
+  padding: 2px;
+}
+
+.theme-dark .kanban-plugin__item-title-wrapper {
+  background-color: var(--bg-dark);
+  padding: 4px 6px;
+}
+
+.theme-dark .kanban-plugin__item-button-wrapper {
+  padding: 6px;
+}
+
+.theme-dark .kanban-plugin__lane-form-wrapper {
+  border: 1px solid var(--border-highlight-color);
+  background-color: var(--bg-darker);
+}
+
+.theme-dark .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  height: 1.94rem;
 }
 
 .theme-dark .kanban-plugin__item button.kanban-plugin__item-prefix-button,
 .theme-dark .kanban-plugin__item button.kanban-plugin__item-postfix-button,
 .theme-dark .kanban-plugin__lane button.kanban-plugin__lane-settings-button,
 .theme-dark .kanban-plugin__lane button.kanban-plugin__new-item-button {
-  background-color: var(--bg-darker);
+  background-color: var(--main-accent-dark);
   transition: all 200ms ease-out;
 }
 

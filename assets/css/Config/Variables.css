@@ -20,7 +20,7 @@
   --bg-darker: hsl(204, 14%, 10%);
   --bg-darkest: hsl(192, 20%, 7%);
   --bg-black:hsl(192, 20%, 5%);
-  --border-highlight-color:hsl(210, 15%, 13%);
+  --border-highlight-color:hsl(210, 15%, 17%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;
   --bg-note: var(--bg-darker-translucent);

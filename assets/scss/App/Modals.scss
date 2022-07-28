@@ -29,16 +29,16 @@
 }
 
 .modal,
-.prompt {
+.prompt,
+.popover {
     box-shadow:  var(--shadow);
     background-color: var(--bg-darker);
+    border: 1px solid var(--border-highlight-color);
+    border-radius: var(--radius-big);
 }
 
 .popover .markdown-embed .markdown-embed-link {
-    background-color: var(--bg-black);
     color: var(--text-normal);
-    border: 1px solid transparent;
-    border-radius: 50%;
     padding: 4px 5px 0px 5px;
     transition: all 200ms ease-out;
     box-shadow: var(--button-shadow);
@@ -51,11 +51,6 @@
 
 .community-plugin-readme.markdown-preview-view {
     font-size: var(--note-font-size);
-}
-
-.modal {
-    border-width: 0px;
-    border-radius: var(--radius-big);
 }
 
 .modal-close-button {

@@ -74,7 +74,7 @@ body .app-container .workspace-ribbon.is-collapsed {
 /* #endregion */
 /* #region *.......................... Workspace-Split */
 body:not(.is-mobile) .workspace-split.mod-root {
-  padding: var(--panel-spacing) var(--panel-spacing);
+  padding: var(--panel-spacing);
   border-radius: var(--radius-big);
 }
 

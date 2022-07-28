@@ -80,16 +80,16 @@ body .app-container .workspace-ribbon.is-collapsed {
 /* #region *.......................... Workspace-Split */
 
 body:not(.is-mobile) .workspace-split.mod-root {
-padding: var(--panel-spacing) var(--panel-spacing);
-border-radius: var(--radius-big);
+    padding: var(--panel-spacing);
+    border-radius: var(--radius-big);
 }
 
 .workspace-split.mod-root .view-content {
-background-color: transparent;
+    background-color: transparent;
 }
 
 .view-content .empty-state {
-background-color: var(--bg-dark-translucent);
+    background-color: var(--bg-dark-translucent);
 }
 
 .workspace-split.mod-left-split {

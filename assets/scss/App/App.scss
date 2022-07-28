@@ -85,7 +85,8 @@ button:hover {
 
 /* #region *.......................... Inputbox */
 
-input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
+input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'],
+.theme-dark .kanban-plugin__grow-wrap>textarea, .theme-dark .kanban-plugin__grow-wrap:after {
     background: var(--bg-darkest);
     border: 1px solid var(--main-accent-dark);
     font-size: 0.8em;
@@ -102,7 +103,9 @@ input[type='text']:hover,
 input[type='search']:hover,
 input[type='email']:hover,
 input[type='password']:hover,
-input[type='number']:hover {
+input[type='number']:hover,
+.theme-dark .kanban-plugin__grow-wrap>textarea:hover,
+.theme-dark .kanban-plugin__grow-wrap:hover:after {
     border-color: var(--main-accent);
     background-color: var(--bg-darkest);
     transition: all 200ms ease-in;
@@ -117,7 +120,9 @@ input[type='text']:focus,
 input[type='search']:focus,
 input[type='email']:focus,
 input[type='password']:focus,
-input[type='number']:focus {
+input[type='number']:focus,
+.theme-dark .kanban-plugin__grow-wrap>textarea:focus,
+.theme-dark .kanban-plugin__grow-wrap:focus:after{
     border-color: var(--main-accent);
     background-color: var(--bg-black);
     transition: all 200ms ease-in;
