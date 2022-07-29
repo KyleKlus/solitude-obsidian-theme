@@ -161,7 +161,9 @@ svg.bullet-list {
 }
 
 body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,
-body:not(.is-grabbing) .nav-folder-title:hover {
+body:not(.is-grabbing) .nav-folder-title:hover,
+body:not(.is-grabbing) :not(.is-active).nav-file-title.has-focus,
+body:not(.is-grabbing) .nav-folder-title.has-focus {
   border: 1px solid transparent;
   background-color: var(--bg-black);
   transform: translate(1px, -1px);
