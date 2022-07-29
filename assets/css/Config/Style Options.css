@@ -11,20 +11,25 @@ settings:
     collapsed: false
   -
     id: is-hover-effect-on
-    title: Enable hover effect in editor
+    title: Enable hover effect for editor lines
     type: class-toggle
     default: false
   -
     id: is-active-effect-on
-    title: Enable active line effect in editor
+    title: Enable effect for active editor lines
     type: class-toggle
     default: false
   -
     id: is-translucency-effect-on
-    title: Enable translucency effect
+    title: Enable transparency effect for panes
     description: It only really makes sense to use this option if you have a custom background set
     type: class-toggle
     default: false
+  -
+    id: conf-bg-transparency
+    title: Opacity
+    type: variable-number
+    default: 0.85
   -
     id: has-custom-background
     title: Enable custom background
@@ -33,29 +38,29 @@ settings:
     default: false
   -
     id: custom-bullet-point-enabled
-    title: Enable custom bullet point character "-"
+    title: Replace bullet point with "-"
     type: class-toggle
     default: false
   -
     id: gutter-is-moved
-    title: Enable moving the gutter all the way to the left
+    title: Move the line numbers all the way to the left
     type: class-toggle
     default: false
   -
     id: note-font-size
-    title: Editor Font Size (rem)
+    title: Editor Font Size (in rem)
     type: variable-number
     default: 1.0
     format: 'rem'
   -
     id: note-width
-    title: Note width (px)
+    title: Note width (in pixel)
     type: variable-number
     default: 700
     format: 'px'
   -
     id: active-line-font-size
-    title: Active Line Font Size (rem)
+    title: Active Line Font Size (in rem)
     type: variable-number
     default: 1.01
     format: 'rem'
@@ -67,7 +72,12 @@ settings:
     collapsed: true
   -
     id: dark-statusbar-enabled
-    title: Enable that the statusbar is colored dark
+    title: Color the statusbar dark instead of the accent color
+    type: class-toggle
+    default: false
+  -
+    id: show-embed
+    title: Highlight embedded notes
     type: class-toggle
     default: false
   -
@@ -177,7 +187,7 @@ settings:
     default: '#10253f'
   -
     id: header-settings
-    title: Headers
+    title: Heading Settings
     type: heading
     level: 1
     collapsed: false

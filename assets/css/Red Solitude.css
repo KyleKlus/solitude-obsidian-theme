@@ -1213,14 +1213,43 @@ body:is(.custom-bullet-point-enabled) .markdown-embed .cm-formatting.cm-formatti
   color: transparent;
 }
 
-.markdown-embed,
-.file-embed,
-.cm-formatting .markdown-embed,
-.cm-s-obsidian .file-embed {
-  border: 1px solid transparent !important;
+.markdown-embed-link, .file-embed-link {
+  right: 2px;
+  top: 2px;
+  transform: scale(0.8);
+  transition: all 200ms ease-out;
+}
+
+.markdown-embed-link:hover, .file-embed-link:hover {
+  right: 2px;
+  top: 2px;
+  transform: scale(1);
+  transition: all 200ms ease-in;
+}
+
+body:is(.show-embed) .markdown-embed,
+body:is(.show-embed) .file-embed,
+body:is(.show-embed) .cm-formatting .markdown-embed,
+body:is(.show-embed) .cm-s-obsidian .file-embed {
+  border: 1px solid var(--border-highlight-color) !important;
+  background-color: var(--bg-embed);
   border-radius: var(--radius-medium) !important;
   margin: 0px 0 !important;
-  background-color: var(--bg-embed);
+}
+
+body:not(.show-embed) .markdown-embed,
+body:not(.show-embed) .file-embed,
+body:not(.show-embed) .cm-formatting .markdown-embed,
+body:not(.show-embed) .cm-s-obsidian .file-embed {
+  border: 1px solid transparent !important;
+  background-color: transparent;
+  border-radius: var(--radius-medium) !important;
+  margin: 0px 0 !important;
+}
+
+body:not(.show-embed) .markdown-embed .markdown-preview-section {
+  background-color: transparent;
+  font-size: var(--note-font-size);
 }
 
 .markdown-embed .markdown-preview-view {
@@ -1411,9 +1440,21 @@ body:is(.custom-bullet-point-enabled) .list-bullet::after {
   content: var(--list-bullet-sign);
 }
 
+body:is(.custom-bullet-point-enabled) ::marker,
+body:is(.custom-bullet-point-enabled) .cm-formatting-list,
+body:is(.custom-bullet-point-enabled) .list-bullet::after {
+  color: var(--main-accent);
+  list-style-type: var(--list-bullet-sign);
+  content: var(--list-bullet-sign);
+}
+
 .markdown-embed ::marker {
   content: none;
   list-style-type: none;
+  color: transparent;
+}
+
+.task-list-item::marker {
   color: transparent;
 }
 
@@ -2499,20 +2540,25 @@ settings:
     collapsed: false
   -
     id: is-hover-effect-on
-    title: Enable hover effect in editor
+    title: Enable hover effect for editor lines
     type: class-toggle
     default: false
   -
     id: is-active-effect-on
-    title: Enable active line effect in editor
+    title: Enable effect for active editor lines
     type: class-toggle
     default: false
   -
     id: is-translucency-effect-on
-    title: Enable translucency effect
+    title: Enable transparency effect for panes
     description: It only really makes sense to use this option if you have a custom background set
     type: class-toggle
     default: false
+  -
+    id: conf-bg-transparency
+    title: Opacity
+    type: variable-number
+    default: 0.85
   -
     id: has-custom-background
     title: Enable custom background
@@ -2521,29 +2567,29 @@ settings:
     default: false
   -
     id: custom-bullet-point-enabled
-    title: Enable custom bullet point character "-"
+    title: Replace bullet point with "-"
     type: class-toggle
     default: false
   -
     id: gutter-is-moved
-    title: Enable moving the gutter all the way to the left
+    title: Move the line numbers all the way to the left
     type: class-toggle
     default: false
   -
     id: note-font-size
-    title: Editor Font Size (rem)
+    title: Editor Font Size (in rem)
     type: variable-number
     default: 1.0
     format: 'rem'
   -
     id: note-width
-    title: Note width (px)
+    title: Note width (in pixel)
     type: variable-number
     default: 700
     format: 'px'
   -
     id: active-line-font-size
-    title: Active Line Font Size (rem)
+    title: Active Line Font Size (in rem)
     type: variable-number
     default: 1.01
     format: 'rem'
@@ -2555,7 +2601,12 @@ settings:
     collapsed: true
   -
     id: dark-statusbar-enabled
-    title: Enable that the statusbar is colored dark
+    title: Color the statusbar dark instead of the accent color
+    type: class-toggle
+    default: false
+  -
+    id: show-embed
+    title: Highlight embedded notes
     type: class-toggle
     default: false
   -
@@ -2665,7 +2716,7 @@ settings:
     default: '#10253f'
   -
     id: header-settings
-    title: Headers
+    title: Heading Settings
     type: heading
     level: 1
     collapsed: false
