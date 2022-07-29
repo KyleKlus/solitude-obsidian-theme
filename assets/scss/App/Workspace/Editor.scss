@@ -578,7 +578,7 @@ body:is(.custom-bullet-point-enabled) .list-bullet::after {
     color          : transparent;
 }
 
-li.task-list-item ::marker {
+li.task-list-item::marker {
     color: transparent;
 }
 

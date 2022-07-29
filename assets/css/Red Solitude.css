@@ -1454,7 +1454,7 @@ body:is(.custom-bullet-point-enabled) .list-bullet::after {
   color: transparent;
 }
 
-li.task-list-item ::marker {
+li.task-list-item::marker {
   color: transparent;
 }
 
@@ -2511,7 +2511,7 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
 .theme-dark .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover,
 .theme-dark .kanban-plugin__lane button.kanban-plugin__new-item-button:hover {
   background-color: var(--main-accent);
-  transform: scale(1.05);
+  transform: scale(1.04);
   transition: all 200ms ease-in;
 }
 
