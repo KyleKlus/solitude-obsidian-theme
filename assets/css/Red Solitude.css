@@ -2340,7 +2340,7 @@ body:is(.dark-statusbar-enabled) .status-bar-item {
 
 .status-bar-item {
   color: var(--text-normal);
-  background-color: var(--bg-darker-translucent);
+  background-color: var(--bg-darker);
   border-radius: var(--radius-medium);
   max-height: 22px;
   margin: 4px calc(var(--panel-spacing) / 2);
