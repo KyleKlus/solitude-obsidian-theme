@@ -1,0 +1,77 @@
+/* #region | Nav-Header */
+.nav-header {
+  width: fit-content;
+  align-self: center;
+  padding-top: 14px;
+}
+
+.nav-buttons-container .nav-action-button {
+  background-color: var(--interactive-normal);
+  border: 1px solid transparent;
+  padding: 0px 15px 0px 15px;
+  box-shadow: var(--shadow-small);
+  border-radius: var(--radius-small);
+  transition: all 200ms ease-out;
+}
+
+.nav-buttons-container .nav-action-button:hover {
+  background-color: var(--interactive-hover);
+  transform: scale(1.07);
+  transition: all 200ms ease-in;
+}
+
+.nav-buttons-container .nav-action-button.is-active {
+  background-color: var(--interactive-hover);
+  transition: all 200ms ease-in;
+}
+
+.nav-buttons-container .nav-action-button {
+  color: var(--text-normal);
+}
+
+.workspace-leaf-content[data-type=file-explorer] .nav-action-button svg path,
+svg.up-and-down-arrows path,
+svg.magnifying-glass path,
+svg.expand-vertically path,
+svg.bullet-list path,
+svg.folder path {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=file-explorer] .nav-action-button svg,
+.nav-action-button[aria-label="Change sort order"] svg,
+.nav-action-button[aria-label="Show search filter"] svg,
+.nav-action-button[aria-label="Show more context"] svg,
+.nav-action-button[aria-label="Collapse results"] svg {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+
+.nav-action-button[aria-label="New note"] svg {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="m213.7 82.3l-56-56A8.1 8.1 0 0 0 152 24H56a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V88a8.1 8.1 0 0 0-2.3-5.7Zm-53.7-31L188.7 80H160ZM200 216H56V40h88v48a8 8 0 0 0 8 8h48v120Zm-40-64a8 8 0 0 1-8 8h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1 0-16h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 8 8Z"%2F%3E%3C%2Fsvg%3E');
+}
+
+.nav-action-button[aria-label="New folder"] svg {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="M216 72h-85.3l-27.8-20.8a15.6 15.6 0 0 0-9.6-3.2H40a16 16 0 0 0-16 16v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V88a16 16 0 0 0-16-16ZM93.3 96H40V64h53.3l21.4 16l-21.4 16M216 200H40v-88h53.3a15.6 15.6 0 0 0 9.6-3.2L130.7 88H216Zm-80-76v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1 0-16h16v-16a8 8 0 0 1 16 0Z"%2F%3E%3C%2Fsvg%3E');
+}
+
+svg.up-and-down-arrows {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="M117.7 170.3a8.1 8.1 0 0 1 0 11.4l-32 32a8.2 8.2 0 0 1-11.4 0l-32-32a8.1 8.1 0 0 1 11.4-11.4L72 188.7V48a8 8 0 0 1 16 0v140.7l18.3-18.4a8.1 8.1 0 0 1 11.4 0Zm96-96l-32-32a8.1 8.1 0 0 0-11.4 0l-32 32a8.1 8.1 0 0 0 11.4 11.4L168 67.3V208a8 8 0 0 0 16 0V67.3l18.3 18.4a8.2 8.2 0 0 0 11.4 0a8.1 8.1 0 0 0 0-11.4Z"%2F%3E%3C%2Fsvg%3E');
+}
+
+svg.magnifying-glass {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"%3E%3Cpath fill="white" d="m29 27.586l-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9a9.01 9.01 0 0 1-9-9Z"%2F%3E%3C%2Fsvg%3E');
+}
+
+svg.expand-vertically {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M18.51 1.51H2.49m16.02 18H2.49m4.006-5.992l4 4l4.015-4m-8.015-6l4-4l4.015 4M10.51 17.51v-14"%2F%3E%3C%2Fsvg%3E');
+}
+
+svg.bullet-list {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cpath stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M7.5 6.5h8m-8 3.998h5m-5 4.002h8"%2F%3E%3Cpath fill="white" d="M4.499 7.5c.5 0 1-.5 1-1s-.5-1-1-1s-.999.5-.999 1s.499 1 .999 1zm0 4c.5 0 1-.5 1-1s-.5-1-1-1s-.999.5-.999 1s.499 1 .999 1zm0 4c.5 0 1-.5 1-1s-.5-1-1-1s-.999.5-.999 1s.499 1 .999 1z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  background-size: 18px;
+}
+
+/* #endregion | Nav-Header */

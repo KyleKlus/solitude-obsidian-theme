@@ -306,10 +306,11 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 /* #endregion | Workspace-Tabs */
 
+@import './Navigation/Navigation.scss';
+
 @import 'Editor';
 
 @import 'Graph';
 
-@import 'File Explorer';
 
 /* #endregion */
