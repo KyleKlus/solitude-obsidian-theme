@@ -28,7 +28,7 @@
 }
 
 .popover {
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 /* #region *.......................... URL */

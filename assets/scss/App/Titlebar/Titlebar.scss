@@ -1,0 +1,27 @@
+/* #region *.......................... Titlebar*/
+
+.titlebar {
+    background-color: var(--bg-black);
+    height: 24px !important;
+    box-shadow: var(--shadow-big-down);
+    border: none;
+}
+
+.titlebar-text {
+    color: var(--text-faint);
+    background-color: transparent;
+    opacity: 1.0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0px auto 0px auto;
+    width: fit-content;
+    padding: 0 10px;
+    letter-spacing: unset;
+}
+
+@import "Titlebarbuttons.scss";
+
+/* #endregion -> Titlebar */

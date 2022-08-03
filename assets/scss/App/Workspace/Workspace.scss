@@ -95,13 +95,13 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-split.mod-left-split {
     padding-left: 0;
     background-color: var(--bg-dark-translucent);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 .workspace-split.mod-right-split {
     padding-right: 0;
     background-color: var(--bg-dark-translucent);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 
@@ -115,7 +115,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
     border-bottom: 2px solid var(--main-accent-dark);
     background-color: var(--bg-darkest);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 
 }
 
@@ -144,7 +144,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 .view-header {
     background-color: var(--bg-darkest);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 .view-header-title-container:after {
@@ -155,7 +155,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 .workspace-split.mod-vertical > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-horizontal),
 .workspace-split .mod-horizontal > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-vertical) {
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 .workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
@@ -269,7 +269,7 @@ svg.folder {
     height: fit-content;
     justify-content: center;
     padding: 8px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 .workspace-tab-header.is-active {
@@ -298,7 +298,7 @@ svg.folder {
 .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
     background-color: var(--interactive-hover);
     transform: scale(1.05);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     transition: all 200ms ease-in;
 }
 

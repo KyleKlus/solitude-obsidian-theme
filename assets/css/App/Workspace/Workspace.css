@@ -89,13 +89,13 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-split.mod-left-split {
   padding-left: 0;
   background-color: var(--bg-dark-translucent);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 .workspace-split.mod-right-split {
   padding-right: 0;
   background-color: var(--bg-dark-translucent);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 /* #endregion */
@@ -105,7 +105,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
   border-bottom: 2px solid var(--main-accent-dark);
   background-color: var(--bg-darkest);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 .view-header-icon svg path {
@@ -133,7 +133,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 .view-header {
   background-color: var(--bg-darkest);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 .view-header-title-container:after {
@@ -143,7 +143,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 /* #endregion | View Header  */
 .workspace-split.mod-vertical > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-horizontal),
 .workspace-split .mod-horizontal > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-vertical) {
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 .workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
@@ -254,7 +254,7 @@ svg.folder {
   height: fit-content;
   justify-content: center;
   padding: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 .workspace-tab-header.is-active {
@@ -283,7 +283,7 @@ svg.folder {
 .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
   background-color: var(--interactive-hover);
   transform: scale(1.05);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transition: all 200ms ease-in;
 }
 
@@ -387,7 +387,7 @@ body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover { /* Line Hover
 
 body:not(.is-export-mode):is(.is-active-effect-on) div.cm-active.cm-line {
   background-color: var(--bg-line-active);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate3d(0px, -1px, 0px);
   transition: all 200ms;
   border-radius: var(--radius-medium);
@@ -549,7 +549,7 @@ body:is(.is-mobile) .callout {
 .callout {
   margin-left: 5% !important;
   margin-right: 5% !important;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -564,7 +564,7 @@ body:is(.is-mobile) .callout {
 
 .markdown-source-view.mod-cm6 .callout,
 .markdown-preview-view .callout {
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -677,14 +677,14 @@ body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-pre
   width: 90%;
   margin-left: auto !important;
   margin-right: auto !important;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 body:not(.is-deactivate-normal-quotes, .is-export-mode):is(.is-hover-effect-on) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover, .markdown-preview-view blockquote {
   border-left: 4px solid var(--main-accent-dark);
   border-radius: 0px;
   background-color: var(--bg-quote);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -692,7 +692,7 @@ body:is(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-prev
   border: 0px solid transparent;
   border-radius: 0px;
   background-color: var(--bg-quote);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   width: var(--note-width);
   margin-left: unset !important;
   margin-right: unset !important;
@@ -890,7 +890,7 @@ li.task-list-item::marker {
   filter: none;
   border-radius: var(--radius-big);
   background-color: var(--bg-note);
-  /* box-shadow: var(--shadow); */
+  /* box-shadow: var(--shadow-small); */
   transition: all 150ms ease-out 0s;
   transform: rotate(-180deg);
 }
@@ -1081,7 +1081,7 @@ li[data-task="!"] > .task-list-item-checkbox,
 }
 
 .popover {
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 /* #region *.......................... URL */
@@ -1497,7 +1497,7 @@ a.external-link[href*="reactjs.org"]::before {
   background-color: var(--interactive-normal);
   border: 1px solid transparent;
   padding: 4px 15px 0px 15px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   border-radius: var(--radius-small);
   transition: all 200ms ease-out;
 }
@@ -1652,10 +1652,11 @@ body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover,
 body:not(.is-grabbing) :not(.is-active).nav-file.has-focus,
 body:not(.is-grabbing) .nav-folder.has-focus {
-  border: 1px solid transparent;
+  border: none;
+  border-radius: var(--radius-small);
   background-color: var(--bg-black);
   transform: translate(1px, -1px);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transition: all 200ms ease-in;
 }
 
@@ -1667,7 +1668,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
   background-color: var(--bg-black);
   border-left: 2px solid var(--main-accent);
   color: var(--text-on-accent);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate(1px, -1px);
   transition: all 200ms ease-in;
 }

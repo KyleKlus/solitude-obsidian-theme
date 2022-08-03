@@ -1,6 +1,6 @@
 /* #region *.......................... Links */
 
-.cm-hmd-embed.cm-hmd-internal-link.cm-quote, 
+.cm-hmd-embed.cm-hmd-internal-link.cm-quote,
 .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link, .is-unresolved),
 .cm-s-obsidian .internal-link,
 .markdown-preview-section a.internal-link{
@@ -10,15 +10,15 @@
     transition: all 200ms ease-out;
 }
 
-.cm-s-obsidian span.cm-formatting.cm-url, 
-.external-link, 
+.cm-s-obsidian span.cm-formatting.cm-url,
+.external-link,
 .markdown-source-view.mod-cm6 .cm-link,
 .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote,
 .cm-s-obsidian .cm-line .cm-underline {
     text-decoration: none;
 }
 
-.cm-hmd-embed.cm-hmd-internal-link.cm-quote:hover, 
+.cm-hmd-embed.cm-hmd-internal-link.cm-quote:hover,
 .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link:hover, .is-unresolved:hover),
 .markdown-preview-section a.internal-link:hover{
     color: var(--note-link-hover-color);
@@ -29,13 +29,13 @@
 }
 
 .popover {
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 /* #region *.......................... URL */
 
-.cm-s-obsidian span.cm-formatting.cm-url, 
-.external-link, 
+.cm-s-obsidian span.cm-formatting.cm-url,
+.external-link,
 .markdown-source-view.mod-cm6 .cm-link,
 .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
     color: var(--url-color);
@@ -47,7 +47,7 @@
     color: var(--text-faint);
 }
 
-.cm-s-obsidian span.cm-url:hover, 
+.cm-s-obsidian span.cm-url:hover,
 .external-link:hover,
 .markdown-source-view.mod-cm6 .cm-link:hover {
     text-decoration: none;

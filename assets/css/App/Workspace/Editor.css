@@ -92,7 +92,7 @@ body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover { /* Line Hover
 
 body:not(.is-export-mode):is(.is-active-effect-on) div.cm-active.cm-line {
   background-color: var(--bg-line-active);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate3d(0px, -1px, 0px);
   transition: all 200ms;
   border-radius: var(--radius-medium);
@@ -254,7 +254,7 @@ body:is(.is-mobile) .callout {
 .callout {
   margin-left: 5% !important;
   margin-right: 5% !important;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -269,7 +269,7 @@ body:is(.is-mobile) .callout {
 
 .markdown-source-view.mod-cm6 .callout,
 .markdown-preview-view .callout {
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -382,14 +382,14 @@ body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-pre
   width: 90%;
   margin-left: auto !important;
   margin-right: auto !important;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 body:not(.is-deactivate-normal-quotes, .is-export-mode):is(.is-hover-effect-on) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover, .markdown-preview-view blockquote {
   border-left: 4px solid var(--main-accent-dark);
   border-radius: 0px;
   background-color: var(--bg-quote);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -397,7 +397,7 @@ body:is(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-prev
   border: 0px solid transparent;
   border-radius: 0px;
   background-color: var(--bg-quote);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
   width: var(--note-width);
   margin-left: unset !important;
   margin-right: unset !important;
@@ -595,7 +595,7 @@ li.task-list-item::marker {
   filter: none;
   border-radius: var(--radius-big);
   background-color: var(--bg-note);
-  /* box-shadow: var(--shadow); */
+  /* box-shadow: var(--shadow-small); */
   transition: all 150ms ease-out 0s;
   transform: rotate(-180deg);
 }
@@ -786,7 +786,7 @@ li[data-task="!"] > .task-list-item-checkbox,
 }
 
 .popover {
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-small);
 }
 
 /* #region *.......................... URL */

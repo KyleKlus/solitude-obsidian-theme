@@ -92,7 +92,7 @@
     padding: 1px 6px 1px 3px;
     border: 1px solid var(--main-accent);
     border-radius: var(--radius-medium);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child) {
@@ -103,7 +103,7 @@
     padding: 1px 3px 1px 6px;
     border: 1px solid var(--main-accent);
     border-radius: var(--radius-medium);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child:hover {
@@ -137,7 +137,7 @@
     /* border-bottom: 1px solid var(--horizontal-line-color); */
     border-top-left-radius : var(--radius-medium);
     border-top-right-radius: var(--radius-medium);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 .callout[data-callout="ctrl"] .callout-title:only-child {
@@ -145,7 +145,7 @@
     /* border-bottom: 1px solid var(--horizontal-line-color); */
     border: 1px solid var(--border-highlight-color);
     border-radius : var(--radius-medium);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 
@@ -166,7 +166,7 @@
 .callout[data-callout="ctrl"] .callout-content > p > a.external-link {
     border: 1px solid var(--main-accent);
     border-radius: var(--radius-small);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     padding: 2px 21px 2px 6px;
 }
 
@@ -179,7 +179,7 @@
 .callout[data-callout="ctrl"] .callout-content > p > a.internal-link {
     border: 1px solid var(--main-accent);
     border-radius: var(--radius-small);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     padding: 2px;
 }
 

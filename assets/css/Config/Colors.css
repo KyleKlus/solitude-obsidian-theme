@@ -1,25 +1,28 @@
 /* #region -> Colors */
 :root, .theme-dark {
   /* #region -> General Colors */
-  --main-accent-dark: #521414;
-  --main-accent: rgb(163, 41, 41);
-  --main-accent-light: #ce3b3b;
+  --main-accent-dark: hsl(0, 61%, 20%);
+  --main-accent: hsl(0, 60%, 40%);
+  --main-accent-light: hsl(0, 60%, 52%);
   --main-accent-rgb: 163, 41, 41;
-  --conf-bg-spacing: 5%;
-  --conf-bg-start: 3%;
+  --main-accent-light-rgb: 206, 59, 59;
+  --main-accent-dark-rgb: 82, 20, 20;
+  --bg-hsl: 208, 16%, 16%;
+  --bg-dark-hsl: 210, 15%, 13%;
+  --bg-darker-hsl: 204, 14%, 10%;
+  --bg-darkest-hsl: 192, 20%, 7%;
+  --bg-black-hsl: 192, 20%, 5%;
+  --bg: hsl(var(--bg-hsl));
+  --bg-dark: hsl(var(--bg-dark-hsl));
+  --bg-darker: hsl(var(--bg-darker-hsl));
+  --bg-darkest: hsl(var(--bg-darkest-hsl));
+  --bg-black: hsl(var(--bg-black-hsl));
   --conf-bg-transparency: 0.85;
-  --conf-bg-hue: 228;
-  --conf-bg-sat: 12%;
-  --bg-translucent: hsla(208, 16%, 16%, var(--conf-bg-transparency));
-  --bg-dark-translucent: hsla(210, 15%, 13%, var(--conf-bg-transparency));
-  --bg-darker-translucent: hsla(204, 12%, 10%, var(--conf-bg-transparency));
-  --bg-darkest-translucent: hsla(192, 20%, 7%, var(--conf-bg-transparency));
-  --bg-black-translucent: hsla(192, 20%, 5%, var(--conf-bg-transparency));
-  --bg: hsl(208, 16%, 16%);
-  --bg-dark: hsl(210, 15%, 13%);
-  --bg-darker: hsl(204, 14%, 10%);
-  --bg-darkest: hsl(192, 20%, 7%);
-  --bg-black:hsl(192, 20%, 5%);
+  --bg-translucent: hsla(var(--bg-hsl), var(--conf-bg-transparency));
+  --bg-dark-translucent: hsla(var(--bg-dark-hsl), var(--conf-bg-transparency));
+  --bg-darker-translucent: hsla(var(--bg-darker-hsl), var(--conf-bg-transparency));
+  --bg-darkest-translucent: hsla(var(--bg-darkest-hsl), var(--conf-bg-transparency));
+  --bg-black-translucent: hsla(var(--bg-black-hsl), var(--conf-bg-transparency));
   --border-highlight-color:hsl(210, 15%, 17%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;

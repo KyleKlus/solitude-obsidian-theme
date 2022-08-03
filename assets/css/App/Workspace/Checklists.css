@@ -13,7 +13,7 @@
   filter: none;
   border-radius: var(--radius-big);
   background-color: var(--bg-note);
-  /* box-shadow: var(--shadow); */
+  /* box-shadow: var(--shadow-small); */
   transition: all 150ms ease-out 0s;
   transform: rotate(-180deg);
 }

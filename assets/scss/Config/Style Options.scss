@@ -5,32 +5,32 @@ name: Red Solitude Dark
 id: red-solitude-dark
 settings:
   -
-    id: general-settings
-    title: General Settings
+    id: extra-theme-features
+    title: Extra Theme Features
     type: heading
     level: 1
     collapsed: false
   -
     id: is-hover-effect-on
-    title: Enable hover effect for editor lines
+    title: Highlight lines over which the cursor currently hovers
     type: class-toggle
     default: false
   -
     id: is-active-effect-on
-    title: Enable effect for active editor lines
+    title: Highlight lines where the carret is currently located
     type: class-toggle
     default: false
   -
-    id: is-translucency-effect-on
-    title: Enable transparency effect for panes
-    description: It only really makes sense to use this option if you have a custom background set
+    id: show-embed
+    title: Highlight embedded content
     type: class-toggle
     default: false
   -
-    id: conf-bg-transparency
-    title: Opacity
-    type: variable-number
-    default: 0.85
+    id: apple-eske-buttons-active
+    title: Replace standard close, minimize and maximize buttons with apple eske buttons
+    description: It only really makes sense to use this option if you are not on mac os.
+    type: class-toggle
+    default: false
   -
     id: has-custom-background
     title: Enable custom background
@@ -48,11 +48,17 @@ settings:
     type: class-toggle
     default: false
   -
-    id: note-font-size
-    title: Editor Font Size (in rem)
+    id: is-translucency-effect-on
+    title: Enable transparency effect for panes
+    description: It only really makes sense to use this option if you have a custom background set.
+    type: class-toggle
+    default: false
+  -
+    id: conf-bg-transparency
+    title: Transparency value (0.0 - 1.0)
+    description: It only really makes sense to use this option if you have the transparency effect enabled.
     type: variable-number
-    default: 1.0
-    format: 'rem'
+    default: 0.85
   -
     id: note-width
     title: Note width (in pixel)
@@ -60,25 +66,26 @@ settings:
     default: 700
     format: 'px'
   -
+    id: note-font-size
+    title: Editor Font Size (in rem)
+    type: variable-number
+    default: 1.0
+    format: 'rem'
+  -
     id: active-line-font-size
     title: Active Line Font Size (in rem)
     type: variable-number
     default: 1.01
     format: 'rem'
   -
-    id: General-colors-settings
-    title: General Colors
+    id: colors-settings
+    title: Theme Colors
     type: heading
     level: 1
     collapsed: true
   -
     id: dark-statusbar-enabled
     title: Color the statusbar dark instead of the accent color
-    type: class-toggle
-    default: false
-  -
-    id: show-embed
-    title: Highlight embedded notes
     type: class-toggle
     default: false
   -
@@ -194,8 +201,8 @@ settings:
     collapsed: false
   -
     id: downsize-h-formatter
-    title: 'Downsize Header Formatter'
-    description: 'This downsizes the "#" formatter for headers.'
+    title: 'Downsize header formatting symbol'
+    description: 'This downsizes the "#" formatting symbol for headers.'
     type: class-toggle
     default: true
   -

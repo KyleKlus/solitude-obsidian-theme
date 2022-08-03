@@ -11,7 +11,7 @@
     background-color: var(--interactive-normal);
     border: 1px solid transparent;
     padding: 4px 15px 0px 15px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     border-radius: var(--radius-small);
     transition: all 200ms ease-out;
 }
@@ -166,10 +166,11 @@ body:not(.is-grabbing) :not(.is-active).nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover,
 body:not(.is-grabbing) :not(.is-active).nav-file.has-focus,
 body:not(.is-grabbing) .nav-folder.has-focus{
-    border: 1px solid transparent;
+    border: none;
+    border-radius: var(--radius-small);
     background-color: var(--bg-black);
     transform: translate(1px, -1px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     transition: all 200ms ease-in;
 }
 
@@ -181,7 +182,7 @@ body:not(.is-grabbing) .nav-folder.has-focus{
     background-color: var(--bg-black);
     border-left: 2px solid var(--main-accent);
     color: var(--text-on-accent);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     transform: translate(1px, -1px);
     transition: all 200ms ease-in;
 }

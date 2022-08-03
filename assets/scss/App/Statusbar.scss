@@ -15,7 +15,7 @@ body:is(.dark-statusbar-enabled) .status-bar-item {
     align-items: center;
     justify-content: center;
     border: none;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
 }
 
 .status-bar-item{

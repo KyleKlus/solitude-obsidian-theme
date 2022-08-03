@@ -67,22 +67,22 @@ div#calendar-container td.svelte-egt0yd {
 }
 
 .fc-button-group {
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     transition: all 200ms ease-out;
 }
 
 :not(.fc-button-group) > button {
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     transition: all 200ms ease-out;
 }
 
 .fc-event[href], .fc-event.fc-event-draggable:not(.fc-daygrid-dot-event) {
-    box-shadow: var(--shadow) !important;
+    box-shadow: var(--shadow-small) !important;
     transition: all 200ms ease-out;
 }
 
 .fc-event[href]:hover, .fc-event.fc-event-draggable:hover {
-    box-shadow: var(--shadow) !important;
+    box-shadow: var(--shadow-small) !important;
     transform: scale(1.05, 1.05);
     transition: all 200ms ease-in;
 }
@@ -141,7 +141,7 @@ body.privacy-glasses.blur-preview
 }
 
 .kanban-plugin__lane-wrapper {
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     border-radius: var(--radius-medium);
 }
 
