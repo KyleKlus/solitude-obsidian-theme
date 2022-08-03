@@ -266,7 +266,7 @@ body:is(.is-mobile) .callout {
 .callout {
     margin-left : 5%!important;
     margin-right: 5%!important;
-    box-shadow  : var(--shadow-small);
+    box-shadow  : var(--shadow-medium);
     transform   : translate3d(0px, -3px, 0px);
 }
 
@@ -281,7 +281,7 @@ body:is(.is-mobile) .callout {
 
 .markdown-source-view.mod-cm6 .callout,
 .markdown-preview-view .callout{
-    box-shadow  : var(--shadow-small);
+    box-shadow  : var(--shadow-medium);
     transform   : translate3d(0px, -3px, 0px);
 }
 

@@ -254,7 +254,7 @@ body:is(.is-mobile) .callout {
 .callout {
   margin-left: 5% !important;
   margin-right: 5% !important;
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-medium);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -269,7 +269,7 @@ body:is(.is-mobile) .callout {
 
 .markdown-source-view.mod-cm6 .callout,
 .markdown-preview-view .callout {
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-medium);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -595,14 +595,10 @@ li.task-list-item::marker {
   filter: none;
   border-radius: var(--radius-big);
   background-color: var(--bg-note);
-  /* box-shadow: var(--shadow-small); */
   transition: all 150ms ease-out 0s;
   transform: rotate(-180deg);
 }
 
-/* .HyperMD-task-line span {
-text-shadow: var(--text-shadow);
-} */
 .task-list-item-checkbox:checked {
   border: none;
   transform: unset;
@@ -783,10 +779,6 @@ li[data-task="!"] > .task-list-item-checkbox,
   background-color: var(--note-link-hover-bg-color);
   border-radius: var(--radius-small);
   transition: all 200ms ease-in;
-}
-
-.popover {
-  box-shadow: var(--shadow-small);
 }
 
 /* #region *.......................... URL */

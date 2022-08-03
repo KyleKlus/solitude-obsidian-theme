@@ -27,10 +27,6 @@
   transition: all 200ms ease-in;
 }
 
-.popover {
-  box-shadow: var(--shadow-small);
-}
-
 /* #region *.......................... URL */
 .cm-s-obsidian span.cm-formatting.cm-url,
 .external-link,

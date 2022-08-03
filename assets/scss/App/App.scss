@@ -22,10 +22,16 @@ body:is(.has-custom-background) {
 
 /* #region *.......................... Icons & buttons */
 
+svg.folder {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 290 290"%3E%3Cpath fill="white" d="M216 72h-85.3l-27.8-20.8a15.6 15.6 0 0 0-9.6-3.2H40a16 16 0 0 0-16 16v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V88a16 16 0 0 0-16-16ZM93.3 96H40V64h53.3l21.4 16l-21.4 16M216 200H40v-88h53.3a15.6 15.6 0 0 0 9.6-3.2L130.7 88H216Z"%2F%3E%3C%2Fsvg%3E');
+    background-size: 18px;
+    background-repeat: no-repeat;
+}
+
 button:hover {
     transform: scale(1.03);
     transition: all 200ms ease-in;
-    box-shadow: var(--shadow-small);
+    box-shadow: var(--shadow-medium);
     border-radius: var(--radius-small);
 }
 
@@ -44,15 +50,13 @@ button:hover {
     transition: all 200ms ease-out;
 }
 
-.edit-block-button,
-.modal-close-button{
+.edit-block-button{
     padding: 0px 3px 0px 3px;
     border-radius: var(--radius-big);
     transition: transform 200ms ease-out;
 }
 
-.edit-block-button:hover,
-.modal-close-button:hover{
+.edit-block-button:hover{
     color: var(--text-normal);
     background-color: var(--main-accent);
     transform: scale(1.1);

@@ -105,7 +105,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
   border-bottom: 2px solid var(--main-accent-dark);
   background-color: var(--bg-darkest);
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-big);
 }
 
 .view-header-icon svg path {
@@ -133,7 +133,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 .view-header {
   background-color: var(--bg-darkest);
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-medium-down);
 }
 
 .view-header-title-container:after {
@@ -143,7 +143,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 /* #endregion | View Header  */
 .workspace-split.mod-vertical > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-horizontal),
 .workspace-split .mod-horizontal > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-vertical) {
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-big);
 }
 
 .workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
@@ -235,14 +235,8 @@ body:not(.is-mobile) .workspace-split.mod-root {
 }
 
 .workspace-tab-container-inner {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow-small);
   height: 24px;
-}
-
-svg.folder {
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="white" d="M216 72h-85.3l-27.8-20.8a15.6 15.6 0 0 0-9.6-3.2H40a16 16 0 0 0-16 16v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V88a16 16 0 0 0-16-16ZM93.3 96H40V64h53.3l21.4 16l-21.4 16M216 200H40v-88h53.3a15.6 15.6 0 0 0 9.6-3.2L130.7 88H216Z"%2F%3E%3C%2Fsvg%3E');
-  background-size: 18px;
-  background-repeat: no-repeat;
 }
 
 .workspace-tab-header-inner-icon .folder path {
@@ -254,12 +248,14 @@ svg.folder {
   height: fit-content;
   justify-content: center;
   padding: 8px;
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-medium-down);
 }
 
 .workspace-tab-header.is-active {
   background-color: var(--interactive-hover);
   border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-small);
+  z-index: 10;
 }
 
 .workspace-tabs .workspace-leaf.mod-active,
@@ -283,7 +279,7 @@ svg.folder {
 .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
   background-color: var(--interactive-hover);
   transform: scale(1.05);
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-medium);
   transition: all 200ms ease-in;
 }
 
@@ -549,7 +545,7 @@ body:is(.is-mobile) .callout {
 .callout {
   margin-left: 5% !important;
   margin-right: 5% !important;
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-medium);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -564,7 +560,7 @@ body:is(.is-mobile) .callout {
 
 .markdown-source-view.mod-cm6 .callout,
 .markdown-preview-view .callout {
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-medium);
   transform: translate3d(0px, -3px, 0px);
 }
 
@@ -890,14 +886,10 @@ li.task-list-item::marker {
   filter: none;
   border-radius: var(--radius-big);
   background-color: var(--bg-note);
-  /* box-shadow: var(--shadow-small); */
   transition: all 150ms ease-out 0s;
   transform: rotate(-180deg);
 }
 
-/* .HyperMD-task-line span {
-text-shadow: var(--text-shadow);
-} */
 .task-list-item-checkbox:checked {
   border: none;
   transform: unset;
@@ -1078,10 +1070,6 @@ li[data-task="!"] > .task-list-item-checkbox,
   background-color: var(--note-link-hover-bg-color);
   border-radius: var(--radius-small);
   transition: all 200ms ease-in;
-}
-
-.popover {
-  box-shadow: var(--shadow-small);
 }
 
 /* #region *.......................... URL */
@@ -1496,7 +1484,7 @@ a.external-link[href*="reactjs.org"]::before {
 .nav-buttons-container .nav-action-button {
   background-color: var(--interactive-normal);
   border: 1px solid transparent;
-  padding: 4px 15px 0px 15px;
+  padding: 0px 15px 0px 15px;
   box-shadow: var(--shadow-small);
   border-radius: var(--radius-small);
   transition: all 200ms ease-out;
@@ -1514,7 +1502,7 @@ a.external-link[href*="reactjs.org"]::before {
 }
 
 .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
-.workspace-leaf.mod-active .nav-file.has-focus {
+.workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   background-color: transparent;
   border: none;
 }

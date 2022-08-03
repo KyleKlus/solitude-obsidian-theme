@@ -18,8 +18,9 @@
 }
 
 .modal-bg {
-  background-color: rgba(41, 41, 41, 0.5);
-  backdrop-filter: blur(5px);
+  background-color: rgba(12, 12, 12, 0.85);
+  backdrop-filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 .suggestion-item.is-selected {
@@ -29,7 +30,7 @@
 .modal,
 .prompt,
 .popover {
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-big);
   background-color: var(--bg-darker);
   border: 1px solid var(--border-highlight-color);
   border-radius: var(--radius-big);
@@ -54,13 +55,19 @@
 .modal-close-button {
   right: 8px;
   padding: 0px 3px;
+  transition: all 200ms ease-out;
+}
+
+.modal-close-button:hover {
+  transform: scale(1.1);
   color: var(--main-accent);
+  transition: all 200ms ease-in;
 }
 
 /* #endregion */
 /* #region *.......................... Theme modal */
 .community-theme {
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-medium);
 }
 
 .community-theme .community-theme-info {
