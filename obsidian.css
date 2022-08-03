@@ -1155,7 +1155,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
 }
 
 .markdown-preview-section {
-  background-color: var(--bg-embed);
+  background-color: transparent;
   font-size: var(--note-font-size);
 }
 
