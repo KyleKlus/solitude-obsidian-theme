@@ -1,0 +1,80 @@
+/* #region *.......................... Workspace-Tabs */
+.workspace-tab-header-container,
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-container-before.is-before-active,
+.workspace-tab-container-after.is-after-active,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active,
+.workspace-tabs {
+  background-color: transparent;
+}
+
+.workspace-tab-container-inner,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header {
+  background-color: var(--interactive-normal);
+  border-radius: var(--radius-medium);
+  color: var(--text-normal);
+}
+
+.workspace-tab-container-inner {
+  box-shadow: var(--shadow-small);
+  height: 24px;
+}
+
+.workspace-tab-header-inner-icon .folder path {
+  display: none;
+}
+
+.workspace-tab-header-container {
+  background-color: var(--bg-darkest);
+  height: fit-content;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: var(--shadow-medium-down);
+}
+
+.workspace-tab-header.is-active {
+  background-color: var(--interactive-hover);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-small);
+  z-index: 10;
+}
+
+.workspace-tabs .workspace-leaf.mod-active,
+.workspace-tabs .workspace-leaf {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.workspace-tabs {
+  padding: 0;
+}
+
+.workspace-tab-container-inner .workspace-tab-header-inner,
+.workspace-tab-header.is-active .workspace-tab-header-inner {
+  color: var(--text-normal);
+  border-radius: var(--radius-medium);
+  transition: all 200ms ease-out;
+}
+
+.workspace-tab-container-inner .workspace-tab-header-inner:hover,
+.workspace-tab-header.is-active .workspace-tab-header-inner:hover {
+  background-color: var(--interactive-hover);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-medium);
+  transition: all 200ms ease-in;
+  z-index: 11;
+}
+
+.nav-buttons-container .nav-action-button,
+.workspace-tab-header,
+.workspace-tab-header.is-active {
+  color: var(--main-accent);
+}
+
+/* #endregion | Workspace-Tabs */
+
+/*# sourceMappingURL=Workspace-Tab.css.map */

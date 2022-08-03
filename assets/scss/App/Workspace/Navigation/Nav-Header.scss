@@ -8,7 +8,8 @@
 .nav-buttons-container .nav-action-button {
     background-color: var(--interactive-normal);
     border: 1px solid transparent;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 10px 0px 10px;
+    max-height: 30px;
     box-shadow: var(--shadow-small);
     border-radius: var(--radius-small);
     transition: all 200ms ease-out;
@@ -16,7 +17,8 @@
 
 .nav-buttons-container .nav-action-button:hover {
     background-color: var(--interactive-hover);
-    transform: scale(1.07);
+    box-shadow: var(--shadow-medium);
+    transform: scale(1.01);
     transition: all 200ms ease-in;
 }
 
@@ -27,6 +29,10 @@
 
 .nav-buttons-container .nav-action-button {
     color: var(--text-normal);
+}
+
+.workspace-leaf-content .nav-action-button svg {
+    margin-top: 1px;
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-action-button svg path,
