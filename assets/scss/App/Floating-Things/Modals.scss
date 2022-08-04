@@ -35,15 +35,15 @@
 }
 
 .popover .markdown-embed .markdown-embed-link {
-    color: var(--text-normal);
     padding: 4px 5px 0px 5px;
-    transition: all 200ms ease-out;
+    color: var(--text-normal);
     box-shadow: var(--button-shadow);
+    transition: border-color 200ms ease-out;
 }
 
 .popover .markdown-embed .markdown-embed-link:hover {
     border-color: var(--main-accent);
-    transition: all 200ms ease-in;
+    transition: border-color 200ms ease-in;
 }
 
 .community-plugin-readme.markdown-preview-view {
@@ -53,13 +53,15 @@
 .modal-close-button {
     right: 8px;
     padding: 0px 3px;
-    transition: all 200ms ease-out;
+    transition: transform 150ms ease-out,
+                color 150ms ease-out;
 }
 
 .modal-close-button:hover {
     transform: scale(1.1);
     color: var(--main-accent);
-    transition: all 200ms ease-in;
+    transition: transform 150ms ease-in,
+                color 150ms ease-in;
 }
 
 @import 'Theme-Modal.scss';

@@ -41,10 +41,10 @@ body:is(.has-custom-background) {
 
 .titlebar-button {
   max-height: 24px;
-  transition: all 200ms ease-out;
   color: var(--text-faint);
   background-color: transparent;
   opacity: 1;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .titlebar-button.mod-close:hover {
@@ -53,8 +53,8 @@ body:is(.has-custom-background) {
 
 .titlebar-button:hover {
   color: var(--interactive-accent-hover);
-  transform: scale(1.2, 1.2);
-  transition: all 200ms ease-in;
+  transform: scale(1.2);
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 body:is(.apple-eske-buttons-active) .titlebar-button:is(.mod-close, .mod-minimize, .mod-maximize) {
@@ -154,15 +154,15 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
 }
 
 .popover .markdown-embed .markdown-embed-link {
-  color: var(--text-normal);
   padding: 4px 5px 0px 5px;
-  transition: all 200ms ease-out;
+  color: var(--text-normal);
   box-shadow: var(--button-shadow);
+  transition: border-color 200ms ease-out;
 }
 
 .popover .markdown-embed .markdown-embed-link:hover {
   border-color: var(--main-accent);
-  transition: all 200ms ease-in;
+  transition: border-color 200ms ease-in;
 }
 
 .community-plugin-readme.markdown-preview-view {
@@ -172,13 +172,13 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
 .modal-close-button {
   right: 8px;
   padding: 0px 3px;
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .modal-close-button:hover {
   transform: scale(1.1);
   color: var(--main-accent);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 /* #region *.......................... Theme modal */
@@ -241,19 +241,19 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
   border-left: 3px solid var(--bg-darkest);
   font-size: 0.8em;
   padding: 3px 6px 3px 24px;
-  transition: all 200ms ease-out;
+  transition: border-left-color 150ms ease-out, background-color 150ms ease-out;
 }
 
 .modal.mod-settings .vertical-tab-nav-item.is-active {
   border-left-color: var(--main-accent);
   background-color: var(--bg-darker);
-  transition: all 200ms ease-out;
+  transition: border-left-color 150ms ease-in, background-color 150ms ease-in;
 }
 
 .modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover {
-  background-color: var(--main-accent);
-  border-left-color: var(--main-accent);
-  transition: all 200ms ease-in;
+  background-color: var(--bg-darker);
+  border-left-color: var(--bg-darker);
+  transition: border-left-color 150ms ease-in, background-color 150ms ease-in;
 }
 
 .community-plugin-search button.clickable-icon {
@@ -265,20 +265,19 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
 }
 
 .community-plugin-item {
+  border-radius: var(--radius-medium);
   margin: 20px 8px;
-  transition: all 100ms ease-out;
+  transition: box-shadow 100ms ease-out, background-color 100ms ease-out;
 }
 
 .community-plugin-item.is-active {
   box-shadow: var(--shadow-medium);
-  border-radius: var(--radius-medium);
-  transition: all 100ms ease-in;
+  transition: box-shadow 100ms ease-in, background-color 100ms ease-in;
 }
 
 .community-plugin-item:not(.is-active):hover {
   box-shadow: var(--shadow-small);
-  border-radius: var(--radius-medium);
-  transition: all 100ms ease-in;
+  transition: box-shadow 100ms ease-in, background-color 100ms ease-in;
 }
 
 .flair.mod-pop {
@@ -325,62 +324,53 @@ svg.folder {
   background-repeat: no-repeat;
 }
 
+button {
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out, background-color 150ms ease-out;
+}
+
 button:hover {
+  border-color: transparent;
   transform: scale(1.03);
-  transition: all 200ms ease-in;
   box-shadow: var(--shadow-medium);
-  border-radius: var(--radius-small);
+  transition: transform 150ms ease-in, box-shadow 150ms ease-in, background-color 150ms ease-in;
 }
 
 .setting-add-hotkey-button {
   padding: 3px 1px;
-  transition: transform 200ms ease-out;
+  transition: color 100ms ease-out;
 }
 
 .setting-add-hotkey-button:hover {
-  background-color: var(--main-accent);
-  transform: scale(1.08);
-  transition: all 200ms ease-in;
+  background-color: transparent;
+  color: var(--main-accent);
+  transition: color 100ms ease-in;
 }
 
-.clickable-icon {
-  transition: all 200ms ease-out;
-}
-
-.edit-block-button {
-  padding: 0px 3px 0px 3px;
-  border-radius: var(--radius-big);
-  box-shadow: var(--shadow-small);
-  transition: transform 200ms ease-out;
-}
-
-.edit-block-button:hover {
-  color: var(--text-normal);
-  background-color: var(--main-accent);
-  transform: scale(1.1);
-  transition: transform 200ms ease-in, background-color 200ms ease-in;
-}
-
-.setting-editor-extra-setting-button {
-  border-radius: var(--radius-big);
-  padding: 3px;
-  transition: all 200ms ease-out;
-}
-
-.setting-editor-extra-setting-button:hover {
-  box-shadow: var(--shadow-small);
-  color: var(--text-normal);
-  background-color: var(--main-accent);
-  transform: scale(1.1, 1.1);
-  transition: all 200ms ease-in;
-}
-
+.edit-block-button,
 .markdown-source-view.mod-cm6 .edit-block-button {
   top: unset;
   bottom: 2px;
   right: 2px;
-  padding: 1px;
-  transition: all 200ms ease-out;
+  padding: 2px;
+  box-shadow: var(--shadow-small);
+  border-radius: var(--radius-small);
+  transition: transform 200ms ease-out;
+}
+
+.edit-block-button:hover {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in;
+}
+
+.setting-editor-extra-setting-button {
+  color: var(--text-faint);
+  transition: color 100ms ease-out, transform 100ms ease-out;
+}
+
+.setting-editor-extra-setting-button:hover {
+  color: var(--main-accent);
+  transform: scale(1.1);
+  transition: color 100ms ease-in, transform 100ms ease-in;
 }
 
 /* #endregion | Icons */
@@ -388,7 +378,8 @@ button:hover {
 input[type=text],
 input[type=search],
 input[type=email],
-input[type=password], input[type=number],
+input[type=password],
+input[type=number],
 .theme-dark .kanban-plugin__grow-wrap > textarea,
 .theme-dark .kanban-plugin__grow-wrap:after {
   background: var(--bg-darkest);
@@ -396,7 +387,7 @@ input[type=password], input[type=number],
   font-size: 0.8em;
   border-radius: var(--radius-small);
   box-shadow: var(--shadow-small);
-  transition: all 200ms ease-out;
+  transition: border-color 150ms ease-in, background-color 150ms ease-in;
 }
 
 input[type=text]:hover,
@@ -413,7 +404,7 @@ input[type=number]:hover,
 .theme-dark .kanban-plugin__grow-wrap:hover:after {
   border-color: var(--main-accent);
   background-color: var(--bg-darkest);
-  transition: all 200ms ease-in;
+  transition: border-color 150ms ease-in, background-color 150ms ease-in;
 }
 
 input[type=text]:active,
@@ -452,25 +443,25 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
   box-shadow: var(--shadow-small);
   border-radius: var(--radius-small);
   font-size: 0.8em;
-  transition: all 200ms ease-out;
+  transition: border-color 150ms ease-out;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.4' height='292.4'%3E%3Cpath fill='%23666' d='M287 69.4a17.6 17.6 0 0 0-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4A17.6 17.6 0 0 0 0 82.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 95c3.5-3.5 5.4-7.8 5.4-12.8 0-5-1.9-9.2-5.5-12.8z'/%3E%3C/svg%3E");
 }
 
 .dropdown:hover {
-  border: 1px solid var(--main-accent);
-  transition: all 200ms ease-in;
+  border-color: var(--main-accent);
+  transition: border-color 150ms ease-in;
 }
 
 .dropdown option {
   font-weight: normal;
-  background-color: var(--bg-dark);
   border: 1px solid var(--main-accent) !important;
-  transition: all 200ms ease-out;
+  background-color: var(--bg-dark);
+  transition: background-color 150ms ease-out;
 }
 
 .dropdown option:hover {
   background-color: var(--main-accent) !important;
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in;
 }
 
 /* #endregion | 3.4.3. dropdown */
@@ -482,36 +473,36 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
   border-radius: var(--radius-big);
   border: 1px solid transparent;
   padding: 0px 3px 0px 3px;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .checkbox-container:after {
   border-radius: var(--radius-small);
   transform: translate3d(2px, -1px, 0);
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .checkbox-container.is-enabled:after {
   border-radius: var(--radius-small);
   transform: translate3d(18px, -1px, 0);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .checkbox-container:not(.is-enabled):hover {
   border-color: var(--main-accent);
   transform: scale(1.05);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .checkbox-container.is-enabled {
   background-color: var(--main-accent);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .checkbox-container.is-enabled:hover {
   border-color: var(--main-accent-light);
   transform: scale(1.03);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 /* #endregion | Checkbox */
@@ -551,36 +542,36 @@ body .app-container .workspace-ribbon.is-collapsed {
 /* ribbon buttons */
 .side-dock-ribbon-action svg {
   width: 1.05rem;
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .side-dock-ribbon-action {
   color: var(--text-faint);
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .side-dock-ribbon-action:hover {
   color: var(--main-accent-light);
-  transform: scale(1.05, 1.05);
-  transition: all 200ms ease-in;
+  transform: scale(1.05);
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 .workspace-ribbon-collapse-btn {
   padding-top: 20px;
   margin-top: 0;
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .workspace-ribbon-collapse-btn svg {
   stroke-width: 4px;
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .side-dock-ribbon-action:hover,
 .workspace-ribbon-collapse-btn:hover {
   transform: scale(1.05, 1.05);
   color: var(--main-accent-light);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 /* #endregion |4.1. Ribbons */
@@ -639,14 +630,14 @@ body:not(.is-mobile) .workspace-split.mod-root {
   background-repeat: no-repeat;
   background-size: 20px;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="%23a32929" d="M108 60a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm56 16a16 16 0 1 0-16-16a16 16 0 0 0 16 16Zm-72 36a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm-72 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Z"%2F%3E%3C%2Fsvg%3E');
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .view-header-icon svg {
   background-repeat: no-repeat;
   background-size: 20px;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="gray" d="M108 60a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm56 16a16 16 0 1 0-16-16a16 16 0 0 0 16 16Zm-72 36a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm-72 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Z"%2F%3E%3C%2Fsvg%3E');
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .workspace-leaf.mod-active .view-header-title-container::after,
@@ -683,7 +674,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .view-header-icon,
 .view-action {
   color: var(--text-faint);
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .workspace-ribbon-collapse-btn:hover,
@@ -693,19 +684,19 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .view-action:hover {
   transform: scale(1.05, 1.05);
   color: var(--main-accent-light);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 .workspace-leaf-resize-handle {
   background-color: transparent;
   border-color: transparent;
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .workspace-leaf-resize-handle:hover {
   background-color: var(--main-accent-dark);
   border-color: var(--main-accent-dark);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, border-color 150ms ease-in;
 }
 
 .workspace-leaf .view-header,
@@ -795,7 +786,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-tab-header.is-active .workspace-tab-header-inner {
   color: var(--text-normal);
   border-radius: var(--radius-medium);
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, transform 150ms ease-out, box-shadow 150ms ease-out;
 }
 
 .workspace-tab-container-inner .workspace-tab-header-inner:hover,
@@ -803,7 +794,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
   background-color: var(--interactive-hover);
   transform: scale(1.05);
   box-shadow: var(--shadow-medium);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, transform 150ms ease-in, box-shadow 150ms ease-in;
   z-index: 11;
 }
 
@@ -829,19 +820,19 @@ body:not(.is-mobile) .workspace-split.mod-root {
   max-height: 30px;
   box-shadow: var(--shadow-small);
   border-radius: var(--radius-small);
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, box-shadow 150ms ease-out, transform 150ms ease-out;
 }
 
 .nav-buttons-container .nav-action-button:hover {
   background-color: var(--interactive-hover);
   box-shadow: var(--shadow-medium);
   transform: scale(1.01);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button.is-active {
   background-color: var(--interactive-hover);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button {
@@ -911,7 +902,7 @@ svg.bullet-list {
   padding: 0px 0px 0px 5px;
   font-size: 14px;
   align-items: center;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .nav-folder.mod-root > .nav-file-title,
@@ -944,7 +935,7 @@ body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-fol
   padding-left: 10px;
   box-shadow: none;
   transform: none;
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .nav-folder.mod-root > .nav-file-title:hover,
@@ -963,7 +954,7 @@ body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-fol
   border-left: 1px solid var(--main-accent);
   margin: 5px 16px;
   padding-left: 8px;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .nav-folder-collapse-indicator {
@@ -1004,7 +995,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
   border-radius: var(--radius-small);
   background-color: var(--bg-black);
   box-shadow: var(--shadow-small);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 /* Didn't find another way to overwrite hover, sry */
@@ -1016,7 +1007,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
   color: var(--text-on-accent);
   box-shadow: var(--shadow-small);
   transform: translate(1px, -1px);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .workspace-leaf.mod-active .nav-folder.has-focus,
@@ -1035,14 +1026,14 @@ body:not(.is-grabbing) .nav-folder.has-focus {
 .tree-item-self,
 .search-result-file-match,
 .tree-item-flair {
-  transition: all 200ms ease-out;
+  transition: box-shadow 150ms ease-out;
 }
 
 .tree-item-self.is-clickable:hover,
 .search-result-file-match:hover,
 .tree-item-flair:hover {
   box-shadow: var(--shadow-small);
-  transition: all 200ms ease-in;
+  transition: box-shadow 150ms ease-in;
 }
 
 .tree-item-flair {
@@ -1137,21 +1128,21 @@ body:is(.gutter-is-moved) .cm-contentContainer {
 
 body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover { /* Line Hover */
   background-color: var(--bg-line-hover);
-  transition: all 200ms;
   border-radius: var(--radius-medium);
+  transition: background-color 150ms ease-in;
 }
 
 body:not(.is-export-mode):is(.is-active-effect-on) div.cm-active.cm-line {
   background-color: var(--bg-line-active);
   box-shadow: var(--shadow-small);
   transform: translate3d(0px, -1px, 0px);
-  transition: all 200ms;
   border-radius: var(--radius-medium);
+  transition: background-color 150ms ease-in, transform 150ms ease-in;
 }
 
 body:not(.is-export-mode) body:is(.is-hover-effect-on) .HyperMD-quote.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line:hover {
   background-color: var(--bg-line-hover);
-  transition: all 200ms;
+  transition: background-color 150ms ease-in;
 }
 
 /* #endregion | Lines  */
@@ -1377,14 +1368,12 @@ body:is(.custom-bullet-point-enabled) .markdown-embed .cm-formatting.cm-formatti
   right: 2px;
   top: 2px;
   transform: scale(0.8);
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .markdown-embed-link:hover, .file-embed-link:hover {
-  right: 2px;
-  top: 2px;
   transform: scale(1);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 body:is(.show-embed) .markdown-embed,
@@ -1533,14 +1522,14 @@ a.tag {
   background-color: var(--bg-tag);
   padding: 1px 6px;
   border-radius: var(--radius-big);
-  transition: all 200ms ease-out;
+  transition: color 150ms ease-out, background-color 150ms ease-out;
 }
 
 .cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover,
 a.tag:hover {
   color: var(--tag-hover-color);
   background-color: var(--bg-tag-hover);
-  transition: all 200ms ease-in;
+  transition: color 150ms ease-in, background-color 150ms ease-in;
 }
 
 .theme-dark .token.property,
@@ -1659,26 +1648,26 @@ li.task-list-item::marker {
   filter: none;
   border-radius: var(--radius-big);
   background-color: var(--bg-note);
-  transition: all 150ms ease-out 0s;
   transform: rotate(-180deg);
+  transition: all 150ms ease-out 0s;
 }
 
 .task-list-item-checkbox:checked {
   border: none;
   transform: unset;
   background-color: var(--interactive-accent);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, border-color 150ms ease-in, background-color 150ms ease-in;
 }
 
 .task-list-item-checkbox:not(:checked):hover {
   border-color: var(--interactive-accent);
   transform: scale(1.2), rotate(-180deg);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, border-color 150ms ease-in;
 }
 
 .task-list-item-checkbox:checked:hover {
   transform: scale(1.2);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .task-list-item-checkbox:checked::before {
@@ -1690,7 +1679,7 @@ li.task-list-item::marker {
   width: 14px;
   left: 2px;
   right: 2px;
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 ul > li.task-list-item {
@@ -1703,7 +1692,7 @@ li[data-task=X] > .task-list-item-checkbox:checked::before,
 .task-list-item-checkbox[data-task=x]::before,
 .task-list-item-checkbox[data-task=X]::before {
   content: " ";
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
   top: 2px;
   bottom: 2px;
   background-color: white;
@@ -1786,7 +1775,7 @@ li[data-task="/"] > .task-list-item-checkbox,
 li[data-task="/"] > .task-list-item-checkbox:hover,
 .task-list-item-checkbox[data-task="/"]:hover {
   transform: rotate(90deg) scale(1.2);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 /* '?' for question/more info task ('- [?]') */
@@ -1824,7 +1813,7 @@ li[data-task="!"] > .task-list-item-checkbox,
   color: var(--note-link-color);
   text-decoration: none;
   border-bottom: 1px solid var(--main-accent);
-  transition: all 200ms ease-out;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .cm-s-obsidian span.cm-formatting.cm-url,
@@ -1839,8 +1828,9 @@ li[data-task="!"] > .task-list-item-checkbox,
 .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link:hover, .is-unresolved:hover),
 .markdown-preview-section a.internal-link:hover {
   color: var(--note-link-hover-color);
+  border-color: var(--main-accent);
   text-decoration: none;
-  transition: all 200ms ease-in;
+  transition: color 150ms ease-in, border-color 150ms ease-in;
 }
 
 /* #region *.......................... URL */
@@ -1852,12 +1842,12 @@ li[data-task="!"] > .task-list-item-checkbox,
   color: var(--url-color);
   text-decoration: none;
   border-bottom: 1px solid var(--url-color);
-  transition: all 200ms ease-out;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .cm-s-obsidian span.cm-url:not(.cm-link) {
   color: var(--text-faint);
-  transition: all 200ms ease-out;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .cm-s-obsidian span.cm-url:hover,
@@ -1866,7 +1856,8 @@ li[data-task="!"] > .task-list-item-checkbox,
 .community-plugin-info a:hover {
   text-decoration: none;
   color: var(--url-hover-color);
-  transition: all 200ms ease-in;
+  border-color: var(--url-hover-color);
+  transition: color 150ms ease-in, border-color 150ms ease-in;
 }
 
 /* #endregion | URL */
@@ -2270,20 +2261,20 @@ body:is(.dark-statusbar-enabled) .status-bar-item {
 }
 
 .status-bar-item {
-  color: var(--text-normal);
-  background-color: var(--bg-darker);
-  border-radius: var(--radius-medium);
-  max-height: 22px;
   margin: 4px calc(var(--panel-spacing) / 2);
   padding: 0px 5px;
+  max-height: 22px;
+  border-radius: var(--radius-medium);
   box-shadow: var(--text-shadow);
-  transition: all 200ms ease-out;
+  background-color: var(--bg-darker);
+  color: var(--text-normal);
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .status-bar-item.mod-clickable:hover {
   color: var(--interactive-accent-hover);
   transform: scale(1.04, 1.04);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 /* #endregion */

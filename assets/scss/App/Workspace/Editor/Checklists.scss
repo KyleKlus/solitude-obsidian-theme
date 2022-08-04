@@ -13,26 +13,29 @@
     filter: none;
     border-radius: var(--radius-big);
     background-color: var(--bg-note);
-    transition: all 150ms ease-out 0s;
     transform: rotate(-180deg);
+    transition: all 150ms ease-out 0s;
 }
 
 .task-list-item-checkbox:checked  {
     border: none;
     transform: unset;
     background-color: var(--interactive-accent);
-    transition: all 200ms ease-in;
+    transition: transform 150ms ease-in,
+                border-color 150ms ease-in,
+                background-color 150ms ease-in;
 }
 
 .task-list-item-checkbox:not(:checked):hover {
     border-color: var(--interactive-accent);
     transform: scale(1.2), rotate(-180deg);
-    transition: all 200ms ease-in;
+    transition: transform 150ms ease-in,
+                border-color 150ms ease-in;
 }
 
 .task-list-item-checkbox:checked:hover {
     transform: scale(1.2);
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 .task-list-item-checkbox:checked::before {
@@ -44,10 +47,10 @@
     width:14px;
     left:2px;
     right:2px;
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
-ul>li.task-list-item{
+ul > li.task-list-item{
     font-weight: normal;
 }
 
@@ -56,8 +59,8 @@ li[data-task="x"] > .task-list-item-checkbox:checked::before,
 li[data-task="X"] > .task-list-item-checkbox:checked::before,
 .task-list-item-checkbox[data-task="x"]::before,
 .task-list-item-checkbox[data-task="X"]::before {
-content: ' ';
-    transition: all 200ms ease-in;
+    content: ' ';
+    transition: all 150ms ease-in;
     top: 2px;
     bottom: 2px;
     background-color: white;
@@ -141,7 +144,7 @@ li[data-task="/"] > .task-list-item-checkbox:hover,
 .task-list-item-checkbox[data-task="/"]:hover {
     transform: rotate(90deg)
                 scale(1.2);
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 /* '?' for question/more info task ('- [?]') */

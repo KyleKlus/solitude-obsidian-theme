@@ -28,36 +28,36 @@ body .app-container .workspace-ribbon.is-collapsed {
 /* ribbon buttons */
 .side-dock-ribbon-action svg {
   width: 1.05rem;
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .side-dock-ribbon-action {
   color: var(--text-faint);
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .side-dock-ribbon-action:hover {
   color: var(--main-accent-light);
-  transform: scale(1.05, 1.05);
-  transition: all 200ms ease-in;
+  transform: scale(1.05);
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 .workspace-ribbon-collapse-btn {
   padding-top: 20px;
   margin-top: 0;
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .workspace-ribbon-collapse-btn svg {
   stroke-width: 4px;
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .side-dock-ribbon-action:hover,
 .workspace-ribbon-collapse-btn:hover {
   transform: scale(1.05, 1.05);
   color: var(--main-accent-light);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 /* #endregion |4.1. Ribbons */
@@ -116,14 +116,14 @@ body:not(.is-mobile) .workspace-split.mod-root {
   background-repeat: no-repeat;
   background-size: 20px;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="%23a32929" d="M108 60a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm56 16a16 16 0 1 0-16-16a16 16 0 0 0 16 16Zm-72 36a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm-72 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Z"%2F%3E%3C%2Fsvg%3E');
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .view-header-icon svg {
   background-repeat: no-repeat;
   background-size: 20px;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="gray" d="M108 60a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm56 16a16 16 0 1 0-16-16a16 16 0 0 0 16 16Zm-72 36a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm-72 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Z"%2F%3E%3C%2Fsvg%3E');
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .workspace-leaf.mod-active .view-header-title-container::after,
@@ -160,7 +160,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .view-header-icon,
 .view-action {
   color: var(--text-faint);
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .workspace-ribbon-collapse-btn:hover,
@@ -170,19 +170,19 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .view-action:hover {
   transform: scale(1.05, 1.05);
   color: var(--main-accent-light);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 .workspace-leaf-resize-handle {
   background-color: transparent;
   border-color: transparent;
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .workspace-leaf-resize-handle:hover {
   background-color: var(--main-accent-dark);
   border-color: var(--main-accent-dark);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, border-color 150ms ease-in;
 }
 
 .workspace-leaf .view-header,
@@ -272,7 +272,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .workspace-tab-header.is-active .workspace-tab-header-inner {
   color: var(--text-normal);
   border-radius: var(--radius-medium);
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, transform 150ms ease-out, box-shadow 150ms ease-out;
 }
 
 .workspace-tab-container-inner .workspace-tab-header-inner:hover,
@@ -280,7 +280,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
   background-color: var(--interactive-hover);
   transform: scale(1.05);
   box-shadow: var(--shadow-medium);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, transform 150ms ease-in, box-shadow 150ms ease-in;
   z-index: 11;
 }
 
@@ -306,19 +306,19 @@ body:not(.is-mobile) .workspace-split.mod-root {
   max-height: 30px;
   box-shadow: var(--shadow-small);
   border-radius: var(--radius-small);
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, box-shadow 150ms ease-out, transform 150ms ease-out;
 }
 
 .nav-buttons-container .nav-action-button:hover {
   background-color: var(--interactive-hover);
   box-shadow: var(--shadow-medium);
   transform: scale(1.01);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button.is-active {
   background-color: var(--interactive-hover);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button {
@@ -388,7 +388,7 @@ svg.bullet-list {
   padding: 0px 0px 0px 5px;
   font-size: 14px;
   align-items: center;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .nav-folder.mod-root > .nav-file-title,
@@ -421,7 +421,7 @@ body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-fol
   padding-left: 10px;
   box-shadow: none;
   transform: none;
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .nav-folder.mod-root > .nav-file-title:hover,
@@ -440,7 +440,7 @@ body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-fol
   border-left: 1px solid var(--main-accent);
   margin: 5px 16px;
   padding-left: 8px;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .nav-folder-collapse-indicator {
@@ -481,7 +481,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
   border-radius: var(--radius-small);
   background-color: var(--bg-black);
   box-shadow: var(--shadow-small);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 /* Didn't find another way to overwrite hover, sry */
@@ -493,7 +493,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
   color: var(--text-on-accent);
   box-shadow: var(--shadow-small);
   transform: translate(1px, -1px);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .workspace-leaf.mod-active .nav-folder.has-focus,
@@ -512,14 +512,14 @@ body:not(.is-grabbing) .nav-folder.has-focus {
 .tree-item-self,
 .search-result-file-match,
 .tree-item-flair {
-  transition: all 200ms ease-out;
+  transition: box-shadow 150ms ease-out;
 }
 
 .tree-item-self.is-clickable:hover,
 .search-result-file-match:hover,
 .tree-item-flair:hover {
   box-shadow: var(--shadow-small);
-  transition: all 200ms ease-in;
+  transition: box-shadow 150ms ease-in;
 }
 
 .tree-item-flair {
@@ -614,21 +614,21 @@ body:is(.gutter-is-moved) .cm-contentContainer {
 
 body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover { /* Line Hover */
   background-color: var(--bg-line-hover);
-  transition: all 200ms;
   border-radius: var(--radius-medium);
+  transition: background-color 150ms ease-in;
 }
 
 body:not(.is-export-mode):is(.is-active-effect-on) div.cm-active.cm-line {
   background-color: var(--bg-line-active);
   box-shadow: var(--shadow-small);
   transform: translate3d(0px, -1px, 0px);
-  transition: all 200ms;
   border-radius: var(--radius-medium);
+  transition: background-color 150ms ease-in, transform 150ms ease-in;
 }
 
 body:not(.is-export-mode) body:is(.is-hover-effect-on) .HyperMD-quote.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line:hover {
   background-color: var(--bg-line-hover);
-  transition: all 200ms;
+  transition: background-color 150ms ease-in;
 }
 
 /* #endregion | Lines  */
@@ -854,14 +854,12 @@ body:is(.custom-bullet-point-enabled) .markdown-embed .cm-formatting.cm-formatti
   right: 2px;
   top: 2px;
   transform: scale(0.8);
-  transition: all 200ms ease-out;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .markdown-embed-link:hover, .file-embed-link:hover {
-  right: 2px;
-  top: 2px;
   transform: scale(1);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 body:is(.show-embed) .markdown-embed,
@@ -1010,14 +1008,14 @@ a.tag {
   background-color: var(--bg-tag);
   padding: 1px 6px;
   border-radius: var(--radius-big);
-  transition: all 200ms ease-out;
+  transition: color 150ms ease-out, background-color 150ms ease-out;
 }
 
 .cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover,
 a.tag:hover {
   color: var(--tag-hover-color);
   background-color: var(--bg-tag-hover);
-  transition: all 200ms ease-in;
+  transition: color 150ms ease-in, background-color 150ms ease-in;
 }
 
 .theme-dark .token.property,
@@ -1136,26 +1134,26 @@ li.task-list-item::marker {
   filter: none;
   border-radius: var(--radius-big);
   background-color: var(--bg-note);
-  transition: all 150ms ease-out 0s;
   transform: rotate(-180deg);
+  transition: all 150ms ease-out 0s;
 }
 
 .task-list-item-checkbox:checked {
   border: none;
   transform: unset;
   background-color: var(--interactive-accent);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, border-color 150ms ease-in, background-color 150ms ease-in;
 }
 
 .task-list-item-checkbox:not(:checked):hover {
   border-color: var(--interactive-accent);
   transform: scale(1.2), rotate(-180deg);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, border-color 150ms ease-in;
 }
 
 .task-list-item-checkbox:checked:hover {
   transform: scale(1.2);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .task-list-item-checkbox:checked::before {
@@ -1167,7 +1165,7 @@ li.task-list-item::marker {
   width: 14px;
   left: 2px;
   right: 2px;
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 ul > li.task-list-item {
@@ -1180,7 +1178,7 @@ li[data-task=X] > .task-list-item-checkbox:checked::before,
 .task-list-item-checkbox[data-task=x]::before,
 .task-list-item-checkbox[data-task=X]::before {
   content: " ";
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
   top: 2px;
   bottom: 2px;
   background-color: white;
@@ -1263,7 +1261,7 @@ li[data-task="/"] > .task-list-item-checkbox,
 li[data-task="/"] > .task-list-item-checkbox:hover,
 .task-list-item-checkbox[data-task="/"]:hover {
   transform: rotate(90deg) scale(1.2);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 /* '?' for question/more info task ('- [?]') */
@@ -1301,7 +1299,7 @@ li[data-task="!"] > .task-list-item-checkbox,
   color: var(--note-link-color);
   text-decoration: none;
   border-bottom: 1px solid var(--main-accent);
-  transition: all 200ms ease-out;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .cm-s-obsidian span.cm-formatting.cm-url,
@@ -1316,8 +1314,9 @@ li[data-task="!"] > .task-list-item-checkbox,
 .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link:hover, .is-unresolved:hover),
 .markdown-preview-section a.internal-link:hover {
   color: var(--note-link-hover-color);
+  border-color: var(--main-accent);
   text-decoration: none;
-  transition: all 200ms ease-in;
+  transition: color 150ms ease-in, border-color 150ms ease-in;
 }
 
 /* #region *.......................... URL */
@@ -1329,12 +1328,12 @@ li[data-task="!"] > .task-list-item-checkbox,
   color: var(--url-color);
   text-decoration: none;
   border-bottom: 1px solid var(--url-color);
-  transition: all 200ms ease-out;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .cm-s-obsidian span.cm-url:not(.cm-link) {
   color: var(--text-faint);
-  transition: all 200ms ease-out;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .cm-s-obsidian span.cm-url:hover,
@@ -1343,7 +1342,8 @@ li[data-task="!"] > .task-list-item-checkbox,
 .community-plugin-info a:hover {
   text-decoration: none;
   color: var(--url-hover-color);
-  transition: all 200ms ease-in;
+  border-color: var(--url-hover-color);
+  transition: color 150ms ease-in, border-color 150ms ease-in;
 }
 
 /* #endregion | URL */

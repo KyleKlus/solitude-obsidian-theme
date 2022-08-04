@@ -228,14 +228,14 @@ body:is(.custom-bullet-point-enabled) .markdown-embed .cm-formatting.cm-formatti
     right: 2px;
     top: 2px;
     transform: scale(0.8);
-    transition: all 200ms ease-out;
+    transition: transform 150ms ease-out,
+                color 150ms ease-out;
 }
 
 .markdown-embed-link:hover, .file-embed-link:hover {
-    right: 2px;
-    top: 2px;
     transform: scale(1);
-    transition: all 200ms ease-in;
+    transition: transform 150ms ease-in,
+                color 150ms ease-in;
 }
 
 body:is(.show-embed) .markdown-embed,
@@ -385,14 +385,16 @@ a.tag {
     background-color: var(--bg-tag);
     padding         : 1px 6px;
     border-radius   : var(--radius-big);
-    transition      : all 200ms ease-out;
+    transition      : color 150ms ease-out,
+                        background-color 150ms ease-out;
 }
 
 .cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover,
 a.tag:hover{
     color           : var(--tag-hover-color);
     background-color: var(--bg-tag-hover);
-    transition      : all 200ms ease-in;
+    transition      : color 150ms ease-in,
+                    background-color 150ms ease-in;
 }
 
 .theme-dark .token.property,

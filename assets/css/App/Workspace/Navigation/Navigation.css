@@ -13,19 +13,19 @@
   max-height: 30px;
   box-shadow: var(--shadow-small);
   border-radius: var(--radius-small);
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, box-shadow 150ms ease-out, transform 150ms ease-out;
 }
 
 .nav-buttons-container .nav-action-button:hover {
   background-color: var(--interactive-hover);
   box-shadow: var(--shadow-medium);
   transform: scale(1.01);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button.is-active {
   background-color: var(--interactive-hover);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button {
@@ -95,7 +95,7 @@ svg.bullet-list {
   padding: 0px 0px 0px 5px;
   font-size: 14px;
   align-items: center;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .nav-folder.mod-root > .nav-file-title,
@@ -128,7 +128,7 @@ body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-fol
   padding-left: 10px;
   box-shadow: none;
   transform: none;
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .nav-folder.mod-root > .nav-file-title:hover,
@@ -147,7 +147,7 @@ body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-fol
   border-left: 1px solid var(--main-accent);
   margin: 5px 16px;
   padding-left: 8px;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .nav-folder-collapse-indicator {
@@ -188,7 +188,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
   border-radius: var(--radius-small);
   background-color: var(--bg-black);
   box-shadow: var(--shadow-small);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 /* Didn't find another way to overwrite hover, sry */
@@ -200,7 +200,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
   color: var(--text-on-accent);
   box-shadow: var(--shadow-small);
   transform: translate(1px, -1px);
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .workspace-leaf.mod-active .nav-folder.has-focus,
@@ -219,14 +219,14 @@ body:not(.is-grabbing) .nav-folder.has-focus {
 .tree-item-self,
 .search-result-file-match,
 .tree-item-flair {
-  transition: all 200ms ease-out;
+  transition: box-shadow 150ms ease-out;
 }
 
 .tree-item-self.is-clickable:hover,
 .search-result-file-match:hover,
 .tree-item-flair:hover {
   box-shadow: var(--shadow-small);
-  transition: all 200ms ease-in;
+  transition: box-shadow 150ms ease-in;
 }
 
 .tree-item-flair {

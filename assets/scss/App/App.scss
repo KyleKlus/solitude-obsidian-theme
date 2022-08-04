@@ -28,64 +28,61 @@ svg.folder {
     background-repeat: no-repeat;
 }
 
+button {
+    transition: transform 150ms ease-out,
+                box-shadow 150ms ease-out,
+                background-color 150ms ease-out;
+}
+
 button:hover {
+    border-color: transparent;
     transform: scale(1.03);
-    transition: all 200ms ease-in;
     box-shadow: var(--shadow-medium);
-    border-radius: var(--radius-small);
+    transition: transform 150ms ease-in,
+                box-shadow 150ms ease-in,
+                background-color 150ms ease-in;
 }
 
 .setting-add-hotkey-button{
     padding: 3px 1px;
-    transition: transform 200ms ease-out;
+    transition: color 100ms ease-out;
 }
 
 .setting-add-hotkey-button:hover {
-    background-color: var(--main-accent);
-    transform: scale(1.08);
-    transition: all 200ms ease-in;
+    background-color: transparent;
+    color: var(--main-accent);
+    transition: color 100ms ease-in;
 }
 
-.clickable-icon {
-    transition: all 200ms ease-out;
-}
-
-.edit-block-button{
-    padding: 0px 3px 0px 3px;
-    border-radius: var(--radius-big);
-    box-shadow: var(--shadow-small);
-    transition: transform 200ms ease-out;
-}
-
-.edit-block-button:hover{
-    color: var(--text-normal);
-    background-color: var(--main-accent);
-    transform: scale(1.1);
-    transition: transform 200ms ease-in,
-                background-color 200ms ease-in;
-}
-
-.setting-editor-extra-setting-button {
-    border-radius: var(--radius-big);
-    padding: 3px;
-    transition: all 200ms ease-out;
-}
-
-.setting-editor-extra-setting-button:hover {
-    box-shadow: var(--shadow-small);
-    color: var(--text-normal);
-    background-color: var(--main-accent);
-    transform: scale(1.1, 1.1);
-    transition: all 200ms ease-in;
-}
-
+.edit-block-button,
 .markdown-source-view.mod-cm6 .edit-block-button {
     top: unset;
     bottom: 2px;
     right: 2px;
-    padding: 1px;
-    transition: all 200ms ease-out;
+    padding: 2px;
+    box-shadow: var(--shadow-small);
+    border-radius: var(--radius-small);
+    transition: transform 200ms ease-out;
 }
+
+.edit-block-button:hover{
+    transform: scale(1.1);
+    transition: transform 200ms ease-in;
+}
+
+.setting-editor-extra-setting-button {
+    color: var(--text-faint);
+    transition: color 100ms ease-out,
+                transform 100ms ease-out;
+}
+
+.setting-editor-extra-setting-button:hover {
+    color: var(--main-accent);
+    transform: scale(1.1);
+    transition: color 100ms ease-in,
+                transform 100ms ease-in;
+}
+
 
 /* #endregion | Icons */
 
@@ -94,7 +91,8 @@ button:hover {
 input[type='text'],
 input[type='search'],
 input[type='email'],
-input[type='password'], input[type='number'],
+input[type='password'],
+input[type='number'],
 .theme-dark .kanban-plugin__grow-wrap > textarea,
 .theme-dark .kanban-plugin__grow-wrap:after {
     background: var(--bg-darkest);
@@ -102,7 +100,8 @@ input[type='password'], input[type='number'],
     font-size: 0.8em;
     border-radius: var(--radius-small);
     box-shadow: var(--shadow-small);
-    transition: all 200ms ease-out;
+    transition: border-color 150ms ease-in,
+                background-color 150ms ease-in;
 }
 
 input[type='text']:hover,
@@ -119,7 +118,8 @@ input[type='number']:hover,
 .theme-dark .kanban-plugin__grow-wrap:hover:after {
     border-color: var(--main-accent);
     background-color: var(--bg-darkest);
-    transition: all 200ms ease-in;
+    transition: border-color 150ms ease-in,
+                background-color 150ms ease-in;
 }
 
 input[type='text']:active,
@@ -160,25 +160,25 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
     box-shadow: var(--shadow-small);
     border-radius: var(--radius-small);
     font-size: 0.8em;
-    transition: all 200ms ease-out;
+    transition: border-color 150ms ease-out;
     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.4' height='292.4'%3E%3Cpath fill='%23666' d='M287 69.4a17.6 17.6 0 0 0-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4A17.6 17.6 0 0 0 0 82.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 95c3.5-3.5 5.4-7.8 5.4-12.8 0-5-1.9-9.2-5.5-12.8z'/%3E%3C/svg%3E");
 }
 
 .dropdown:hover{
-    border: 1px solid var(--main-accent);
-    transition: all 200ms ease-in;
+    border-color: var(--main-accent);
+    transition: border-color 150ms ease-in;
 }
 
 .dropdown option {
     font-weight: normal;
-    background-color: var(--bg-dark);
     border: 1px solid var(--main-accent) !important;
-    transition: all 200ms ease-out;
+    background-color: var(--bg-dark);
+    transition: background-color 150ms ease-out;
 }
 
 .dropdown option:hover {
     background-color: var(--main-accent) !important;
-    transition: all 200ms ease-in;
+    transition: background-color 150ms ease-in;
 }
 
 /* #endregion | 3.4.3. dropdown */
@@ -192,36 +192,36 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
     border-radius: var(--radius-big);
     border: 1px solid transparent;
     padding: 0px 3px 0px 3px ;
-    transition: all 200ms ease-out;
+    transition: all 150ms ease-out;
 }
 
 .checkbox-container:after {
     border-radius: var(--radius-small);
     transform: translate3d(2px, -1px, 0);
-    transition: all 200ms ease-out;
+    transition: all 150ms ease-out;
 }
 
 .checkbox-container.is-enabled:after {
     border-radius: var(--radius-small);
     transform: translate3d(18px, -1px, 0);
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 .checkbox-container:not(.is-enabled):hover {
     border-color: var(--main-accent);
     transform: scale(1.05);
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 .checkbox-container.is-enabled {
     background-color: var(--main-accent);
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 .checkbox-container.is-enabled:hover {
     border-color: var(--main-accent-light);
     transform: scale(1.03);
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 /* #endregion | Checkbox */

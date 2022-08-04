@@ -30,36 +30,42 @@ body .app-container .workspace-ribbon.is-collapsed {
 
 .side-dock-ribbon-action svg {
     width: 1.05rem;
-    transition: all 200ms ease-out;
+    transition: transform 150ms ease-out,
+                color 150ms ease-out;
 }
 
 .side-dock-ribbon-action {
     color: var(--text-faint);
-    transition: all 200ms ease-out;
+    transition: transform 150ms ease-out,
+                color 150ms ease-out;
 }
 
 .side-dock-ribbon-action:hover {
     color: var(--main-accent-light);
-    transform: scale(1.05, 1.05);
-    transition: all 200ms ease-in;
+    transform: scale(1.05);
+    transition: transform 150ms ease-in,
+                color 150ms ease-in;
 }
 
 .workspace-ribbon-collapse-btn {
     padding-top: 20px;
     margin-top: 0;
-    transition: all 200ms ease-out;
+    transition: transform 150ms ease-out,
+                color 150ms ease-out;
 }
 
 .workspace-ribbon-collapse-btn svg {
     stroke-width: 4px;
-    transition: all 200ms ease-out;
+    transition: transform 150ms ease-out,
+                color 150ms ease-out;
 }
 
 .side-dock-ribbon-action:hover,
 .workspace-ribbon-collapse-btn:hover{
     transform: scale(1.05, 1.05);
     color: var(--main-accent-light);
-    transition: all 200ms ease-in;
+    transition: transform 150ms ease-in,
+                color 150ms ease-in;
 }
 
 /* #endregion |4.1. Ribbons */
@@ -126,14 +132,14 @@ body:not(.is-mobile) .workspace-split.mod-root {
     background-repeat: no-repeat;
     background-size: 20px;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="%23a32929" d="M108 60a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm56 16a16 16 0 1 0-16-16a16 16 0 0 0 16 16Zm-72 36a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm-72 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Z"%2F%3E%3C%2Fsvg%3E');
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 .view-header-icon svg {
     background-repeat: no-repeat;
     background-size: 20px;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cpath fill="gray" d="M108 60a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm56 16a16 16 0 1 0-16-16a16 16 0 0 0 16 16Zm-72 36a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm-72 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm72 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16Z"%2F%3E%3C%2Fsvg%3E');
-    transition: all 200ms ease-out;
+    transition: all 150ms ease-out;
 }
 
 .workspace-leaf.mod-active .view-header-title-container::after,
@@ -171,7 +177,8 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .view-header-icon,
 .view-action {
     color: var(--text-faint);
-    transition: all 200ms ease-out;
+    transition: transform 150ms ease-out,
+                color 150ms ease-out;
 }
 
 .workspace-ribbon-collapse-btn:hover,
@@ -181,19 +188,22 @@ body:not(.is-mobile) .workspace-split.mod-root {
 .view-action:hover {
     transform: scale(1.05, 1.05);
     color: var(--main-accent-light);
-    transition: all 200ms ease-in;
+    transition: transform 150ms ease-in,
+                color 150ms ease-in;
 }
 
 .workspace-leaf-resize-handle{
     background-color: transparent;
     border-color: transparent;
-    transition: all 200ms ease-out;
+    transition: background-color 150ms ease-out,
+                border-color 150ms ease-out;
 }
 
 .workspace-leaf-resize-handle:hover {
     background-color: var(--main-accent-dark);
     border-color: var(--main-accent-dark);
-    transition: all 200ms ease-in;
+    transition: background-color 150ms ease-in,
+                border-color 150ms ease-in;
 }
 
 .workspace-leaf .view-header,

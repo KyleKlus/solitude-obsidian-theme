@@ -27,10 +27,10 @@
 
 .titlebar-button {
   max-height: 24px;
-  transition: all 200ms ease-out;
   color: var(--text-faint);
   background-color: transparent;
   opacity: 1;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .titlebar-button.mod-close:hover {
@@ -39,8 +39,8 @@
 
 .titlebar-button:hover {
   color: var(--interactive-accent-hover);
-  transform: scale(1.2, 1.2);
-  transition: all 200ms ease-in;
+  transform: scale(1.2);
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 body:is(.apple-eske-buttons-active) .titlebar-button:is(.mod-close, .mod-minimize, .mod-maximize) {

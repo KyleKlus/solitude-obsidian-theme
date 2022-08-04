@@ -62,7 +62,7 @@
 .callout[data-callout="ctrl"] .callout-content a.internal-link:hover  {
     color     : var(--main-accent-light);
     transform: translate3d(1px, -1px, 0px);
-    transition: all 200ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner {
@@ -138,7 +138,7 @@
     border-top-left-radius : var(--radius-medium);
     border-top-right-radius: var(--radius-medium);
     box-shadow: var(--shadow-small);
-    transition: border-radius 200ms ease-out;
+    transition: border-radius 150ms ease-out;
 }
 
 .callout[data-callout="ctrl"] .callout-title:only-child,
@@ -147,7 +147,7 @@
     border: 1px solid var(--border-highlight-color);
     border-radius : var(--radius-medium);
     box-shadow: var(--shadow-small);
-    transition: border-radius 200ms ease-in;
+    transition: border-radius 150ms ease-in;
 }
 
 

@@ -12,19 +12,19 @@
   max-height: 30px;
   box-shadow: var(--shadow-small);
   border-radius: var(--radius-small);
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, box-shadow 150ms ease-out, transform 150ms ease-out;
 }
 
 .nav-buttons-container .nav-action-button:hover {
   background-color: var(--interactive-hover);
   box-shadow: var(--shadow-medium);
   transform: scale(1.01);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button.is-active {
   background-color: var(--interactive-hover);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button {

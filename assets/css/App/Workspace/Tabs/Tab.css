@@ -57,7 +57,7 @@
 .workspace-tab-header.is-active .workspace-tab-header-inner {
   color: var(--text-normal);
   border-radius: var(--radius-medium);
-  transition: all 200ms ease-out;
+  transition: background-color 150ms ease-out, transform 150ms ease-out, box-shadow 150ms ease-out;
 }
 
 .workspace-tab-container-inner .workspace-tab-header-inner:hover,
@@ -65,7 +65,7 @@
   background-color: var(--interactive-hover);
   transform: scale(1.05);
   box-shadow: var(--shadow-medium);
-  transition: all 200ms ease-in;
+  transition: background-color 150ms ease-in, transform 150ms ease-in, box-shadow 150ms ease-in;
   z-index: 11;
 }
 

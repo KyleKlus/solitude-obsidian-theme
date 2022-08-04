@@ -17,20 +17,20 @@ body:is(.dark-statusbar-enabled) .status-bar-item {
 }
 
 .status-bar-item {
-  color: var(--text-normal);
-  background-color: var(--bg-darker);
-  border-radius: var(--radius-medium);
-  max-height: 22px;
   margin: 4px calc(var(--panel-spacing) / 2);
   padding: 0px 5px;
+  max-height: 22px;
+  border-radius: var(--radius-medium);
   box-shadow: var(--text-shadow);
-  transition: all 200ms ease-out;
+  background-color: var(--bg-darker);
+  color: var(--text-normal);
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .status-bar-item.mod-clickable:hover {
   color: var(--interactive-accent-hover);
   transform: scale(1.04, 1.04);
-  transition: all 200ms ease-in;
+  transition: transform 150ms ease-in, color 150ms ease-in;
 }
 
 /* #endregion */

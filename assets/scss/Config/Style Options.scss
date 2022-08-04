@@ -65,6 +65,12 @@ settings:
     type: variable-number
     default: 0.85
   -
+    id: panel-spacing
+    title: Space between notes
+    type: variable-number
+    default: 15
+    format: 'px'
+  -
     id: note-width
     title: Note width (in pixel)
     type: variable-number

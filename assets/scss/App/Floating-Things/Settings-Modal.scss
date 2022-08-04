@@ -7,48 +7,51 @@
 .modal.mod-settings .vertical-tab-header,
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings {
-height: 90vh;
+    height: 90vh;
 }
 
 .modal.mod-settings {
-width: 80vw;
-max-width: 80vw;
+    width: 80vw;
+    max-width: 80vw;
 }
 
 .modal.mod-settings.vertical-tab-header-group {
-padding: 5px 0;
+    padding: 5px 0;
 }
 
 .setting-item-name {
-font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .horizontal-tab-content,
 .modal.mod-settings .vertical-tab-content {
-background-color: var(--bg-darker);
-padding: 5px 30px;
+    background-color: var(--bg-darker);
+    padding: 5px 30px;
 }
 
 .modal.mod-settings .vertical-tab-nav-item {
-border-top: 2px solid transparent;
-border-bottom: 2px solid transparent;
-border-left: 3px solid var(--bg-darkest);
-font-size: 0.8em;
-padding: 3px 6px 3px 24px;
-transition: all 200ms ease-out;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 3px solid var(--bg-darkest);
+    font-size: 0.8em;
+    padding: 3px 6px 3px 24px;
+    transition: border-left-color 150ms ease-out,
+                background-color 150ms ease-out;
 }
 
 .modal.mod-settings .vertical-tab-nav-item.is-active{
-border-left-color: var(--main-accent);
-background-color: var(--bg-darker);
-transition: all 200ms ease-out;
+    border-left-color: var(--main-accent);
+    background-color: var(--bg-darker);
+    transition: border-left-color 150ms ease-in,
+                background-color 150ms ease-in;
 }
 
 .modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover{
-background-color: var(--main-accent);
-border-left-color: var(--main-accent);
-transition: all 200ms ease-in;
+    background-color: var(--bg-darker);
+    border-left-color: var(--bg-darker);
+    transition: border-left-color 150ms ease-in,
+                background-color 150ms ease-in;
 }
 
 .community-plugin-search button.clickable-icon {
@@ -60,20 +63,22 @@ transition: all 200ms ease-in;
 }
 
 .community-plugin-item {
+    border-radius: var(--radius-medium);
     margin: 20px 8px;
-    transition: all 100ms ease-out;
+    transition: box-shadow 100ms ease-out,
+                background-color 100ms ease-out;
 }
 
 .community-plugin-item.is-active {
     box-shadow: var(--shadow-medium);
-    border-radius: var(--radius-medium);
-    transition: all 100ms ease-in;
+    transition: box-shadow 100ms ease-in,
+                background-color 100ms ease-in;
 }
 
 .community-plugin-item:not(.is-active):hover {
     box-shadow: var(--shadow-small);
-    border-radius: var(--radius-medium);
-    transition: all 100ms ease-in;
+    transition: box-shadow 100ms ease-in,
+                background-color 100ms ease-in;
 }
 
 .flair.mod-pop {
