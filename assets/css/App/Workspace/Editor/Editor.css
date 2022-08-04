@@ -797,7 +797,7 @@ li[data-task="!"] > .task-list-item-checkbox,
 .external-link,
 .markdown-source-view.mod-cm6 .cm-link,
 .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote,
-a:not(.view-action, .internal-link, .tag) {
+.community-plugin-info a {
   color: var(--url-color);
   text-decoration: none;
   border-bottom: 1px solid var(--url-color);
@@ -812,7 +812,7 @@ a:not(.view-action, .internal-link, .tag) {
 .cm-s-obsidian span.cm-url:hover,
 .external-link:hover,
 .markdown-source-view.mod-cm6 .cm-link:hover,
-a:not(.view-action, .internal-link, .tag):hover {
+.community-plugin-info a:hover {
   text-decoration: none;
   color: var(--url-hover-color);
   transition: all 200ms ease-in;
