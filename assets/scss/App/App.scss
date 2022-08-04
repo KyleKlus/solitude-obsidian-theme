@@ -53,6 +53,7 @@ button:hover {
 .edit-block-button{
     padding: 0px 3px 0px 3px;
     border-radius: var(--radius-big);
+    box-shadow: var(--shadow-small);
     transition: transform 200ms ease-out;
 }
 
@@ -71,6 +72,7 @@ button:hover {
 }
 
 .setting-editor-extra-setting-button:hover {
+    box-shadow: var(--shadow-small);
     color: var(--text-normal);
     background-color: var(--main-accent);
     transform: scale(1.1, 1.1);
@@ -155,6 +157,7 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 
 .dropdown {
     border: 1px solid var(--main-accent-dark);
+    box-shadow: var(--shadow-small);
     border-radius: var(--radius-small);
     font-size: 0.8em;
     transition: all 200ms ease-out;
@@ -182,10 +185,10 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 
 /* #region *.......................... Checkbox */
 
-
 .checkbox-container {
     color: var(--text-normal);
     background-color: var(--bg-black);
+    box-shadow: var(--shadow-small);
     border-radius: var(--radius-big);
     border: 1px solid transparent;
     padding: 0px 3px 0px 3px ;
@@ -204,7 +207,7 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
     transition: all 200ms ease-in;
 }
 
-.checkbox-container:hover {
+.checkbox-container:not(.is-enabled):hover {
     border-color: var(--main-accent);
     transform: scale(1.05);
     transition: all 200ms ease-in;
@@ -216,7 +219,7 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 }
 
 .checkbox-container.is-enabled:hover {
-    border-color: var(--main-accent-dark);
+    border-color: var(--main-accent-light);
     transform: scale(1.03);
     transition: all 200ms ease-in;
 }

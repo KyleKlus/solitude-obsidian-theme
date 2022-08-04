@@ -16,7 +16,9 @@
     background-color: var(--interactive-hover);
 }
 
-.is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
+.is-mobile .modal,
+.is-mobile .prompt,
+.is-mobile .suggestion-container {
     height: calc(100% - 20px) !important;
     max-height: calc(100% - 20px);
     width: calc(100% - 20px) !important;
@@ -100,6 +102,11 @@ kbd .suggestion-aux {
 
 .community-theme.is-selected .modal-button-container button:hover {
     background-color: var(--main-accent-light);
+}
+
+.community-theme-filters-container button {
+    padding: 5px 10px;
+    margin-bottom: 4px;
 }
 
 /* #endregion */

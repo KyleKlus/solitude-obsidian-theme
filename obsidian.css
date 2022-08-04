@@ -24,7 +24,7 @@
   --bg-darker-translucent: hsla(var(--bg-darker-hsl), var(--conf-bg-transparency));
   --bg-darkest-translucent: hsla(var(--bg-darkest-hsl), var(--conf-bg-transparency));
   --bg-black-translucent: hsla(var(--bg-black-hsl), var(--conf-bg-transparency));
-  --border-highlight-color:hsl(210, 3%, 15%);
+  --border-highlight-color:hsl(220, 4%, 15%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;
   --bg-note: var(--bg-darker-translucent);
@@ -299,7 +299,9 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
   background-color: var(--interactive-hover);
 }
 
-.is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
+.is-mobile .modal,
+.is-mobile .prompt,
+.is-mobile .suggestion-container {
   height: calc(100% - 20px) !important;
   max-height: calc(100% - 20px);
   width: calc(100% - 20px) !important;
@@ -381,6 +383,11 @@ kbd .suggestion-aux {
 
 .community-theme.is-selected .modal-button-container button:hover {
   background-color: var(--main-accent-light);
+}
+
+.community-theme-filters-container button {
+  padding: 5px 10px;
+  margin-bottom: 4px;
 }
 
 /* #endregion */
@@ -471,6 +478,7 @@ button:hover {
 .edit-block-button {
   padding: 0px 3px 0px 3px;
   border-radius: var(--radius-big);
+  box-shadow: var(--shadow-small);
   transition: transform 200ms ease-out;
 }
 
@@ -488,6 +496,7 @@ button:hover {
 }
 
 .setting-editor-extra-setting-button:hover {
+  box-shadow: var(--shadow-small);
   color: var(--text-normal);
   background-color: var(--main-accent);
   transform: scale(1.1, 1.1);
@@ -568,6 +577,7 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 /* #region *.......................... Dropdown */
 .dropdown {
   border: 1px solid var(--main-accent-dark);
+  box-shadow: var(--shadow-small);
   border-radius: var(--radius-small);
   font-size: 0.8em;
   transition: all 200ms ease-out;
@@ -596,6 +606,7 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 .checkbox-container {
   color: var(--text-normal);
   background-color: var(--bg-black);
+  box-shadow: var(--shadow-small);
   border-radius: var(--radius-big);
   border: 1px solid transparent;
   padding: 0px 3px 0px 3px;
@@ -614,7 +625,7 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
   transition: all 200ms ease-in;
 }
 
-.checkbox-container:hover {
+.checkbox-container:not(.is-enabled):hover {
   border-color: var(--main-accent);
   transform: scale(1.05);
   transition: all 200ms ease-in;
@@ -626,7 +637,7 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 }
 
 .checkbox-container.is-enabled:hover {
-  border-color: var(--main-accent-dark);
+  border-color: var(--main-accent-light);
   transform: scale(1.03);
   transition: all 200ms ease-in;
 }
