@@ -13,7 +13,7 @@ settings:
     id: highlight-vault-name
     title: Highlight the vault name within the file explorer
     type: class-toggle
-    default: true
+    default: false
   -
     id: is-hover-effect-on
     title: Highlight lines over which the cursor currently hovers

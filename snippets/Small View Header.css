@@ -1,13 +1,13 @@
-.view-header {
+body:not(.is-mobile) .view-header {
     max-height: 24px;
     align-items: center;
 }
 
-.view-header-title{
+body:not(.is-mobile) .view-header-title{
     font-size: 15px;
 }
 
-.view-content {
+body:not(.is-mobile) .view-content {
     width: 100%;
     height: 100%;
 }

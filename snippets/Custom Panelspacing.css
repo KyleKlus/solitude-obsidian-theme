@@ -1,3 +1,3 @@
-:root{
+body:not(.is-mobile) :root {
     --panel-spacing: 8px;
 }

@@ -1,4 +1,4 @@
-.cm-hmd-frontmatter {
+body:not(.is-mobile) .cm-hmd-frontmatter {
     display: none;
     height: 0px;
 }
