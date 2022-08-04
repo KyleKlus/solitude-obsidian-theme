@@ -1,116 +1,3 @@
-
-/* #region *.......................... Editor */
-
-/* #region *.......................... General */
-
-.document-search {
-    min-height: 32px;
-}
-
-.document-search-container {
-    padding         : 3px 2px 4px 2px;
-    background-color: var(--bg-black);
-}
-
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-.markdown-source-view.mod-cm6.is-readable-line-width :is(:not(.is-rtl) .cm-contentContainer, .is-line-wrap .cm-content),
-.is-line-wrap .cm-line:not(.HyperMD-table-row),
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row){ /* <- Note width */
-    max-width   : var(--note-width);
-    margin-right: auto !important;
-}
-
-.markdown-preview-section {
-    background-color: transparent;
-    font-size       : var(--note-font-size);
-}
-
-.markdown-source-view,
-.markdown-reading-view,
-.cm-line {
-    font-size       : var(--note-font-size);
-    background-color: var(--bg-note);
-}
-
-.workspace-tabs .markdown-source-view,
-.workspace-tabs .markdown-reading-view,
-.workspace-tabs .cm-line  {
-    background-color: transparent;
-}
-
-.markdown-source-view.mod-cm6 .cm-scroller {
-    padding         : 10px;
-    background-color: transparent;
-}
-
-body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-scroller {
-    padding: 0px;
-}
-
-body:is(.gutter-is-moved) .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-scroller > *:first-child {
-    padding-right: 1px;
-    margin-left  : unset;
-}
-
-body:is(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
-    padding-right: 0px;
-    width        : 0px;
-    color        : transparent;
-    display      : none;
-}
-
-body:is(.gutter-is-moved) .cm-contentContainer {
-    margin-left: auto;
-}
-
-.cm-embed-block {
-    color: var(--text-note);
-}
-
-/* #endregion | General  */
-
-/* #region -> Lines */
-
-.markdown-source-view .cm-scroller div.cm-gutters { /* <- Line numbers & dotted divider */
-    flex            : 0 0 auto;
-    background-color: transparent;
-    color           : var(--text-faint) !important;
-    border-right    : 1px dotted var(--text-faint) !important;
-}
-
-.ͼ1 .cm-line{
-    border-left     : 3px solid transparent;
-    border-right    : 3px solid transparent;
-    background-color: transparent;
-}
-
-.markdown-source-view.mod-cm6 .hr{
-    padding-left: 0px;
-}
-
-body:not(.is-export-mode):is(.is-hover-effect-on) .cm-line:hover { /* Line Hover */
-    background-color: var(--bg-line-hover);
-    transition      : all 200ms;
-    border-radius   : var(--radius-medium);
-}
-
-body:not(.is-export-mode):is(.is-active-effect-on) div.cm-active.cm-line /* Active Line */ {
-    background-color: var(--bg-line-active);
-    box-shadow      : var(--shadow-small);
-    transform       : translate3d(0px, -1px, 0px);
-    transition      : all 200ms;
-    border-radius   : var(--radius-medium);
-}
-
-body:not(.is-export-mode) body:is(.is-hover-effect-on) .HyperMD-quote.cm-line.cm-line.cm-line.cm-line.cm-line.cm-line:hover{
-    background-color: var(--bg-line-hover);
-    transition      : all 200ms;
-}
-
-
-
-/* #endregion | Lines  */
-
 /* #region -> Formatting Elements */
 
 /* #region -> Headings */
@@ -388,7 +275,8 @@ body:not(.show-embed) .markdown-embed .markdown-preview-section {
     background-color: var(--bg-quote);
 }
 
-body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote,  .markdown-preview-view blockquote {
+body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote,
+.markdown-preview-view blockquote {
     border          : 0px solid var(--background-primary);
     border-right    : 1px solid var(--background-secondary);
     border-left     : 5px solid var(--main-accent-dark);
@@ -397,6 +285,10 @@ body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-pre
     width           : 90%;
     margin-left     : auto !important;
     margin-right    : auto !important;
+
+}
+
+.markdown-preview-view blockquote {
     box-shadow: var(--shadow-small);
 }
 
@@ -474,12 +366,21 @@ ul ol::before {
 }
 
 .cm-s-obsidian .cm-line .cm-hashtag,
-.cm-s-obsidian .cm-line .cm-formatting.cm-hashtag,
-a.tag{
+a.tag {
     color: var(--tag-color);
+    text-decoration: none;
 }
 
-.cm-s-obsidian .cm-line:not(.cm-formatting).cm-hashtag,
+.cm-s-obsidian .cm-line .cm-formatting.cm-hashtag {
+    font-size: small;
+    text-decoration: none;
+}
+
+.cm-s-obsidian :not(.cm-active).cm-line .cm-formatting.cm-hashtag {
+    display: none;
+}
+
+.cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag,
 .markdown-preview-section a.tag{
     background-color: var(--bg-tag);
     padding         : 1px 6px;
@@ -487,7 +388,7 @@ a.tag{
     transition      : all 200ms ease-out;
 }
 
-.cm-s-obsidian .cm-line:not(.cm-formatting).cm-hashtag:hover,
+.cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover,
 a.tag:hover{
     color           : var(--tag-hover-color);
     background-color: var(--bg-tag-hover);
@@ -546,7 +447,7 @@ strong,
 }
 
 em ,
-.cm-em{
+.cm-em {
     color: var(--italic-color);
 }
 
@@ -594,10 +495,4 @@ li.task-list-item::marker {
     color: #98E342;
 }
 
-/* #endregion |3.5.4.3. Formating Elements  */
-
-@import 'Checklists';
-
-@import 'Links';
-
-/* #endregion |3.5.4. Editor  */
+/* #endregion | Formatting Elements  */

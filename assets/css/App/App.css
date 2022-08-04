@@ -115,7 +115,11 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
 
 /* #endregion */
 /* #region *.......................... Modals */
-/* #region *.......................... General Modals */
+/* #region *.......................... General Floaty things */
+.theme-dark .notice {
+  box-shadow: var(--shadow-big);
+}
+
 .modal button:not(.mod-cta):not(.mod-warning),
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
   background-color: var(--interactive-normal);
@@ -139,8 +143,20 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
   -webkit-filter: blur(2px);
 }
 
-.suggestion-item.is-selected {
-  background-color: var(--bg-line-active);
+.suggestion-item {
+  transition: all 100ms ease-out;
+}
+
+.suggestion-item.is-selected,
+.suggestion-aux {
+  background-color: var(--bg-black);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-small);
+  transition: all 100ms ease-in;
+}
+
+kbd .suggestion-aux {
+  background-color: var(--bg-darkest);
 }
 
 .modal,
@@ -319,12 +335,17 @@ button:hover {
 
 /* #endregion | Icons */
 /* #region *.......................... Inputbox */
-input[type=text], input[type=search], input[type=email], input[type=password], input[type=number],
-.theme-dark .kanban-plugin__grow-wrap > textarea, .theme-dark .kanban-plugin__grow-wrap:after {
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=password], input[type=number],
+.theme-dark .kanban-plugin__grow-wrap > textarea,
+.theme-dark .kanban-plugin__grow-wrap:after {
   background: var(--bg-darkest);
   border: 1px solid var(--main-accent-dark);
   font-size: 0.8em;
   border-radius: var(--radius-small);
+  box-shadow: var(--shadow-small);
   transition: all 200ms ease-out;
 }
 
@@ -444,7 +465,7 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 /* #endregion | Checkbox */
 /* #region *.......................... Tooltips */
 .tooltip {
-  background-color: rgba(0, 0, 0, 0.709);
+  box-shadow: var(--shadow-medium);
 }
 
 /* #endregion | Tooltips */
@@ -593,7 +614,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 /* #endregion | View Header  */
 .workspace-split.mod-vertical > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-horizontal),
 .workspace-split .mod-horizontal > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-vertical) {
-  box-shadow: var(--shadow-big);
+  box-shadow: var(--shadow-medium);
 }
 
 .workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
@@ -834,10 +855,6 @@ svg.bullet-list {
   border: none;
 }
 
-.nav-folder-title {
-  transition: all 200ms ease-out;
-}
-
 .nav-file-title {
   padding: 0px 0px 0px 5px;
   font-size: 14px;
@@ -850,6 +867,14 @@ svg.bullet-list {
   font-size: 20px;
   padding-top: 15px;
   padding-bottom: 10px;
+}
+
+body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  background-color: var(--bg-darkest);
+  padding: 5px;
+  border: 1px solid var(--border-highlight-color);
+  border-radius: var(--radius-big);
+  box-shadow: var(--shadow-small);
 }
 
 .nav-folder-title.is-being-dragged-over {
@@ -1346,7 +1371,8 @@ body:not(.show-embed) .markdown-embed .markdown-preview-section {
   background-color: var(--bg-quote);
 }
 
-body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
+body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote,
+.markdown-preview-view blockquote {
   border: 0px solid var(--background-primary);
   border-right: 1px solid var(--background-secondary);
   border-left: 5px solid var(--main-accent-dark);
@@ -1355,6 +1381,9 @@ body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-pre
   width: 90%;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.markdown-preview-view blockquote {
   box-shadow: var(--shadow-small);
 }
 
@@ -1432,12 +1461,21 @@ ul ol::before {
 }
 
 .cm-s-obsidian .cm-line .cm-hashtag,
-.cm-s-obsidian .cm-line .cm-formatting.cm-hashtag,
 a.tag {
   color: var(--tag-color);
+  text-decoration: none;
 }
 
-.cm-s-obsidian .cm-line:not(.cm-formatting).cm-hashtag,
+.cm-s-obsidian .cm-line .cm-formatting.cm-hashtag {
+  font-size: small;
+  text-decoration: none;
+}
+
+.cm-s-obsidian :not(.cm-active).cm-line .cm-formatting.cm-hashtag {
+  display: none;
+}
+
+.cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag,
 .markdown-preview-section a.tag {
   background-color: var(--bg-tag);
   padding: 1px 6px;
@@ -1445,7 +1483,7 @@ a.tag {
   transition: all 200ms ease-out;
 }
 
-.cm-s-obsidian .cm-line:not(.cm-formatting).cm-hashtag:hover,
+.cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover,
 a.tag:hover {
   color: var(--tag-hover-color);
   background-color: var(--bg-tag-hover);
@@ -1552,7 +1590,7 @@ li.task-list-item::marker {
   color: #98E342;
 }
 
-/* #endregion |3.5.4.3. Formating Elements  */
+/* #endregion | Formatting Elements  */
 /* #region *..........................3.5.4.4. Notation checkboxes */
 .task-list-item-checkbox {
   -webkit-appearance: none;
@@ -1749,8 +1787,6 @@ li[data-task="!"] > .task-list-item-checkbox,
 .markdown-preview-section a.internal-link:hover {
   color: var(--note-link-hover-color);
   text-decoration: none;
-  background-color: var(--note-link-hover-bg-color);
-  border-radius: var(--radius-small);
   transition: all 200ms ease-in;
 }
 
@@ -1762,10 +1798,12 @@ li[data-task="!"] > .task-list-item-checkbox,
   color: var(--url-color);
   text-decoration: none;
   border-bottom: 1px solid var(--url-color);
+  transition: all 200ms ease-out;
 }
 
 .cm-s-obsidian span.cm-url:not(.cm-link) {
   color: var(--text-faint);
+  transition: all 200ms ease-out;
 }
 
 .cm-s-obsidian span.cm-url:hover,
@@ -1773,6 +1811,7 @@ li[data-task="!"] > .task-list-item-checkbox,
 .markdown-source-view.mod-cm6 .cm-link:hover {
   text-decoration: none;
   color: var(--url-hover-color);
+  transition: all 200ms ease-in;
 }
 
 /* #endregion | URL */

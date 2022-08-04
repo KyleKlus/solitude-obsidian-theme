@@ -32,7 +32,14 @@
   --header-6-alignment: left;
   --note-font-size: 1.0rem;
   --active-line-font-size: 1.01rem;
+}
+
+body:is(.theme-font-active) :root {
   --font-monospace: "Fira Code" ;
+}
+
+body:is(.theme-font-active) * {
+  font-family: "Fira Code";
 }
 
 @font-face {

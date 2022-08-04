@@ -24,7 +24,7 @@
   --bg-darker-translucent: hsla(var(--bg-darker-hsl), var(--conf-bg-transparency));
   --bg-darkest-translucent: hsla(var(--bg-darkest-hsl), var(--conf-bg-transparency));
   --bg-black-translucent: hsla(var(--bg-black-hsl), var(--conf-bg-transparency));
-  --border-highlight-color:hsl(210, 15%, 17%);
+  --border-highlight-color:hsl(210, 3%, 15%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;
   --bg-note: var(--bg-darker-translucent);
@@ -125,7 +125,14 @@
   --header-6-alignment: left;
   --note-font-size: 1.0rem;
   --active-line-font-size: 1.01rem;
+}
+
+body:is(.theme-font-active) :root {
   --font-monospace: "Fira Code" ;
+}
+
+body:is(.theme-font-active) * {
+  font-family: "Fira Code";
 }
 
 @font-face {
@@ -143,9 +150,9 @@
   --radius-big: 15px;
   --radius-medium: 10px;
   --radius-small: 5px;
-  --shadow-small: 2px 2px 10px 2px rgb(0 0 0 / 25%), 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
-  --shadow-medium: 3px 3px 10px 3px rgb(0 0 0 / 45%), 2px 2px 3px 2px rgba(0, 0, 0, 0.32);
-  --shadow-big: 4px 4px 10px 4px rgb(0 0 0 / 50%), 3px 3px 7px 3px rgba(0, 0, 0, 0.4);
+  --shadow-small: 2px 1px 10px 2px rgb(0 0 0 / 25%), 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  --shadow-medium: 3px 2px 10px 3px rgb(0 0 0 / 45%), 2px 1px 3px 2px rgba(0, 0, 0, 0.32);
+  --shadow-big: 4px 3px 10px 4px rgb(0 0 0 / 50%), 3px 2px 7px 3px rgba(0, 0, 0, 0.4);
   --shadow-small-down: 0px 2px 10px 2px rgb(0 0 0 / 25%), 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
   --shadow-medium-down: 0px 3px 10px 3px rgb(0 0 0 / 45%), 0px 2px 3px 2px rgba(0, 0, 0, 0.32);
   --shadow-big-down: 0px 4px 10px 4px rgb(0 0 0 / 50%), 0px 3px 7px 3px rgba(0, 0, 0, 0.4);
@@ -158,7 +165,6 @@
   font-feature-settings: "liga" on, "calt" on;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: "Fira Code";
   font-weight: 300;
 }
 
@@ -278,7 +284,11 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
 
 /* #endregion */
 /* #region *.......................... Modals */
-/* #region *.......................... General Modals */
+/* #region *.......................... General Floaty things */
+.theme-dark .notice {
+  box-shadow: var(--shadow-big);
+}
+
 .modal button:not(.mod-cta):not(.mod-warning),
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
   background-color: var(--interactive-normal);
@@ -302,8 +312,20 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
   -webkit-filter: blur(2px);
 }
 
-.suggestion-item.is-selected {
-  background-color: var(--bg-line-active);
+.suggestion-item {
+  transition: all 100ms ease-out;
+}
+
+.suggestion-item.is-selected,
+.suggestion-aux {
+  background-color: var(--bg-black);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-small);
+  transition: all 100ms ease-in;
+}
+
+kbd .suggestion-aux {
+  background-color: var(--bg-darkest);
 }
 
 .modal,
@@ -482,12 +504,17 @@ button:hover {
 
 /* #endregion | Icons */
 /* #region *.......................... Inputbox */
-input[type=text], input[type=search], input[type=email], input[type=password], input[type=number],
-.theme-dark .kanban-plugin__grow-wrap > textarea, .theme-dark .kanban-plugin__grow-wrap:after {
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=password], input[type=number],
+.theme-dark .kanban-plugin__grow-wrap > textarea,
+.theme-dark .kanban-plugin__grow-wrap:after {
   background: var(--bg-darkest);
   border: 1px solid var(--main-accent-dark);
   font-size: 0.8em;
   border-radius: var(--radius-small);
+  box-shadow: var(--shadow-small);
   transition: all 200ms ease-out;
 }
 
@@ -607,7 +634,7 @@ input[type=text], input[type=search], input[type=email], input[type=password], i
 /* #endregion | Checkbox */
 /* #region *.......................... Tooltips */
 .tooltip {
-  background-color: rgba(0, 0, 0, 0.709);
+  box-shadow: var(--shadow-medium);
 }
 
 /* #endregion | Tooltips */
@@ -756,7 +783,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 /* #endregion | View Header  */
 .workspace-split.mod-vertical > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-horizontal),
 .workspace-split .mod-horizontal > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-vertical) {
-  box-shadow: var(--shadow-big);
+  box-shadow: var(--shadow-medium);
 }
 
 .workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
@@ -997,10 +1024,6 @@ svg.bullet-list {
   border: none;
 }
 
-.nav-folder-title {
-  transition: all 200ms ease-out;
-}
-
 .nav-file-title {
   padding: 0px 0px 0px 5px;
   font-size: 14px;
@@ -1013,6 +1036,14 @@ svg.bullet-list {
   font-size: 20px;
   padding-top: 15px;
   padding-bottom: 10px;
+}
+
+body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  background-color: var(--bg-darkest);
+  padding: 5px;
+  border: 1px solid var(--border-highlight-color);
+  border-radius: var(--radius-big);
+  box-shadow: var(--shadow-small);
 }
 
 .nav-folder-title.is-being-dragged-over {
@@ -1509,7 +1540,8 @@ body:not(.show-embed) .markdown-embed .markdown-preview-section {
   background-color: var(--bg-quote);
 }
 
-body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote, .markdown-preview-view blockquote {
+body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote,
+.markdown-preview-view blockquote {
   border: 0px solid var(--background-primary);
   border-right: 1px solid var(--background-secondary);
   border-left: 5px solid var(--main-accent-dark);
@@ -1518,6 +1550,9 @@ body:not(.is-deactivate-normal-quotes) .markdown-source-view.mod-cm6.is-live-pre
   width: 90%;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.markdown-preview-view blockquote {
   box-shadow: var(--shadow-small);
 }
 
@@ -1595,12 +1630,21 @@ ul ol::before {
 }
 
 .cm-s-obsidian .cm-line .cm-hashtag,
-.cm-s-obsidian .cm-line .cm-formatting.cm-hashtag,
 a.tag {
   color: var(--tag-color);
+  text-decoration: none;
 }
 
-.cm-s-obsidian .cm-line:not(.cm-formatting).cm-hashtag,
+.cm-s-obsidian .cm-line .cm-formatting.cm-hashtag {
+  font-size: small;
+  text-decoration: none;
+}
+
+.cm-s-obsidian :not(.cm-active).cm-line .cm-formatting.cm-hashtag {
+  display: none;
+}
+
+.cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag,
 .markdown-preview-section a.tag {
   background-color: var(--bg-tag);
   padding: 1px 6px;
@@ -1608,7 +1652,7 @@ a.tag {
   transition: all 200ms ease-out;
 }
 
-.cm-s-obsidian .cm-line:not(.cm-formatting).cm-hashtag:hover,
+.cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover,
 a.tag:hover {
   color: var(--tag-hover-color);
   background-color: var(--bg-tag-hover);
@@ -1715,7 +1759,7 @@ li.task-list-item::marker {
   color: #98E342;
 }
 
-/* #endregion |3.5.4.3. Formating Elements  */
+/* #endregion | Formatting Elements  */
 /* #region *..........................3.5.4.4. Notation checkboxes */
 .task-list-item-checkbox {
   -webkit-appearance: none;
@@ -1912,8 +1956,6 @@ li[data-task="!"] > .task-list-item-checkbox,
 .markdown-preview-section a.internal-link:hover {
   color: var(--note-link-hover-color);
   text-decoration: none;
-  background-color: var(--note-link-hover-bg-color);
-  border-radius: var(--radius-small);
   transition: all 200ms ease-in;
 }
 
@@ -1925,10 +1967,12 @@ li[data-task="!"] > .task-list-item-checkbox,
   color: var(--url-color);
   text-decoration: none;
   border-bottom: 1px solid var(--url-color);
+  transition: all 200ms ease-out;
 }
 
 .cm-s-obsidian span.cm-url:not(.cm-link) {
   color: var(--text-faint);
+  transition: all 200ms ease-out;
 }
 
 .cm-s-obsidian span.cm-url:hover,
@@ -1936,6 +1980,7 @@ li[data-task="!"] > .task-list-item-checkbox,
 .markdown-source-view.mod-cm6 .cm-link:hover {
   text-decoration: none;
   color: var(--url-hover-color);
+  transition: all 200ms ease-in;
 }
 
 /* #endregion | URL */
@@ -2574,6 +2619,11 @@ settings:
     level: 1
     collapsed: false
   -
+    id: highlight-vault-name
+    title: Highlight the vault name within the file explorer
+    type: class-toggle
+    default: true
+  -
     id: is-hover-effect-on
     title: Highlight lines over which the cursor currently hovers
     type: class-toggle
@@ -2628,6 +2678,11 @@ settings:
     type: variable-number
     default: 700
     format: 'px'
+  -
+    id: theme-font-active
+    title: Use the font provided by the theme
+    type: class-toggle
+    default: true
   -
     id: note-font-size
     title: Editor Font Size (in rem)

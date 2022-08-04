@@ -23,7 +23,7 @@
   --bg-darker-translucent: hsla(var(--bg-darker-hsl), var(--conf-bg-transparency));
   --bg-darkest-translucent: hsla(var(--bg-darkest-hsl), var(--conf-bg-transparency));
   --bg-black-translucent: hsla(var(--bg-black-hsl), var(--conf-bg-transparency));
-  --border-highlight-color:hsl(210, 15%, 17%);
+  --border-highlight-color:hsl(210, 3%, 15%);
   /* #endregion -> General Colors */
   --bg-app: #323c45;
   --bg-note: var(--bg-darker-translucent);

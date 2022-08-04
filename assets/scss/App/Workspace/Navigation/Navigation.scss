@@ -12,10 +12,6 @@
     border: none;
 }
 
-.nav-folder-title {
-    transition: all 200ms ease-out;
-}
-
 .nav-file-title {
     padding: 0px 0px 0px 5px;
     font-size: 14px;
@@ -28,6 +24,14 @@
     font-size: 20px;
     padding-top: 15px;
     padding-bottom: 10px;
+}
+
+body:is(.highlight-vault-name) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+    background-color: var(--bg-darkest);
+    padding: 5px;
+    border: 1px solid var(--border-highlight-color);
+    border-radius: var(--radius-big);
+    box-shadow: var(--shadow-small);
 }
 
 .nav-folder-title.is-being-dragged-over{

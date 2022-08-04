@@ -16,31 +16,39 @@
     --header-1-size: 1.8rem;
     --header-1-weight: bold;
     --header-1-alignment: left;
-    
+
     --header-2-size: 1.65rem;
     --header-2-weight: bold;
     --header-2-alignment: left;
-    
+
     --header-3-size: 1.30rem;
     --header-3-weight: bold;
     --header-3-alignment: left;
-    
+
     --header-4-size: 1.20rem;
     --header-4-weight: bold;
     --header-4-alignment: left;
-    
+
     --header-5-size: 1.12rem;
     --header-5-weight: bold;
     --header-5-alignment: left;
-    
+
     --header-6-size: 1.1rem;
     --header-6-weight: normal;
     --header-6-alignment: left;
-    
+
     --note-font-size: 1.0rem;
     --active-line-font-size: 1.01rem;
 
+
+}
+
+body:is(.theme-font-active) :root {
     --font-monospace: 'Fira Code'
+}
+
+body:is(.theme-font-active) * {
+    font-family: 'Fira Code';
 }
 
 @font-face {

@@ -464,7 +464,11 @@ a.tag {
   color: var(--tag-color);
 }
 
-.cm-s-obsidian .cm-line:not(.cm-formatting).cm-hashtag,
+.cm-s-obsidian .cm-line .cm-formatting.cm-hashtag {
+  display: none;
+}
+
+.cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag,
 .markdown-preview-section a.tag {
   background-color: var(--bg-tag);
   padding: 1px 6px;
@@ -472,7 +476,7 @@ a.tag {
   transition: all 200ms ease-out;
 }
 
-.cm-s-obsidian .cm-line:not(.cm-formatting).cm-hashtag:hover,
+.cm-s-obsidian .cm-line :not(.cm-formatting).cm-hashtag:hover,
 a.tag:hover {
   color: var(--tag-hover-color);
   background-color: var(--bg-tag-hover);
@@ -1142,3 +1146,5 @@ a.external-link[href*="reactjs.org"]::before {
 /* #endregion | URL Link Symbols */
 /* #endregion | Links */
 /* #endregion |3.5.4. Editor  */
+
+/*# sourceMappingURL=Editor.css.map */

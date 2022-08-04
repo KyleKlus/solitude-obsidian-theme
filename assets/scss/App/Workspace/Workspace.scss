@@ -116,7 +116,6 @@ body:not(.is-mobile) .workspace-split.mod-root {
     border-bottom: 2px solid var(--main-accent-dark);
     background-color: var(--bg-darkest);
     box-shadow: var(--shadow-big);
-
 }
 
 .view-header-icon svg path {
@@ -155,7 +154,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 .workspace-split.mod-vertical > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-horizontal),
 .workspace-split .mod-horizontal > :is(.workspace-split, .workspace-leaf):not(.workspace-split .mod-vertical) {
-    box-shadow: var(--shadow-big);
+    box-shadow: var(--shadow-medium);
 }
 
 .workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
@@ -231,7 +230,7 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 @import './Navigation/Navigation.scss';
 
-@import 'Editor';
+@import './Editor/Editor.scss';
 
 @import 'Graph';
 
