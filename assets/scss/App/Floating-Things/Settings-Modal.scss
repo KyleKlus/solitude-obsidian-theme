@@ -51,4 +51,33 @@ border-left-color: var(--main-accent);
 transition: all 200ms ease-in;
 }
 
+.community-plugin-search button.clickable-icon {
+    margin-top: 6px;
+}
+
+.modal-content {
+    border-radius: var(--radius-big);
+}
+
+.community-plugin-item {
+    margin: 20px 8px;
+    transition: all 100ms ease-out;
+}
+
+.community-plugin-item.is-active {
+    box-shadow: var(--shadow-medium);
+    border-radius: var(--radius-medium);
+    transition: all 100ms ease-in;
+}
+
+.community-plugin-item:not(.is-active):hover {
+    box-shadow: var(--shadow-small);
+    border-radius: var(--radius-medium);
+    transition: all 100ms ease-in;
+}
+
+.flair.mod-pop {
+    box-shadow: var(--shadow-small);
+}
+
 /* #endregion */

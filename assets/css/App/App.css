@@ -256,24 +256,58 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
   transition: all 200ms ease-in;
 }
 
+.community-plugin-search button.clickable-icon {
+  margin-top: 6px;
+}
+
+.modal-content {
+  border-radius: var(--radius-big);
+}
+
+.community-plugin-item {
+  margin: 20px 8px;
+  transition: all 100ms ease-out;
+}
+
+.community-plugin-item.is-active {
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--radius-medium);
+  transition: all 100ms ease-in;
+}
+
+.community-plugin-item:not(.is-active):hover {
+  box-shadow: var(--shadow-small);
+  border-radius: var(--radius-medium);
+  transition: all 100ms ease-in;
+}
+
+.flair.mod-pop {
+  box-shadow: var(--shadow-small);
+}
+
 /* #endregion */
 /* #endregion */
-.suggestion-container {
+.suggestion-container,
+.menu {
   box-shadow: var(--shadow-medium);
   border-radius: var(--radius-medium);
   transition: all 200ms ease-out;
 }
 
-.suggestion {
-  padding: 5px;
-}
-
-.suggestion-item {
+.suggestion-item,
+.menu-item {
+  margin: 5px;
   transition: all 100ms ease-out;
 }
 
+.suggestion-item > * {
+  margin: 0px 2px;
+}
+
 .suggestion-item.is-selected,
-.suggestion-aux {
+.menu-item.selected,
+.suggestion-aux,
+.suggestion-hotkey {
   background-color: var(--bg-black);
   border-radius: var(--radius-small);
   box-shadow: var(--shadow-small);
@@ -1814,7 +1848,8 @@ li[data-task="!"] > .task-list-item-checkbox,
 .cm-s-obsidian span.cm-formatting.cm-url,
 .external-link,
 .markdown-source-view.mod-cm6 .cm-link,
-.cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
+.cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote,
+a:not(.view-action, .internal-link, .tag) {
   color: var(--url-color);
   text-decoration: none;
   border-bottom: 1px solid var(--url-color);
@@ -1828,7 +1863,8 @@ li[data-task="!"] > .task-list-item-checkbox,
 
 .cm-s-obsidian span.cm-url:hover,
 .external-link:hover,
-.markdown-source-view.mod-cm6 .cm-link:hover {
+.markdown-source-view.mod-cm6 .cm-link:hover,
+a:not(.view-action, .internal-link, .tag):hover {
   text-decoration: none;
   color: var(--url-hover-color);
   transition: all 200ms ease-in;

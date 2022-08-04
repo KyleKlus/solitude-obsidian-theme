@@ -1,19 +1,24 @@
-.suggestion-container {
+.suggestion-container,
+.menu {
     box-shadow: var(--shadow-medium);
     border-radius: var(--radius-medium);
     transition: all 200ms ease-out;
 }
 
-.suggestion {
-    padding: 5px;
-}
-
-.suggestion-item {
+.suggestion-item,
+.menu-item {
+    margin: 5px;
     transition: all 100ms ease-out;
 }
 
+.suggestion-item > * {
+    margin: 0px 2px;
+}
+
 .suggestion-item.is-selected,
-.suggestion-aux {
+.menu-item.selected,
+.suggestion-aux,
+.suggestion-hotkey{
     background-color: var(--bg-black);
     border-radius: var(--radius-small);
     box-shadow: var(--shadow-small);

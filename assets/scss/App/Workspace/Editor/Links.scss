@@ -28,10 +28,13 @@
 
 /* #region *.......................... URL */
 
+
+
 .cm-s-obsidian span.cm-formatting.cm-url,
 .external-link,
 .markdown-source-view.mod-cm6 .cm-link,
-.cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
+.cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote,
+a:not(.view-action, .internal-link, .tag) {
     color: var(--url-color);
     text-decoration: none;
     border-bottom: 1px solid var(--url-color);
@@ -45,7 +48,8 @@
 
 .cm-s-obsidian span.cm-url:hover,
 .external-link:hover,
-.markdown-source-view.mod-cm6 .cm-link:hover {
+.markdown-source-view.mod-cm6 .cm-link:hover,
+a:not(.view-action, .internal-link, .tag):hover {
     text-decoration: none;
     color: var(--url-hover-color);
     transition: all 200ms ease-in;
