@@ -46,6 +46,7 @@
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner:is(a.internal-link, a.external-link),
 .callout[data-callout="ctrl"] .callout-content:is(a.internal-link, a.external-link) {
     border-radius: var(--radius-small);
+    box-shadow: var(--shadow-small);
     font-size    : 0.83rem;
     display      : inline-block;
     margin-bottom: 2px;
@@ -60,8 +61,7 @@
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner a.internal-link:hover,
 .callout[data-callout="ctrl"] .callout-content a.internal-link:hover  {
     color     : var(--main-accent-light);
-    padding   : 0 2px;
-    transform : scale(1.08, 1.08);
+    transform: translate3d(1px, -1px, 0px);
     transition: all 200ms ease-in;
 }
 
@@ -82,7 +82,7 @@
     margin: 0px 8px;
 }
 
-.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child{
+.callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child {
     grid-row-start: 1;
     grid-row-end: span 1;
     grid-column-start: 1;
@@ -109,12 +109,13 @@
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child:hover {
     background-color: var(--bg-dark);
     border-color: var(--main-accent-light);
-    padding: 1px 6px 1px 3px;
+    box-shadow: var(--shadow-medium);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child):hover  {
     background-color: var(--bg-dark);
     border-color: var(--main-accent-light);
+    box-shadow: var(--shadow-medium);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child::before {
@@ -134,18 +135,19 @@
     background-color: var(--bg-darkest-translucent);
     border: 1px solid var(--border-highlight-color);
     border-bottom: none;
-    /* border-bottom: 1px solid var(--horizontal-line-color); */
     border-top-left-radius : var(--radius-medium);
     border-top-right-radius: var(--radius-medium);
-    box-shadow: var(--shadow-medium);
+    box-shadow: var(--shadow-small);
+    transition: border-radius 200ms ease-out;
 }
 
-.callout[data-callout="ctrl"] .callout-title:only-child {
+.callout[data-callout="ctrl"] .callout-title:only-child,
+.callout[data-callout="ctrl"].is-collapsed .callout-title {
     background-color: var(--bg-darkest-translucent);
-    /* border-bottom: 1px solid var(--horizontal-line-color); */
     border: 1px solid var(--border-highlight-color);
     border-radius : var(--radius-medium);
     box-shadow: var(--shadow-small);
+    transition: border-radius 200ms ease-in;
 }
 
 
