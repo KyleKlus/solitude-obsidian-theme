@@ -31,6 +31,16 @@
     -webkit-filter: blur(2px);
 }
 
+.suggestion-container {
+    box-shadow: var(--shadow-medium);
+    border-radius: var(--radius-medium);
+    transition: all 200ms ease-out;
+}
+
+.suggestion {
+    padding: 5px;
+}
+
 .suggestion-item {
     transition: all 100ms ease-out;
 }

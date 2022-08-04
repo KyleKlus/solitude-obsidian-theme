@@ -145,6 +145,16 @@ body:is(.apple-eske-buttons-active) .titlebar-button.mod-maximize:hover svg {
   -webkit-filter: blur(2px);
 }
 
+.suggestion-container {
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--radius-medium);
+  transition: all 200ms ease-out;
+}
+
+.suggestion {
+  padding: 5px;
+}
+
 .suggestion-item {
   transition: all 100ms ease-out;
 }
@@ -1000,6 +1010,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
 .tree-item-self.is-clickable:hover,
 .search-result-file-match:hover,
 .tree-item-flair:hover {
+  box-shadow: var(--shadow-small);
   transition: all 200ms ease-in;
 }
 

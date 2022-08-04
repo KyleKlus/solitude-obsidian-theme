@@ -225,6 +225,7 @@ body:not(.is-grabbing) .nav-folder.has-focus {
 .tree-item-self.is-clickable:hover,
 .search-result-file-match:hover,
 .tree-item-flair:hover {
+  box-shadow: var(--shadow-small);
   transition: all 200ms ease-in;
 }
 
