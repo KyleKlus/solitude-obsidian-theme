@@ -1,0 +1,169 @@
+.theme-dark .notice {
+  box-shadow: var(--shadow-big);
+}
+
+/* #region *.......................... Modals */
+.modal button:not(.mod-cta):not(.mod-warning),
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
+  background-color: var(--interactive-normal);
+}
+
+.modal button:not(.mod-cta):not(.mod-warning):hover,
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning) :hover {
+  background-color: var(--interactive-hover);
+}
+
+.is-mobile .modal,
+.is-mobile .prompt,
+.is-mobile .suggestion-container {
+  height: calc(100% - 20px) !important;
+  max-height: calc(100% - 20px);
+  width: calc(100% - 20px) !important;
+  max-width: calc(100% - 20px);
+}
+
+.modal-bg {
+  background-color: rgba(12, 12, 12, 0.85);
+  backdrop-filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.modal,
+.prompt,
+.popover {
+  box-shadow: var(--shadow-big);
+  background-color: var(--bg-darker);
+  border: 1px solid var(--border-highlight-color);
+  border-radius: var(--radius-big);
+}
+
+.popover .markdown-embed .markdown-embed-link {
+  color: var(--text-normal);
+  padding: 4px 5px 0px 5px;
+  transition: all 200ms ease-out;
+  box-shadow: var(--button-shadow);
+}
+
+.popover .markdown-embed .markdown-embed-link:hover {
+  border-color: var(--main-accent);
+  transition: all 200ms ease-in;
+}
+
+.community-plugin-readme.markdown-preview-view {
+  font-size: var(--note-font-size);
+}
+
+.modal-close-button {
+  right: 8px;
+  padding: 0px 3px;
+  transition: all 200ms ease-out;
+}
+
+.modal-close-button:hover {
+  transform: scale(1.1);
+  color: var(--main-accent);
+  transition: all 200ms ease-in;
+}
+
+/* #region *.......................... Theme modal */
+.community-theme {
+  box-shadow: var(--shadow-medium);
+}
+
+.community-theme .community-theme-info {
+  flex-grow: 1;
+}
+
+.community-theme div:nth-child(3) {
+  flex-grow: 1;
+}
+
+.community-theme.is-selected .modal-button-container button:hover {
+  background-color: var(--main-accent-light);
+}
+
+.community-theme-filters-container button {
+  padding: 5px 10px;
+  margin-bottom: 4px;
+}
+
+/* #endregion */
+/* #region *.......................... Settings modal */
+.modal.mod-settings div.vertical-tab-content h2 {
+  font-size: 1.4em;
+}
+
+.modal.mod-settings .vertical-tab-header,
+.modal.mod-settings .vertical-tab-content-container,
+.modal.mod-settings {
+  height: 90vh;
+}
+
+.modal.mod-settings {
+  width: 80vw;
+  max-width: 80vw;
+}
+
+.modal.mod-settings.vertical-tab-header-group {
+  padding: 5px 0;
+}
+
+.setting-item-name {
+  font-size: 0.9em;
+}
+
+.modal.mod-settings .vertical-tab-content-container,
+.modal.mod-settings .horizontal-tab-content,
+.modal.mod-settings .vertical-tab-content {
+  background-color: var(--bg-darker);
+  padding: 5px 30px;
+}
+
+.modal.mod-settings .vertical-tab-nav-item {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 3px solid var(--bg-darkest);
+  font-size: 0.8em;
+  padding: 3px 6px 3px 24px;
+  transition: all 200ms ease-out;
+}
+
+.modal.mod-settings .vertical-tab-nav-item.is-active {
+  border-left-color: var(--main-accent);
+  background-color: var(--bg-darker);
+  transition: all 200ms ease-out;
+}
+
+.modal.mod-settings .vertical-tab-nav-item:not(.is-active):hover {
+  background-color: var(--main-accent);
+  border-left-color: var(--main-accent);
+  transition: all 200ms ease-in;
+}
+
+/* #endregion */
+/* #endregion */
+.suggestion-container {
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--radius-medium);
+  transition: all 200ms ease-out;
+}
+
+.suggestion {
+  padding: 5px;
+}
+
+.suggestion-item {
+  transition: all 100ms ease-out;
+}
+
+.suggestion-item.is-selected,
+.suggestion-aux {
+  background-color: var(--bg-black);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-small);
+  transition: all 100ms ease-in;
+}
+
+kbd .suggestion-aux {
+  background-color: var(--bg-darkest);
+}

@@ -1,0 +1,25 @@
+.suggestion-container {
+    box-shadow: var(--shadow-medium);
+    border-radius: var(--radius-medium);
+    transition: all 200ms ease-out;
+}
+
+.suggestion {
+    padding: 5px;
+}
+
+.suggestion-item {
+    transition: all 100ms ease-out;
+}
+
+.suggestion-item.is-selected,
+.suggestion-aux {
+    background-color: var(--bg-black);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-small);
+    transition: all 100ms ease-in;
+}
+
+kbd .suggestion-aux {
+    background-color: var(--bg-darkest);
+}

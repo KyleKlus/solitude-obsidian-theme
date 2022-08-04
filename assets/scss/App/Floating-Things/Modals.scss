@@ -1,0 +1,69 @@
+/* #region *.......................... Modals */
+
+.modal button:not(.mod-cta):not(.mod-warning),
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
+    background-color: var(--interactive-normal);
+}
+
+.modal button:not(.mod-cta):not(.mod-warning):hover,
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning) :hover {
+    background-color: var(--interactive-hover);
+}
+
+.is-mobile .modal,
+.is-mobile .prompt,
+.is-mobile .suggestion-container {
+    height: calc(100% - 20px) !important;
+    max-height: calc(100% - 20px);
+    width: calc(100% - 20px) !important;
+    max-width: calc(100% - 20px);
+}
+
+.modal-bg {
+    background-color: rgba(12, 12, 12, 0.85);
+    backdrop-filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.modal,
+.prompt,
+.popover {
+    box-shadow:  var(--shadow-big);
+    background-color: var(--bg-darker);
+    border: 1px solid var(--border-highlight-color);
+    border-radius: var(--radius-big);
+}
+
+.popover .markdown-embed .markdown-embed-link {
+    color: var(--text-normal);
+    padding: 4px 5px 0px 5px;
+    transition: all 200ms ease-out;
+    box-shadow: var(--button-shadow);
+}
+
+.popover .markdown-embed .markdown-embed-link:hover {
+    border-color: var(--main-accent);
+    transition: all 200ms ease-in;
+}
+
+.community-plugin-readme.markdown-preview-view {
+    font-size: var(--note-font-size);
+}
+
+.modal-close-button {
+    right: 8px;
+    padding: 0px 3px;
+    transition: all 200ms ease-out;
+}
+
+.modal-close-button:hover {
+    transform: scale(1.1);
+    color: var(--main-accent);
+    transition: all 200ms ease-in;
+}
+
+@import 'Theme-Modal.scss';
+
+@import 'Settings-Modal.scss';
+
+/* #endregion */
