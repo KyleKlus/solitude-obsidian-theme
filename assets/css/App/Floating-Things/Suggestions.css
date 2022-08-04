@@ -2,7 +2,6 @@
 .menu {
   box-shadow: var(--shadow-medium);
   border-radius: var(--radius-medium);
-  transition: all 200ms ease-out;
 }
 
 .suggestion-item,
