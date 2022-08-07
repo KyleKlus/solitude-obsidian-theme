@@ -2059,28 +2059,29 @@ li[data-task="!"] > .task-list-item-checkbox,
 .cm-hmd-embed.cm-hmd-internal-link.cm-quote,
 .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link, .is-unresolved),
 .cm-s-obsidian .internal-link,
-.markdown-preview-section a.internal-link {
+.markdown-rendered .internal-link {
   color: var(--note-link-color);
-  text-decoration: none;
-  border-bottom: 1px solid var(--main-accent);
-  transition: color 150ms ease-out, border-color 150ms ease-out;
+  transition: color 100ms ease-out, border-bottom 100ms ease-out;
 }
 
 .cm-s-obsidian span.cm-formatting.cm-url,
 .external-link,
 .markdown-source-view.mod-cm6 .cm-link,
 .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote,
-.cm-s-obsidian .cm-line .cm-underline {
+.cm-s-obsidian .cm-line .cm-underline,
+.markdown-preview-section .internal-link,
+.markdown-rendered .internal-link {
   text-decoration: none;
 }
 
 .cm-hmd-embed.cm-hmd-internal-link.cm-quote:hover,
 .cm-s-obsidian .cm-line :is(.cm-hmd-internal-link:hover, .is-unresolved:hover),
-.markdown-preview-section a.internal-link:hover {
+.markdown-preview-section .internal-link:hover,
+.markdown-rendered .internal-link:hover {
   color: var(--note-link-hover-color);
-  border-color: var(--main-accent);
+  border-bottom: 1px solid var(--note-link-hover-color);
   text-decoration: none;
-  transition: color 150ms ease-in, border-color 150ms ease-in;
+  transition: color 100ms ease-in, border-bottom 100ms ease-in;
 }
 
 /* #region *.......................... URL */
@@ -2091,7 +2092,6 @@ li[data-task="!"] > .task-list-item-checkbox,
 .community-plugin-info a {
   color: var(--url-color);
   text-decoration: none;
-  border-bottom: 1px solid var(--url-color);
   transition: color 150ms ease-out, border-color 150ms ease-out;
 }
 
@@ -2105,8 +2105,8 @@ li[data-task="!"] > .task-list-item-checkbox,
 .markdown-source-view.mod-cm6 .cm-link:hover,
 .community-plugin-info a:hover {
   text-decoration: none;
+  border-bottom: 1px solid var(--url-hover-color);
   color: var(--url-hover-color);
-  border-color: var(--url-hover-color);
   transition: color 150ms ease-in, border-color 150ms ease-in;
 }
 
