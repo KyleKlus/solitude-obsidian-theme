@@ -59,13 +59,13 @@ div#calendar-container td.svelte-egt0yd {
   padding-bottom: 10px;
 }
 
-.theme-dark .fc .fc-button-primary:not(:disabled):active:focus,
-.theme-dark .fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+.workspace .fc .fc-button-primary:not(:disabled):active:focus,
+.workspace .fc .fc-button-primary:not(:disabled).fc-button-active:focus {
   box-shadow: none;
 }
 
-.theme-dark .fc .fc-button-primary:not(:disabled):active,
-.theme-dark .fc .fc-button-primary:not(:disabled).fc-button-active {
+.workspace .fc .fc-button-primary:not(:disabled):active,
+.workspace .fc .fc-button-primary:not(:disabled).fc-button-active {
   box-shadow: var(--shadow-medium);
 }
 
@@ -135,7 +135,7 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
 /* #endregion -> Privacy Glasses */
 /* #region Kanban */
 /* Some deklaration are where input boxes are */
-.theme-dark .kanban-plugin {
+.workspace .kanban-plugin {
   background-color: var(--bg-note);
 }
 
@@ -150,25 +150,25 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
   border: 1px solid var(--background-modifier-border);
 }
 
-.theme-dark .kanban-plugin__lane-header-wrapper {
+.workspace .kanban-plugin__lane-header-wrapper {
   padding: 5px 9px 5px 5px;
 }
 
-.theme-dark .kanban-plugin__lane-items {
+.workspace .kanban-plugin__lane-items {
   padding: 2px;
 }
 
-.kanban-plugin__item-wrapper {
+.workspace .kanban-plugin__item-wrapper {
   box-shadow: var(--shadow-small);
   transition: transform 100ms ease-out;
 }
 
-.theme-dark .kanban-plugin__item-title-wrapper {
+.workspace .kanban-plugin__item-title-wrapper {
   background-color: var(--bg-dark);
   padding: 4px 6px;
 }
 
-.theme-dark .kanban-plugin__item-wrapper:hover {
+.workspace .kanban-plugin__item-wrapper:hover {
   transform: scale(1.01);
   transition: transform 100ms ease-in;
 }
@@ -203,6 +203,10 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
   transition: transform 100ms ease-in, background-color 100ms ease-in;
 }
 
+.theme-dark .kanban-plugin__item button.kanban-plugin__item-prefix-button {
+  padding: 2px;
+}
+
 .kanban-plugin__lane-grip {
   transition: transform 100ms ease-out, color 100ms ease-out;
 }
@@ -211,6 +215,10 @@ body.privacy-glasses.blur-preview :is(.callout-content :is(p, li), .callout-titl
   color: var(--main-accent);
   transform: scale(1.07);
   transition: transform 100ms ease-in, color 100ms ease-in;
+}
+
+.workspace .kanban-plugin__item-tags .kanban-plugin__item-tag {
+  background-color: var(--bg-tag);
 }
 
 /* #endregion | Kanban */

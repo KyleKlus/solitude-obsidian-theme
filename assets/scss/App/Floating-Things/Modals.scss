@@ -20,9 +20,9 @@
 }
 
 .modal-bg {
-    background-color: rgba(12, 12, 12, 0.85);
-    backdrop-filter: blur(2px);
-    -webkit-filter: blur(2px);
+    background-color: rgba(12, 12, 12, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-filter: blur(10px);
 }
 
 .modal,
@@ -48,6 +48,10 @@
 
 .community-plugin-readme.markdown-preview-view {
     font-size: var(--note-font-size);
+}
+
+.modal.mod-image-lightbox {
+    max-height: 90vh;
 }
 
 .modal-close-button {

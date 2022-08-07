@@ -1695,16 +1695,16 @@ a.external-link[href*="reactjs.org"]::before {
   color: var(--main-accent);
 }
 
-.theme-dark .graph-view.color-fill-unresolved {
+.workspace .graph-view.color-fill-unresolved {
   color: var(--main-accent-dark);
   opacity: 0.5;
 }
 
-* .theme-dark .graph-view.color-fill-tag {
+* .workspace .graph-view.color-fill-tag {
   color: var(--tags);
 }
 
-.theme-dark .graph-view.color-fill-attachment {
+.workspace .graph-view.color-fill-attachment {
   color: var(--url-color);
 }
 
