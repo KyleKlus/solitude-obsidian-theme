@@ -104,12 +104,59 @@ settings:
     type: class-toggle
     default: false
   -
+    id: background-colors-settings
+    title: Background Colors (Panels / Workspace)
+    type: heading
+    level: 2
+    collapsed: false
+  -
     id: bg-app
     title: Workspace Background Color
     type: variable-color
     format: hex
     opacity: true
-    default: '#323c45'
+    default: '#263036'
+  -
+    id: bg
+    title: Panel Background Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#212a30'
+  -
+    id: bg-dark
+    title: Panel Background Color Dark
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#1b2327'
+  -
+    id: bg-darker
+    title: Panel Background Color Darker
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#151b1e'
+  -
+    id: bg-darkest
+    title: Panel Background Color Darkest
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#0f1315'
+  -
+    id: bg-black
+    title: Panel Background Color Black
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#080b0c'
+  -
+    id: accent-colors-settings
+    title: Accent Color
+    type: heading
+    level: 2
+    collapsed: false
   -
     id: main-accent
     title: Accent Color
@@ -131,6 +178,12 @@ settings:
     format: hex
     opacity: true
     default: '#521414'
+  -
+    id: markdown-colors-settings
+    title: Markdown Colors
+    type: heading
+    level: 2
+    collapsed: false
   -
     id: bold-color
     title: Bold Text Color
@@ -213,7 +266,7 @@ settings:
     title: Heading Settings
     type: heading
     level: 1
-    collapsed: false
+    collapsed: true
   -
     id: downsize-h-formatter
     title: 'Downsize header formatting symbol'
