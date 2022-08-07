@@ -2,7 +2,8 @@
 
 This is an example snippet, which shows you how to add your own background
 - Use "body:is(.has-custom-background)" instead of just "body" in order to have it compatible with the "Style Settings" plugin option.
-- Replace the url with your own base64 encoded image ( the encoder I used -> https://www.base64-image.de/ )
+- Replace the url with your own base64 encoded image ( the encoder I used -> https://www.base64-image.de/ ) or just simply use the url of an image you found on the internet, but then it will only be availiable if you are online.
+- The image within this snippet is the one I currently use. It was taken by Rahul Pandit and I found it here -> https://www.pexels.com/de-de/foto/schattenbild-der-leute-die-auf-grunem-grasfeld-wahrend-des-sonnenuntergangs-stehen-6246075/.
 
 */
 

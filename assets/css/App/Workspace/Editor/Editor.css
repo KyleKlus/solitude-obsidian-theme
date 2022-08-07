@@ -605,7 +605,7 @@ li.task-list-item::marker {
   cursor: pointer;
   filter: none;
   border-radius: var(--radius-big);
-  background-color: var(--bg-note);
+  background-color: var(--bg-darkest);
   transform: rotate(-180deg);
   transition: all 150ms ease-out 0s;
 }

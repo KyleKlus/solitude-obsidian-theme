@@ -35,7 +35,7 @@
 
     /* #endregion -> General Colors */
 
-    --bg-app: #323c45;
+    --bg-app: hsl(202, 18%, 18%);
 
     --bg-note: var(--bg-darker-translucent);
     --bg-line-hover: var(--bg-black);
@@ -44,8 +44,6 @@
     --bg-embed: var(--bg-darkest);
 
     --horizontal-line-color:#4d5255;
-
-    --bg-task-hover:#202833;
 
     --bg-quote: var(--bg-black);
 

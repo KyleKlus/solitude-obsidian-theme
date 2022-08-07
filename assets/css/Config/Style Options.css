@@ -37,8 +37,8 @@ settings:
     default: false
   -
     id: has-custom-background
-    title: Enable custom background
-    description: Use the provided repo snippet, if you want to have your own picture as a background
+    title: Enable custom background feature
+    description: Use the provided snippet within the github repository, if you want to have your own picture as a background
     type: class-toggle
     default: false
   -

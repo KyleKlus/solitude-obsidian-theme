@@ -25,13 +25,12 @@
   --bg-black-translucent: hsla(var(--bg-black-hsl), var(--conf-bg-transparency));
   --border-highlight-color:hsl(220, 4%, 15%);
   /* #endregion -> General Colors */
-  --bg-app: #323c45;
+  --bg-app: hsl(202, 18%, 18%);
   --bg-note: var(--bg-darker-translucent);
   --bg-line-hover: var(--bg-black);
   --bg-line-active: var(--bg-black);
   --bg-embed: var(--bg-darkest);
   --horizontal-line-color:#4d5255;
-  --bg-task-hover:#202833;
   --bg-quote: var(--bg-black);
   --header-1-color: hsl(233, 21%, 93%);
   --header-2-color: hsl(230, 20%, 92%);
