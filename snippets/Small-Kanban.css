@@ -1,3 +1,12 @@
 body:not(.is-mobile) .kanban-plugin__item-button-wrapper {
     display: none;
 }
+
+body:not(.is-mobile) .kanban-plugin__lane-wrapper {
+    width: 230px;
+    margin-right: 0.5rem;
+}
+
+body:not(.is-mobile) .kanban-plugin__board > div {
+    padding: 0.5rem;
+}

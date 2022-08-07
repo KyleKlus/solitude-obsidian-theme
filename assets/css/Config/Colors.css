@@ -2,16 +2,16 @@
 :root, .theme-dark {
   /* #region -> General Colors */
   --main-accent-dark: hsl(0, 61%, 20%);
-  --main-accent: hsl(0, 60%, 40%);
-  --main-accent-light: hsl(0, 60%, 52%);
+  --main-accent: hsl(0, 61%, 40%);
+  --main-accent-light: hsl(0, 61%, 52%);
   --main-accent-rgb: 163, 41, 41;
   --main-accent-light-rgb: 206, 59, 59;
   --main-accent-dark-rgb: 82, 20, 20;
-  --bg-hsl: 208, 16%, 16%;
-  --bg-dark-hsl: 210, 15%, 13%;
-  --bg-darker-hsl: 204, 14%, 10%;
-  --bg-darkest-hsl: 192, 20%, 7%;
-  --bg-black-hsl: 192, 20%, 5%;
+  --bg-hsl: 205, 18%, 16%;
+  --bg-dark-hsl: 202, 18%, 13%;
+  --bg-darker-hsl: 199, 18%, 10%;
+  --bg-darkest-hsl: 196, 18%, 7%;
+  --bg-black-hsl: 193, 18%, 4%;
   --bg: hsl(var(--bg-hsl));
   --bg-dark: hsl(var(--bg-dark-hsl));
   --bg-darker: hsl(var(--bg-darker-hsl));

@@ -78,7 +78,6 @@
     align-self: center;
     justify-self: center;
     border-bottom-width: 2px;
-    text-shadow: var(--text-shadow);
     margin: 0px 8px;
 }
 
