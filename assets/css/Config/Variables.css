@@ -1,5 +1,5 @@
 /* #region *..........................Variables */ /* #region -> Colors */
-:root, .theme-dark {
+:root .theme-dark {
   /* #region -> General Colors */
   --main-accent-dark: hsl(0, 61%, 20%);
   --main-accent: hsl(0, 61%, 40%);
@@ -60,6 +60,88 @@
   --background-secondary: var(--bg-black); /*Sidebar background*/
   --background-secondary-alt: var(--bg-darkest); /*Sidebar Title background*/
   --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
+  --text-note: var(--text-normal);
+  --text-muted: ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
+  --text-accent: var(--main-accent); /*Links*/
+  --text-accent-hover: var(--main-accent-light); /*Links hover*/
+  --text-faint: #5C5C5C; /*Link brackets color & Gutter Numbers*/
+  --text-highlight-bg: #c939395d; /*Search Matches*/
+  --text-highlight-bg-active: #cc141467; /*Active Search Match (Preview Mode)*/
+  --text-selection: var(--main-accent-dark); /*Text Selections*/
+  --text-selection-color: #caa3a3;
+  --interactive-normal: var(--main-accent-dark); /*Button Color*/
+  --interactive-hover: var(--main-accent); /*Button Hovered Color*/
+  --interactive-accent: var(--main-accent); /*Workspace Note Title Underline*/
+  --interactive-accent-hover: var(--main-accent-light); /*Menu Button Hover*/
+  --interactive-accent-rgb: var(--main-accent-rgb);
+  --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
+  --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
+  --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/
+  --indentation-guide: var(--main-accent);
+  --indentation-guide-active: var(--main-accent-light);
+}
+
+:root .theme-light {
+  /* #region -> General Colors */
+  --main-accent-dark: hsl(0, 61%, 20%);
+  --main-accent: hsl(0, 61%, 40%);
+  --main-accent-light: hsl(0, 61%, 52%);
+  --main-accent-rgb: 163, 41, 41;
+  --main-accent-light-rgb: 206, 59, 59;
+  --main-accent-dark-rgb: 82, 20, 20;
+  --bg-hsl: 205, 18%, 98%;
+  --bg-dark-hsl: 202, 18%, 95%;
+  --bg-darker-hsl: 199, 18%, 89%;
+  --bg-darkest-hsl: 196, 18%, 83%;
+  --bg-black-hsl: 193, 18%, 79%;
+  --bg: hsl(var(--bg-hsl));
+  --bg-dark: hsl(var(--bg-dark-hsl));
+  --bg-darker: hsl(var(--bg-darker-hsl));
+  --bg-darkest: hsl(var(--bg-darkest-hsl));
+  --bg-black: hsl(var(--bg-black-hsl));
+  --conf-bg-transparency: 0.85;
+  --bg-translucent: hsla(var(--bg-hsl), var(--conf-bg-transparency));
+  --bg-dark-translucent: hsla(var(--bg-dark-hsl), var(--conf-bg-transparency));
+  --bg-darker-translucent: hsla(var(--bg-darker-hsl), var(--conf-bg-transparency));
+  --bg-darkest-translucent: hsla(var(--bg-darkest-hsl), var(--conf-bg-transparency));
+  --bg-black-translucent: hsla(var(--bg-black-hsl), var(--conf-bg-transparency));
+  --border-highlight-color:hsl(220, 4%, 15%);
+  /* #endregion -> General Colors */
+  --bg-app: hsl(202, 18%, 98%);
+  --bg-note: var(--bg-darker-translucent);
+  --bg-line-hover: var(--bg-black);
+  --bg-line-active: var(--bg-black);
+  --bg-embed: var(--bg-darkest);
+  --horizontal-line-color:#4d5255;
+  --bg-quote: var(--bg-black);
+  --header-1-color: hsl(233, 21%, 4%);
+  --header-2-color: hsl(230, 20%, 4%);
+  --header-3-color: hsl(230, 20%, 4%);
+  --header-4-color: hsl(231, 21%, 10%);
+  --header-5-color: hsl(230, 20%, 10%);
+  --header-6-color: hsl(230, 20%, 10%);
+  --bg-highlight-color:#afe400;
+  --highlight-text-color:#000000;
+  --bold-color: #2487e4;
+  --italic-color: #59dbb4;
+  --math-text-color:#5e90c9;
+  --url-color: #40bcdb;
+  --url-hover-color: #6fe2ff;
+  --note-link-color: var(--main-accent);
+  --note-link-hover-color: var(--main-accent-light);
+  --note-link-hover-bg-color: var(--bg-black-translucent);
+  --tag-color:#95b4c2;
+  --tag-hover-color: #27cbd1;
+  --bg-tag:#16375c;
+  --bg-tag-hover: #10253f;
+  --graph-line-color:#7a7a7a;
+  /* Overridden Obsidian Variables */
+  --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
+  --background-primary: var(--bg-dark); /*Note background*/
+  --background-primary-alt: var(--bg-darker); /*Note Title background active*/
+  --background-secondary: var(--bg-black); /*Sidebar background*/
+  --background-secondary-alt: var(--bg-darkest); /*Sidebar Title background*/
+  --text-normal: hsl(230, 20%, 4%); /*Text body of note*/
   --text-note: var(--text-normal);
   --text-muted: ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--main-accent); /*Links*/
