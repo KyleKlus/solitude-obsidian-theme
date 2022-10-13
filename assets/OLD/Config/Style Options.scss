@@ -1,0 +1,495 @@
+/* #region *.......................... Style Settings Plugin */
+
+/* @settings
+name: Red Solitude Dark (Still Fixing the theme)
+id: red-solitude-dark
+settings:
+  -
+    id: extra-theme-features
+    title: Extra Theme Features
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: highlight-vault-name
+    title: Highlight the vault name within the file explorer
+    type: class-toggle
+    default: false
+  -
+    id: is-hover-effect-on
+    title: Highlight lines over which the cursor currently hovers
+    type: class-toggle
+    default: false
+  -
+    id: is-active-effect-on
+    title: Highlight lines where the carret is currently located
+    type: class-toggle
+    default: false
+  -
+    id: show-embed
+    title: Highlight embedded content
+    type: class-toggle
+    default: false
+  -
+    id: apple-eske-buttons-active
+    title: Replace standard close, minimize and maximize buttons with apple eske buttons
+    description: It only really makes sense to use this option if you are not on mac os.
+    type: class-toggle
+    default: false
+  -
+    id: has-custom-background
+    title: Enable custom background feature
+    description: Use the provided snippet within the github repository, if you want to have your own picture as a background. The picture used here was take by Rahul Pandit and can be found on pexels.com (link can be found in the before mentioned snippet).
+    type: class-toggle
+    default: false
+  -
+    id: custom-bullet-point-enabled
+    title: Replace bullet point with "-"
+    type: class-toggle
+    default: false
+  -
+    id: gutter-is-moved
+    title: Move the line numbers all the way to the left
+    type: class-toggle
+    default: false
+  -
+    id: is-translucency-effect-on
+    title: Enable transparency effect for panes
+    description: It only really makes sense to use this option if you have a custom background set.
+    type: class-toggle
+    default: false
+  -
+    id: conf-bg-transparency
+    title: Transparency value (0.0 - 1.0)
+    description: It only really makes sense to use this option if you have the transparency effect enabled.
+    type: variable-number
+    default: 0.85
+  -
+    id: panel-spacing
+    title: Space between notes
+    type: variable-number
+    default: 15
+    format: 'px'
+  -
+    id: note-width
+    title: Note width (in pixel)
+    type: variable-number
+    default: 700
+    format: 'px'
+  -
+    id: theme-font-active
+    title: Dont use the font provided by the theme
+    type: class-toggle
+    default: false
+  -
+    id: note-font-size
+    title: Editor Font Size (in rem)
+    type: variable-number
+    default: 1.0
+    format: 'rem'
+  -
+    id: active-line-font-size
+    title: Active Line Font Size (in rem)
+    type: variable-number
+    default: 1.01
+    format: 'rem'
+  -
+    id: colors-settings
+    title: Theme Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: dark-statusbar-enabled
+    title: Color the statusbar dark instead of the accent color
+    type: class-toggle
+    default: false
+  -
+    id: background-colors-settings
+    title: Background Colors (Panels / Workspace)
+    type: heading
+    level: 2
+    collapsed: false
+  -
+    id: bg-app
+    title: Workspace Background Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#263036'
+  -
+    id: bg
+    title: Panel Background Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#212a30'
+  -
+    id: bg-dark
+    title: Panel Background Color Dark
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#1b2327'
+  -
+    id: bg-darker
+    title: Panel Background Color Darker
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#151b1e'
+  -
+    id: bg-darkest
+    title: Panel Background Color Darkest
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#0f1315'
+  -
+    id: bg-black
+    title: Panel Background Color Black
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#080b0c'
+  -
+    id: accent-colors-settings
+    title: Accent Color
+    type: heading
+    level: 2
+    collapsed: false
+  -
+    id: main-accent
+    title: Accent Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#a32929'
+  -
+    id: main-accent-light
+    title: Accent Color light
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#ce3b3b'
+  -
+    id: main-accent-dark
+    title: Accent Color Dark
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#521414'
+  -
+    id: markdown-colors-settings
+    title: Markdown Colors
+    type: heading
+    level: 2
+    collapsed: false
+  -
+    id: bold-color
+    title: Bold Text Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#2487e4'
+  -
+    id: italic-color
+    title: Italic Text Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#59dbb4'
+  -
+    id: note-link-color
+    title: Note Link Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#a32929'
+  -
+    id: note-link-hover-color
+    title: Note Link Hover Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#ce3b3b'
+  -
+    id: math-text-color
+    title: Latex Text Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#5e90c9'
+  -
+    id: url-color
+    title: URL Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#40bcdb'
+  -
+    id: url-hover-color
+    title: URL Hover Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#6fe2ff'
+  -
+    id: tag-color
+    title: Tag Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#95b4c2'
+  -
+    id: tag-hover-color
+    title: Tag Hover Color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#27cbd1'
+  -
+    id: bg-tag
+    title: Tag background color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#16375c'
+  -
+    id: bg-tag-hover
+    title: Tag background hover color
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#10253f'
+  -
+    id: header-settings
+    title: Heading Settings
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: downsize-h-formatter
+    title: 'Downsize header formatting symbol'
+    description: 'This downsizes the "#" formatting symbol for headers.'
+    type: class-toggle
+    default: true
+  -
+    id: header-1-settings
+    title: Heading Level 1
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: header-1-color
+    title: 'Header 1 Color:'
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#e8e9f0'
+  -
+    id: header-1-size
+    title: 'Header 1 Size:'
+    type: variable-number
+    default: 1.9
+    format: 'em'
+  -
+    id: header-1-weight
+    title: 'Header 1 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-1-alignment
+    title: 'Header 1 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  -
+    id: header-2-settings
+    title: Heading Level 2
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: header-2-color
+    title: 'Header 2 Color:'
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#e8e9f0'
+  -
+    id: header-2-size
+    title: 'Header 2 Size:'
+    type: variable-number
+    default: 1.55
+    format: 'rem'
+  -
+    id: header-2-weight
+    title: 'Header 2 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-2-alignment
+    title: 'Header 2 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  -
+    id: header-3-settings
+    title: Heading Level 3
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: header-3-color
+    title: 'Header3 Color:'
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#e8e9f0'
+  -
+    id: header-3-size
+    title: 'Header 3 Size:'
+    type: variable-number
+    default: 1.37
+    format: 'rem'
+  -
+    id: header-3-weight
+    title: 'Header 3 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-3-alignment
+    title: 'Header 3 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  -
+    id: header-4-settings
+    title: Heading Level 4
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: header-4-color
+    title: 'Header 4 Color:'
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#dadce7'
+  -
+    id: header-4-size
+    title: 'Header 4 Size:'
+    type: variable-number
+    default: 1.25
+    format: 'rem'
+  -
+    id: header-4-weight
+    title: 'Header 4 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-4-alignment
+    title: 'Header 4 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  -
+    id: header-5-settings
+    title: Heading Level 5
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: header-5-color
+    title: 'Header 5 Color:'
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#dadce7'
+  -
+    id: header-5-size
+    title: 'Header 5 Size:'
+    type: variable-number
+    default: 1.12
+    format: 'rem'
+  -
+    id: header-5-weight
+    title: 'Header 5 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-5-alignment
+    title: 'Header 5 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+  -
+    id: header-6-settings
+    title: Heading Level 6
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: header-6-color
+    title: 'Header 6 Color:'
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#dadce7'
+  -
+    id: header-6-size
+    title: 'Header 6 Size:'
+    type: variable-number
+    default: 1.08
+    format: 'rem'
+  -
+    id: header-6-weight
+    title: 'Header 6 Weight:'
+    type: variable-select
+    default: bold
+    options:
+      - bold
+      - normal
+  -
+    id: header-6-alignment
+    title: 'Header 6 Alignment:'
+    type: variable-select
+    default: left
+    options:
+      - left
+      - center
+      - right
+*/
+
+/* #endregion */

@@ -7,4 +7,9 @@
   text-rendering: optimizeLegibility;
 }
 
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(3) > div.setting-item-info > div.setting-item-name::after {
+  content: " (Still working on a fix for 1.0)";
+  color: hsl(0, 61%, 52%);
+}
+
 @import 'Config/Style Options.scss';
