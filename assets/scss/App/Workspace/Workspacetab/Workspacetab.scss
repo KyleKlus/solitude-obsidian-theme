@@ -1,0 +1,11 @@
+.mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
+    background-color: var(--color-accent-1);
+    border-radius: var(--radius-s);
+    padding: 0px;
+    box-shadow: var(--shadow-l);
+    margin: 6px 0px;
+}
+
+.workspace-tab-header-inner{
+    padding: 0px 4px;
+}

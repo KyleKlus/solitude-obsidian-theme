@@ -28,12 +28,12 @@
   var(--accent-s),
   var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
-  --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
+  --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 15%));
+  --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 15%));
   --background-modifier-form-field: var(--color-base-25);
-  --background-secondary-alt: var(--color-base-30);
-  --interactive-normal: var(--color-base-30);
-  --interactive-hover: var(--color-base-35);
+  --background-secondary-alt: var(--color-base-25);
+  --interactive-normal: var(--color-accent-1);
+  --interactive-hover: var(--color-accent);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --text-highlight-bg: rgba(255, 208, 0, 0.4);
