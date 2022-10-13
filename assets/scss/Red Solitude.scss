@@ -7,11 +7,13 @@
   text-rendering: optimizeLegibility;
 }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(3) > div.setting-item-info > div.setting-item-name::after {
-  content: " (Still working on a fix for 1.0)";
+.modal.mod-settings .vertical-tab-header::before {
+  content: "This is a quickly fixed version. I am still working on a stable version for obsidian 1.0";
+  font-size: small;
   color: hsl(0, 61%, 52%);
 }
 
 @import 'App/App.scss';
+@import 'Plugins/Plugins.scss';
 
 @import 'Config/Style Options.scss';

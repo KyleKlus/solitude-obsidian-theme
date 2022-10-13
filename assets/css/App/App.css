@@ -4,6 +4,10 @@
   -webkit-filter: blur(1px);
 }
 
+.checkbox-container {
+  background-color: var(--color-base-30);
+}
+
 .mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
   background-color: var(--color-accent-1);
   border-radius: var(--radius-s);

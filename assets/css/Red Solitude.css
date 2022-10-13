@@ -311,8 +311,8 @@ body {
   --nav-item-color-active: var(--text-normal);
   --nav-item-color-selected: var(--text-normal);
   --nav-item-color-highlighted: var(--text-accent-hover);
-  --nav-item-background-hover: var(--background-modifier-hover);
-  --nav-item-background-active: var(--background-modifier-hover);
+  --nav-item-background-hover: var(--color-accent-1);
+  --nav-item-background-active: var(--color-accent);
   --nav-item-background-selected: hsla(var(--color-accent-hsl), 0.2);
   --nav-item-padding: var(--size-4-1) var(--size-4-2);
   --nav-item-weight: inherit;
@@ -518,8 +518,9 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(3) > div.setting-item-info > div.setting-item-name::after {
-  content: " (Still working on a fix for 1.0)";
+.modal.mod-settings .vertical-tab-header::before {
+  content: "This is a quickly fixed version. I am still working on a stable version for obsidian 1.0";
+  font-size: small;
   color: hsl(0deg, 61%, 52%);
 }
 
@@ -527,6 +528,10 @@ body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout >
   background-color: rgb(12, 12, 12);
   backdrop-filter: blur(20px);
   -webkit-filter: blur(1px);
+}
+
+.checkbox-container {
+  background-color: var(--color-base-30);
 }
 
 .mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
@@ -539,6 +544,28 @@ body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout >
 
 .workspace-tab-header-inner {
   padding: 0px 4px;
+}
+
+.kanban-plugin {
+  background-color: var(--background-primary);
+}
+
+.workspace-split.mod-horizontal:is(.mod-right-split, .mod-left-split) .kanban-plugin {
+  background-color: var(--background-secondary);
+}
+
+.kanban-plugin__lane {
+  background-color: var(--background-secondary-alt);
+}
+
+button.kanban-plugin__new-item-button,
+.kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+  background-color: var(--color-accent-1);
+}
+
+button.kanban-plugin__new-item-button:hover,
+.kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  background-color: var(--color-accent);
 }
 
 /* #region *.......................... Style Settings Plugin */

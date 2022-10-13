@@ -225,8 +225,8 @@ body {
     --nav-item-color-active: var(--text-normal);
     --nav-item-color-selected: var(--text-normal);
     --nav-item-color-highlighted: var(--text-accent-hover);
-    --nav-item-background-hover: var(--background-modifier-hover);
-    --nav-item-background-active: var(--background-modifier-hover);
+    --nav-item-background-hover: var(--color-accent-1); //--background-modifier-hover
+    --nav-item-background-active: var(--color-accent); //--background-modifier-hover
     --nav-item-background-selected: hsla(var(--color-accent-hsl), 0.2);
     --nav-item-padding: var(--size-4-1) var(--size-4-2);
     --nav-item-weight: inherit;

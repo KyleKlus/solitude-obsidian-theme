@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/App/Floatythings/Modals.scss","../../scss/App/Workspace/Workspacetab/Workspacetab.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;;ACHJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI","file":"App.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/App/Floatythings/Modals.scss","../../scss/App/Interactionthings/Checkbox.scss","../../scss/App/Workspace/Workspacetab/Workspacetab.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;;ACHJ;EACI;;;ACDJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI","file":"App.css"}

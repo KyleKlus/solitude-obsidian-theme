@@ -1,0 +1,21 @@
+.kanban-plugin {
+  background-color: var(--background-primary);
+}
+
+.workspace-split.mod-horizontal:is(.mod-right-split, .mod-left-split) .kanban-plugin {
+  background-color: var(--background-secondary);
+}
+
+.kanban-plugin__lane {
+  background-color: var(--background-secondary-alt);
+}
+
+button.kanban-plugin__new-item-button,
+.kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+  background-color: var(--color-accent-1);
+}
+
+button.kanban-plugin__new-item-button:hover,
+.kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  background-color: var(--color-accent);
+}
