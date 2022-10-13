@@ -77,9 +77,9 @@ settings:
     format: 'px'
   -
     id: theme-font-active
-    title: Use the font provided by the theme
+    title: Dont use the font provided by the theme
     type: class-toggle
-    default: true
+    default: false
   -
     id: note-font-size
     title: Editor Font Size (in rem)

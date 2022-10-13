@@ -1,0 +1,19 @@
+.workspace-leaf-content[data-type="google-calendar-view-day"] .titleContainer h3 {
+    font-size: small;
+}
+
+.workspace-leaf-content[data-type="google-calendar-view-day"] .titleContainer button {
+    padding: 4px 8px;
+}
+
+.workspace-leaf-content[data-type="google-calendar-view-day"] .timeline .timeDisplay {
+    background: var(--main-accent);
+}
+
+.workspace-leaf-content[data-type="google-calendar-view-day"] .timeline .hourText {
+    font-family: 'Fira Code';
+}
+
+.workspace-leaf-content[data-type="google-calendar-view-day"] .timeline {
+    width: fit-content;
+}

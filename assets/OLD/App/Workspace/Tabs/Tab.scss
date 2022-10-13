@@ -57,21 +57,18 @@
 .workspace-tab-container-inner .workspace-tab-header-inner,
 .workspace-tab-header.is-active .workspace-tab-header-inner {
     color: var(--text-normal);
+    border: 1px solid transparent;
     border-radius: var(--radius-medium);
-    transition: background-color 150ms ease-out,
-                transform 150ms ease-out,
-                box-shadow 150ms ease-out;
+    transition: border-color 150ms ease-out,
+                transform 150ms ease-out;
 }
 
 .workspace-tab-container-inner .workspace-tab-header-inner:hover,
 .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
-    background-color: var(--interactive-hover);
-    transform: scale(1.05);
-    box-shadow: var(--shadow-medium);
-    transition: background-color 150ms ease-in,
-                transform 150ms ease-in,
-                box-shadow 150ms ease-in;
-    z-index: 11;
+    border-color: var(--interactive-hover);
+    transform: scale(1.02);
+    transition: border-color 150ms ease-in,
+                transform 150ms ease-in;
 }
 
 .nav-buttons-container .nav-action-button,

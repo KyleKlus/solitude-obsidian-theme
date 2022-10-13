@@ -1,12 +1,12 @@
 /* #region *.......................... Workspace */
 
-.workspace-leaf-resize-handle,
-.workspace-leaf,
-.workspace-leaf-content,
-.workspace-tabs .workspace-leaf,
-.workspace-split:is(.mod-root, .mod-vertical, .mod-horizontal) {
-    background-color: transparent;
-}
+// .workspace-leaf-resize-handle,
+// .workspace-leaf,
+// .workspace-leaf-content,
+// .workspace-tabs .workspace-leaf,
+// .workspace-split:is(.mod-root, .mod-vertical, .mod-horizontal) {
+//     background-color: transparent;
+// }
 
 /* #region *.......................... Ribbons */
 
@@ -85,30 +85,30 @@ body .app-container .workspace-ribbon.is-collapsed {
 
 /* #region *.......................... Workspace-Split */
 
-body:not(.is-mobile) .workspace-split.mod-root {
-    padding: var(--panel-spacing);
-    border-radius: var(--radius-big);
-}
+// body:not(.is-mobile) .workspace-split.mod-root {
+//     padding: var(--panel-spacing);
+//     border-radius: var(--radius-big);
+// }
 
-.workspace-split.mod-root .view-content {
-    background-color: transparent;
-}
+// .workspace-split.mod-root .view-content {
+//     background-color: transparent;
+// }
 
-.view-content .empty-state {
-    background-color: var(--bg-dark-translucent);
-}
+// .view-content .empty-state {
+//     background-color: var(--bg-dark-translucent);
+// }
 
-.workspace-split.mod-left-split {
-    padding-left: 0;
-    background-color: var(--bg-dark-translucent);
-    box-shadow: var(--shadow-small);
-}
+// .workspace-split.mod-left-split {
+//     padding-left: 0;
+//     background-color: var(--bg-dark-translucent);
+//     box-shadow: var(--shadow-small);
+// }
 
-.workspace-split.mod-right-split {
-    padding-right: 0;
-    background-color: var(--bg-dark-translucent);
-    box-shadow: var(--shadow-small);
-}
+// .workspace-split.mod-right-split {
+//     padding-right: 0;
+//     background-color: var(--bg-dark-translucent);
+//     box-shadow: var(--shadow-small);
+// }
 
 
 /* #endregion */
@@ -163,15 +163,15 @@ body:not(.is-mobile) .workspace-split.mod-root {
     box-shadow: var(--shadow-medium);
 }
 
-.workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
-    margin-right: calc(var(--panel-spacing));
-    padding-right: 0px;
-}
+// .workspace-split.mod-vertical > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
+//     margin-right: calc(var(--panel-spacing));
+//     padding-right: 0px;
+// }
 
-.workspace-split .mod-horizontal > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
-    margin-bottom: calc( var(--panel-spacing));
-    padding-bottom: 0px;
-}
+// .workspace-split .mod-horizontal > *:not(.workspace-leaf:last-child, .workspace-split:last-child) {
+//     margin-bottom: calc( var(--panel-spacing));
+//     padding-bottom: 0px;
+// }
 
 .workspace-ribbon-collapse-btn,
 .view-header-icon,
@@ -206,17 +206,17 @@ body:not(.is-mobile) .workspace-split.mod-root {
                 border-color 150ms ease-in;
 }
 
-.workspace-leaf .view-header,
-.workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
-.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-    border-top-left-radius: var(--radius-big);
-    border-top-right-radius: var(--radius-big);
-}
+// .workspace-leaf .view-header,
+// .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+// .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+//     border-top-left-radius: var(--radius-big);
+//     border-top-right-radius: var(--radius-big);
+// }
 
-.workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf-content,
-.workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf {
-    border-radius: var(--radius-big);
-}
+// .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf-content,
+// .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf {
+//     border-radius: var(--radius-big);
+// }
 
 .workspace-leaf-content[data-type="timeline"] {
     border-radius: 0px;
@@ -224,9 +224,9 @@ body:not(.is-mobile) .workspace-split.mod-root {
     padding-top: 5px;
 }
 
-.search-input-container {
-    padding-top: 5px;
-}
+// .search-input-container {
+//     padding-top: 5px;
+// }
 
 .workspace-leaf.mod-active .view-header-title-container::after,
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header-title-container.view-header-title-container::after {
@@ -236,13 +236,13 @@ body:not(.is-mobile) .workspace-split.mod-root {
 
 /* #endregion | Workspace-Leaf */
 
-@import './Tabs/Tab.scss';
+// @import './Tabs/Tab.scss';
 
-@import './Navigation/Navigation.scss';
+// @import './Navigation/Navigation.scss';
 
-@import './Editor/Editor.scss';
+// @import './Editor/Editor.scss';
 
-@import 'Graph';
+// @import 'Graph';
 
 
 /* #endregion */

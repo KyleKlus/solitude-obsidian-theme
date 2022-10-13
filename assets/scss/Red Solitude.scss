@@ -5,12 +5,6 @@
   font-feature-settings: 'liga' on, 'calt' on;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-
-  font-weight: 300;
 }
 
-@import 'App/App.scss';
-
-@import 'Plugins';
-
-@import 'Config/Style\ Options.scss';
+@import 'Config/Style Options.scss';

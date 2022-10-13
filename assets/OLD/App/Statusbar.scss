@@ -18,9 +18,9 @@ body:is(.dark-statusbar-enabled) .status-bar-item {
 }
 
 .status-bar-item {
-    margin: 4px calc(var(--panel-spacing) / 2);
-    padding: 0px 5px;
-    max-height: 22px;
+    // margin: 4px calc(var(--panel-spacing) / 2);
+    // padding: 0px 5px;
+    // max-height: 22px;
     border-radius: var(--radius-medium);
     box-shadow: var(--text-shadow);
     background-color: var(--bg-darker);
@@ -30,7 +30,7 @@ body:is(.dark-statusbar-enabled) .status-bar-item {
 }
 
 .status-bar-item.mod-clickable:hover{
-    color: var(--interactive-accent-hover);
+    // color: var(--interactive-accent-hover);
     transform: scale(1.04, 1.04);
     transition: transform 150ms ease-in,
                 color 150ms ease-in;
