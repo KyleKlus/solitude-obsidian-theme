@@ -1,5 +1,7 @@
 # Red Solitude
 
+**I am currently working on a complete overhall of the theme, in order to make it work with obsidian v1.0.0. This could take quite some time, as I have quite a full week, so please be patient; it will be worth it.**
+
 ![Screenshot](promo_screenshot.png)
 
 ## Description
