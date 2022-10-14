@@ -47,7 +47,11 @@ Theme with translucency enabled and a custom background defined via a snippet. H
 - v2.2.0 Bugfixes (Buttons and workspace background)
 - v2.2.1 Bugfix: old folder icon wasn't removed
 - v2.3.0 Major bugfixes after update & some additional settings were added
-- v2.3.1 Major fix after obsidian v1.0.0
+- v2.4.0 Redone ribbons & statusbar
+- v2.5.0 Redone modals
+- v2.6.0 Redone shadows & fileexplorer
+- v2.7.0 Redone suggestion prompt
+- v2.7.4 Major fix after obsidian v1.0.0
 
 <p align="center">
     Please open an <a href="https://github.com/MajorEnkidu/red-solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.
