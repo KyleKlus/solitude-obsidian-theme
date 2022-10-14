@@ -1,30 +1,36 @@
 # Red Solitude
 
-**I am currently working on a complete overhall of the theme, in order to make it work with obsidian v1.0.0. This could take quite some time, as I have quite a full week, so please be patient; it will be worth it.**
-
 ![Screenshot](promo_screenshot.png)
+
+<p align="center">
+    Designed by
+    <a href="https://github.com/MajorEnkidu">MajorEnkidu</a>
+     | License:
+    <a href="https://github.com/MajorEnkidu/red-solitude-vscode-theme/blob/main/LICENCE.md">MIT</a>
+</p>
+
+<p align="center">
+    <a href='https://ko-fi.com/W7W1D5JTZ' target='_blank'>
+        <img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+    </a>
+</p>
+
+**_I am currently working on a complete overhaul of the theme, in order to make it work with obsidian v1.0.0. This could take quite some time, as I have quite a full week, so please be patient; it will be worth it._**
 
 ## Description
 
-This is a dark theme with a strong accent color and a 3D look. It has many extra functions (if you use the below mentioned snippets) and is highly configurable via the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+This is going to be a dark theme with a 3D look, which uses your chosen accent color. It will have many extra functions (if you use the below mentioned snippets) and is highly configurable via the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
-## Extra Features
-
-Use the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to enable the below mentioned features .
+## Planed Extra Features (Not yet working due to the obsidian v1.0.0 update)
 
 - Custom workspace background
 - Translucent panels (Only useful if a custom background is used)
 - Active line effect
 - Hover over line effect
-
-Use [these](https://github.com/MajorEnkidu/red-solitude-obsidian-theme/tree/main/snippets) Snippets, if you want to have the below mentioned features.
-
-- Heading callout (callout tag: "h") such that whole sections under the heading can be folded via callout fold arrows
-
-- MOC callout (callout tag: "moc") such that a wiki like, left aligned, moc can be created
-
-- Controls callout (callout tag: "ctrl") for use as a ctrl-buttons header (Work in progress)
-
+- Custom callouts
+  - Heading callout (callout tag: "h") such that whole sections under the heading can be folded via callout fold arrows
+  - MOC callout (callout tag: "moc") such that a wiki like, left aligned, moc can be created
+  - Controls callout (callout tag: "ctrl") for use as a ctrl-buttons header (Work in progress)
 - Exportmode (Work in progress)
 
 ![Screenshot](assets/img/custom_background_screenshot.png)
@@ -34,11 +40,6 @@ Theme with translucency enabled and a custom background defined via a snippet. H
 
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
 
-## Supported Plugins
-
-- [Fullcalendar](https://github.com/davish/obsidian-full-calendar)
-- [Privacy Glasses](https://github.com/jillalberts/privacy-glasses)
-
 ## Changelog
 
 - v1.0.0 Initial Theme creation
@@ -46,7 +47,8 @@ Theme with translucency enabled and a custom background defined via a snippet. H
 - v2.2.0 Bugfixes (Buttons and workspace background)
 - v2.2.1 Bugfix: old folder icon wasn't removed
 - v2.3.0 Major bugfixes after update & some additional settings were added
+- v2.3.1 Major fix after obsidian v1.0.0
 
-## Planned Changes
-
-- More plugin support
+<p align="center">
+    Please open an <a href="https://github.com/MajorEnkidu/red-solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.
+</p>
