@@ -1,3 +1,4 @@
+// TODO: Cleanup file
 .mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
     background-color: var(--color-accent-1);
     border-radius: var(--radius-s);
@@ -6,6 +7,72 @@
     margin: 6px 0px;
 }
 
+.workspace-tabs .workspace-leaf {
+    background-color: var(--color-base-25);
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
+.mod-right-split .workspace-tab-header-container{
+    padding-left: 6px;
+}
+
 .workspace-tab-header-inner{
-    padding: 0px 4px;
+    padding: 0px 3px;
+}
+
+.mod-root .workspace-tab-header-container-inner {
+    padding: 1px 23px 0;
+}
+
+.workspace-split.mod-left-split .workspace-leaf,
+.workspace-split.mod-right-split .workspace-leaf {
+    border-radius: var(--radius-l);
+    margin: 6px;
+}
+
+.workspace-split.mod-root .workspace-leaf,
+.workspace-split.mod-root .workspace-leaf {
+    border-radius: var(--radius-l);
+    margin: 0px 3px 3px 3px;
+    // TODO: insert shadow
+}
+
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf, .mod-root .workspace-tabs .workspace-leaf,
+.view-header,
+.is-focused .workspace-leaf.mod-active .view-header {
+    background-color: var(--color-base-20);
+}
+
+.workspace-split.mod-root .view-content {
+    background-color: var(--color-base-10);
+}
+
+.is-focused .workspace-leaf.mod-active .view-header {
+    border-bottom-color: var(--color-accent-1);
+}
+
+.view-header {
+    border-bottom: 1px solid transparent;
+    box-shadow: var(--shadow-l);
+    margin: 0px;
+}
+
+.view-header-title-container:not(.mod-at-end):after {
+    background: none;
+}
+
+.view-header-nav-buttons {
+    margin-left: var(--size-4-1);
+}
+
+.view-actions {
+    margin-right: var(--size-4-1);
+}
+
+.view-header-title-parent .view-header-breadcrumb-separator {
+    color: var(--color-accent-1);
+}
+
+.workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    background-color: var(--color-base-25);
 }

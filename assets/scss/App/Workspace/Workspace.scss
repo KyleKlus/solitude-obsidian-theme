@@ -4,4 +4,10 @@
 //     border-left: 1px solid var(--color-accent-1);
 // }
 
+body:not(.is-mobile):is(.has-custom-background) .workspace,
+body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
+    background-color: transparent;
+}
+
+@import 'Workspaceribbon.scss';
 @import 'Workspacetab/Workspacetab.scss';

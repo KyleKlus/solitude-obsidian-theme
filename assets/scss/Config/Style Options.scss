@@ -5,8 +5,27 @@ name: Red Solitude Dark (Still Fixing the theme)
 id: red-solitude-dark
 settings:
   -
+    id: extras
+    title: Extras
+    type: heading
+    level: 1
+    collapsed: true
+  -
     id: theme-font-active
-    title: Deactivate the font provided by the theme
+    title: Deactivate Custom Font
+    description: Deactivate the default font provided by the theme
+    type: class-toggle
+    default: false
+  -
+    id: deactivate-popout-border
+    title: Deactivate Popout window border
+    description: Deactivate the border around popout windows
+    type: class-toggle
+    default: false
+  -
+    id: has-custom-background
+    title: Activate custom background
+    description: Activate the custom background
     type: class-toggle
     default: false
   -
