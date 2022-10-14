@@ -1,5 +1,5 @@
 .kanban-plugin {
-  background-color: var(--background-primary);
+  background-color: var(--color-base-10);
 }
 
 .workspace-split.mod-horizontal:is(.mod-right-split, .mod-left-split) .kanban-plugin {
