@@ -4,8 +4,18 @@
 .callout[data-callout="moc"] {
     --callout-color: 255, 166, 77;
     --callout-icon : lucide-list;
+    padding: var(--size-4-3) 0 0 0;
     margin-left    : 0% !important;
     margin-right   : 55% !important;
+}
+
+.callout[data-callout="moc"] .callout-content {
+    background-color: var(--color-base-25);
+}
+
+.callout[data-callout="moc"] .callout-title {
+    padding-bottom: 12px;
+    padding-left: 12px;
 }
 
 .callout[data-callout="h"] {
@@ -14,6 +24,8 @@
     border-left-width: 0px;
     background-color : transparent;
     box-shadow       : none !important;
+    padding-left     : 0px !important;
+    padding-right    : 0px !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
 }
@@ -25,7 +37,7 @@
 
 .callout[data-callout="h"] .callout-title {
     background-color: transparent;
-    border-bottom   : 1px solid var(--horizontal-line-color);
+    border-bottom   : var(--hr-thickness) solid var(--hr-color);
 }
 
 .callout[data-callout="h"] .callout-content {
@@ -34,33 +46,35 @@
 
 .callout[data-callout="ctrl"] {
     --callout-icon  : none;
+    padding: 0 0 0 0;
     background-color: transparent;
     border          : none;
     transform       : none;
     margin-left     : 0px !important;
     margin-right    : 0px !important;
-    margin-bottom   : 30px !important;
-    border-radius: var(--radius-medium);
+    border-radius: var(--radius-s);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner:is(a.internal-link, a.external-link),
 .callout[data-callout="ctrl"] .callout-content:is(a.internal-link, a.external-link) {
-    border-radius: var(--radius-small);
-    box-shadow: var(--shadow-small);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-s);
     font-size    : 0.83rem;
     display      : inline-block;
     margin-bottom: 2px;
     margin-left  : 5px;
     margin-right : 5px;
+    text-decoration-style: none;
 }
 
 .callout[data-callout="ctrl"] .callout-content :is(a.internal-link, a.external-link) {
     font-size: 0.7rem;
+    text-decoration-style:unset;
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner a.internal-link:hover,
 .callout[data-callout="ctrl"] .callout-content a.internal-link:hover  {
-    color     : var(--main-accent-light);
+    color     : var(--color-accent-2);
     transform: translate3d(1px, -1px, 0px);
     transition: all 150ms ease-in;
 }
@@ -89,9 +103,9 @@
     justify-self: left;
     align-self: center;
     padding: 1px 6px 1px 3px;
-    border: 1px solid var(--main-accent);
-    border-radius: var(--radius-medium);
-    box-shadow: var(--shadow-small);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-s);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child) {
@@ -100,21 +114,21 @@
     justify-self: right;
     align-self: center;
     padding: 1px 3px 1px 6px;
-    border: 1px solid var(--main-accent);
-    border-radius: var(--radius-medium);
-    box-shadow: var(--shadow-small);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-s);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child:hover {
-    background-color: var(--bg-dark);
-    border-color: var(--main-accent-light);
-    box-shadow: var(--shadow-medium);
+    background-color: var(--color-base-30);
+    border-color: var(--color-accent-2);
+    box-shadow: var(--shadow-s);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child):hover  {
-    background-color: var(--bg-dark);
-    border-color: var(--main-accent-light);
-    box-shadow: var(--shadow-medium);
+    background-color: var(--color-base-30);
+    border-color: var(--color-accent-2);
+    box-shadow: var(--shadow-s);
 }
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child::before {
@@ -127,35 +141,33 @@
 
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:first-child::before:hover,
 .callout[data-callout="ctrl"] .callout-title .callout-title-inner > *:last-child:not(:first-child)::after:hover {
-    color: var(--main-accent-light);
+    color: var(--color-accent-2);
 }
 
 .callout[data-callout="ctrl"] .callout-title {
-    background-color: var(--bg-darkest-translucent);
-    border: 1px solid var(--border-highlight-color);
+    background-color: var(--color-base-00);
     border-bottom: none;
-    border-top-left-radius : var(--radius-medium);
-    border-top-right-radius: var(--radius-medium);
-    box-shadow: var(--shadow-small);
+    border-top-left-radius : var(--radius-s);
+    border-top-right-radius: var(--radius-s);
+    padding: 12px;
+    box-shadow: var(--shadow-s);
     transition: border-radius 150ms ease-out;
 }
 
 .callout[data-callout="ctrl"] .callout-title:only-child,
 .callout[data-callout="ctrl"].is-collapsed .callout-title {
-    background-color: var(--bg-darkest-translucent);
-    border: 1px solid var(--border-highlight-color);
-    border-radius: var(--radius-medium);
-    box-shadow: var(--shadow-small);
+    background-color: var(--color-base-00);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-s);
     transition: border-radius 150ms ease-in;
 }
 
 
 .callout[data-callout="ctrl"] .callout-content {
-    border: 1px solid var(--border-highlight-color);
     border-top            : none;
-    background-color          : var(--bg-black-translucent);
-    border-bottom-left-radius : var(--radius-medium);
-    border-bottom-right-radius: var(--radius-medium);
+    background-color          : var(--color-base-25);
+    border-bottom-left-radius : var(--radius-s);
+    border-bottom-right-radius: var(--radius-s);
     text-align: center;
 }
 
@@ -165,29 +177,29 @@
 }
 
 .callout[data-callout="ctrl"] .callout-content > p > a.external-link {
-    border: 1px solid var(--main-accent);
-    border-radius: var(--radius-small);
-    box-shadow: var(--shadow-small);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-s);
     padding: 2px 21px 2px 6px;
 }
 
 .callout[data-callout="ctrl"] .callout-content > p > a.external-link:hover {
-    background-color: var(--bg-darker);
-    border-color: var(--main-accent-light);
+    background-color: var(--color-base-20);
+    border-color: var(--color-accent-2);
 }
 
 .callout[data-callout="ctrl"] .callout-content > *:not(p),
 .callout[data-callout="ctrl"] .callout-content > p > a.internal-link {
-    border: 1px solid var(--main-accent);
-    border-radius: var(--radius-small);
-    box-shadow: var(--shadow-small);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-s);
     padding: 2px;
 }
 
 .callout[data-callout="ctrl"] .callout-content > *:not(p),
 .callout[data-callout="ctrl"] .callout-content > p > a.internal-link:hover {
-    background-color: var(--bg-darker);
-    border-color: var(--main-accent-light);
+    background-color: var(--color-base-20);
+    border-color: var(--color-accent-2);
     padding: 2px;
 }
 

@@ -113,7 +113,7 @@ body {
   --callout-blend-mode: var(--highlight-mix-blend-mode);
   --callout-title-padding: 0;
   --callout-title-size: inherit;
-  --callout-content-padding: 0;
+  --callout-content-padding: 0px;
   --checkbox-radius: var(--radius-s);
   --checkbox-size: 15px;
   --checkbox-marker-color: var(--background-primary);

@@ -16,9 +16,9 @@ settings:
     type: class-toggle
     default: false
   -
-    id: deactivate-popout-border
-    title: Deactivate Popout window border
-    description: Deactivate the border around popout windows
+    id: deactivate-window-border
+    title: Deactivate window border
+    description: Deactivate the border around non-maximized windows
     type: class-toggle
     default: false
   -
