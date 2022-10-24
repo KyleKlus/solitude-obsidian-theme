@@ -3,12 +3,13 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   background-color: transparent;
 }
 
-.mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
   background-color: var(--color-accent-1);
   border-radius: var(--radius-s);
   padding: 0px;
   box-shadow: var(--shadow-l);
-  margin: 6px 0px;
+  height: 24px;
+  align-self: center;
 }
 
 .workspace-tabs .workspace-leaf {
@@ -17,7 +18,7 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
 
 .is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
 .mod-right-split .workspace-tab-header-container {
-  padding-left: 6px;
+  padding-left: var(--panel-spacing);
 }
 
 .workspace-tab-header-inner {

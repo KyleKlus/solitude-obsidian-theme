@@ -2,6 +2,10 @@
 @import 'Fonts.scss';
 
 body {
+    /* Selfdefined Variables */
+    --panel-spacing: 6px;
+
+    /* Default Variables */
     --anim-duration-none: 0;
     --anim-duration-superfast: 70ms;
     --anim-duration-fast: 140ms;
