@@ -29,6 +29,16 @@ settings:
     type: class-toggle
     default: false
   -
+    id: panel-spacing
+    title: Adjust panel spacing
+    description: Adjusts the spacing in between the panels
+    type: variable-number-slider
+    format: px
+    default: 6
+    min: 0
+    max: 50
+    step: 1
+  -
     id: colors
     title: Colors
     type: heading
@@ -42,7 +52,7 @@ settings:
     default: 0
     min: -6
     max: 21
-    step: 1
+    step: 0.5
 */
 
 /* #endregion */
