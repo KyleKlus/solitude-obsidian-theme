@@ -33,9 +33,11 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   background-color: var(--color-accent-1);
   border-radius: var(--radius-s);
   padding: 0px;
+  margin: 0px;
+  align-self: center;
+  justify-self: center;
   box-shadow: var(--shadow-l);
   height: 24px;
-  align-self: center;
 }
 
 .workspace-tabs .workspace-leaf {
@@ -55,10 +57,9 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   padding: 1px 23px 0;
 }
 
-.workspace-split.mod-left-split .workspace-leaf,
-.workspace-split.mod-right-split .workspace-leaf {
+.workspace-split:is(.mod-left-split, .mod-right-split) .workspace-leaf {
   border-radius: var(--radius-l);
-  margin: 6px;
+  margin: 0px 6px 6px 6px;
 }
 
 .workspace-split.mod-root .workspace-leaf,
