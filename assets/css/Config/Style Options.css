@@ -28,5 +28,19 @@ settings:
     type: class-toggle
     default: false
   -
+    id: colors
+    title: Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: color-base-offset-mult
+    title: Adjust brightness
+    description: Adjusts the brightness of all dark backgrounds
+    type: variable-number-slider
+    default: 0
+    min: -6
+    max: 21
+    step: 1
 */
 /* #endregion */
