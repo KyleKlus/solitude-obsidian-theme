@@ -3,7 +3,7 @@
 }
 
 .HyperMD-task-line .task-list-item-checkbox::after {
-    color: white;
+    color: var(--checkbox-marker-color);
 }
 
 .HyperMD-task-line .task-list-item-checkbox:hover {
