@@ -92,10 +92,10 @@ body {
   --panel-spacing: 6px;
   /* Default Variables */
   --anim-duration-none: 0;
-  --anim-duration-superfast: 70ms;
-  --anim-duration-fast: 140ms;
-  --anim-duration-moderate: 300ms;
-  --anim-duration-slow: 560ms;
+  --anim-duration-superfast: 60ms;
+  --anim-duration-fast: 120ms;
+  --anim-duration-moderate: 200ms;
+  --anim-duration-slow: 500ms;
   --anim-motion-smooth: cubic-bezier(0.45, 0.05, 0.55, 0.95);
   --anim-motion-delay: cubic-bezier(0.65, 0.05, 0.36, 1);
   --anim-motion-jumpy: cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -117,9 +117,9 @@ body {
   --callout-title-padding: 0;
   --callout-title-size: inherit;
   --callout-content-padding: 0px;
-  --checkbox-radius: var(--radius-s);
+  --checkbox-radius: 50%;
   --checkbox-size: 15px;
-  --checkbox-marker-color: var(--background-primary);
+  --checkbox-marker-color: white;
   --checkbox-color: var(--interactive-accent);
   --checkbox-color-hover: var(--interactive-accent-hover);
   --checkbox-border-color: var(--text-faint);
