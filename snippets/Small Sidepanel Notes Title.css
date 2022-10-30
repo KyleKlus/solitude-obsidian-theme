@@ -1,0 +1,4 @@
+.workspace-split:not(.mod-root):is(.mod-left-split, .mod-right-split) .inline-title {
+    padding: 0px;
+    font-size: medium;
+}
