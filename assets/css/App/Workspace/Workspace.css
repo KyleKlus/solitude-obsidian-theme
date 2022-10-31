@@ -3,6 +3,19 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   background-color: transparent;
 }
 
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
+.mod-right-split .workspace-tab-header-container {
+  padding-left: var(--panel-spacing);
+}
+
+.workspace-tab-header-inner {
+  padding: 0px 3px;
+}
+
+.mod-root .workspace-tab-header-container-inner {
+  padding: 1px 23px 0;
+}
+
 :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
   background-color: var(--color-accent-1);
   border-radius: var(--radius-s);
@@ -16,19 +29,6 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
 
 .workspace-tabs .workspace-leaf {
   background-color: var(--color-base-25);
-}
-
-.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
-.mod-right-split .workspace-tab-header-container {
-  padding-left: var(--panel-spacing);
-}
-
-.workspace-tab-header-inner {
-  padding: 0px 3px;
-}
-
-.mod-root .workspace-tab-header-container-inner {
-  padding: 1px 23px 0;
 }
 
 .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-leaf {
@@ -48,22 +48,14 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   background-color: var(--color-base-20);
 }
 
-.workspace-split.mod-root .view-content {
-  background-color: var(--color-base-10);
-}
-
-.is-focused .workspace-leaf.mod-active .view-header {
-  border-bottom-color: var(--color-accent-1);
-}
-
 .view-header {
   border-bottom: 1px solid transparent;
   box-shadow: var(--shadow-l);
   margin: 0px;
 }
 
-.view-header-title-container:not(.mod-at-end):after {
-  background: none;
+.is-focused .workspace-leaf.mod-active .view-header {
+  border-bottom-color: var(--color-accent-1);
 }
 
 .view-header-nav-buttons {
@@ -78,6 +70,10 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   color: var(--color-accent-1);
 }
 
-.workspace .mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-  background-color: var(--color-base-25);
+.view-header-title-container:not(.mod-at-end):after {
+  background: none;
+}
+
+.workspace-split.mod-root .view-content {
+  background-color: var(--color-base-10);
 }
