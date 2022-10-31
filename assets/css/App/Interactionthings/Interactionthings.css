@@ -1,14 +1,16 @@
+/* General Checkboxes */
 .checkbox-container {
   background-color: var(--color-base-30);
 }
 
-.HyperMD-task-line .task-list-item-checkbox::after {
-  color: var(--checkbox-marker-color);
-}
-
 .HyperMD-task-line .task-list-item-checkbox:hover {
   transform: scale(1.1);
-  transition: transform var(--anim-duration-moderate) var(--anim-motion-jumpy);
+  transition: transform var(--anim-duration-moderate) ease-in-out;
+}
+
+/* Special checkboxes */
+.HyperMD-task-line .task-list-item-checkbox::after {
+  color: var(--checkbox-marker-color);
 }
 
 :is(.HyperMD-task-line[data-task=A],
@@ -17,9 +19,10 @@
 .HyperMD-task-line[data-task=D],
 .HyperMD-task-line[data-task=X]) .task-list-item-checkbox::after {
   -webkit-mask-image: none;
+  mask-image: none;
   background-color: transparent;
-  top: 0px;
-  left: 2px;
+  top: 1px;
+  left: 3px;
   position: relative;
 }
 
@@ -29,9 +32,10 @@
 .HyperMD-task-line[data-task=""],
 .HyperMD-task-line[data-task="/"]) .task-list-item-checkbox::after {
   -webkit-mask-image: none;
+  mask-image: none;
   background-color: transparent;
-  top: 0px;
-  left: 3px;
+  top: 1px;
+  left: 4px;
   position: relative;
 }
 
@@ -39,9 +43,10 @@
 .HyperMD-task-line[data-task="-"],
 .HyperMD-task-line[data-task="/"]) .task-list-item-checkbox::after {
   -webkit-mask-image: none;
+  mask-image: none;
   background-color: transparent;
-  top: 0px;
-  left: 4px;
+  top: 1px;
+  left: 6px;
   position: relative;
 }
 
