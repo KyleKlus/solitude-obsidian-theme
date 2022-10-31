@@ -1,0 +1,23 @@
+.HyperMD-task-line[data-task="A"] .task-list-item-checkbox,
+.HyperMD-task-line[data-task="A"] .task-list-item-checkbox:hover {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.HyperMD-task-line[data-task="B"] .task-list-item-checkbox,
+.HyperMD-task-line[data-task="B"] .task-list-item-checkbox:hover {
+    background-color: var(--color-yellow);
+    border-color: var(--color-yellow);
+}
+
+.HyperMD-task-line[data-task="C"] .task-list-item-checkbox,
+.HyperMD-task-line[data-task="C"] .task-list-item-checkbox:hover {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+.HyperMD-task-line[data-task="D"] .task-list-item-checkbox,
+.HyperMD-task-line[data-task="D"] .task-list-item-checkbox:hover {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+}
