@@ -9,5 +9,4 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
     background-color: transparent;
 }
 
-@import 'Workspaceribbon.scss';
 @import 'Workspacetab/Workspacetab.scss';
