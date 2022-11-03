@@ -9,4 +9,16 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
     background-color: transparent;
 }
 
+.workspace > .workspace-leaf, .workspace > .workspace-split {
+    height: calc(100% - 6px);
+}
+
+body:is(.has-custom-background) .workspace-split.mod-left-split {
+    margin-left: var(--panel-spacing);
+}
+
+body:is(.has-custom-background) .workspace-split.mod-right-split {
+    margin-right: var(--panel-spacing);
+}
+
 @import 'Workspacetab/Workspacetab.scss';

@@ -28,6 +28,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: custom-background
+    title: Custom Background
+    description: Custom background encoded as base64 url. Use this encoder -> (https://www.base64-image.de/)
+    type: variable-text
+    default: none
+  -
     id: panel-spacing
     title: Adjust panel spacing
     description: Adjusts the spacing in between the panels
