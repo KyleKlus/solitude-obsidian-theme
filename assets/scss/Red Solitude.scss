@@ -7,14 +7,6 @@
   text-rendering: optimizeLegibility;
 }
 
-.modal.mod-settings .vertical-tab-header::before {
-  content: "This is a quickly fixed version. I am still working on a stable version for obsidian 1.0";
-  font-size: small;
-  color: hsl(0, 61%, 52%);
-}
-
-
-
 @import 'App/App.scss';
 @import 'Plugins/Plugins.scss';
 

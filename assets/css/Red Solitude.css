@@ -572,12 +572,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.modal.mod-settings .vertical-tab-header::before {
-  content: "This is a quickly fixed version. I am still working on a stable version for obsidian 1.0";
-  font-size: small;
-  color: hsl(0deg, 61%, 52%);
-}
-
 body:not(.deactivate-window-border, .is-maximized) {
   border: 1px solid var(--color-accent-1);
 }
