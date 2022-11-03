@@ -24,6 +24,10 @@ body:not(.deactivate-window-border, .is-maximized) .titlebar-button-container.mo
   -webkit-filter: blur(1px);
 }
 
+.vertical-tab-content {
+  background-color: var(--color-base-10);
+}
+
 /* General Checkboxes */
 .checkbox-container {
   background-color: var(--color-base-30);
@@ -203,6 +207,10 @@ body:not(.is-mobile):is(.has-custom-background) .sidebar-toggle-button:hover .cl
   height: 24px;
 }
 
+.workspace .mod-root .workspace-tab-header-inner::after {
+  right: 1.5px;
+}
+
 .workspace-tabs .workspace-leaf {
   background-color: var(--color-base-25);
 }
@@ -217,12 +225,12 @@ body:not(.is-mobile):is(.has-custom-background) .sidebar-toggle-button:hover .cl
   margin: 0px 3px 3px 3px;
 }
 
-.workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
+body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
   display: block;
   margin: 0px 3px 3px 3px;
 }
 
-.workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
+body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
   display: block;
   position: absolute;
   font-size: xx-small;

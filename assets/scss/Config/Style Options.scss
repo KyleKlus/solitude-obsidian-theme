@@ -23,6 +23,11 @@ settings:
     type: class-toggle
     default: false
   -
+    id: show-file-first-letter
+    title: Show first letter in side panel tab icon of a file
+    type: class-toggle
+    default: true
+  -
     id: has-custom-background
     title: Activate custom background
     description: If you want to replace the default image with your own image, then go to the github repository of this theme and get the "Custom Background" snippet, which can be found in the snippets directory.
@@ -51,7 +56,7 @@ settings:
     type: variable-number-slider
     default: 0
     min: -6
-    max: 21
+    max: 19
     step: 0.5
 */
 

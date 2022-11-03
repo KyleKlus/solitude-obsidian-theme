@@ -16,16 +16,16 @@
   --color-purple: #a882ff;
   --color-pink: #FA99CD;
   --color-base-00: hsl(196, 18%, calc(6% + var(--color-base-offset)));
-  --color-base-10: hsl(196, 18%, calc(8% + var(--color-base-offset)));
-  --color-base-20: hsl(196, 18%, calc(9% + var(--color-base-offset)));
-  --color-base-25: hsl(196, 18%, calc(10% + var(--color-base-offset)));
-  --color-base-30: hsl(196, 18%, calc(15% + var(--color-base-offset)));
-  --color-base-35: hsl(196, 18%, calc(19% + var(--color-base-offset)));
-  --color-base-40: hsl(196, 18%, calc(27% + var(--color-base-offset)));
-  --color-base-50: hsl(196, 18%, calc(34% + var(--color-base-offset)));
-  --color-base-60: hsl(196, 18%, calc(54% + var(--color-base-offset)));
-  --color-base-70: hsl(196, 18%, calc(67% + var(--color-base-offset)));
-  --color-base-100: hsl(196, 18%, calc(79% + var(--color-base-offset)));
+  --color-base-10: hsl(196, 18%, calc(9% + var(--color-base-offset)));
+  --color-base-20: hsl(196, 18%, calc(10% + var(--color-base-offset)));
+  --color-base-25: hsl(196, 18%, calc(11% + var(--color-base-offset)));
+  --color-base-30: hsl(196, 18%, calc(16% + var(--color-base-offset)));
+  --color-base-35: hsl(196, 18%, calc(20% + var(--color-base-offset)));
+  --color-base-40: hsl(196, 18%, calc(28% + var(--color-base-offset)));
+  --color-base-50: hsl(196, 18%, calc(35% + var(--color-base-offset)));
+  --color-base-60: hsl(196, 18%, calc(55% + var(--color-base-offset)));
+  --color-base-70: hsl(196, 18%, calc(68% + var(--color-base-offset)));
+  --color-base-100: hsl(196, 18%, calc(80% + var(--color-base-offset)));
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 15%));
@@ -598,6 +598,10 @@ body:not(.deactivate-window-border, .is-maximized) .titlebar-button-container.mo
   -webkit-filter: blur(1px);
 }
 
+.vertical-tab-content {
+  background-color: var(--color-base-10);
+}
+
 /* General Checkboxes */
 .checkbox-container {
   background-color: var(--color-base-30);
@@ -777,6 +781,10 @@ body:not(.is-mobile):is(.has-custom-background) .sidebar-toggle-button:hover .cl
   height: 24px;
 }
 
+.workspace .mod-root .workspace-tab-header-inner::after {
+  right: 1.5px;
+}
+
 .workspace-tabs .workspace-leaf {
   background-color: var(--color-base-25);
 }
@@ -791,12 +799,12 @@ body:not(.is-mobile):is(.has-custom-background) .sidebar-toggle-button:hover .cl
   margin: 0px 3px 3px 3px;
 }
 
-.workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
+body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
   display: block;
   margin: 0px 3px 3px 3px;
 }
 
-.workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
+body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
   display: block;
   position: absolute;
   font-size: xx-small;
@@ -887,6 +895,11 @@ settings:
     type: class-toggle
     default: false
   -
+    id: show-file-first-letter
+    title: Show first letter in side panel tab icon of a file
+    type: class-toggle
+    default: true
+  -
     id: has-custom-background
     title: Activate custom background
     description: If you want to replace the default image with your own image, then go to the github repository of this theme and get the "Custom Background" snippet, which can be found in the snippets directory.
@@ -915,7 +928,7 @@ settings:
     type: variable-number-slider
     default: 0
     min: -6
-    max: 21
+    max: 19
     step: 0.5
 */
 /* #endregion */
