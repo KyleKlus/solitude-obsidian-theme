@@ -2,3 +2,7 @@ body:not(.deactivate-window-border, .is-maximized) .titlebar-button-container.mo
     border-top: 1px solid var(--color-accent-1);
     border-right: 1px solid var(--color-accent-1);
 }
+
+.titlebar-button-container.mod-right {
+    border-bottom-left-radius: var(--radius-s);
+}
