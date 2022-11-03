@@ -6,7 +6,7 @@ body:not(.is-mobile):is(.has-custom-background) {
     background-color: none;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: var(--custom-background);
+    background-image: url(var(--custom-background));
 }
 
 @import 'Titlebar.scss';
