@@ -4,8 +4,13 @@
   margin: 0px;
 }
 
-.is-focused .workspace-leaf.mod-active .view-header {
+Body:not(.is-mobile) .is-focused .workspace-leaf.mod-active .view-header,
+body.is-mobile .workspace-leaf.mod-active .view-header {
   border-bottom-color: var(--color-accent-1);
+}
+
+body.is-mobile .workspace-leaf.mod-active .view-header {
+  border-bottom-color: var(--hr-color);
 }
 
 .view-header-nav-buttons {

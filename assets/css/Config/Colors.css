@@ -56,3 +56,16 @@
   0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
   0px 30px 90px rgba(0, 0, 0, 0.2);
 }
+
+.is-mobile.theme-dark {
+  --color-base-00: hsl(196, 18%, calc(6% + var(--color-base-offset)));
+  --color-base-10: hsl(196, 18%, calc(9% + var(--color-base-offset)));
+  --color-base-20: hsl(196, 18%, calc(10% + var(--color-base-offset)));
+  --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
+  --modal-background: var(--background-secondary);
+  --search-result-background: var(--background-secondary);
+  --background-modifier-form-field: var(--background-modifier-border);
+  --background-modifier-cover: rgba(0, 0, 0, 0.5);
+  --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
+  --settings-home-background: var(--background-primary);
+}

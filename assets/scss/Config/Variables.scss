@@ -579,3 +579,54 @@ body {
     --interactive-accent: var(--color-accent);
     --interactive-accent-hover: var(--color-accent-2);
 }
+
+.is-mobile {
+    --ribbon-width: 58px;
+    --view-header-height: 50px;
+    --mobile-toolbar-height: 40px;
+    --caret-color: var(--text-accent);
+    --font-ui-smaller: calc(var(--font-text-size) * 0.8);
+    --font-ui-small: calc(var(--font-text-size) * 0.937);
+    --font-ui-medium: var(--font-text-size);
+    --font-ui-large: calc(var(--font-text-size) * 1.2);
+    --icon-s: 18px;
+    --icon-m: 20px;
+    --icon-l: 24px;
+    --icon-l-stroke-width: 1.8px;
+    --icon-opacity: 1;
+    --input-height: 40px;
+    --input-shadow: none;
+    --input-shadow-hover: none;
+    --input-font-weight: var(--font-medium);
+    --input-border-width: 0px;
+    --interactive-normal: var(--background-secondary);
+    --mobile-sidebar-width: 340px;
+    --mobile-sidebar-max-width: 500px;
+    --nav-item-padding: var(--size-2-3) var(--size-4-2);
+    --nav-item-color: var(--text-normal);
+    --search-clear-button-size: 16px;
+    --search-icon-size: 20px;
+    --settings-home-background: var(--background-secondary);
+    --slider-thumb-border-width: 0px;
+    --slider-thumb-height: 24px;
+    --slider-thumb-width: 24px;
+    --slider-thumb-y: -9px;
+    --slider-track-height: 6px;
+    --swatch-shadow: none;
+    --swatch-height: 40px;
+    --swatch-width: 40px;
+    --swatch-radius: 40px;
+    --toggle-width: 48px;
+    --toggle-radius: 26px;
+    --toggle-thumb-radius: 26px;
+    --toggle-thumb-height: 26px;
+    --toggle-thumb-width: 26px;
+    --file-margins: var(--size-4-2) var(--size-4-5);
+    --background-modifier-cover: rgba(0, 0, 0, 0.25);
+    --background-modifier-form-field: var(--background-secondary);
+    --keyboard-background: var(--background-primary);
+    --checkbox-size: 17px;
+
+    --interactive-accent: var(--color-accent-1);
+    --interactive-accent-hover: var(--color-accent);
+}

@@ -157,8 +157,9 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   background-color: transparent;
 }
 
-.workspace > .workspace-leaf, .workspace > .workspace-split {
-  height: calc(100% - 6px);
+body:not(.is-mobile) .workspace > .workspace-leaf,
+body:not(.is-mobile) .workspace > .workspace-split {
+  height: calc(100% - var(--panel-spacing));
 }
 
 body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-left-split {
@@ -219,8 +220,7 @@ body:not(.is-mobile):is(.has-custom-background) .sidebar-toggle-button:hover .cl
   border-radius: var(--radius-l);
 }
 
-.workspace-split.mod-root .workspace-leaf,
-.workspace-split.mod-root .workspace-leaf {
+body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf {
   border-radius: var(--radius-l);
   margin: 0px 3px 3px 3px;
 }
@@ -245,14 +245,44 @@ body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right
   background-color: var(--color-base-20);
 }
 
+body:is(.is-mobile) .workspace-drawer-active-tab-back-icon {
+  color: var(--interactive-accent);
+  order: unset;
+}
+
+body:is(.is-mobile) .workspace-drawer-active-tab-back-icon > svg {
+  display: none;
+}
+
+body:is(.is-mobile) .workspace-drawer-active-tab-back-icon::after {
+  content: "<-";
+  font-size: var(--font-ui-large);
+}
+
+body:is(.is-mobile) .workspace-drawer-active-tab-icon > svg.svg-icon.lucide-maximize {
+  display: none;
+}
+
+body:is(.is-mobile) .workspace-drawer-tab-option-item {
+  background-color: var(--color-base-30);
+  border-radius: var(--radius-s);
+  padding: var(--size-2-3);
+  margin: var(--size-4-6);
+}
+
 .view-header {
   border-bottom: 1px solid transparent;
   box-shadow: var(--shadow-l);
   margin: 0px;
 }
 
-.is-focused .workspace-leaf.mod-active .view-header {
+Body:not(.is-mobile) .is-focused .workspace-leaf.mod-active .view-header,
+body.is-mobile .workspace-leaf.mod-active .view-header {
   border-bottom-color: var(--color-accent-1);
+}
+
+body.is-mobile .workspace-leaf.mod-active .view-header {
+  border-bottom-color: var(--hr-color);
 }
 
 .view-header-nav-buttons {

@@ -9,8 +9,9 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
     background-color: transparent;
 }
 
-.workspace > .workspace-leaf, .workspace > .workspace-split {
-    height: calc(100% - 6px);
+body:not(.is-mobile) .workspace > .workspace-leaf,
+body:not(.is-mobile) .workspace > .workspace-split {
+    height: calc(100% - var(--panel-spacing));
 }
 
 body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-left-split {
