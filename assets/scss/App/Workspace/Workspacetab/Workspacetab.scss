@@ -88,10 +88,6 @@ body:is(.is-mobile) .workspace-drawer-active-tab-back-icon::after {
     font-size: var(--font-ui-large)
 }
 
-body:is(.is-mobile) .workspace-drawer-active-tab-icon > svg.svg-icon.lucide-maximize {
-    display: none;
-}
-
 body:is(.is-mobile) .workspace-drawer-tab-option-item {
     background-color: var(--color-base-30);
     border-radius: var(--radius-s);
