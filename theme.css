@@ -57,6 +57,19 @@
   0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
+.is-mobile.theme-dark {
+  --color-base-00: hsl(196, 18%, calc(6% + var(--color-base-offset)));
+  --color-base-10: hsl(196, 18%, calc(9% + var(--color-base-offset)));
+  --color-base-20: hsl(196, 18%, calc(10% + var(--color-base-offset)));
+  --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
+  --modal-background: var(--background-secondary);
+  --search-result-background: var(--background-secondary);
+  --background-modifier-form-field: var(--background-modifier-border);
+  --background-modifier-cover: rgba(0, 0, 0, 0.5);
+  --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
+  --settings-home-background: var(--background-primary);
+}
+
 /* #region *.......................... Fonts */
 :root {
   --header-1-weight: bold;
@@ -565,6 +578,56 @@ body {
   --interactive-accent-hover: var(--color-accent-2);
 }
 
+.is-mobile {
+  --ribbon-width: 58px;
+  --view-header-height: 50px;
+  --mobile-toolbar-height: 40px;
+  --caret-color: var(--text-accent);
+  --font-ui-smaller: calc(var(--font-text-size) * 0.8);
+  --font-ui-small: calc(var(--font-text-size) * 0.937);
+  --font-ui-medium: var(--font-text-size);
+  --font-ui-large: calc(var(--font-text-size) * 1.2);
+  --icon-s: 18px;
+  --icon-m: 20px;
+  --icon-l: 24px;
+  --icon-l-stroke-width: 1.8px;
+  --icon-opacity: 1;
+  --input-height: 40px;
+  --input-shadow: none;
+  --input-shadow-hover: none;
+  --input-font-weight: var(--font-medium);
+  --input-border-width: 0px;
+  --interactive-normal: var(--background-secondary);
+  --mobile-sidebar-width: 340px;
+  --mobile-sidebar-max-width: 500px;
+  --nav-item-padding: var(--size-2-3) var(--size-4-2);
+  --nav-item-color: var(--text-normal);
+  --search-clear-button-size: 16px;
+  --search-icon-size: 20px;
+  --settings-home-background: var(--background-secondary);
+  --slider-thumb-border-width: 0px;
+  --slider-thumb-height: 24px;
+  --slider-thumb-width: 24px;
+  --slider-thumb-y: -9px;
+  --slider-track-height: 6px;
+  --swatch-shadow: none;
+  --swatch-height: 40px;
+  --swatch-width: 40px;
+  --swatch-radius: 40px;
+  --toggle-width: 48px;
+  --toggle-radius: 26px;
+  --toggle-thumb-radius: 26px;
+  --toggle-thumb-height: 26px;
+  --toggle-thumb-width: 26px;
+  --file-margins: var(--size-4-2) var(--size-4-5);
+  --background-modifier-cover: rgba(0, 0, 0, 0.25);
+  --background-modifier-form-field: var(--background-secondary);
+  --keyboard-background: var(--background-primary);
+  --checkbox-size: 17px;
+  --interactive-accent: var(--color-accent-1);
+  --interactive-accent-hover: var(--color-accent);
+}
+
 * {
   -webkit-font-feature-settings: "liga" on, "calt" on;
   font-feature-settings: "liga" on, "calt" on;
@@ -731,8 +794,9 @@ body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   background-color: transparent;
 }
 
-.workspace > .workspace-leaf, .workspace > .workspace-split {
-  height: calc(100% - 6px);
+body:not(.is-mobile) .workspace > .workspace-leaf,
+body:not(.is-mobile) .workspace > .workspace-split {
+  height: calc(100% - var(--panel-spacing));
 }
 
 body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-left-split {
@@ -793,8 +857,7 @@ body:not(.is-mobile):is(.has-custom-background) .sidebar-toggle-button:hover .cl
   border-radius: var(--radius-l);
 }
 
-.workspace-split.mod-root .workspace-leaf,
-.workspace-split.mod-root .workspace-leaf {
+body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf {
   border-radius: var(--radius-l);
   margin: 0px 3px 3px 3px;
 }
@@ -819,14 +882,44 @@ body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right
   background-color: var(--color-base-20);
 }
 
+body:is(.is-mobile) .workspace-drawer-active-tab-back-icon {
+  color: var(--interactive-accent);
+  order: unset;
+}
+
+body:is(.is-mobile) .workspace-drawer-active-tab-back-icon > svg {
+  display: none;
+}
+
+body:is(.is-mobile) .workspace-drawer-active-tab-back-icon::after {
+  content: "<-";
+  font-size: var(--font-ui-large);
+}
+
+body:is(.is-mobile) .workspace-drawer-active-tab-icon > svg.svg-icon.lucide-maximize {
+  display: none;
+}
+
+body:is(.is-mobile) .workspace-drawer-tab-option-item {
+  background-color: var(--color-base-30);
+  border-radius: var(--radius-s);
+  padding: var(--size-2-3);
+  margin: var(--size-4-6);
+}
+
 .view-header {
   border-bottom: 1px solid transparent;
   box-shadow: var(--shadow-l);
   margin: 0px;
 }
 
-.is-focused .workspace-leaf.mod-active .view-header {
+Body:not(.is-mobile) .is-focused .workspace-leaf.mod-active .view-header,
+body.is-mobile .workspace-leaf.mod-active .view-header {
   border-bottom-color: var(--color-accent-1);
+}
+
+body.is-mobile .workspace-leaf.mod-active .view-header {
+  border-bottom-color: var(--hr-color);
 }
 
 .view-header-nav-buttons {
