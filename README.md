@@ -19,24 +19,13 @@
 
 ## Description
 
-This is a dark theme with a slight greenish tint, which uses your chosen accent color. It will have many extra functions (if you use the below mentioned snippets) and is highly configurable via the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+This is a dark theme with a slight greenish tint, which uses your chosen accent color. It is highly configurable via the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and has some nice extra features.
 
 ## Extra Features
 
 - Custom workspace background
 - Colored "A, B, C, D" - checkboxes (Useful for prioritizing tasks)
-
-## Planed Extra Features
-
-- Translucent panels (Only useful if a custom background is used)
-- Custom callouts
-  - Heading callout (callout tag: "h") such that whole sections under the heading can be folded via callout fold arrows
-  - MOC callout (callout tag: "moc") such that a wiki like, left aligned, moc can be created
-  - Controls callout (callout tag: "ctrl") for use as a ctrl-buttons header
-- Exportmode
-
-![Screenshot](assets/img/custom_background_screenshot.png)
-Theme with translucency enabled and a custom background defined via a snippet. Here you can also see the before mentioned custom callouts.
+- Custom background settings
 
 ## Recommended Plugins
 
@@ -55,6 +44,7 @@ Theme with translucency enabled and a custom background defined via a snippet. H
 - v2.7.0 Redone suggestion prompt
 - v2.7.4 Major fix after obsidian v1.0.0
 - v2.7.5 Added custom background feature, file icon in the tab header of the side panels show first letter now
+- v2.7.6 Added some mobile optimizations
 
 <p align="center">
     Please open an <a href="https://github.com/MajorEnkidu/red-solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.

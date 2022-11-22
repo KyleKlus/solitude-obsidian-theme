@@ -44,18 +44,36 @@ settings:
     step: 1
   -
     id: colors
-    title: Colors
+    title: Background Colors
     type: heading
     level: 1
     collapsed: true
   -
     id: color-base-offset-mult
     title: Adjust brightness
-    description: Adjusts the brightness of all dark backgrounds
-    type: variable-number-slider
+    description: Adjusts the brightness of all  backgrounds
+    type: variable-number
     default: 0
     min: -6
     max: 19
+    step: 0.5
+  -
+    id: color-base-hue-offset
+    title: Adjust hue
+    description: Adjusts the hue of all backgrounds
+    type: variable-number
+    default: 0
+    min: -196
+    max: 59
+    step: 1
+  -
+    id: color-base-sat-offset-mult
+    title: Adjust saturation
+    description: Adjusts the saturation of all backgrounds
+    type: variable-number
+    default: 0
+    min: -18
+    max: 82
     step: 0.5
 */
 /* #endregion */

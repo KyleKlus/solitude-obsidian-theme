@@ -54,6 +54,10 @@ body:not(.deactivate-window-border, .is-maximized, .is-mobile) .titlebar-button-
   color: var(--interactive-accent);
 }
 
+.mobile-navbar {
+  background-color: var(--color-base-00);
+}
+
 .is-mobile .menu {
   border-top: 1px solid var(--background-modifier-border);
 }
