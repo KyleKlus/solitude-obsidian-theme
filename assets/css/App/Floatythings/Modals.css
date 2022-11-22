@@ -4,6 +4,22 @@
   -webkit-filter: blur(1px);
 }
 
+.is-phone .modal .modal-title {
+  font-size: var(--font-ui-large);
+}
+
+.is-phone .vertical-tab-header-group-title, .is-phone .setting-item-heading .setting-item-name {
+  font-size: var(--font-ui-medium);
+}
+
 .vertical-tab-content {
   background-color: var(--color-base-10);
+}
+
+.vertical-tab-header {
+  background-color: var(--color-base-25);
+}
+
+.is-phone .modal.mod-settings .vertical-tab-header-group-items {
+  border: 1px solid var(--background-modifier-border);
 }

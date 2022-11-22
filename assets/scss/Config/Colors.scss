@@ -22,7 +22,7 @@
     --color-base-10: hsl(196, 18%, calc(9% + var(--color-base-offset)));
     --color-base-20: hsl(196, 18%, calc(10% + var(--color-base-offset)));
     --color-base-25: hsl(196, 18%, calc(11% + var(--color-base-offset)));
-    --color-base-30: hsl(196, 18%, calc(16% + var(--color-base-offset)));
+    --color-base-30: hsl(196, 18%, calc(14% + var(--color-base-offset)));
     --color-base-35: hsl(196, 18%, calc(20% + var(--color-base-offset)));
     --color-base-40: hsl(196, 18%, calc(28% + var(--color-base-offset)));
     --color-base-50: hsl(196, 18%, calc(35% + var(--color-base-offset)));
@@ -66,7 +66,11 @@
   --color-base-20: hsl(196, 18%, calc(10% + var(--color-base-offset)));
   --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
   --modal-background: var(--background-secondary);
+
   --search-result-background: var(--background-secondary);
+  --background-primary: var(--color-base-10);
+  --background-secondary: var(--color-base-25); // default 30
+  --background-secondary-alt: var(--color-base-30);
   --background-modifier-form-field: var(--background-modifier-border);
   --background-modifier-cover: rgba(0, 0, 0, 0.5);
   --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);

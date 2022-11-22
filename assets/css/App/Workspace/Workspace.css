@@ -112,6 +112,43 @@ body:is(.is-mobile) .workspace-drawer-tab-option-item {
   margin: var(--size-4-6);
 }
 
+body.is-mobile .workspace-drawer.mod-left {
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+body.is-mobile .workspace-drawer.mod-right {
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+body.is-mobile .workspace-drawer-header {
+  background-color: var(--color-base-25);
+}
+
+body:is(.is-mobile, .theme-dark) .workspace-drawer-inner {
+  background-color: var(--color-base-20);
+}
+
+body.is-mobile .workspace-drawer-header {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+body.is-mobile .workspace-drawer.mod-left .workspace-drawer-active-tab-header {
+  background-color: var(--color-base-25);
+  border-bottom: 1px solid var(--background-modifier-border);
+  box-shadow: var(--shadow-l);
+}
+
+body.is-mobile .workspace-drawer.mod-right .workspace-drawer-active-tab-header {
+  background-color: var(--color-base-25);
+  border-bottom: 1px solid var(--background-modifier-border);
+  box-shadow: var(--shadow-l);
+}
+
+body.is-mobile .nav-header {
+  border-top: 1px solid var(--background-modifier-border);
+  background-color: var(--color-base-00);
+}
+
 .view-header {
   border-bottom: 1px solid transparent;
   box-shadow: var(--shadow-l);
@@ -145,4 +182,10 @@ body.is-mobile .workspace-leaf.mod-active .view-header {
 
 .workspace-split.mod-root .view-content {
   background-color: var(--color-base-10);
+}
+
+body.is-mobile .nav-file-title,
+body.is-mobile .nav-folder-title {
+  --nav-item-padding: 8px 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
 }

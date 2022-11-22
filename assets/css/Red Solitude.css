@@ -19,7 +19,7 @@
   --color-base-10: hsl(196, 18%, calc(9% + var(--color-base-offset)));
   --color-base-20: hsl(196, 18%, calc(10% + var(--color-base-offset)));
   --color-base-25: hsl(196, 18%, calc(11% + var(--color-base-offset)));
-  --color-base-30: hsl(196, 18%, calc(16% + var(--color-base-offset)));
+  --color-base-30: hsl(196, 18%, calc(14% + var(--color-base-offset)));
   --color-base-35: hsl(196, 18%, calc(20% + var(--color-base-offset)));
   --color-base-40: hsl(196, 18%, calc(28% + var(--color-base-offset)));
   --color-base-50: hsl(196, 18%, calc(35% + var(--color-base-offset)));
@@ -64,6 +64,9 @@
   --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
   --modal-background: var(--background-secondary);
   --search-result-background: var(--background-secondary);
+  --background-primary: var(--color-base-10);
+  --background-secondary: var(--color-base-25);
+  --background-secondary-alt: var(--color-base-30);
   --background-modifier-form-field: var(--background-modifier-border);
   --background-modifier-cover: rgba(0, 0, 0, 0.5);
   --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
@@ -635,7 +638,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body:not(.deactivate-window-border, .is-maximized) {
+body:not(.deactivate-window-border, .is-maximized, .is-mobile) {
   border: 1px solid var(--color-accent-1);
 }
 
@@ -646,7 +649,7 @@ body:not(.is-mobile):is(.has-custom-background) {
   background-image: var(--custom-background);
 }
 
-body:not(.deactivate-window-border, .is-maximized) .titlebar-button-container.mod-right {
+body:not(.deactivate-window-border, .is-maximized, .is-mobile) .titlebar-button-container.mod-right {
   border-top: 1px solid var(--color-accent-1);
   border-right: 1px solid var(--color-accent-1);
 }
@@ -661,8 +664,38 @@ body:not(.deactivate-window-border, .is-maximized) .titlebar-button-container.mo
   -webkit-filter: blur(1px);
 }
 
+.is-phone .modal .modal-title {
+  font-size: var(--font-ui-large);
+}
+
+.is-phone .vertical-tab-header-group-title, .is-phone .setting-item-heading .setting-item-name {
+  font-size: var(--font-ui-medium);
+}
+
 .vertical-tab-content {
   background-color: var(--color-base-10);
+}
+
+.vertical-tab-header {
+  background-color: var(--color-base-25);
+}
+
+.is-phone .modal.mod-settings .vertical-tab-header-group-items {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.mobile-toolbar {
+  border-top: 1px solid var(--background-modifier-border);
+  background-color: var(--color-base-00);
+}
+
+.mobile-toolbar-option {
+  padding: 0px 5px;
+  color: var(--interactive-accent);
+}
+
+.is-mobile .menu {
+  border-top: 1px solid var(--background-modifier-border);
 }
 
 /* General Checkboxes */
@@ -903,6 +936,43 @@ body:is(.is-mobile) .workspace-drawer-tab-option-item {
   margin: var(--size-4-6);
 }
 
+body.is-mobile .workspace-drawer.mod-left {
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+body.is-mobile .workspace-drawer.mod-right {
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+body.is-mobile .workspace-drawer-header {
+  background-color: var(--color-base-25);
+}
+
+body:is(.is-mobile, .theme-dark) .workspace-drawer-inner {
+  background-color: var(--color-base-20);
+}
+
+body.is-mobile .workspace-drawer-header {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+body.is-mobile .workspace-drawer.mod-left .workspace-drawer-active-tab-header {
+  background-color: var(--color-base-25);
+  border-bottom: 1px solid var(--background-modifier-border);
+  box-shadow: var(--shadow-l);
+}
+
+body.is-mobile .workspace-drawer.mod-right .workspace-drawer-active-tab-header {
+  background-color: var(--color-base-25);
+  border-bottom: 1px solid var(--background-modifier-border);
+  box-shadow: var(--shadow-l);
+}
+
+body.is-mobile .nav-header {
+  border-top: 1px solid var(--background-modifier-border);
+  background-color: var(--color-base-00);
+}
+
 .view-header {
   border-bottom: 1px solid transparent;
   box-shadow: var(--shadow-l);
@@ -936,6 +1006,12 @@ body.is-mobile .workspace-leaf.mod-active .view-header {
 
 .workspace-split.mod-root .view-content {
   background-color: var(--color-base-10);
+}
+
+body.is-mobile .nav-file-title,
+body.is-mobile .nav-folder-title {
+  --nav-item-padding: 8px 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
 }
 
 .kanban-plugin {

@@ -1,4 +1,4 @@
-body:not(.deactivate-window-border, .is-maximized) {
+body:not(.deactivate-window-border, .is-maximized, .is-mobile) {
     border: 1px solid var(--color-accent-1);
 }
 
