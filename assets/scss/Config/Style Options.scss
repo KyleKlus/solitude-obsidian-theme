@@ -50,31 +50,29 @@ settings:
     level: 1
     collapsed: true
   -
+    id: color-base-hue
+    title: Adjust hue
+    description: Adjusts the hue of all background colors (0-255)
+    type: variable-number
+    default: 196
+    min: 0
+    max: 255
+  -
+    id: color-base-sat
+    title: Adjust saturation
+    description: Adjusts the saturation of all  background colors (0%-100%)
+    type: variable-number
+    default: 18
+    min: 0
+    max: 100
+  -
     id: color-base-offset-mult
     title: Adjust brightness
-    description: Adjusts the brightness of all  backgrounds
-    type: variable-number
+    description: Adjusts the brightness of all  background colors (0%-100%)
+    type: variable-number-slider
     default: 0
     min: -6
     max: 19
-    step: 0.5
-  -
-    id: color-base-hue-offset
-    title: Adjust hue
-    description: Adjusts the hue of all backgrounds
-    type: variable-number
-    default: 0
-    min: -196
-    max: 59
-    step: 1
-  -
-    id: color-base-sat-offset-mult
-    title: Adjust saturation
-    description: Adjusts the saturation of all backgrounds
-    type: variable-number
-    default: 0
-    min: -18
-    max: 82
     step: 0.5
 */
 

@@ -2,9 +2,9 @@
     // Custom variables
     --color-base-offset-mult: 0;
     --color-base-offset: calc(1% * var(--color-base-offset-mult));
-    --color-base-hue-offset: 0;
-    --color-base-sat-offset-mult: 0;
-    --color-base-sat-offset: calc(1% * var(--color-base-sat-offset-mult));
+    --color-base-hue: 196;
+    --color-base-sat: 18;
+    --color-base-sat-percent: calc(1% * var(--color-base-sat));
 
     // Default variables
     color-scheme: dark;
@@ -21,17 +21,17 @@
     --color-blue: #027aff;
     --color-purple: #a882ff;
     --color-pink: #FA99CD;
-    --color-base-00: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(6% + var(--color-base-offset)));
-    --color-base-10: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(9% + var(--color-base-offset)));
-    --color-base-20: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(10% + var(--color-base-offset)));
-    --color-base-25: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(11% + var(--color-base-offset)));
-    --color-base-30: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(14% + var(--color-base-offset)));
-    --color-base-35: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(20% + var(--color-base-offset)));
-    --color-base-40: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(28% + var(--color-base-offset)));
-    --color-base-50: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(35% + var(--color-base-offset)));
-    --color-base-60: hsl(calc(196 + var(--color-base-hue-offset)), calc(18%, + var(--color-base-sat-offset)), calc(55% + var(--color-base-offset)));
-    --color-base-70: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(68% + var(--color-base-offset)));
-    --color-base-100: hsl(calc(196 + var(--color-base-hue-offset)), calc(18% + var(--color-base-sat-offset)), calc(80% + var(--color-base-offset)));
+    --color-base-00: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(6% + var(--color-base-offset)));
+    --color-base-10: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(9% + var(--color-base-offset)));
+    --color-base-20: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(10% + var(--color-base-offset)));
+    --color-base-25: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(11% + var(--color-base-offset)));
+    --color-base-30: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(14% + var(--color-base-offset)));
+    --color-base-35: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(20% + var(--color-base-offset)));
+    --color-base-40: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(28% + var(--color-base-offset)));
+    --color-base-50: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(35% + var(--color-base-offset)));
+    --color-base-60: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(55% + var(--color-base-offset)));
+    --color-base-70: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(68% + var(--color-base-offset)));
+    --color-base-100: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(80% + var(--color-base-offset)));
     --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
     --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 15%));
@@ -64,9 +64,9 @@
 }
 
 .is-mobile.theme-dark {
-  --color-base-00: hsl(196, 18%, calc(6% + var(--color-base-offset)));
-  --color-base-10: hsl(196, 18%, calc(9% + var(--color-base-offset)));
-  --color-base-20: hsl(196, 18%, calc(10% + var(--color-base-offset)));
+  --color-base-00: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(6% + var(--color-base-offset)));
+    --color-base-10: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(9% + var(--color-base-offset)));
+    --color-base-20: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(10% + var(--color-base-offset)));
   --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
   --modal-background: var(--background-secondary);
 

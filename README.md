@@ -45,6 +45,7 @@ This is a dark theme with a slight greenish tint, which uses your chosen accent 
 - v2.7.4 Major fix after obsidian v1.0.0
 - v2.7.5 Added custom background feature, file icon in the tab header of the side panels show first letter now
 - v2.7.6 Added some mobile optimizations
+- v2.7.7 Quick bugfix
 
 <p align="center">
     Please open an <a href="https://github.com/MajorEnkidu/red-solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.
