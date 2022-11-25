@@ -1,6 +1,6 @@
 # Red Solitude
 
-![Screenshot](promo_screenshot.png)
+![Screenshot](promo_screenshot_large.png)
 
 <p align="center">
     Designed by
@@ -14,8 +14,6 @@
         <img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' />
     </a>
 </p>
-
-**_This theme is currently work in progress, as the obsidian v1.0.0 update messed some thing up._**
 
 ## Description
 
@@ -46,6 +44,7 @@ This is a dark theme with a slight greenish tint, which uses your chosen accent 
 - v2.7.5 Added custom background feature, file icon in the tab header of the side panels show first letter now
 - v2.7.6 Added some mobile optimizations
 - v2.7.7 Quick bugfix
+- v2.7.8 Some changes to the README and the promo screenshot
 
 <p align="center">
     Please open an <a href="https://github.com/MajorEnkidu/red-solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.
