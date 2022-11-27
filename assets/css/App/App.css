@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body:not(.deactivate-window-border, .is-maximized, .is-mobile) {
   border: 1px solid var(--color-accent-1);
 }
@@ -289,7 +290,7 @@ body:is(.is-mobile) .workspace-drawer-active-tab-back-icon > svg {
 }
 
 body:is(.is-mobile) .workspace-drawer-active-tab-back-icon::after {
-  content: "<-";
+  content: "⟵"/"";
   font-size: var(--font-ui-large);
 }
 

@@ -1,9 +1,11 @@
+@charset "UTF-8";
 .theme-dark {
   --color-base-offset-mult: 0;
   --color-base-offset: calc(1% * var(--color-base-offset-mult));
-  --color-base-hue: 196;
-  --color-base-sat: 18;
-  --color-base-sat-percent: calc(1% * var(--color-base-sat));
+  --color-base-l: 6%;
+  --color-base-h: 196;
+  --color-base-s: 18%;
+  --color-base-sat-percent: calc(1% * var(--color-base-s));
   color-scheme: dark;
   --highlight-mix-blend-mode: lighten;
   --mono-rgb-0: 0, 0, 0;
@@ -18,17 +20,17 @@
   --color-blue: #027aff;
   --color-purple: #a882ff;
   --color-pink: #FA99CD;
-  --color-base-00: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(6% + var(--color-base-offset)));
-  --color-base-10: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(9% + var(--color-base-offset)));
-  --color-base-20: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(10% + var(--color-base-offset)));
-  --color-base-25: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(11% + var(--color-base-offset)));
-  --color-base-30: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(14% + var(--color-base-offset)));
-  --color-base-35: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(20% + var(--color-base-offset)));
-  --color-base-40: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(28% + var(--color-base-offset)));
-  --color-base-50: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(35% + var(--color-base-offset)));
-  --color-base-60: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(55% + var(--color-base-offset)));
-  --color-base-70: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(68% + var(--color-base-offset)));
-  --color-base-100: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(80% + var(--color-base-offset)));
+  --color-base-00: hsl(var(--color-base-h), var(--color-base-s), var(--color-base-l));
+  --color-base-10: hsl(var(--color-base-h), var(--color-base-s), calc(3% + var(--color-base-l)));
+  --color-base-20: hsl(var(--color-base-h), var(--color-base-s), calc(4% + var(--color-base-l)));
+  --color-base-25: hsl(var(--color-base-h), var(--color-base-s), calc(7% + var(--color-base-l)));
+  --color-base-30: hsl(var(--color-base-h), var(--color-base-s), calc(8% + var(--color-base-l)));
+  --color-base-35: hsl(var(--color-base-h), var(--color-base-s), calc(14% + var(--color-base-l)));
+  --color-base-40: hsl(var(--color-base-h), var(--color-base-s), calc(22% + var(--color-base-l)));
+  --color-base-50: hsl(var(--color-base-h), var(--color-base-s), calc(29% + var(--color-base-l)));
+  --color-base-60: hsl(var(--color-base-h), var(--color-base-s), calc(49% + var(--color-base-l)));
+  --color-base-70: hsl(var(--color-base-h), var(--color-base-s), calc(62% + var(--color-base-l)));
+  --color-base-100: hsl(var(--color-base-h), var(--color-base-s), calc(74% + var(--color-base-l)));
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 15%));
@@ -61,9 +63,9 @@
 }
 
 .is-mobile.theme-dark {
-  --color-base-00: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(6% + var(--color-base-offset)));
-  --color-base-10: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(9% + var(--color-base-offset)));
-  --color-base-20: hsl(var(--color-base-hue), var(--color-base-sat-percent), calc(10% + var(--color-base-offset)));
+  --color-base-00: hsl(var(--color-base-h), var(--color-base-s), var(--color-base-l));
+  --color-base-10: hsl(var(--color-base-h), var(--color-base-s), calc(3% + var(--color-base-l)));
+  --color-base-20: hsl(var(--color-base-h), var(--color-base-s), calc(4% + var(--color-base-l)));
   --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
   --modal-background: var(--background-secondary);
   --search-result-background: var(--background-secondary);
@@ -630,8 +632,8 @@ body {
   --background-modifier-form-field: var(--background-secondary);
   --keyboard-background: var(--background-primary);
   --checkbox-size: 17px;
-  --interactive-accent: var(--color-accent-1);
-  --interactive-accent-hover: var(--color-accent);
+  --interactive-accent: var(--color-accent);
+  --interactive-accent-hover: var(--color-accent-2);
 }
 
 * {
@@ -932,7 +934,7 @@ body:is(.is-mobile) .workspace-drawer-active-tab-back-icon > svg {
 }
 
 body:is(.is-mobile) .workspace-drawer-active-tab-back-icon::after {
-  content: "<-";
+  content: "⟵"/"";
   font-size: var(--font-ui-large);
 }
 
@@ -1089,34 +1091,34 @@ settings:
     step: 1
   -
     id: colors
-    title: Background Colors
+    title: Colors
     type: heading
     level: 1
     collapsed: true
   -
-    id: color-base-hue
-    title: Adjust hue
-    description: Adjusts the hue of all background colors (0-255)
-    type: variable-number
-    default: 196
-    min: 0
-    max: 255
+    id: color-base
+    title: Adjust base color
+    description: Adjusts the color of all backgrounds
+    type: variable-color
+    format: hsl-split
+    default: '#'
   -
-    id: color-base-sat
-    title: Adjust saturation
-    description: Adjusts the saturation of all  background colors (0%-100%)
-    type: variable-number
-    default: 18
-    min: 0
-    max: 100
+    id: text-normal
+    title: Adjust normal text color
+    type: variable-color
+    format: hex
+    default: '#'
   -
-    id: color-base-offset-mult
-    title: Adjust brightness
-    description: Adjusts the brightness of all  background colors (0%-100%)
-    type: variable-number-slider
-    default: 0
-    min: -6
-    max: 19
-    step: 0.5
+    id: text-muted
+    title: Adjust muted text color
+    type: variable-color
+    format: hex
+    default: '#'
+  -
+    id: text-faint
+    title: Adjust faint text color
+    type: variable-color
+    format: hex
+    default: '#'
 */
 /* #endregion */

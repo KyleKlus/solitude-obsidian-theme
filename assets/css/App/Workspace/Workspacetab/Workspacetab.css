@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body.is-focused .workspace-tabs.mod-top,
 .workspace-tabs.mod-top {
   --tab-container-background: transparent;
@@ -83,7 +84,7 @@ body:is(.is-mobile) .workspace-drawer-active-tab-back-icon > svg {
 }
 
 body:is(.is-mobile) .workspace-drawer-active-tab-back-icon::after {
-  content: "<-";
+  content: "⟵"/"";
   font-size: var(--font-ui-large);
 }
 

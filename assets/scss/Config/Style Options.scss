@@ -45,35 +45,35 @@ settings:
     step: 1
   -
     id: colors
-    title: Background Colors
+    title: Colors
     type: heading
     level: 1
     collapsed: true
   -
-    id: color-base-hue
-    title: Adjust hue
-    description: Adjusts the hue of all background colors (0-255)
-    type: variable-number
-    default: 196
-    min: 0
-    max: 255
+    id: color-base
+    title: Adjust base color
+    description: Adjusts the color of all backgrounds
+    type: variable-color
+    format: hsl-split
+    default: '#'
   -
-    id: color-base-sat
-    title: Adjust saturation
-    description: Adjusts the saturation of all  background colors (0%-100%)
-    type: variable-number
-    default: 18
-    min: 0
-    max: 100
+    id: text-normal
+    title: Adjust normal text color
+    type: variable-color
+    format: hex
+    default: '#'
   -
-    id: color-base-offset-mult
-    title: Adjust brightness
-    description: Adjusts the brightness of all  background colors (0%-100%)
-    type: variable-number-slider
-    default: 0
-    min: -6
-    max: 19
-    step: 0.5
+    id: text-muted
+    title: Adjust muted text color
+    type: variable-color
+    format: hex
+    default: '#'
+  -
+    id: text-faint
+    title: Adjust faint text color
+    type: variable-color
+    format: hex
+    default: '#'
 */
 
 /* #endregion */

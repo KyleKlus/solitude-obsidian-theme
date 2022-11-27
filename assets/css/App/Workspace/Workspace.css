@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body:not(.is-mobile):is(.has-custom-background) .workspace,
 body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   background-color: transparent;
@@ -101,7 +102,7 @@ body:is(.is-mobile) .workspace-drawer-active-tab-back-icon > svg {
 }
 
 body:is(.is-mobile) .workspace-drawer-active-tab-back-icon::after {
-  content: "<-";
+  content: "⟵"/"";
   font-size: var(--font-ui-large);
 }
 

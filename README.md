@@ -45,6 +45,7 @@ This is a dark theme with a slight greenish tint, which uses your chosen accent 
 - v2.7.6 Added some mobile optimizations
 - v2.7.7 Quick bugfix
 - v2.7.8 Some changes to the README and the promo screenshot
+- v2.7.9 Changed the back arrow in mobile view & added a color picker to background colors
 
 <p align="center">
     Please open an <a href="https://github.com/MajorEnkidu/red-solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.
