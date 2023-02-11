@@ -1,6 +1,6 @@
 {
-  "name": "red-solitude-obsidian-theme",
-  "version": "2.7.9",
+  "name": "solitude-obsidian-theme",
+  "version": "2.8.0",
   "description": "![Screenshot](promo_screenshot.png)",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MajorEnkidu/red-solitude-obsidian-theme.git"
+    "url": "git+https://github.com/MajorEnkidu/solitude-obsidian-theme.git"
   },
   "author": "Kyle Klus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MajorEnkidu/red-solitude-obsidian-theme/issues"
+    "url": "https://github.com/MajorEnkidu/solitude-obsidian-theme/issues"
   },
-  "homepage": "https://github.com/MajorEnkidu/red-solitude-obsidian-theme#readme",
+  "homepage": "https://github.com/MajorEnkidu/solitude-obsidian-theme#readme",
   "devDependencies": {
     "sass": "^1.53.0"
   }

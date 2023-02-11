@@ -1,0 +1,13 @@
+@import 'Config/Variables.scss';
+
+* {
+  -webkit-font-feature-settings: 'liga' on, 'calt' on;
+  font-feature-settings: 'liga' on, 'calt' on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@import 'App/App.scss';
+@import 'Plugins/Plugins.scss';
+
+@import 'Config/Style Options.scss';

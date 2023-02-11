@@ -1,4 +1,4 @@
-# Red Solitude
+# Solitude
 
 ![Screenshot](promo_screenshot_large.png)
 
@@ -6,7 +6,7 @@
     Designed by
     <a href="https://github.com/MajorEnkidu">MajorEnkidu</a>
      | License:
-    <a href="https://github.com/MajorEnkidu/red-solitude-vscode-theme/blob/main/LICENCE.md">MIT</a>
+    <a href="https://github.com/MajorEnkidu/solitude-vscode-theme/blob/main/LICENCE.md">MIT</a>
 </p>
 
 <p align="center">
@@ -46,7 +46,8 @@ This is a dark theme with a slight greenish tint, which uses your chosen accent 
 - v2.7.7 Quick bugfix
 - v2.7.8 Some changes to the README and the promo screenshot
 - v2.7.9 Changed the back arrow in mobile view & added a color picker to background colors
+- v2.8.0 Rebranding
 
 <p align="center">
-    Please open an <a href="https://github.com/MajorEnkidu/red-solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.
+    Please open an <a href="https://github.com/MajorEnkidu/solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.
 </p>
