@@ -62,6 +62,7 @@ This is a modern looking theme, which respects the chosen accent color. It is so
 - v2.8.0 Rebranding to "Solitude"
 - v2.8.1 Rework on: Tabs, spacing, settings, light theme, bugfixes
 - v2.8.2 Bugfixes & new shadows
+- v2.8.3 Bugfixes
 
 <p align="center">
     Please open an <a href="https://github.com/MajorEnkidu/solitude-obsidian-theme/issues">issue on github</a>, if you find any bugs or if you have any recommendations for what I should add to this theme.
