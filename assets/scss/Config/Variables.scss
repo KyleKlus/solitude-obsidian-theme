@@ -580,6 +580,29 @@ body {
     --interactive-accent-hover: var(--color-accent-2);
 }
 
+body.theme-light {
+     /* Text */
+
+     --text-normal: var(--color-base-100);
+     --text-muted: var(--color-base-90);
+     --text-faint: var(--color-base-60);
+     --text-on-accent: white;
+     --text-error: var(--color-red);
+     --text-success: var(--color-green);
+     --text-selection: hsla(var(--color-accent-hsl), 0.2);
+     --text-accent: var(--color-accent);
+     --text-accent-hover: var(--color-accent-2);
+
+     /* Interactions */
+
+     --interactive-normal: var(--color-base-00);
+     --interactive-hover: var(--color-base-10);
+     --interactive-accent-hsl: var(--color-accent-hsl);
+     --interactive-accent: var(--color-accent);
+     --interactive-accent-hover: var(--color-accent-2);
+
+}
+
 .is-mobile {
     --ribbon-width: 58px;
     --view-header-height: 50px;
