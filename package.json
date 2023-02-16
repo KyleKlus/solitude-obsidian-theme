@@ -4,13 +4,12 @@
   "description": "![Screenshot](promo_screenshot.png)",
   "main": "index.js",
   "scripts": {
-    "sass-dev": "sass --style=expanded assets/scss:assets/css && ./update_theme_dev_vault.zsh",
-    "sass-prod": "sass --no-source-map --style=expanded assets/scss:assets/css && ./update_vaults.zsh",
-    "sass-dev-snippet": "sass --no-source-map --style=expanded assets/scss:assets/css && ./update_snippets.zsh"
+    "sass-dev": "sass --style=expanded assets/scss:assets/css && copyfiles -u 2 assets/css/theme.css ./ && copyfiles -u 2 assets/css/theme.css ./theme-dev-vault-main/.obsidian/themes",
+    "sass-prod": "sass --no-source-map --style=expanded assets/scss:assets/css && copyfiles -u 2 assets/css/theme.css ./ && copyfiles -u 2 assets/css/theme.css ./theme-dev-vault-main/.obsidian/themes"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MajorEnkidu/solitude-obsidian-theme.git"
+    "url": "git+https://github.com/MajorEnkidu/red-solitude-obsidian-theme.git"
   },
   "author": "Kyle Klus",
   "license": "MIT",
@@ -19,6 +18,8 @@
   },
   "homepage": "https://github.com/MajorEnkidu/solitude-obsidian-theme#readme",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "rename": "^1.0.4",
     "sass": "^1.53.0"
   }
 }
