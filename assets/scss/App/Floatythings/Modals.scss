@@ -1,39 +1,62 @@
 .modal-bg {
-    background-color: rgba(12, 12, 12, 1);
-    backdrop-filter: blur(20px);
-    -webkit-filter: blur(1px);
-
+	background-color: rgba(12, 12, 12, 1);
+	backdrop-filter: blur(20px);
+	-webkit-filter: blur(1px);
 }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div.setting-item-description {
-    position: relative;
-    margin-bottom: 2rem;
+body
+	> div.modal-container.mod-dim
+	> div.modal.mod-settings.mod-sidebar-layout
+	> div.modal-content.vertical-tabs-container
+	> div.vertical-tab-content-container
+	> div
+	> div:nth-child(2)
+	> div.setting-item-control
+	> input[type="color"] {
+	position: relative;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
 }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div.setting-item-description::after {
-    position: absolute;
-    color: var(--text-faint);
-    content: "Recommended colors: Red -> #B62F2F  | Blue -> #304BB5 | Green -> #4EA636  | Yellow -> #A98D28 | Purple -> #6042C2";
-    top: 1.5rem;
-    left: 0px;
+body
+	> div.modal-container.mod-dim
+	> div.modal.mod-settings.mod-sidebar-layout
+	> div.modal-content.vertical-tabs-container
+	> div.vertical-tab-content-container
+	> div
+	> div:nth-child(2)
+	> div.setting-item-control
+	> input[type="color"]::before {
+	position: absolute;
+	color: var(--text-faint);
+	content: "Recommended colors: Red -> #B62F2F  | Blue -> #304BB5 | Green -> #4EA636  | Yellow -> #A98D28 | Purple -> #6042C2";
+	top: 2.5rem;
+	left: calc(-50vw + -30px);
 }
 
-.is-phone .modal .modal-title{
-    font-size: var(--font-ui-large);
+.setting-hotkey,
+.horizontal-tab-nav-item.is-active,
+.vertical-tab-nav-item.is-active {
+	box-shadow: var(--input-shadow);
 }
 
-.is-phone .vertical-tab-header-group-title, .is-phone .setting-item-heading .setting-item-name {
-    font-size: var(--font-ui-medium);
+.is-phone .modal .modal-title {
+	font-size: var(--font-ui-large);
+}
+
+.is-phone .vertical-tab-header-group-title,
+.is-phone .setting-item-heading .setting-item-name {
+	font-size: var(--font-ui-medium);
 }
 
 .vertical-tab-content {
-    background-color: var(--color-base-10);
+	background-color: var(--color-base-10);
 }
 
 .vertical-tab-header {
-    background-color: var(--color-base-25);
+	background-color: var(--color-base-25);
 }
 
 .is-phone .modal.mod-settings .vertical-tab-header-group-items {
-    border: 1px solid var(--background-modifier-border);
+	border: 1px solid var(--background-modifier-border);
 }

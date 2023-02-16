@@ -29,7 +29,7 @@ body:not(.is-mobile):is(.has-custom-background) .sidebar-toggle-button:hover .cl
   margin: 0px;
   align-self: center;
   justify-self: center;
-  box-shadow: var(--shadow-l);
+  box-shadow: var(--input-shadow);
   height: 24px;
 }
 
@@ -73,6 +73,7 @@ body:not(.is-mobile) .workspace-split:not(.mod-root, .mod-left-split) {
 .workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
   background-color: var(--tab-background-active);
   border-color: var(--divider-color);
+  box-shadow: var(--input-shadow);
 }
 
 body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
@@ -89,7 +90,8 @@ body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right
   left: 6px;
 }
 
-.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf, .mod-root .workspace-tabs .workspace-leaf,
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.mod-root .workspace-tabs .workspace-leaf,
 .view-header,
 .is-focused .workspace-leaf.mod-active .view-header {
   background-color: var(--color-base-20);

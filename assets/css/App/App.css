@@ -25,24 +25,32 @@ body:not(.deactivate-window-border, .is-maximized, .is-mobile) .titlebar-button-
   -webkit-filter: blur(1px);
 }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div.setting-item-description {
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-control > input[type=color] {
   position: relative;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div.setting-item-description::after {
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-control > input[type=color]::before {
   position: absolute;
   color: var(--text-faint);
   content: "Recommended colors: Red -> #B62F2F  | Blue -> #304BB5 | Green -> #4EA636  | Yellow -> #A98D28 | Purple -> #6042C2";
-  top: 1.5rem;
-  left: 0px;
+  top: 2.5rem;
+  left: calc(-50vw - 30px);
+}
+
+.setting-hotkey,
+.horizontal-tab-nav-item.is-active,
+.vertical-tab-nav-item.is-active {
+  box-shadow: var(--input-shadow);
 }
 
 .is-phone .modal .modal-title {
   font-size: var(--font-ui-large);
 }
 
-.is-phone .vertical-tab-header-group-title, .is-phone .setting-item-heading .setting-item-name {
+.is-phone .vertical-tab-header-group-title,
+.is-phone .setting-item-heading .setting-item-name {
   font-size: var(--font-ui-medium);
 }
 
@@ -200,6 +208,42 @@ body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout >
   content: "/";
 }
 
+.checkbox-container,
+.checkbox-container:hover {
+  box-shadow: var(--input-shadow);
+}
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=password],
+input[type=number] {
+  box-shadow: var(--input-shadow);
+}
+
+textarea:active,
+input[type=text]:active,
+input[type=search]:active,
+input[type=email]:active,
+input[type=password]:active,
+input[type=number]:active,
+textarea:focus,
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+textarea:focus-visible,
+input[type=text]:focus-visible,
+input[type=search]:focus-visible,
+input[type=email]:focus-visible,
+input[type=password]:focus-visible,
+input[type=number]:focus-visible,
+select:focus,
+.dropdown:focus {
+  box-shadow: none;
+}
+
 body:not(.is-mobile):is(.has-custom-background) .workspace,
 body:not(.is-mobile):is(.has-custom-background) .workspace-split.mod-root {
   background-color: transparent;
@@ -248,7 +292,7 @@ body:not(.is-mobile):is(.has-custom-background) .sidebar-toggle-button:hover .cl
   margin: 0px;
   align-self: center;
   justify-self: center;
-  box-shadow: var(--shadow-l);
+  box-shadow: var(--input-shadow);
   height: 24px;
 }
 
@@ -292,6 +336,7 @@ body:not(.is-mobile) .workspace-split:not(.mod-root, .mod-left-split) {
 .workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
   background-color: var(--tab-background-active);
   border-color: var(--divider-color);
+  box-shadow: var(--input-shadow);
 }
 
 body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header[data-type=markdown] .workspace-tab-header-inner-title {
@@ -308,7 +353,8 @@ body:is(.show-file-first-letter) .workspace-split:is(.mod-left-split, .mod-right
   left: 6px;
 }
 
-.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf, .mod-root .workspace-tabs .workspace-leaf,
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.mod-root .workspace-tabs .workspace-leaf,
 .view-header,
 .is-focused .workspace-leaf.mod-active .view-header {
   background-color: var(--color-base-20);
@@ -411,6 +457,13 @@ body.is-mobile .nav-file-title,
 body.is-mobile .nav-folder-title {
   --nav-item-padding: 8px 8px;
   border-bottom: 1px solid var(--background-modifier-border);
+}
+
+body:not(.is-grabbing) .nav-file-title.is-active:hover,
+body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  box-shadow: var(--input-shadow);
 }
 
 .document-search-container {

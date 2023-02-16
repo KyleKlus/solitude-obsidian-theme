@@ -121,3 +121,8 @@
 .HyperMD-task-line[data-task="/"] .task-list-item-checkbox::after {
   content: "/";
 }
+
+.checkbox-container,
+.checkbox-container:hover {
+  box-shadow: var(--input-shadow);
+}

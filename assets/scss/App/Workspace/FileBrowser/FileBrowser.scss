@@ -1,5 +1,12 @@
 body.is-mobile .nav-file-title,
 body.is-mobile .nav-folder-title {
-    --nav-item-padding: 8px 8px;
-    border-bottom: 1px solid var(--background-modifier-border);
+	--nav-item-padding: 8px 8px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+body:not(.is-grabbing) .nav-file-title.is-active:hover,
+body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+	box-shadow: var(--input-shadow);
 }
