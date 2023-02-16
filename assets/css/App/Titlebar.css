@@ -6,5 +6,3 @@ body:not(.deactivate-window-border, .is-maximized, .is-mobile) .titlebar-button-
 .titlebar-button-container.mod-right {
   border-bottom-left-radius: var(--radius-s);
 }
-
-/*# sourceMappingURL=Titlebar.css.map */

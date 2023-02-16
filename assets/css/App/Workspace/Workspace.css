@@ -212,4 +212,6 @@ body.is-mobile .nav-folder-title {
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
-/*# sourceMappingURL=Workspace.css.map */
+.document-search-container {
+  margin: 0;
+}

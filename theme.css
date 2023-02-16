@@ -1157,6 +1157,10 @@ body.is-mobile .nav-folder-title {
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
+.document-search-container {
+  margin: 0;
+}
+
 .kanban-plugin {
   background-color: var(--color-base-10);
 }
@@ -1256,5 +1260,3 @@ settings:
     default: '#'
 */
 /* #endregion */
-
-/*# sourceMappingURL=theme.css.map */
