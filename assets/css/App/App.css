@@ -25,6 +25,19 @@ body:not(.deactivate-window-border, .is-maximized, .is-mobile) .titlebar-button-
   -webkit-filter: blur(1px);
 }
 
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div.setting-item-description {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div.setting-item-description::after {
+  position: absolute;
+  color: var(--text-faint);
+  content: "Recommended colors: Red -> #B62F2F  | Blue -> #304BB5 | Green -> #4EA636  | Yellow -> #A98D28 | Purple -> #6042C2";
+  top: 1.5rem;
+  left: 0px;
+}
+
 .is-phone .modal .modal-title {
   font-size: var(--font-ui-large);
 }
