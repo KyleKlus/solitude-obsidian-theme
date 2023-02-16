@@ -15,7 +15,7 @@ body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout >
   color: var(--text-faint);
   content: "Recommended colors: Red -> #B62F2F  | Blue -> #304BB5 | Green -> #4EA636  | Yellow -> #A98D28 | Purple -> #6042C2";
   top: 2.5rem;
-  left: calc(-50vw - 30px);
+  left: -713px;
 }
 
 .setting-hotkey,
