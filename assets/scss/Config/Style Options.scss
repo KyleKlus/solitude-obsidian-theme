@@ -1,12 +1,43 @@
 /* #region *.......................... Style Settings Plugin */
 
 /* @settings
-name: Red Solitude Dark
-id: red-solitude-dark
+name: Solitude
+id: solitude
 settings:
   -
-    id: extras
-    title: Extras
+    id: colors
+    title: Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: color-base
+    title: Adjust base color
+    description: Adjusts the color of all backgrounds
+    type: variable-color
+    format: hsl-split
+    default: '#'
+  -
+    id: text-normal
+    title: Adjust normal text color
+    type: variable-color
+    format: hex
+    default: '#'
+  -
+    id: text-muted
+    title: Adjust muted text color
+    type: variable-color
+    format: hex
+    default: '#'
+  -
+    id: text-faint
+    title: Adjust faint text color
+    type: variable-color
+    format: hex
+    default: '#'
+  -
+    id: features
+    title: Features
     type: heading
     level: 1
     collapsed: true
@@ -43,37 +74,6 @@ settings:
     min: 0
     max: 50
     step: 1
-  -
-    id: colors
-    title: Colors
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: color-base
-    title: Adjust base color
-    description: Adjusts the color of all backgrounds
-    type: variable-color
-    format: hsl-split
-    default: '#'
-  -
-    id: text-normal
-    title: Adjust normal text color
-    type: variable-color
-    format: hex
-    default: '#'
-  -
-    id: text-muted
-    title: Adjust muted text color
-    type: variable-color
-    format: hex
-    default: '#'
-  -
-    id: text-faint
-    title: Adjust faint text color
-    type: variable-color
-    format: hex
-    default: '#'
 */
 
 /* #endregion */

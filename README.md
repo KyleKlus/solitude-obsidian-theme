@@ -17,13 +17,27 @@
 
 ## Description
 
-This is a dark theme with a slight greenish tint, which uses your chosen accent color. It is highly configurable via the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and has some nice extra features.
+This is a modern looking theme, which respects the chosen accent color. It is somewhat configurable via the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and has some nice extra features.
 
 ## Extra Features
 
-- Custom workspace background
 - Colored "A, B, C, D" - checkboxes (Useful for prioritizing tasks)
-- Custom background settings
+- Custom background color settings
+- Custom workspace background image
+
+## Roadmap
+
+### Planed
+
+- Better buttons
+- Better icons
+- Better animations
+- README improvements
+- More customizations
+
+### Working on
+
+- Link improvements
 
 ## Recommended Plugins
 
@@ -46,8 +60,9 @@ This is a dark theme with a slight greenish tint, which uses your chosen accent 
 - v2.7.7 Quick bugfix
 - v2.7.8 Some changes to the README and the promo screenshot
 - v2.7.9 Changed the back arrow in mobile view & added a color picker to background colors
-- v2.8.0 Rebranding
+- v2.8.0 Rebranding to "Solitude"
+- v2.8.1 Rework on: Tabs, spacing, settings, light theme, bugfixes
 
 <p align="center">
-    Please open an <a href="https://github.com/MajorEnkidu/solitude-obsidian-theme/issues">issue</a> on github, if you find any bugs or if you have any recommendations for what I should add to this theme.
+    Please open an <a href="https://github.com/MajorEnkidu/solitude-obsidian-theme/issues">issue on github</a>, if you find any bugs or if you have any recommendations for what I should add to this theme.
 </p>
