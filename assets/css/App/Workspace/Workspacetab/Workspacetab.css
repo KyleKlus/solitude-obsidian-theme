@@ -51,11 +51,13 @@ body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf {
   border: var(--border-width) solid var(--divider-color);
 }
 
-body:not(.is-mobile) .workspace-split:not(.mod-root) {
+body:not(.is-mobile) .workspace > .workspace-split:not(.mod-root) {
   margin: 0px var(--panel-spacing) 0 0;
 }
 
-body:not(.is-mobile) .workspace-split:not(.mod-root, .mod-left-split) {
+body:not(.is-mobile) .workspace > .workspace-split:not(.mod-root, .mod-left-split),
+body:not(.is-mobile) .workspace-split.mod-vertical > :is(.workspace-split:not(:nth-child(2)),
+.workspace-tabs:not(:nth-child(2))) {
   margin-left: var(--panel-spacing);
 }
 

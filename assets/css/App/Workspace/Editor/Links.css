@@ -1,58 +1,5 @@
 /* #region *.......................... Links */
-.cm-hmd-embed.cm-hmd-internal-link.cm-quote,
-.cm-s-obsidian .cm-line :is(.cm-hmd-internal-link, .is-unresolved),
-.cm-s-obsidian .internal-link,
-.markdown-rendered .internal-link {
-  color: var(--note-link-color);
-  transition: color 100ms ease-out, border-bottom 100ms ease-out;
-}
-
-.cm-s-obsidian span.cm-formatting.cm-url,
-.external-link,
-.markdown-source-view.mod-cm6 .cm-link,
-.cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote,
-.cm-s-obsidian .cm-line .cm-underline,
-.markdown-preview-section .internal-link,
-.markdown-rendered .internal-link {
-  text-decoration: none;
-}
-
-.cm-hmd-embed.cm-hmd-internal-link.cm-quote:hover,
-.cm-s-obsidian .cm-line :is(.cm-hmd-internal-link:hover, .is-unresolved:hover),
-.markdown-preview-section .internal-link:hover,
-.markdown-rendered .internal-link:hover {
-  color: var(--note-link-hover-color);
-  border-bottom: 1px solid var(--note-link-hover-color);
-  text-decoration: none;
-  transition: color 100ms ease-in, border-bottom 100ms ease-in;
-}
-
 /* #region *.......................... URL */
-.cm-s-obsidian span.cm-formatting.cm-url,
-.external-link,
-.markdown-source-view.mod-cm6 .cm-link,
-.cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote,
-.community-plugin-info a {
-  color: var(--url-color);
-  text-decoration: none;
-  transition: color 150ms ease-out, border-color 150ms ease-out;
-}
-
-.cm-s-obsidian span.cm-url:not(.cm-link) {
-  color: var(--text-faint);
-  transition: color 150ms ease-out, border-color 150ms ease-out;
-}
-
-.cm-s-obsidian span.cm-url:hover,
-.external-link:hover,
-.markdown-source-view.mod-cm6 .cm-link:hover,
-.community-plugin-info a:hover {
-  text-decoration: none;
-  border-bottom: 1px solid var(--url-hover-color);
-  color: var(--url-hover-color);
-  transition: color 150ms ease-in, border-color 150ms ease-in;
-}
-
 /* #endregion | URL */
 /* #region *..........................URL Link symbols */
 a.external-link[href*="youtube.com"] {
@@ -65,7 +12,7 @@ a.external-link[href*="youtube.com"]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -82,7 +29,7 @@ a.external-link[href*="linkedin.com"]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -99,7 +46,7 @@ a.external-link[href*=github] {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -111,7 +58,7 @@ a.external-link[href*=github] {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -128,7 +75,7 @@ a.external-link[href*=twitter]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -145,7 +92,7 @@ a.external-link[href*=reddit]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -162,7 +109,7 @@ a.external-link[href*=facebook]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -179,7 +126,7 @@ a.external-link[href*=patreon]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -196,7 +143,7 @@ a.external-link[href*=wikipedia] {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -208,7 +155,7 @@ a.external-link[href*=wikipedia] {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -225,7 +172,7 @@ a.external-link[href*=instagram]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -242,7 +189,7 @@ a.external-link[href*=deviantart]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -259,7 +206,7 @@ a.external-link[href*=medium] {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -271,7 +218,7 @@ a.external-link[href*=medium] {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -288,7 +235,7 @@ a.external-link[href*=stackoverflow]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -305,7 +252,7 @@ a.external-link[href*=steam]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -322,7 +269,7 @@ a.external-link[href*="dev.to"]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -334,7 +281,7 @@ a.external-link[href*="dev.to"]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -353,7 +300,7 @@ a.external-link[href*="developer.mozilla.org"]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -366,7 +313,7 @@ a.external-link[href*="developer.mozilla.org"]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -383,7 +330,7 @@ a.external-link[href*="reactjs.org"]::before {
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: -1.3rem;
   height: 1rem;
   width: 1rem;
@@ -392,5 +339,3 @@ a.external-link[href*="reactjs.org"]::before {
 
 /* #endregion | URL Link Symbols */
 /* #endregion | Links */
-
-/*# sourceMappingURL=Links.css.map */
